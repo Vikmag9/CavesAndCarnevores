@@ -7,9 +7,15 @@ public class Character {
     private List<Feature> feats;
     private int health;
     private int armorClass;
+    private List<InventoryItem> inventory;
 
 
-    public Character(){
+    public Character(String name, Race race, Job job, List<Feature> feats, List<InventoryItem> inventory){
+        this.name = name;
+        this.race = race;
+        this.job = job;
+        this.feats = feats;
+        this.inventory = inventory;
 
     }
 }

@@ -29,7 +29,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>${javafx.maven.plugin.version}</version>
                 <configuration>
-                    <mainClass>Character</mainClass>
+                    <mainClass>FXBaseTestScreen</mainClass>
                 </configuration>
             </plugin>
         </plugins>
