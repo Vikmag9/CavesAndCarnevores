@@ -17,5 +17,6 @@ public class Character {
         this.feats = feats;
         this.inventory = inventory;
 
+
     }
 }
