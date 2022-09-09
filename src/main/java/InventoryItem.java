@@ -8,32 +8,41 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     public int itemValue;
 
-    public InventoryItem(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue){
+    public double itemWeight;
+
+    public InventoryItem(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight) {
         this.itemType = itemType;
         this.itemAmount = itemAmount;
         this.itemName = itemName;
         this.itemValue = itemValue;
         this.itemDescription = itemDescription;
+        this.itemWeight = itemWeight;
 
     }
 
     public String getItemType() {
-        return itemType;
+        return this.itemType;
     }
 
     public String getItemName() {
-        return itemName;
+        return this.itemName;
     }
 
     public String getItemDescription() {
-        return itemDescription;
+        return this.itemDescription;
     }
 
     public int getItemAmount() {
-        return itemAmount;
+        return this.itemAmount;
     }
 
      public int getItemValue() {
          return itemValue;
      }
+
+     public Double getItemWeight() {
+        return itemWeight;
+     }
+
+
 }
