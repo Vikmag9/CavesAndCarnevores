@@ -1,7 +1,9 @@
-import static java.lang.Math.*;
+import java.util.Random;
 
 public class DiceBag {
+
     private static int rollDice(int diceType){
-        return 1;
+        Random rand = new Random();
+        return rand.nextInt(diceType)+1; // Generates a random number between 1 and the max of the dice type.
     }
 }
