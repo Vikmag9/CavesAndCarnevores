@@ -1,6 +1,8 @@
 import java.util.List;
 
 public class Character {
+
+    private FileManager fm = new FileManager();
     private String name;
     private Race race;
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
@@ -17,5 +19,9 @@ public class Character {
         this.feats = feats;
         this.inventory = inventory;
 
+    }
+
+    public void loadJob(){
+        // Switch case, checks which job has been selected. Delegates loading of class based on which class is chosen.
     }
 }

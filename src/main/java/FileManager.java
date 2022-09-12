@@ -7,7 +7,9 @@ public class FileManager {
 
     public InventoryItem inventoryItem = new InventoryItem("", "", "", 0, 0, 0.0);
 
-    public JSONObject loadJSON(File file) throws IOException {
+    public FileManager(){
+    }
+    public JSONObject readFile(File file) throws IOException {
 
         String content = "";
         if (file.isFile()) {
@@ -16,4 +18,6 @@ public class FileManager {
         // Convert JSON string to JSONObject
         return new JSONObject(content);
     }
+
+
 }
