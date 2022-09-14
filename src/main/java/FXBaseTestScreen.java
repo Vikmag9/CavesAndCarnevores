@@ -16,10 +16,18 @@ public class FXBaseTestScreen extends Application {
 
         Label l = new Label("Här står saker:, JavaFX version:" + javafxVersion + ", Java på version" + javaVersion + ".");
 
-        Stage primaryStage = new Stage();
+
         Parent root = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
+        //StackPane root = new StackPane(l);
+        Stage primaryStage = new Stage();
+
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+        //primaryStage.setMaximized(true);
+
+
+//Parent root = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));'
+
 
         /* ResourceBundle bundle = java.util.ResourceBundle.getBundle("imat/resources/iMat");
 
