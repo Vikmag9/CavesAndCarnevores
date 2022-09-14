@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -6,16 +8,19 @@ public class Character_test {
     void createCharacterTest() throws IOException {
         Character character = new Character("Gregg", new Race() {
             public String getRaceName() {
-                return null;
+                return "race here";
             }
 
             public int getMovementSpeed() {
-                return 0;
+                return 30;
             }
 
             public List<String> getRaceActions() {
                 return null;
             }
-        }, new Barbarian(), new List, new InventoryItem("Consumable", ));
+        },
+                new Barbarian(),
+                null,
+                null);
     }
 }

@@ -4,7 +4,6 @@ Barbarian.class
 InventoryItem.class
 FileManager.class
 Character.class
-StatGenerator.class
 Job.class
 DiceBag.class
 Race.class
