@@ -7,17 +7,17 @@ public class FileManager {
 
     public InventoryItem inventoryItem = new InventoryItem("", "", "", 0, 0, 0.0);
 
-    public String loadJSON(File file) throws IOException {
+    public FileManager(){
+    }
+    public JSONObject readFile(File file) throws IOException {
 
         String content = "";
         if (file.isFile()) {
             content = FileUtils.readFileToString(file, "utf-8");
         }
-
         // Convert JSON string to JSONObject
-        JSONObject tomJsonObject = new JSONObject(content);
-
-
-        return "";
+        return new JSONObject(content);
     }
+
+
 }
