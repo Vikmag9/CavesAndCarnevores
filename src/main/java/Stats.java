@@ -1,27 +1,41 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class Stats {
-    int inte;
-    int cha;
-    int wis;
-    int con;
-    int dex;
-    int str;
     List<Integer> listOfRolls;
-    DiceBag diceBag = new DiceBag();
+    List<Integer> listOfStats;
+    DiceBag diceBag;
+    int stat;
 
     public Stats(){
-        this.inte = 0;
-
+         diceBag = new DiceBag();
     }
 
-    private void rollStat(){
+    private int rollOneStat(){
         listOfRolls = new ArrayList<Integer>();
         for(int i = 0; i < 4; i++){
             listOfRolls.add(diceBag.rollDice(6));
         }
+        listOfRolls.remove(listOfRolls.indexOf(Collections.min(listOfRolls)));
+
+        for(int i : listOfRolls) {
+            stat = 0;
+            stat+= listOfRolls.get(i);
+        }
+        return stat;
+    }
+
+    private void rollStats(){
+        for(int i= 1; i < 7; i++)
+            listOfStats.add(this.rollOneStat());
+    }
+
+
+    public List<Integer> getStats(){
+        return listOfStats;
     }
 }
 
