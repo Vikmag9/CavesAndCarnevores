@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartScreen">
+<AnchorPane prefHeight="864.0" prefWidth="1506.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartScreen">
    <children>
-      <ImageView fitHeight="1110.0" fitWidth="2035.0" layoutX="-52.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="868.0" fitWidth="1590.0" layoutX="-52.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" scaleX="1.07">
          <image>
             <Image url="@backgroundCC.png" />
          </image>
       </ImageView>
-      <Button layoutX="1459.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="40.0">
+      <Button layoutX="1168.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="40.0">
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button layoutX="1113.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.rightAnchor="609.9333740234375" AnchorPane.topAnchor="40.0">
+      <Button layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.topAnchor="40.0">
          <effect>
             <DropShadow />
          </effect></Button>
@@ -28,29 +28,23 @@
             <Image url="@logoAndText.png" />
          </image>
       </ImageView>
-      <Button layoutX="1930.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: #d53a2a;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <graphic>
-            <ImageView fitHeight="27.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@bild-removebg-preview.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
-      <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="677.0" layoutX="551.0" layoutY="223.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="872.0" AnchorPane.bottomAnchor="210.0" AnchorPane.topAnchor="223.0" />
-      <Label contentDisplay="CENTER" layoutX="765.0" layoutY="272.0" styleClass="welcome_text_elephant" stylesheets="@Font.css" text="Welcome to caves &amp; carnivores" textAlignment="CENTER" />
-      <Label contentDisplay="CENTER" layoutX="687.0" layoutY="357.0" prefWidth="600.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="This is a tool to help you create characters for Dungeons and Dragons, and we also keep your character sheets digitaly stored" textAlignment="CENTER" wrapText="true" />
-      <Label contentDisplay="CENTER" layoutX="687.0" layoutY="529.0" prefWidth="600.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="Create a new character to get started, or return to one you previously made" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="1083.0" layoutY="752.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters">
-         <effect>
-            <DropShadow />
-         </effect></Button>
-      <Button layoutX="711.0" layoutY="752.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character">
-         <effect>
-            <DropShadow />
-         </effect></Button>
+      <AnchorPane layoutX="440.0" layoutY="186.0" prefHeight="638.0" prefWidth="698.0" AnchorPane.leftAnchor="440.0" AnchorPane.topAnchor="186.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="74.0" prefWidth="300.0" styleClass="welcome_text_elephant" stylesheets="@Font.css" text="Welcome to caves &amp; carnivores" textAlignment="CENTER" AnchorPane.leftAnchor="219.0" AnchorPane.topAnchor="74.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="147.0" prefHeight="86.0" prefWidth="436.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="This is a tool to help you create characters for Dungeons and Dragons, and we also keep your character sheets digitaly stored" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="147.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="274.0" prefWidth="600.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="Create a new character to get started, or return to one you previously made" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="69.0" layoutY="453.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="418.0" layoutY="441.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
