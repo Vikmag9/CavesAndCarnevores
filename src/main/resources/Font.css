@@ -1,22 +1,18 @@
 .normal_font {
-    -fx-font-size: 26;
-    -fx-font: "Lucida sans";
+    -fx-font: 26px "Georgia";
 
 }
 
 .buttons_font_large {
-    -fx-font-size: 25
-;
-    -fx-font: "Lucida sans";
+    -fx-font: 25px "Georgia";
 }
 
 .welcome_text_elephant{
-    -fx-font-size: 32;
-    -fx-font: "Elephant";
+    -fx-font: 36px "Elephant";
 }
 
 .welcome_text_body {
-    -fx-font-size: 32;
-    -fx-font: "Lucida sans";
-    -fx-color-label-visible: WHITE;
+    -fx-font: 24px "Georgia";
+    -fx-text-fill: #e5e5e5;
+
 }
