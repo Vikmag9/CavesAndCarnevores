@@ -1,14 +1,17 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class Character_test {
     @Test
-    void createCharacterTest() throws IOException {
+    public void createCharacterTest() throws IOException {
         Character character = new Character("Gregg", new Race() {
             public String getRaceName() {
-                return "race here";
+                return "Batman";
             }
 
             public int getMovementSpeed() {
@@ -19,8 +22,11 @@ public class Character_test {
                 return null;
             }
         },
-                new Barbarian(),
-                null,
-                null);
+        new Barbarian(),
+    null,
+null);
+
+        assertEquals(character.getName(), "Gregg");
+
     }
 }
