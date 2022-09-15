@@ -21,7 +21,65 @@ public class Character {
 
     }
 
-    public void loadJob(){
-        // Switch case, checks which job has been selected. Delegates loading of class based on which class is chosen.
+
+
+    // --------------------------------- GETTERS AND SETTERS -------------------------------------
+
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public void setRace(Race race) {
+        this.race = race;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public void setFeats(List<Feature> feats) {
+        this.feats = feats;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setArmorClass(int armorClass) {
+        this.armorClass = armorClass;
+    }
+
+    public void setInventory(List<InventoryItem> inventory) {
+        this.inventory = inventory;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
+    public List<Feature> getFeats() {
+        return feats;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getArmorClass() {
+        return armorClass;
+    }
+
+    public List<InventoryItem> getInventory() {
+        return inventory;
+    }
+
+
 }

@@ -14,7 +14,7 @@ public class Barbarian implements Job{
     }
     FileManager fm = new FileManager();
     public HashMap getJob() throws IOException {
-        JSONObject jsonJob = fm.readFile(new File("")); // TODO Insert path to job JSON file
+        JSONObject jsonJob = fm.readFile(new File("jobs.json")); // TODO Insert path to job JSON file
         Map jobMap = jsonJob.toMap();
         if (jobMap.containsKey("Barbarian")) {
             jobMap.get("Barbarian"); // Cannot be tested atm since application does not run. Need to run to figure out how to get barb information
