@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class Character_test {
     @Test
-    public void createCharacterTest() throws IOException {
+    public void createCharacterTest() throws IOException, ClassNotFoundException {
         Character character = new Character("Gregg", new Race() {
             public String getRaceName() {
                 return "Batman";

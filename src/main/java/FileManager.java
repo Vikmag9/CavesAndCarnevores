@@ -1,7 +1,14 @@
 import org.json.*;
 import org.apache.commons.io.*;
-import java.io.File;
-import java.io.IOException;
+
+import java.io.*;
+
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.InputStream;
+import java.util.logging.Logger;
+
 
 public class FileManager {
 
@@ -9,14 +16,21 @@ public class FileManager {
 
     public FileManager(){
     }
-    public JSONObject readFile(File file) throws IOException {
+    public JSONObject readFile(String resourceName) throws IOException, ClassNotFoundException {
 
-        String content = "";
-        if (file.isFile()) {
-            content = FileUtils.readFileToString(file, "utf-8");
+        InputStream is = Class.forName("FileManager").getResourceAsStream(resourceName);
+        if (is == null) {
+            throw new NullPointerException("Cannot find resource file " + resourceName);
         }
+        JSONTokener tokener = new JSONTokener(is);
+        JSONObject content = new JSONObject(tokener);
+
+
+        JSONObject barb = content.getJSONObject("Barbarian");
+
+
         // Convert JSON string to JSONObject
-        return new JSONObject(content);
+        return content;
     }
 
 
