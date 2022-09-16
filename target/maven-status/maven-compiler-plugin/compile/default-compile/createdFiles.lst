@@ -1,0 +1,10 @@
+StartScreen.class
+FXBaseTestScreen.class
+Barbarian.class
+InventoryItem.class
+FileManager.class
+Character.class
+Job.class
+DiceBag.class
+Race.class
+Feature.class
