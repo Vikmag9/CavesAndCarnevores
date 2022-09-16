@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="864.0" prefWidth="1506.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartScreen">
+   <children>
+      <ImageView fitHeight="888.0" fitWidth="1588.0" layoutX="-52.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@backgroundCC.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1168.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="40.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.topAnchor="40.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="171.0" fitWidth="733.0" layoutX="39.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="23.0">
+         <image>
+            <Image url="@logoAndText.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1186.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@leftarrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@rightarrow.png" />
+         </image>
+      </ImageView>
+      <StackPane layoutX="398.0" layoutY="155.0" prefHeight="635.0" prefWidth="739.0">
+         <children>
+            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="24.0" styleClass="Header_font" stylesheets="@Font.css" text="Basics" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="140.0" layoutY="112.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="196.0" layoutY="131.0" styleClass="Text_enter" stylesheets="@Font.css" text="Name" />
+                  <TextField layoutX="370.0" layoutY="124.0" prefHeight="37.0" prefWidth="198.0" promptText="Enter Name" styleClass="Text_enter" stylesheets="@Font.css" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="280.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="362.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="447.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="196.0" layoutY="215.0" styleClass="Text_enter" stylesheets="@Font.css" text="Race" />
+                  <Label layoutX="199.0" layoutY="299.0" styleClass="Text_enter" stylesheets="@Font.css" text="Class" />
+                  <Label layoutX="199.0" layoutY="383.0" styleClass="Text_enter" stylesheets="@Font.css" text="Background" />
+                  <Label layoutX="198.0" layoutY="466.0" styleClass="Text_enter" stylesheets="@Font.css" text="Level" />
+                  <ComboBox editable="true" layoutX="370.0" layoutY="207.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Race" styleClass="Text_enter" stylesheets="@Font.css" />
+                  <ComboBox editable="true" layoutX="370.0" layoutY="291.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Class" styleClass="Text_enter" stylesheets="@Font.css" />
+                  <ComboBox editable="true" layoutX="370.0" layoutY="376.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Background" styleClass="Text_enter" stylesheets="@Font.css" />
+                  <ComboBox editable="true" layoutX="370.0" layoutY="458.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Level" styleClass="Text_enter" stylesheets="@Font.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="638.0" prefWidth="698.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Stats" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="467.0" layoutX="477.0" layoutY="86.0" stroke="#566e54" strokeType="INSIDE" width="198.0" />
+                  <Label layoutX="341.0" layoutY="54.0" styleClass="Text_enter" stylesheets="@Font.css" text="Stats" />
+                  <Label layoutX="46.0" layoutY="59.0" prefWidth="236.0" styleClass="Text_enter" stylesheets="@Font.css" text="We randomized these stats for you, enter them in the field of your choice" wrapText="true" />
+                  <Label layoutX="496.0" layoutY="54.0" styleClass="Text_enter" stylesheets="@Font.css" text="Skill proficiencies" />
+                  <Label layoutX="549.0" layoutY="95.0" styleClass="skills_label" stylesheets="@Font.css" text="DEX" />
+                  <CheckBox layoutX="496.0" layoutY="117.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Acrobatics" />
+                  <CheckBox layoutX="496.0" layoutY="136.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Sleight of hand" />
+                  <CheckBox layoutX="496.0" layoutY="155.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Stealth" />
+                  <Label layoutX="551.0" layoutY="174.0" styleClass="skills_label" stylesheets="@Font.css" text="WIS" />
+                  <CheckBox layoutX="496.0" layoutY="193.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Animal handling" />
+                  <CheckBox layoutX="496.0" layoutY="212.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Insight" />
+                  <CheckBox layoutX="496.0" layoutY="231.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Medicine" />
+                  <CheckBox layoutX="496.0" layoutY="250.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Perception" />
+                  <CheckBox layoutX="496.0" layoutY="269.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Survial" />
+                  <Label layoutX="550.0" layoutY="288.0" styleClass="skills_label" stylesheets="@Font.css" text="INT" />
+                  <CheckBox layoutX="496.0" layoutY="310.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Arcana" />
+                  <CheckBox layoutX="496.0" layoutY="329.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="History" />
+                  <CheckBox layoutX="496.0" layoutY="348.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Investigation" />
+                  <CheckBox layoutX="496.0" layoutY="367.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Nature" />
+                  <CheckBox layoutX="496.0" layoutY="386.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Religion" />
+                  <Label layoutX="551.0" layoutY="405.0" styleClass="skills_label" stylesheets="@Font.css" text="STR" />
+                  <CheckBox layoutX="496.0" layoutY="424.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Athletics" />
+                  <CheckBox layoutX="496.0" layoutY="443.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Intimidation" />
+                  <Label layoutX="549.0" layoutY="462.0" styleClass="skills_label" stylesheets="@Font.css" text="CHA" />
+                  <CheckBox layoutX="496.0" layoutY="481.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Deception" />
+                  <CheckBox layoutX="496.0" layoutY="500.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Performance" />
+                  <CheckBox layoutX="496.0" layoutY="519.0" mnemonicParsing="false" styleClass="skills_font" stylesheets="@Font.css" text="Persuasion" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
