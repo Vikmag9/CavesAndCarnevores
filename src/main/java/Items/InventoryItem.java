@@ -1,3 +1,5 @@
+package Items;
+
 public class InventoryItem { // Functions as a data class, Each inventory item is to be constructed by this class
     public String itemType;
 

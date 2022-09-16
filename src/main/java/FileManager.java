@@ -1,5 +1,4 @@
-import org.json.*;
-import org.apache.commons.io.*;
+import Items.InventoryItem;
 
 import java.io.*;
 
@@ -7,7 +6,6 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.InputStream;
-import java.util.logging.Logger;
 
 
 public class FileManager {
