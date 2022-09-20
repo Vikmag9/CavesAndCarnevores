@@ -1,25 +1,40 @@
 import org.json.JSONObject;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Barbarian implements Job{
-
-    HashMap jobFeatures;
+    private int hitdie;
+    private int level;
+    private Map<String, List<String>> proficiencies;
+    JSONObject jobFeatures;
 
     public Barbarian() throws IOException, ClassNotFoundException {
         this.jobFeatures = getJob();
+        this.hitdie = getHitDie();
+        this.proficiencies = getProficiencies();
     }
+
+
+
     FileManager fm = new FileManager();
-    public HashMap getJob() throws IOException, ClassNotFoundException {
-        JSONObject jsonJob = fm.readFile("jobs.json"); // TODO Insert path to job JSON file
-        Map jobMap = jsonJob.toMap();
-        if (jobMap.containsKey("Barbarian")) {
-            jobMap.get("Barbarian"); // Cannot be tested atm since application does not run. Need to run to figure out how to get barb information
-            // TODO map json file into a Map only containing barbarian relevant information
-        }
-        return null;
+    public JSONObject getJob() throws IOException, ClassNotFoundException {
+        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject("Barbarian");
+        Map<String, Object> jobMap = jsonJob.toMap();
+        return jsonJob;
+    }
+
+
+    public int getHitDie(){
+        return jobFeatures.getJSONObject("Class Features").getInt("Hit Die");
+    }
+
+    public Map getProficiencies() {
+        jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies");
+        return jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
+    }
+    public List getEquipment() {
+        return jobFeatures.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
     }
 }

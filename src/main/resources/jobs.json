@@ -2,20 +2,13 @@
   "Barbarian": {
     "Class Features": {
       "content": "As a barbarian, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d12 per barbarian level",
-          "**Hit Points at 1st Level:** 12 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d12 (or 7) + your Constitution modifier per barbarian level after 1st"
-        ]
-      },
+      "Hit Die": 12,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor, medium armor, shields **Weapons:** Simple weapons, martial weapons **Tools:** None",
-          "**Saving Throws:** Strength, Constitution",
-          "**Skills:** Choose two from Animal Handling, Athletics,",
-          "Intimidation, Nature, Perception, and Survival"
-        ]
+        "Armor": ["Light armor", "Medium armor", "Shields"],
+        "Weapons": ["Simple weapons", "Martial weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Strength", "Constitution"],
+        "SkillOptions": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
       },
       "Equipment": {
         "content": [
