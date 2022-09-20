@@ -5,9 +5,19 @@ import java.util.List;
 
 public class Inventory {
         List<InventoryItem> inventory;
+        CoinBag coinBag;
 
 
-        Inventory() {
+
+        Inventory(List<InventoryItem> startingItems, int startingCoins) {
                 inventory = new ArrayList<InventoryItem>();
+                this.coinBag = new CoinBag(startingCoins);
+        }
+        public void sellItem(){
+
+        }
+
+        public void buyItem(){
+
         }
 }
