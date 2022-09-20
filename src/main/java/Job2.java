@@ -47,6 +47,6 @@ public class Job2 {
     }
 
     public List getEquipment() {
-        return jobFeatures.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList(); //
+        return jobFeatures.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
     }
 }
