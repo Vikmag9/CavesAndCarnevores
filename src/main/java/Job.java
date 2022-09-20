@@ -11,6 +11,8 @@ public interface Job {
     public int getHitDie();
     public List getEquipment();
     public Map getProficiencies();
+    public String getJobDesc();
+    public String getJobName();
 
 
 

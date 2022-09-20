@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class Barbarian implements Job{
+public class Fighter implements Job{
+
     private int hitdie;
     private int level;
     private Map<String, List<String>> proficiencies;
@@ -12,26 +13,29 @@ public class Barbarian implements Job{
 
     FileManager fm = new FileManager();
 
-
-    public Barbarian() throws IOException, ClassNotFoundException {
+    public Fighter() throws IOException, ClassNotFoundException {
         this.jobFeatures = getJob();
         this.hitdie = getHitDie();
         this.proficiencies = getProficiencies();
     }
-
-
-
+    @Override
     public JSONObject getJob() throws IOException, ClassNotFoundException {
-        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject("Barbarian");
+        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject("Fighter");
         Map<String, Object> jobMap = jsonJob.toMap();
         return jsonJob;
     }
 
-
-    public int getHitDie(){
+    @Override
+    public int getHitDie() {
         return jobFeatures.getJSONObject("Class Features").getInt("Hit Die");
     }
 
+    @Override
+    public List getEquipment() {
+        return jobFeatures.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
+    }
+
+    @Override
     public Map getProficiencies() {
         jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies");
         return jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
@@ -44,10 +48,6 @@ public class Barbarian implements Job{
 
     @Override
     public String getJobName() {
-        return "Barbarian";
-    }
-
-    public List getEquipment() {
-        return jobFeatures.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
+        return "Fighter";
     }
 }
