@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="864.0" prefWidth="1506.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartScreen">
+<AnchorPane prefHeight="864.0" prefWidth="1506.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard">
    <children>
       <ImageView fitHeight="888.0" fitWidth="1588.0" layoutX="-52.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -49,7 +49,7 @@
       </ImageView>
       <StackPane layoutX="398.0" layoutY="155.0" prefHeight="635.0" prefWidth="739.0">
          <children>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="basicsPane" prefHeight="638.0" prefWidth="698.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -77,7 +77,7 @@
                   <ComboBox editable="true" layoutX="370.0" layoutY="458.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Level" styleClass="Text_enter" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="satsAndSkillsPane" prefHeight="638.0" prefWidth="698.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -189,7 +189,7 @@
                   <TextField layoutX="339.0" layoutY="372.0" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="jobSpecificPane" prefHeight="638.0" prefWidth="698.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -202,7 +202,7 @@
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Class Specific" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0">
+            <AnchorPane fx:id="weaponsAndArmourPane" prefHeight="638.0" prefWidth="698.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -212,7 +212,7 @@
                   <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
                   <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
                   <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="27.0" styleClass="Header_font" stylesheets="@Font.css" text="Items" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="243.0" layoutY="29.0" styleClass="Header_font" stylesheets="@Font.css" text="Weapons and Armour" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="116.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
                   <Label layoutX="180.0" layoutY="135.0" styleClass="Text_enter" stylesheets="@Font.css" text="Armour" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
@@ -227,7 +227,7 @@
                   <ComboBox layoutX="358.0" layoutY="363.0" prefHeight="37.0" prefWidth="228.0" promptText="Choose Weapon" styleClass="Text_enter" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="inventoryPane" prefHeight="638.0" prefWidth="698.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -252,7 +252,7 @@
                   <TextField layoutX="399.0" layoutY="284.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="lorePane" prefHeight="638.0" prefWidth="698.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
