@@ -1,3 +1,4 @@
+import Items.CoinBag;
 import org.junit.Test;
 
 import java.io.IOException;
