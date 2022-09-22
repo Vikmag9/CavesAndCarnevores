@@ -2,20 +2,14 @@
   "Barbarian": {
     "Class Features": {
       "content": "As a barbarian, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d12 per barbarian level",
-          "**Hit Points at 1st Level:** 12 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d12 (or 7) + your Constitution modifier per barbarian level after 1st"
-        ]
-      },
+      "Hit Die": 12,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor, medium armor, shields **Weapons:** Simple weapons, martial weapons **Tools:** None",
-          "**Saving Throws:** Strength, Constitution",
-          "**Skills:** Choose two from Animal Handling, Athletics,",
-          "Intimidation, Nature, Perception, and Survival"
-        ]
+        "Armor": ["Light armor", "Medium armor", "Shields"],
+        "Weapons": ["Simple weapons", "Martial weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Strength", "Constitution"],
+        "SkillOptions": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -205,21 +199,15 @@
   "Bard": {
     "Class Features": {
       "content": "As a bard, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per bard level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per bard level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor",
-          "**Weapons:** Simple weapons, hand crossbows, longswords, rapiers, shortswords",
-          "**Tools:** Three musical instruments of your choice",
-          "**Saving Throws:** Dexterity, Charisma",
-          "**Skills:** Choose any three"
-        ]
+
+        "Armor": ["Light armor"],
+        "Weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+        "Tools": ["Three musical instruments of your choice"],
+        "Saving throws": ["Dexterity", "Charisma"],
+        "SkillOptions": ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"],
+        "SkillChoices": 3
       },
       "Equipment": {
         "content": [
@@ -627,21 +615,15 @@
   "Cleric": {
     "Class Features": {
       "content": "As a cleric, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per cleric level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per cleric level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor, medium armor, shields",
-          "**Weapons:** Simple weapons",
-          "**Tools:** None",
-          "**Saving Throws:** Wisdom, Charisma",
-          "**Skills:** Choose two from History, Insight, Medicine, Persuasion, and Religion"
-        ]
+
+        "Armor": ["Light armor", "Medium armor", "Shields"],
+        "Weapons": ["Simple weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Wisdom", "Charisma"],
+        "SkillOptions": ["History", "Insight", "Medicine", "Persuasion", "Religion"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -1062,22 +1044,14 @@
   "Druid": {
     "Class Features": {
       "content": "As a druid, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per druid level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per druid level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)",
-          "**Weapons:** Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
-          "**Tools:** Herbalism kit",
-          "**Saving Throws:** Intelligence, Wisdom",
-          "**Skills:** Choose two from Arcana, Animal Handling,",
-          "Insight, Medicine, Nature, Perception, Religion, and Survival"
-        ]
+        "Armor": ["Non-metal light armor", "Non-metal medium armor", "Non-metal shields"],
+        "Weapons": ["Clubs", "Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"],
+        "Tools": ["Herbalism kit"],
+        "Saving throws": ["Intelligence", "Wisdom"],
+        "SkillOptions": ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -1608,22 +1582,14 @@
   "Fighter": {
     "Class Features": {
       "content": "As a fighter, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d10 per fighter level",
-          "**Hit Points at 1st Level:** 10 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per fighter level after 1st"
-        ]
-      },
+      "Hit Points": 10,
       "Proficiencies": {
-        "content": [
-          "**Armor:** All armor, shields",
-          "**Weapons:** Simple weapons, martial weapons",
-          "**Tools:** None",
-          "**Saving Throws:** Strength, Constitution",
-          "**Skills:** Choose two skills from Acrobatics, Animal",
-          "Handling, Athletics, History, Insight, Intimidation, Perception, and Survival"
-        ]
+        "Armor": ["All armor", "Shields"],
+        "Weapons": ["Simple weapons", "Martial weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Strength", "Constitution"],
+        "SkillOptions": ["Acrobatics", "Animal Handling","Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -1757,22 +1723,15 @@
   "Monk": {
     "Class Features": {
       "content": "As a monk, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per monk level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per monk level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** None",
-          "**Weapons:** Simple weapons, shortswords",
-          "**Tools:** Choose one type of artisan’s tools or one musical instrument",
-          "**Saving Throws:** Strength, Dexterity",
-          "**Skills:** Choose two from Acrobatics, Athletics,",
-          "History, Insight, Religion, and Stealth"
-        ]
+
+        "Armor": ["None"],
+        "Weapons": ["Simple weapons", "Shortswords"],
+        "Tools": ["Artisan's tools or one musical instrument"],
+        "Saving throws": ["Strength", "Dexterity"],
+        "SkillOptions": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -2010,21 +1969,15 @@
   "Paladin": {
     "Class Features": {
       "content": "As a paladin, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d10 per paladin level",
-          "**Hit Points at 1st Level:** 10 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per paladin level after 1st"
-        ]
-      },
+      "Hit Points": 10,
       "Proficiencies": {
-        "content": [
-          "**Armor:** All armor, shields",
-          "**Weapons:** Simple weapons, martial weapons",
-          "**Tools:** None",
-          "**Saving Throws:** Wisdom, Charisma",
-          "**Skills:** Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion"
-        ]
+
+        "Armor": ["All armor", "Shields"],
+        "Weapons": ["Simple weapons", "Martial weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Wisdom", "Charisma"],
+        "SkillOptions": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -2373,21 +2326,15 @@
   "Ranger": {
     "Class Features": {
       "content": "As a ranger, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d10 per ranger level",
-          "**Hit Points at 1st Level:** 10 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per ranger level after 1st"
-        ]
-      },
+      "Hit Points": 10,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor, medium armor, shields",
-          "**Weapons:** Simple weapons, martial weapons",
-          "**Tools:** None",
-          "**Saving Throws:** Strength, Dexterity",
-          "**Skills:** Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival"
-        ]
+
+        "Armor": ["Light armor", "Medium armor", "Shields"],
+        "Weapons": ["Simple weapons", "Martial weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Strength", "Dexterity"],
+        "SkillOptions": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -2722,21 +2669,16 @@
   "Rogue": {
     "Class Features": {
       "content": "As a rogue, you have the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per rogue level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per rogue level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor",
-          "**Weapons:** Simple weapons, hand crossbows, longswords, rapiers, shortswords",
-          "**Tools:** Thieves’ tools",
-          "**Saving Throws:** Dexterity, Intelligence",
-          "**Skills:** Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth"
-        ]
+
+        "Armor": ["Light armor"],
+        "Weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+        "Tools": ["Thieves’ tools"],
+        "Saving throws": ["Dexterity", "Intelligence"],
+        "SkillOptions": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"],
+        "SkillChoices": 4
+
       },
       "Equipment": {
         "content": [
@@ -2894,22 +2836,15 @@
   "Sorcerer": {
     "Class Features": {
       "content": "As a sorcerer, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d6 per sorcerer level",
-          "**Hit Points at 1st Level:** 6 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d6 (or 4) + your Constitution modifier per sorcerer level after 1st"
-        ]
-      },
+      "Hit Points": 6,
       "Proficiencies": {
-        "content": [
-          "**Armor:** None",
-          "**Weapons:** Daggers, darts, slings, quarterstaffs, light crossbows",
-          "**Tools:** None",
-          "**Saving Throws:** Constitution, Charisma",
-          "**Skills:** Choose two from Arcana, Deception, Insight,",
-          "Intimidation, Persuasion, and Religion"
-        ]
+
+        "Armor": ["None"],
+        "Weapons": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"],
+        "Tools": ["None"],
+        "Saving throws": ["Constitution", "Charisma"],
+        "SkillOptions": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -3413,21 +3348,15 @@
   "Warlock": {
     "Class Features": {
       "content": "As a warlock, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d8 per warlock level",
-          "**Hit Points at 1st Level:** 8 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d8 (or 5) + your Constitution modifier per warlock level after 1st"
-        ]
-      },
+      "Hit Points": 8,
       "Proficiencies": {
-        "content": [
-          "**Armor:** Light armor",
-          "**Weapons:** Simple weapons",
-          "**Tools:** None",
-          "**Saving Throws:** Wisdom, Charisma",
-          "**Skills:** Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion"
-        ]
+
+        "Armor": ["Light armor"],
+        "Weapons": ["Simple weapons"],
+        "Tools": ["None"],
+        "Saving throws": ["Wisdom", "Charisma"],
+        "SkillOptions": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"],
+        "SkillChoices": 2
       },
       "Equipment": {
         "content": [
@@ -3884,14 +3813,15 @@
   "Wizard": {
     "Class Features": {
       "content": "As a wizard, you gain the following class features.",
-      "Hit Points": {
-        "content": [
-          "**Hit Dice:** 1d6 per wizard level",
-          "**Hit Points at 1st Level:** 6 + your Constitution modifier",
-          "**Hit Points at Higher Levels:** 1d6 (or 4) + your Constitution modifier per wizard level after 1st"
-        ]
-      },
+      "Hit Points": 6,
       "Proficiencies": {
+
+        "Armor": ["None"],
+        "Weapons": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
+        "Tools": ["None"],
+        "Saving throws": ["Intelligence", "Wisdom"],
+        "SkillOptions": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"],
+        "SkillChoices": 4,
         "content": [
           "**Armor:** None",
           "**Weapons:** Daggers, darts, slings, quarterstaffs, light crossbows",

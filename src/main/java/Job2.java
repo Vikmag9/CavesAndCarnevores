@@ -4,26 +4,27 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class Barbarian implements Job{
-    private int hitdie;
+public class Job2 {
+    private final String jobName;
+    private final int hitdie;
     private int level;
-    private Map<String, List<String>> proficiencies;
+    private Map proficiencies;
     JSONObject jobFeatures;
 
     FileManager fm = new FileManager();
 
 
-    public Barbarian() throws IOException, ClassNotFoundException {
-        this.jobFeatures = getJob();
+    public Job2(String jobName) throws IOException, ClassNotFoundException {
+        this.jobName = jobName;
+        this.jobFeatures = getJob(jobName);
         this.hitdie = getHitDie();
         this.proficiencies = getProficiencies();
     }
 
 
 
-    public JSONObject getJob() throws IOException, ClassNotFoundException {
-        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject("Barbarian");
-        Map<String, Object> jobMap = jsonJob.toMap();
+    public JSONObject getJob(String jobName) throws IOException, ClassNotFoundException {
+        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
         return jsonJob;
     }
 
@@ -37,14 +38,12 @@ public class Barbarian implements Job{
         return jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
     }
 
-    @Override
     public String getJobDesc() {
         return jobFeatures.getJSONObject("Class Features").getString("content");
     }
 
-    @Override
     public String getJobName() {
-        return "Barbarian";
+        return jobName;
     }
 
     public List getEquipment() {

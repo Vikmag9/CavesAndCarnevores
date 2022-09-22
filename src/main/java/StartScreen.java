@@ -1,6 +1,11 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class StartScreen {
     @FXML
@@ -12,9 +17,24 @@ public class StartScreen {
     @FXML
     private Button myCharactersButton;
 
-    public static void createCharacter(){
+
+    @FXML
+    public void createCharacter() throws IOException {
         // Sends user to the Character Creator Wizard
+
+        //tried a solution, not sure if we should use it - bats
+        //It started opening duplicate windows after I added fx-ids????? -bats
+        Parent root = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
+        Stage wizardStage = new Stage();
+
+        wizardStage.setScene(new Scene(root, 300, 275));
+        wizardStage.show();
+        wizardStage.setMaximized(true);
+
     }
+
+    @FXML
+
 
     public static void myCharacters(){
         // Sends user to the Characters Screen with previously created characters
