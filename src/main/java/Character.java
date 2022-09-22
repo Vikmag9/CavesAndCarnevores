@@ -1,5 +1,5 @@
 import Items.InventoryItem;
-import Items.Wearable;
+import Items.Clothing;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Character {
     private int health;
     private int armorClass;
     private List<InventoryItem> inventory;
-    private List<Wearable> wearables;
+    private List<Clothing> wearables;
 
 
     public Character(String name, Race race, Job job, List<Feature> feats, List<InventoryItem> inventory){

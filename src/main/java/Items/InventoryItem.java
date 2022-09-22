@@ -1,18 +1,20 @@
 package Items;
 
 public class InventoryItem { // Functions as a data class, Each inventory item is to be constructed by this class
-    public String itemType;
+    private String itemType;
 
-    public String itemName;
+    private String itemName;
 
-    public String itemDescription;
-    public int itemAmount;
+    private String itemDescription;
+    private int itemAmount;
 
-    public int itemValue;
+    private int itemValue;
 
-    public double itemWeight;
+    private double itemWeight;
 
-    public InventoryItem(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight) {
+    private boolean isMagical;
+
+    public InventoryItem(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight, boolean isMagical) {
         this.itemType = itemType;
         this.itemAmount = itemAmount;
         this.itemName = itemName;
@@ -38,11 +40,11 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         return this.itemAmount;
     }
 
-     public int getItemValue() {
+    public int getItemValue() {
          return itemValue;
      }
 
-     public Double getItemWeight() {
+    public Double getItemWeight() {
         return itemWeight;
      }
 

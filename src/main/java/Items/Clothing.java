@@ -1,8 +1,8 @@
 package Items;
 
-public class Wearable {
+public class Clothing implements Equippable {
     private boolean equipped;
-    Wearable(){
+    Clothing(){
         this.equipped = false;
     }
 
