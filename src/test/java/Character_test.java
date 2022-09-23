@@ -15,11 +15,9 @@ public class Character_test {
             public String getRaceName() {
                 return "Batman";
             }
-
             public int getMovementSpeed() {
                 return 30;
             }
-
             public List<String> getRaceActions() {
                 return null;
             }
