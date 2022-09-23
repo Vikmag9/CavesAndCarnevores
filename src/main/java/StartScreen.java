@@ -1,43 +1,26 @@
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.layout.AnchorPane;
 
-import java.awt.*;
 import java.io.IOException;
 
-public class StartScreen {
-    @FXML
-    private Button createCharacterHeaderButton;
-    @FXML
-    private Button myCharactersHeaderButton;
-    @FXML
-    private Button createCharacterButton;
-    @FXML
-    private Button myCharactersButton;
+public class StartScreen extends AnchorPane{
+    private CCcontroller parentController;
 
+    public StartScreen(StartScreenController controller) {
+        this.parentController = parentController;
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("StartScreen.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(controller);
 
-    @FXML
-    public void createCharacter() throws IOException {
-        // Sends user to the Character Creator Wizard
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
 
-        //tried a solution, not sure if we should use it - bats
-        //It started opening duplicate windows after I added fx-ids????? -bats
-        Parent root = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
-        Stage wizardStage = new Stage();
-
-        wizardStage.setScene(new Scene(root, 300, 275));
-        wizardStage.show();
-        wizardStage.setMaximized(true);
-
-    }
-
-    @FXML
-
-
-    public static void myCharacters(){
-        // Sends user to the Characters Screen with previously created characters
     }
 
 }
+
+
+

@@ -9,10 +9,15 @@ Items\Weapon.class
 DiceBag.class
 Items\CoinBag.class
 Items\Inventory.class
+WizardController.class
 Items\InventoryItemFactory.class
 Barbarian.class
+Items\Clothing.class
+Items\Smycken.class
 Fighter.class
-Items\Wearable.class
+Items\Equippable.class
 Race.class
+CCcontroller.class
 Items\Consumable.class
+StartScreenController.class
 Feature.class
