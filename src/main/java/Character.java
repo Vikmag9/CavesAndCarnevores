@@ -1,11 +1,10 @@
 import Items.InventoryItem;
-import Items.Wearable;
+import Items.Clothing;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Character {
-
-    private FileManager fm = new FileManager();
     private String name;
     private Race race;
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
@@ -13,7 +12,8 @@ public class Character {
     private int health;
     private int armorClass;
     private List<InventoryItem> inventory;
-    private List<Wearable> wearables;
+    private List<Clothing> wearables;
+
 
 
     public Character(String name, Race race, Job job, List<Feature> feats, List<InventoryItem> inventory){
@@ -22,9 +22,22 @@ public class Character {
         this.job = job;
         this.feats = feats;
         this.inventory = inventory;
+        this.armorClass = calculateAC();
 
     }
 
+    private int calculateAC() {
+
+        AtomicInteger ac = new AtomicInteger(0);
+        inventory.forEach(item -> {
+            if (item instanceof Clothing) {
+                 if ( ((Clothing) item).isEquipped()) {
+                    ac.set(((Clothing) item).getArmorClass());
+                }
+            }
+        });
+        return ac.get();
+    }
 
 
     // --------------------------------- GETTERS AND SETTERS -------------------------------------
