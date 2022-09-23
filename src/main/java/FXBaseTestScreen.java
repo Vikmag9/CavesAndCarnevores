@@ -16,14 +16,16 @@ public class FXBaseTestScreen extends Application {
 
         Label l = new Label("Här står saker:, JavaFX version:" + javafxVersion + ", Java på version" + javaVersion + ".");
 
+        SceneController sceneController = new SceneController();
 
-        Parent root = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("BaseScreen.fxml"));
         Stage primaryStage = new Stage();
 
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
         primaryStage.setMaximized(true);
 
+        //sceneController.openStartScreen();
 
     }
 
