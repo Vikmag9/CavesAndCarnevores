@@ -22,27 +22,27 @@
             <Image url="@backgroundCC.png" />
          </image>
       </ImageView>
-      <Button layoutX="1168.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="40.0">
+      <Button fx:id="myCharactersHeaderButton" layoutX="1168.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="40.0">
          <effect>
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.topAnchor="40.0">
+      <Button fx:id="createCharacterHeaderButton" layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.topAnchor="40.0">
          <effect>
             <DropShadow />
          </effect>
       </Button>
-      <ImageView fitHeight="171.0" fitWidth="733.0" layoutX="39.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="23.0">
+      <ImageView fx:id="logoImage" fitHeight="171.0" fitWidth="733.0" layoutX="39.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="23.0">
          <image>
             <Image url="@logoAndText.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1186.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="rightArrow" fitHeight="150.0" fitWidth="200.0" layoutX="1186.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@leftarrow.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="leftArrow" fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@rightarrow.png" />
          </image>
