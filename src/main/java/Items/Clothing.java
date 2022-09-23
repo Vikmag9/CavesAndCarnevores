@@ -4,8 +4,8 @@ public class Clothing extends InventoryItem implements Equippable {
     private boolean equipped;
 
     private int armorClass;
-    Clothing(int armorClass, String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight, boolean isMagical) {
-        super(itemType, itemName, itemDescription, itemAmount, itemValue, itemWeight, isMagical);
+    Clothing(int armorClass, String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight, boolean isMagical, String effect) {
+        super(itemType, itemName, itemDescription, itemAmount, itemValue, itemWeight, isMagical, effect);
         this.equipped = false;
         this.armorClass = armorClass;
     }

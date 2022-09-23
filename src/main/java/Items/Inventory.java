@@ -18,6 +18,6 @@ public class Inventory {
         }
 
         public void addItem(){
-
+                this.inventoryItemFactory.createItem();
         }
 }
