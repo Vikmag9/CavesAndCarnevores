@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="644.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="642.0" layoutX="3.0" layoutY="-1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="1235.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="40.0" prefHeight="52.0" prefWidth="616.0" styleClass="welcome_text_elephant" stylesheets="@Font.css" text="Characters" textAlignment="CENTER" AnchorPane.leftAnchor="344.0" AnchorPane.topAnchor="40.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="345.0" layoutY="166.0" prefHeight="107.0" prefWidth="580.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="Here are your previously created characters and their stats. Click on one to expand." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="166.0" />
+      <AnchorPane layoutX="378.0" layoutY="-125.0" prefHeight="114.0" prefWidth="494.0" />
+   </children>
+</AnchorPane>
