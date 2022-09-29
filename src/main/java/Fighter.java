@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class Fighter implements Job{
+public class Fighter extends Job {
 
     private int hitdie;
     private int level;
@@ -14,11 +14,11 @@ public class Fighter implements Job{
     FileManager fm = new FileManager();
 
     public Fighter() throws IOException, ClassNotFoundException {
+        super("Fighter");
         this.jobFeatures = getJob();
         this.hitdie = getHitDie();
         this.proficiencies = getProficiencies();
     }
-    @Override
     public JSONObject getJob() throws IOException, ClassNotFoundException {
         JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject("Fighter");
         Map<String, Object> jobMap = jsonJob.toMap();
