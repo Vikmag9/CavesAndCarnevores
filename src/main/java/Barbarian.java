@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class Barbarian implements Job{
+public class Barbarian extends Job{
     private int hitdie;
     private int level;
     private Map<String, List<String>> proficiencies;
@@ -14,6 +14,7 @@ public class Barbarian implements Job{
 
 
     public Barbarian() throws IOException, ClassNotFoundException {
+        super("Barbarian");
         this.jobFeatures = getJob();
         this.hitdie = getHitDie();
         this.proficiencies = getProficiencies();
@@ -37,12 +38,10 @@ public class Barbarian implements Job{
         return jobFeatures.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
     }
 
-    @Override
     public String getJobDesc() {
         return jobFeatures.getJSONObject("Class Features").getString("content");
     }
 
-    @Override
     public String getJobName() {
         return "Barbarian";
     }

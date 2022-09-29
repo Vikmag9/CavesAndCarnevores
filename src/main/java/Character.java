@@ -1,8 +1,12 @@
 import Items.InventoryItem;
 import Items.Clothing;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static java.util.Collections.emptyList;
 
 public class Character {
     private String name;
@@ -10,9 +14,11 @@ public class Character {
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
     private List<Feature> feats;
     private int health;
+    private int xp;
     private int armorClass;
     private List<InventoryItem> inventory;
     private List<Clothing> wearables;
+    private Map<String, List<String>> proficiencies;
 
 
 
@@ -20,11 +26,16 @@ public class Character {
         this.name = name;
         this.race = race;
         this.job = job;
-        this.feats = feats;
+        this.health = calculateHealth();
+        this.feats = assembleFeats();
         this.inventory = inventory;
         this.armorClass = calculateAC();
 
     }
+
+
+
+
 
     private int calculateAC() {
 
@@ -39,7 +50,15 @@ public class Character {
         return ac.get();
     }
 
+    private int calculateHealth() {
+        return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * this.job.getLevel();
+    }
+    
+    private List<Feature> assembleFeats() {
 
+        //TODO Add features from race and background etc
+        return this.job.getFeatures();
+    }
     // --------------------------------- GETTERS AND SETTERS -------------------------------------
 
     public void setName(String name) {
