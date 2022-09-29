@@ -1,5 +1,7 @@
 StartScreen.class
+Items\InventoryController.class
 FXBaseTestScreen.class
+SceneController.class
 Items\InventoryItem.class
 FileManager.class
 Character.class
@@ -11,8 +13,11 @@ Items\CoinBag.class
 Items\Inventory.class
 Items\InventoryItemFactory.class
 Barbarian.class
+Items\Clothing.class
+Items\Smycken.class
 Fighter.class
-Items\Wearable.class
+Items\Equippable.class
+FxmlHelper.class
 Race.class
 Items\Consumable.class
 Feature.class
