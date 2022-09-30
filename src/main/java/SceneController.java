@@ -15,10 +15,8 @@ public class SceneController {
     @FXML private BorderPane borderPane;
 
     @FXML protected void openStartScreen() {
-        //FxmlHelper fxmlHelper = new FxmlHelper();
-        //Pane view = fxmlHelper.loadFxml("testing");
         try {
-            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("testing.fxml"));
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
@@ -26,9 +24,12 @@ public class SceneController {
     }
 
     @FXML private void openCreateCharacterScreen() {
-        FxmlHelper fxmlHelper = new FxmlHelper();
-        Pane view = fxmlHelper.loadFxml("Wizard");
-        borderPane.setCenter(view);
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
     }
 
     /*-------------FROM Wizard------------
