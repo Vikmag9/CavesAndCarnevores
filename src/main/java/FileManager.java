@@ -10,7 +10,7 @@ import java.io.InputStream;
 
 public class FileManager {
 
-    public InventoryItem inventoryItem = new InventoryItem("", "", "", 0, 0, 0.0, false, "");
+    public InventoryItem inventoryItem = new InventoryItem("", "", "", 0, 0, 0.0, false);
 
     public FileManager(){
     }

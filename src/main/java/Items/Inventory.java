@@ -1,23 +1,36 @@
 package Items;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Inventory {
-        HashMap<String, InventoryItem> inventory;
+        List<InventoryItem> inventory;
         CoinBag coinBag;
-        InventoryItemFactory inventoryItemFactory;
+        InventoryItemCreator inventoryItemCreator;
+        InventoryItem item;
 
 
 
-        Inventory(HashMap<String, InventoryItem> startingItems, int startingCoins) {
+        Inventory(List<InventoryItem> startingItems, int startingCoins) {
                 this.inventory = startingItems;
                 this.coinBag = new CoinBag(startingCoins);
-                this.inventoryItemFactory = new InventoryItemFactory();
+                this.inventoryItemCreator = new InventoryItemCreator();
         }
 
-        public void addItem(){
-                this.inventoryItemFactory.createItem();
+        public void addItem(String type){
+                this.inventoryItemCreator.createItem(type);
+        }
+
+        public void sellItem(int index){
+               item = this.getInventoryItem(index);
+
+        }
+
+        private InventoryItem getInventoryItem(int index){
+                return this.inventory.get(index);
+        }
+
+        private void removeItem(int index){
+                this.inventory.remove(index);
         }
 }
