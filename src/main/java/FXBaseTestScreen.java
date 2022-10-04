@@ -20,8 +20,6 @@ public class FXBaseTestScreen extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("BaseScreen.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Caves and Carnivores");
-        SceneController sceneController = new SceneController();
-        sceneController.openStartScreen(); //this line does not work yet??
 
 
         primaryStage.setScene(new Scene(root, 300, 275));
