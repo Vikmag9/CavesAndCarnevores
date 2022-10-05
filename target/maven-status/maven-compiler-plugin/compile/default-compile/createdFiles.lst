@@ -1,3 +1,5 @@
+StartScreen.class
+Items\InventoryController.class
 FXBaseTestScreen.class
 SceneController.class
 Items\InventoryItem.class

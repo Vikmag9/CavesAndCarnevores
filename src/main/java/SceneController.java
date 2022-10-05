@@ -1,4 +1,6 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -7,22 +9,59 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class SceneController {
+public class SceneController implements Initializable {
     @FXML private BorderPane borderPane;
+    @FXML private Button CreateCharacterHeaderButton;
+    @FXML private Button MyCharactersHeaderButton;
+
+    //General
+    @FXML private AnchorPane basicsPane;
+    @FXML private AnchorPane inventoryPane;
+    @FXML private AnchorPane jobSpecificPane;
+    @FXML private AnchorPane lorePane;
+    @FXML private AnchorPane satsAndSkillsPane;
+    @FXML private AnchorPane weaponsAndArmourPane;
+    @FXML private ImageView rightArrow;
+    @FXML private ImageView leftArrow;
+    @FXML private ImageView logoImage;
+
+    private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
+
+    //Basics AnchorPane
+    @FXML private TextField nameField;
+    private String name;
+    @FXML private ComboBox raceComboBox;
+    @FXML private ComboBox jobComboBox;
+    @FXML private ComboBox backgroundComboBox;
+    @FXML private ComboBox levelComboBox;
+
 
     @FXML protected void openStartScreen() {
-        FxmlHelper fxmlHelper = new FxmlHelper();
-        Pane view = fxmlHelper.loadFxml("StartScreen");
-        borderPane.setCenter(view);
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
     }
 
     @FXML private void openCreateCharacterScreen() {
-        FxmlHelper fxmlHelper = new FxmlHelper();
-        Pane view = fxmlHelper.loadFxml("Wizard");
-        borderPane.setCenter(view);
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        openStartScreen();
     }
 
     /*-------------FROM Wizard------------
