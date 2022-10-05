@@ -48,11 +48,24 @@ public class SceneController implements Initializable {
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
         }
+
     }
 
     @FXML private void openCreateCharacterScreen() {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+        //initializeWizard();
+        rightArrow.setVisible(true);
+        leftArrow.setVisible(true);
+    }
+
+    @FXML private void openCharacterInfoScreen() {
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterInfoScreen.fxml"));
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
@@ -63,32 +76,41 @@ public class SceneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
     }
+/*
+    private void showNextPane() {
+        for (int i = 0; i < AnchorPaneList.size(); i++) {
+            if (AnchorPaneList.get(i).isVisible()) {
+                AnchorPaneList.get(i).setVisible(false);
+                AnchorPaneList.get(i + 1).setVisible(true);
+                break;
+            }
+        }
+    }
+
+    private void showPreviousPane() {
+        for (int i = 0; i < AnchorPaneList.size(); i++) {
+            if (AnchorPaneList.get(i).isVisible()) {
+                AnchorPaneList.get(i).setVisible(false);
+                AnchorPaneList.get(i - 1).setVisible(true);
+                break;
+            }
+        }
+    }
+
+    @FXML
+    public void initializeWizard() {
+        basicsPane.setVisible(true);
+        jobSpecificPane.setVisible(false);
+        satsAndSkillsPane.setVisible(false);
+        weaponsAndArmourPane.setVisible(false);
+        inventoryPane.setVisible(false);
+        lorePane.setVisible(false);
+    }
+
+
+ */
 
     /*-------------FROM Wizard------------
-    //Generall
-    @FXML private AnchorPane basicsPane;
-    @FXML private AnchorPane inventoryPane;
-    @FXML private AnchorPane jobSpecificPane;
-    @FXML private AnchorPane lorePane;
-    @FXML private AnchorPane satsAndSkillsPane;
-    @FXML private AnchorPane weaponsAndArmourPane;
-    @FXML private ImageView rightArrow;
-    @FXML private ImageView leftArrow;
-    @FXML private ImageView logoImage;
-    @FXML private Button createCharacterHeaderButton;
-    @FXML private Button myCharactersHeaderButton;
-
-    private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
-
-    //Basics AnchorPane
-    @FXML private TextField nameField;
-    private String name;
-    @FXML private ComboBox raceComboBox;
-    @FXML private ComboBox jobComboBox;
-    @FXML private ComboBox backgroundComboBox;
-    @FXML private ComboBox levelComboBox;
-
-
 
     private void showNextPane() {
         for (int i = 0; i < AnchorPaneList.size(); i++) {

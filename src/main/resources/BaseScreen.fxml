@@ -18,12 +18,12 @@
          <top>
             <AnchorPane prefHeight="146.0" prefWidth="1526.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="156.0" fitWidth="287.0" layoutX="14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="-6.0">
+                  <ImageView fx:id="logoImage" fitHeight="156.0" fitWidth="287.0" layoutX="14.0" layoutY="-6.0" onMouseClicked="#openStartScreen" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="-6.0">
                      <image>
                         <Image url="@logoAndText.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="CreateCharacterHeaderButton" layoutX="1177.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#openStartScreen" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="46.0">
+                  <Button fx:id="CreateCharacterHeaderButton" layoutX="1177.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#openCharacterInfoScreen" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="My Characters" AnchorPane.topAnchor="46.0">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -39,7 +39,7 @@
          <left>
             <AnchorPane prefHeight="660.0" prefWidth="403.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView disable="true" fitHeight="150.0" fitWidth="200.0" layoutX="148.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fx:id="rightArrow" fitHeight="150.0" fitWidth="200.0" layoutX="148.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@rightarrow.png" />
                      </image>
@@ -50,7 +50,7 @@
          <right>
             <AnchorPane prefHeight="660.0" prefWidth="408.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView disable="true" fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fx:id="leftArrow" fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" visible="false">
                      <image>
                         <Image url="@leftarrow.png" />
                      </image>
