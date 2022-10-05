@@ -1,4 +1,5 @@
 import Items.CoinBag;
+import Items.Inventory;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -6,11 +7,16 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Collections.emptyList;
 import static org.junit.Assert.*;
 
 public class Character_test {
     @Test
     public void createCharacterTest() throws IOException, ClassNotFoundException {
+        Job charJob = new Job("Barbarian");
+        List<Feature> featureList = charJob.getFeatures();
+        Inventory inventory = new Inventory(emptyList(), 0);
+
         Character character = new Character("Gregg", new Race() {
             public String getRaceName() {
                 return "Batman";
@@ -22,11 +28,19 @@ public class Character_test {
                 return null;
             }
         },
-                new Barbarian(),
-                null,
-                null);
+                charJob,
+                featureList,
+                inventory,
+                1);
+
 
         assertEquals(character.getName(), "Gregg");
+        assertEquals(character.getRace().getRaceName(), "Batman");
+        assertEquals(character.getJob().getJobName(), "Barbarian");
+        assertEquals(character.getFeats(), featureList);
+        assertEquals(character.getInventory(), inventory);
+        assertEquals(character.getHealth(), 7);
+        assertEquals(character.getArmorClass(), 0);
 
     }
 
@@ -46,9 +60,10 @@ public class Character_test {
                 return null;
             }
         },
-                new Barbarian(),
+                new Job("Barbarian"),
                 null,
-                null);
+                null,
+                1);
 
         ArrayList<String> barbArmorProf = new ArrayList<>(); // Tests if the armor proficiencies are retrieved correctly
         barbArmorProf.add("Light armor");

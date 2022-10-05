@@ -2,7 +2,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -10,16 +10,13 @@ import static java.util.Collections.emptyList;
 
 public class Job {
     private final String jobName;
+
     private final int hitdie;
-
-
-    private int level;
     private Map proficiencies;
     private List<Feature> features;
     private JSONObject jobContent;
 
     FileManager fm = new FileManager();
-
 
     public Job(String jobName) throws IOException, ClassNotFoundException {
         this.jobName = jobName;
@@ -35,21 +32,18 @@ public class Job {
         JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
         return jsonJob;
     }
-
     public List<Feature> parseFeatures() {
-        List<Feature> features = emptyList();
+        ArrayList<Feature> features = new ArrayList<>();
         JSONObject featureTable = jobContent.getJSONObject("Class Features").getJSONObject("The "+this.jobName).getJSONObject("table");
         JSONArray featureNames = featureTable.getJSONArray("Features");
         JSONArray featureDescs = new JSONArray();
         featureNames.forEach(featureName -> {
             featureDescs.put(jobContent.getJSONObject("Class Features").getString(featureName.toString()));
         });
-
         JSONArray featurePreReqs = featureTable.getJSONArray("Level");
         for (int i = 0; i < featureNames.length(); i++) {
             features.add(new Feature(featureNames.getString(i), featureDescs.getString(i), featurePreReqs.getInt(i)));
         }
-
         return features;
     }
 
@@ -59,7 +53,9 @@ public class Job {
 
 
     public int getHitDie(){
-        return jobContent.getJSONObject("Class Features").getInt("Hit Die");
+        JSONObject classFeats = jobContent.getJSONObject("Class Features");
+        int hitDie = classFeats.getInt("Hit Die");
+        return hitDie;
     }
 
     public Map getProficiencies() {
@@ -79,7 +75,15 @@ public class Job {
         return jobContent.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
     }
 
-    public int getLevel() {
-        return level;
+    public void setProficiencies(Map proficiencies) {
+        this.proficiencies = proficiencies;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
+
+    public void setJobContent(JSONObject jobContent) {
+        this.jobContent = jobContent;
     }
 }
