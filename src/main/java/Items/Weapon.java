@@ -3,8 +3,8 @@ package Items;
 public class Weapon extends InventoryItem implements Equippable{
     boolean equipped;
     String damage;
-    public Weapon(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight, boolean isMagical, String damage) {
-        super(itemType, itemName, itemDescription, itemAmount, itemValue, itemWeight, isMagical);
+    public Weapon(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical, String damage) {
+        super(itemType, itemName, itemDescription, itemValue, itemWeight, isMagical);
 
         this.equipped = false;
         this.damage = damage;

@@ -1,4 +1,6 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -7,26 +9,17 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class SceneController {
+public class SceneController implements Initializable {
     @FXML private BorderPane borderPane;
+    @FXML private Button CreateCharacterHeaderButton;
+    @FXML private Button MyCharactersHeaderButton;
 
-    @FXML protected void openStartScreen() {
-        FxmlHelper fxmlHelper = new FxmlHelper();
-        Pane view = fxmlHelper.loadFxml("StartScreen");
-        borderPane.setCenter(view);
-    }
-
-    @FXML private void openCreateCharacterScreen() {
-        FxmlHelper fxmlHelper = new FxmlHelper();
-        Pane view = fxmlHelper.loadFxml("Wizard");
-        borderPane.setCenter(view);
-    }
-
-    /*-------------FROM Wizard------------
-    //Generall
+    //General
     @FXML private AnchorPane basicsPane;
     @FXML private AnchorPane inventoryPane;
     @FXML private AnchorPane jobSpecificPane;
@@ -36,8 +29,6 @@ public class SceneController {
     @FXML private ImageView rightArrow;
     @FXML private ImageView leftArrow;
     @FXML private ImageView logoImage;
-    @FXML private Button createCharacterHeaderButton;
-    @FXML private Button myCharactersHeaderButton;
 
     private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
 
@@ -50,6 +41,76 @@ public class SceneController {
     @FXML private ComboBox levelComboBox;
 
 
+    @FXML protected void openStartScreen() {
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+
+    }
+
+    @FXML private void openCreateCharacterScreen() {
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+        //initializeWizard();
+        rightArrow.setVisible(true);
+        leftArrow.setVisible(true);
+    }
+
+    @FXML private void openCharacterInfoScreen() {
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterInfoScreen.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        openStartScreen();
+    }
+/*
+    private void showNextPane() {
+        for (int i = 0; i < AnchorPaneList.size(); i++) {
+            if (AnchorPaneList.get(i).isVisible()) {
+                AnchorPaneList.get(i).setVisible(false);
+                AnchorPaneList.get(i + 1).setVisible(true);
+                break;
+            }
+        }
+    }
+
+    private void showPreviousPane() {
+        for (int i = 0; i < AnchorPaneList.size(); i++) {
+            if (AnchorPaneList.get(i).isVisible()) {
+                AnchorPaneList.get(i).setVisible(false);
+                AnchorPaneList.get(i - 1).setVisible(true);
+                break;
+            }
+        }
+    }
+
+    @FXML
+    public void initializeWizard() {
+        basicsPane.setVisible(true);
+        jobSpecificPane.setVisible(false);
+        satsAndSkillsPane.setVisible(false);
+        weaponsAndArmourPane.setVisible(false);
+        inventoryPane.setVisible(false);
+        lorePane.setVisible(false);
+    }
+
+
+ */
+
+    /*-------------FROM Wizard------------
 
     private void showNextPane() {
         for (int i = 0; i < AnchorPaneList.size(); i++) {

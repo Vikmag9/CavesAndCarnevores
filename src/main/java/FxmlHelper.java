@@ -9,13 +9,15 @@ public class FxmlHelper {
 
     public Pane loadFxml(String filename) {
         try {
-            URL fileUrl = SceneController.class.getResource(filename + ".fxml");
+            URL fileUrl = SceneController.class.getResource("testing.fxml" );
+            //"C:" + "\u00c5" + "Users" + "\u00c5" + "arash" + "\u00c5" +"IdeaProjects" +"\u00c5" + "CavesAndCarnevores" +"\u00c5" +"src" +"\u00c5"+ "main" + "\u00c5" + "resources" + "\u00c5
             if (fileUrl == null) {
                 throw new java.io.FileNotFoundException("FXML file can't be found");
             }
-            view = new FXMLLoader().load(fileUrl);
+            new FXMLLoader();
+            view = FXMLLoader.load(fileUrl);
         } catch (IOException e) {
-            System.out.println("Error loading FXML file: " + filename);
+            System.out.println("Error loading FXML file: " + filename + ". Error: " + e);
         }
         return view;
     }
