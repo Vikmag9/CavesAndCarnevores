@@ -33,4 +33,8 @@ public class Inventory {
         private void removeItem(int index){
                 this.inventory.remove(index);
         }
+
+        public List<InventoryItem> getInventory(){
+                return this.inventory;
+        }
 }

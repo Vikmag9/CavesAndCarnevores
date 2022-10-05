@@ -37,12 +37,11 @@ public class Character {
 
 
     private int calculateAC() {
-
         AtomicInteger ac = new AtomicInteger(0);
-        inventory.forEach(item -> {
-            if (item instanceof Armor) {
-                 if ( ((Clothing) item).isEquipped()) {
-                    ac.set(((Clothing) item).getArmorClass());
+        this.inventory.getInventory().forEach(item -> {
+            if (item instanceof Armour) {
+                 if ( ((Armour) item).isEquipped()) {
+                    ac.set(((Armour) item).getArmorClass());
                 }
             }
         });

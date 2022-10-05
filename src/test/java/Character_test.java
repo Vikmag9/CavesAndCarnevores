@@ -1,5 +1,7 @@
+import Items.Armour;
 import Items.CoinBag;
 import Items.Inventory;
+import Items.InventoryItem;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -15,7 +17,9 @@ public class Character_test {
     public void createCharacterTest() throws IOException, ClassNotFoundException {
         Job charJob = new Job("Barbarian");
         List<Feature> featureList = charJob.getFeatures();
-        Inventory inventory = new Inventory(emptyList(), 0);
+        List<InventoryItem> inventoryList = new ArrayList<>();
+        inventoryList.add(new Armour(12, "Armor", "Cheesetplate", "A cheese-splate", 15, 10.0, true));
+        Inventory inventory = new Inventory(inventoryList,0);
 
         Character character = new Character("Gregg", new Race() {
             public String getRaceName() {
