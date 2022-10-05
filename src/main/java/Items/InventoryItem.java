@@ -16,7 +16,7 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     private String effect;
 
-    public InventoryItem(String itemType, String itemName, String itemDescription, int itemAmount, int itemValue, Double itemWeight, boolean isMagical) {
+    public InventoryItem(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical) {
         this.itemType = itemType;
         this.itemAmount = itemAmount;
         this.itemName = itemName;
