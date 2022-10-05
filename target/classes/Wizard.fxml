@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,23 +14,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="663.0" prefWidth="1037.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="733.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard">
    <children>
-      <ImageView fx:id="rightArrow" fitHeight="150.0" fitWidth="200.0" layoutX="903.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@leftarrow.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="leftArrow" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@rightarrow.png" />
-         </image>
-      </ImageView>
-      <StackPane layoutX="142.0" layoutY="7.0" prefHeight="635.0" prefWidth="739.0">
+      <StackPane layoutX="7.0" prefHeight="646.0" prefWidth="720.0">
          <children>
-            <AnchorPane fx:id="basicsPane" prefHeight="638.0" prefWidth="698.0">
+            <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="710.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="6.0" layoutY="2.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="642.0" layoutX="-8.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="733.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
                   <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
                   <Circle fill="#e4e4e4" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
@@ -55,7 +46,7 @@
                   <ComboBox editable="true" layoutX="370.0" layoutY="458.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Level" styleClass="Text_enter" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="satsAndSkillsPane" prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="satsAndSkillsPane" prefHeight="646.0" prefWidth="723.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -167,7 +158,7 @@
                   <TextField layoutX="339.0" layoutY="372.0" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="jobSpecificPane" prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="jobSpecificPane" prefHeight="646.0" prefWidth="710.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -180,7 +171,7 @@
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Class Specific" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="weaponsAndArmourPane" prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="weaponsAndArmourPane" prefHeight="646.0" prefWidth="702.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -205,7 +196,7 @@
                   <ComboBox layoutX="358.0" layoutY="363.0" prefHeight="37.0" prefWidth="228.0" promptText="Choose Weapon" styleClass="Text_enter" stylesheets="@Font.css" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="inventoryPane" prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="inventoryPane" prefHeight="646.0" prefWidth="708.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -230,7 +221,7 @@
                   <TextField layoutX="399.0" layoutY="284.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="lorePane" prefHeight="638.0" prefWidth="698.0" visible="false">
+            <AnchorPane fx:id="lorePane" prefHeight="646.0" prefWidth="713.0" visible="false">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -255,4 +246,7 @@
          </children>
       </StackPane>
    </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" height="161.36" radius="65.56" spread="0.17" width="102.88" />
+   </effect>
 </AnchorPane>

@@ -1,12 +1,9 @@
 import Items.InventoryItem;
-import Items.Clothing;
+import Items.Armour;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import static java.util.Collections.emptyList;
 
 public class Character {
     private String name;
@@ -17,7 +14,7 @@ public class Character {
     private int xp;
     private int armorClass;
     private List<InventoryItem> inventory;
-    private List<Clothing> wearables;
+    private List<Armour> wearables;
     private Map<String, List<String>> proficiencies;
 
 
@@ -41,9 +38,9 @@ public class Character {
 
         AtomicInteger ac = new AtomicInteger(0);
         inventory.forEach(item -> {
-            if (item instanceof Clothing) {
-                 if ( ((Clothing) item).isEquipped()) {
-                    ac.set(((Clothing) item).getArmorClass());
+            if (item instanceof Armour) {
+                 if ( ((Armour) item).isEquipped()) {
+                    ac.set(((Armour) item).getArmorClass());
                 }
             }
         });
