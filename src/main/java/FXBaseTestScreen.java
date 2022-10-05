@@ -36,5 +36,4 @@ public class FXBaseTestScreen extends Application {
         launch();
     }
 
-
 }
