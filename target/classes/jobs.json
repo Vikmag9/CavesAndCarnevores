@@ -24,26 +24,29 @@
       "The Barbarian": {
         "table": {
           "Level": [
-            "1st",
-            "2nd",
-            "3rd",
-            "4th",
-            "5th",
-            "6th",
-            "7th",
-            "8th",
-            "9th",
-            "10th",
-            "11th",
-            "12th",
-            "13th",
-            "14th",
-            "15th",
-            "16th",
-            "17th",
-            "18th",
-            "19th",
-            "20th"
+            1,
+            1,
+            2,
+            2,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
           ],
           "Proficiency Bonus": [
             "+2",
@@ -68,23 +71,26 @@
             "+6"
           ],
           "Features": [
-            "Rage, Unarmored Defense",
-            "Reckless Attack, Danger Sense",
+            "Rage",
+            "Unarmored Defense",
+            "Reckless Attack",
+            "Danger Sense",
             "Primal Path",
             "Ability Score Improvement",
-            "Extra Attack, Fast Movement",
+            "Extra Attack",
+            "Fast Movement",
             "Path feature",
             "Feral Instinct",
             "Ability Score Improvement",
-            "Brutal Critical (1 die)",
+            "Brutal Critical",
             "Path feature",
-            "Relentless",
+            "Relentless Rage",
+            "-",
             "Ability Score Improvement",
-            "Brutal Critical (2 dice)",
             "Path feature",
             "Persistent Rage",
             "Ability Score Improvement",
-            "Brutal Critical (3 dice)",
+            "-",
             "Indomitable Might",
             "Ability Score Improvement",
             "Primal Champion"
@@ -135,65 +141,74 @@
           ]
         }
       },
-      "Rage": {
-        "content": [
-          "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.",
-          "While raging, you gain the following benefits if you aren’t wearing heavy armor:",
-          [
-            "You have advantage on Strength checks and Strength saving throws.",
-            "When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.",
-            "You have resistance to bludgeoning, piercing, and slashing damage."
-          ],
-          "If you are able to cast spells, you can’t cast them or concentrate on them while raging.",
-          "Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.",
-          "Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again."
-        ]
-      },
+      "Rage": "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren’t wearing heavy armor: You have advantage on Strength checks and Strength saving throws. When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table. You have resistance to bludgeoning, piercing, and slashing damage. If you are able to cast spells, you can’t cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.",
       "Unarmored Defense": "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
       "Reckless Attack": "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
-      "Danger Sense": {
-        "content": [
-          "At 2nd level, you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger.",
-          "You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated."
-        ]
-      },
+      "Danger Sense": "At 2nd level, you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated.",
       "Primal Path": "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
-      "Ability Score Improvement": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
+      "Ability Score Improvement": "When you reach 4th, 8th, 12th, 16th and 19th level you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
       "Extra Attack": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
       "Fast Movement": "Starting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.",
-      "Feral Instinct": {
-        "content": [
-          "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
-          "Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
-        ]
-      },
-      "Brutal Critical": {
-        "content": [
-          "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.",
-          "This increases to two additional dice at 13th level and three additional dice at 17th level."
-        ]
-      },
-      "Relentless Rage": {
-        "content": [
-          "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you’re raging and don’t die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
-          "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
-        ]
-      },
+      "Path feature":  "At 6th level, you gain a feature granted by your chosen path. At 10th level, and again at 14th level, you gain another feature granted by your chosen path.",
+      "Feral Instinct": "By 7th level, your instincts are so honed that you have advantage on initiative rolls. Additionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+      "Brutal Critical": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+      "Relentless Rage": "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you’re raging and don’t die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead. Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",
       "Persistent Rage": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
       "Indomitable Might": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
       "Primal Champion": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
-      "Path of the Berserker": {
-        "content": "For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
-        "Frenzy": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).",
-        "Mindless Rage": "Beginning at 6th level, you can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
-        "Intimidating Presence": {
-          "content": [
-            "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
-            "If the creature succeeds on its saving throw, you can’t use this feature on that creature again for 24 hours."
-          ]
+      "-": "",
+      "subtypes": [
+        {
+          "Path of the Berserker": {
+            "content": "For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being.",
+            "Frenzy": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).",
+            "Mindless Rage": "Beginning at 6th level, you can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+            "Intimidating Presence": {
+              "content": [
+                "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
+                "If the creature succeeds on its saving throw, you can’t use this feature on that creature again for 24 hours."
+              ]
+            },
+            "Retaliation": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
+          }
         },
-        "Retaliation": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
-      }
+        {
+          "Path of the Totem Warrior": {
+            "content": "The Path of the Totem Warrior is a path of primal magic, where the spirits of the world infuse you with their power. You gain the ability to cast spells, and you learn to channel the magic of your totem spirit to imbue your weapons with supernatural might.",
+            "Spirit Seeker": "Starting when you choose this path at 3rd level, you can cast the find familiar spell, but only as a ritual. You can’t cast it again until you finish a long rest. When you cast the spell, you can choose to summon a spirit that assumes the form of a raven, a badger, a hawk, a crab, or a wolf (your choice). The familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A spirit familiar can’t attack, but it can take other actions as normal. When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. You can’t have more than one familiar at a time. If you cast this spell again, the effect on you ends, and you can’t summon the same familiar spirit again for 24 hours.",
+            "Totemic Attunement": "Starting at 6th level, you can cast the speak with animals spell as a ritual. You can’t cast this spell again until you finish a long rest.",
+            "Aspect of the Beast": {
+              "content": [
+                "Starting at 10th level, you can cast the beast sense spell once with this trait and regain the ability to do so when you finish a long rest. You can also cast the commune with nature spell once with this trait and regain the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.",
+                "Additionally, you can cast the conjure animals spell once with this trait and regain the ability to do so when you finish a long rest. When you do so, you choose one of the following options for what appears:",
+                "• One beast of challenge rating 2 or lower",
+                "• Two beasts of challenge rating 1 or lower",
+                "• Four beasts of challenge rating 1/2 or lower",
+                "• Eight beasts of challenge rating 1/4 or lower",
+                "• One beast of challenge rating 3 or lower"
+              ]
+            }
+          }
+        },
+        {
+          "Path of the Ancestral Guardian": {
+            "content": "The Path of the Ancestral Guardian is a path of ancestral magic, where the spirits of the world infuse you with their power. You gain the ability to cast spells, and you learn to channel the magic of your ancestors to imbue your weapons with supernatural might.",
+            "Spirit Seeker": "Starting when you choose this path at 3rd level, you can cast the find familiar spell, but only as a ritual. You can’t cast it again until you finish a long rest. When you cast the spell, you can choose to summon a spirit that assumes the form of a raven, a badger, a hawk, a crab, or a wolf (your choice). The familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A spirit familiar can’t attack, but it can take other actions as normal. When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. You can’t have more than one familiar at a time. If you cast this spell again, the effect on you ends, and you can’t summon the same familiar spirit again for 24 hours.",
+            "Totemic Attunement": "Starting at 6th level, you can cast the speak with animals spell as a ritual. You can’t cast this spell again until you finish a long rest.",
+            "Aspect of the Beast": {
+              "content": [
+                "Starting at 10th level, you can cast the beast sense spell once with this trait and regain the ability to do so when you finish a long rest. You can also cast the commune with nature spell once with this trait and regain the ability to do so when you finish a long rest. Wisdom is your spellcasting ability for these spells.",
+                "Additionally, you can cast the conjure animals spell once with this trait and regain the ability to do so when you finish a long rest. When you do so, you choose one of the following options for what appears:",
+                "• One beast of challenge rating 2 or lower",
+                "• Two beasts of challenge rating 1 or lower",
+                "• Four beasts of challenge rating 1/2 or lower",
+                "• Eight beasts of challenge rating 1/4 or lower",
+                "• One beast of challenge rating 3 or lower"
+              ]
+            }
+          }
+        }
+      ]
     }
   },
   "Bard": {
@@ -201,7 +216,6 @@
       "content": "As a bard, you gain the following class features.",
       "Hit Points": 8,
       "Proficiencies": {
-
         "Armor": ["Light armor"],
         "Weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
         "Tools": ["Three musical instruments of your choice"],
@@ -223,26 +237,32 @@
       "The Bard": {
         "table": {
           "Level": [
-            "1st",
-            "2nd",
-            "3rd",
-            "4th",
-            "5th",
-            "6th",
-            "7th",
-            "8th",
-            "9th",
-            "10th",
-            "11th",
-            "12th",
-            "13th",
-            "14th",
-            "15th",
-            "16th",
-            "17th",
-            "18th",
-            "19th",
-            "20th"
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            5,
+            6,
+            6,
+            7,
+            8,
+            9,
+            10,
+            10,
+            11,
+            12,
+            13,
+            14,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
           ],
           "Proficieny Bonus": [
             "+2",
@@ -267,23 +287,29 @@
             "+6"
           ],
           "Features": [
-            "Spellcasting, Bardic Inspiration (d6)",
-            "Jack of All Trades, Song of Rest (d6)",
-            "Bard College, Expertise",
+            "Spellcasting",
+            "Bardic Inspiration",
+            "Jack of All Trades",
+            "Song of Rest",
+            "Bard College",
+            "Expertise",
             "Ability Score Improvement",
-            "Bardic Inspiration (d8), Font of Inspiration",
-            "Countercharm, Bard College Feature",
+            "Font of Inspiration",
+            "Countercharm",
+            "Bard College Feature",
             "-",
             "Ability Score Improvement",
-            "Song of Rest (d8)",
-            "Bardic Inspiration (d10), Expertise, Magical Secrets",
+            "-",
+            "Expertise",
+            "Magical Secrets",
             "-",
             "Ability Score Improvement",
-            "Song of Rest (d10)",
-            "Magical Secrets, Bard College Feature",
-            "Bardic Inspiration (d12)",
+            "-",
+            "Magical Secrets",
+            "Bard College Feature",
+            "-",
             "Ability Score Improvement",
-            "Song of Rest (d12)",
+            "-",
             "Magical Secrets",
             "Ability Score Improvement",
             "Superior Inspiration"
@@ -561,21 +587,11 @@
         "Ritual Casting": "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
         "Spellcasting Focus": "You can use a musical instrument (see chapter 5, “Equip-ment”) as a spellcasting focus for your bard spells."
       },
-      "Bardic Inspiration": {
-        "content": [
-          "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.",
-          "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-          "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.",
-          "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
-        ]
-      },
+      "Bardic Inspiration": "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+      ,
       "Jack of All Trades": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn’t already include your proficiency bonus.",
-      "Song of Rest": {
-        "content": [
-          "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.",
-          "The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
-        ]
-      },
+      "Song of Rest": "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points. The extra hit points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
+        ,
       "Bard College": {
         "content": [
           "At 3rd level, you delve into the advanced techniques of a bard college of your choice: the College of Lore or the College of Valor, both detailed at the end of",

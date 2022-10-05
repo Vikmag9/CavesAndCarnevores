@@ -14,11 +14,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="733.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="733.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
    <children>
       <StackPane layoutX="7.0" prefHeight="646.0" prefWidth="720.0">
          <children>
-            <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="710.0">
+            <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="726.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="642.0" layoutX="-8.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="733.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />

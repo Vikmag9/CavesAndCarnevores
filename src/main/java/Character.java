@@ -16,7 +16,6 @@ public class Character {
     private int level;
     private int armorClass;
     private Inventory inventory;
-    private List<Armour> wearables;
     private Map<String, List<String>> proficiencies;
 
 
@@ -40,13 +39,13 @@ public class Character {
     private int calculateAC() {
 
         AtomicInteger ac = new AtomicInteger(0);
-        /*inventory.forEach(item -> {
-            if (item instanceof Clothing) {
+        inventory.forEach(item -> {
+            if (item instanceof Armor) {
                  if ( ((Clothing) item).isEquipped()) {
                     ac.set(((Clothing) item).getArmorClass());
                 }
             }
-        });*/
+        });
         return ac.get();
     }
 
