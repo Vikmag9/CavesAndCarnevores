@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="723.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="722.0" prefWidth="1243.0" stylesheets="@ModuleTabs.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabBasics" text="Basics">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="166.0" layoutY="211.0" prefHeight="404.0" prefWidth="130.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="407.0" stroke="BLACK" strokeType="INSIDE" width="129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Text layoutX="51.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skills" />
+                              <Circle fx:id="athleticsSkillCheck" fill="WHITE" layoutX="14.0" layoutY="35.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="acrobaticsSkillCheck" fill="WHITE" layoutX="14.0" layoutY="55.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="sleightOfHandSkillCheck" fill="WHITE" layoutX="14.0" layoutY="75.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="stealthSkillCheck" fill="WHITE" layoutX="14.0" layoutY="95.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="arcanaSkillCheck" fill="WHITE" layoutX="14.0" layoutY="115.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="historySkillCheck" fill="WHITE" layoutX="14.0" layoutY="135.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="investigationSkillCheck" fill="WHITE" layoutX="14.0" layoutY="156.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="natureSkillCheck" fill="WHITE" layoutX="14.0" layoutY="176.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="religionSkillCheck" fill="WHITE" layoutX="14.0" layoutY="196.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="animalHandlingSkillCheck" fill="WHITE" layoutX="14.0" layoutY="215.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="insightSkillCheck" fill="WHITE" layoutX="14.0" layoutY="235.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="medicineSkillCheck" fill="WHITE" layoutX="14.0" layoutY="255.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="perceptionSkillCheck" fill="WHITE" layoutX="14.0" layoutY="276.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="survivalSkillCheck" fill="WHITE" layoutX="14.0" layoutY="296.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="deceptionSkillCheck" fill="WHITE" layoutX="14.0" layoutY="317.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="intimidationSkillCheck" fill="WHITE" layoutX="14.0" layoutY="338.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="performanceSkillCheck" fill="WHITE" layoutX="14.0" layoutY="359.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="perception" fill="WHITE" layoutX="14.0" layoutY="380.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Text layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Athletics" />
+                              <Text layoutX="28.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrobatics" />
+                              <Text layoutX="28.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleight of Hand" />
+                              <Text layoutX="28.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stealth" />
+                              <Text layoutX="28.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arcana" />
+                              <Text layoutX="28.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="History" />
+                              <Text layoutX="28.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Investigation" />
+                              <Text layoutX="28.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nature" />
+                              <Text layoutX="28.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Religion" />
+                              <Text layoutX="29.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Handling" />
+                              <Text layoutX="29.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insight" />
+                              <Text layoutX="29.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine" />
+                              <Text layoutX="29.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perception" />
+                              <Text layoutX="29.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Survival" />
+                              <Text layoutX="29.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deception" />
+                              <Text layoutX="28.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intimidation" />
+                              <Text layoutX="28.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Performance" />
+                              <Text layoutX="28.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Persuasion" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="166.0" layoutY="24.0" prefHeight="154.0" prefWidth="127.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="163.0" stroke="BLACK" strokeType="INSIDE" width="129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Text layoutX="35.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spell Saves" AnchorPane.bottomAnchor="141.8" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="36.199609374999994" AnchorPane.topAnchor="6.0" />
+                              <Circle fill="WHITE" layoutX="14.0" layoutY="40.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="WHITE" layoutX="14.0" layoutY="61.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="WHITE" layoutX="14.0" layoutY="82.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="WHITE" layoutX="14.0" layoutY="103.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="WHITE" layoutX="14.0" layoutY="125.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                           </children>
+                        </AnchorPane>
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#9bb193" height="623.0" layoutX="32.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="50.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="47.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="47.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="339.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="47.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="451.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="47.0" layoutY="555.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                        <Text fx:id="textPtsDexterity" layoutX="58.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text fx:id="textPtsStrength" layoutX="58.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text fx:id="textPtsConstitution" layoutX="58.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text fx:id="textPtsWisdom" layoutX="58.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text fx:id="textPtsIntelligence" layoutX="58.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text fx:id="textPtsCharisma" layoutX="59.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" wrappingWidth="47.7366943359375" />
+                        <Text layoutX="59.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Strength" />
+                        <Text layoutX="59.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dexterity" />
+                        <Text layoutX="50.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Constitution" />
+                        <Text layoutX="60.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wisdom" />
+                        <Text layoutX="52.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intelligence" />
+                        <Text layoutX="57.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charisma" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="203.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="297.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="395.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="507.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="68.0" layoutY="611.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="400.0" layoutX="328.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="206.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="176.0" layoutX="329.0" layoutY="447.0" stroke="BLACK" strokeType="INSIDE" width="204.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="282.0" layoutX="563.0" layoutY="398.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="658.0" layoutX="887.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="342.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="305.0" layoutX="563.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="167.0" />
+                        <Text layoutX="340.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proficiencies" />
+                        <Text layoutX="340.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Languages" />
+                        <Text layoutX="573.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spells" />
+                        <Text layoutX="899.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes" />
+                        <TextArea editable="false" layoutX="899.0" layoutY="50.0" prefHeight="614.0" prefWidth="318.0" />
+                        <Text layoutX="346.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <ScrollPane layoutX="573.0" layoutY="429.0" prefHeight="241.0" prefWidth="274.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="270.0" />
+                          </content>
+                        </ScrollPane>
+                        <Accordion layoutX="332.0" layoutY="67.0">
+                          <panes>
+                            <TitledPane animated="false" text="untitled 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 3">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabCombat" text="Combat">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="tabSpells" text="Spells">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="tabLoreNotes" text="Lore &amp; Notes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="tabInventory" text="Inventory">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
