@@ -1,3 +1,4 @@
+import Items.Inventory;
 import Items.InventoryItem;
 import Items.Clothing;
 
@@ -15,17 +16,22 @@ public class Character {
     private List<Feature> feats;
     private int health;
     private int xp;
+    private int level;
+
+
+
     private int armorClass;
-    private List<InventoryItem> inventory;
+    private Inventory inventory;
     private List<Clothing> wearables;
     private Map<String, List<String>> proficiencies;
 
 
 
-    public Character(String name, Race race, Job job, List<Feature> feats, List<InventoryItem> inventory){
+    public Character(String name, Race race, Job job, List<Feature> feats, Inventory inventory, int level){
         this.name = name;
         this.race = race;
         this.job = job;
+        this.level = level;
         this.health = calculateHealth();
         this.feats = assembleFeats();
         this.inventory = inventory;
@@ -40,18 +46,18 @@ public class Character {
     private int calculateAC() {
 
         AtomicInteger ac = new AtomicInteger(0);
-        inventory.forEach(item -> {
+        /*inventory.forEach(item -> {
             if (item instanceof Clothing) {
                  if ( ((Clothing) item).isEquipped()) {
                     ac.set(((Clothing) item).getArmorClass());
                 }
             }
-        });
+        });*/
         return ac.get();
     }
 
     private int calculateHealth() {
-        return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * this.job.getLevel();
+        return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * getLevel();
     }
     
     private List<Feature> assembleFeats() {
@@ -85,7 +91,7 @@ public class Character {
         this.armorClass = armorClass;
     }
 
-    public void setInventory(List<InventoryItem> inventory) {
+    public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
 
@@ -113,9 +119,24 @@ public class Character {
         return armorClass;
     }
 
-    public List<InventoryItem> getInventory() {
+    public Inventory getInventory() {
         return inventory;
     }
 
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 
 }

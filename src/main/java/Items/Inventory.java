@@ -11,7 +11,7 @@ public class Inventory {
 
 
 
-        Inventory(List<InventoryItem> startingItems, int startingCoins) {
+        public Inventory(List<InventoryItem> startingItems, int startingCoins) {
                 this.inventory = startingItems;
                 this.coinBag = new CoinBag(startingCoins);
                 this.inventoryItemCreator = new InventoryItemCreator();
