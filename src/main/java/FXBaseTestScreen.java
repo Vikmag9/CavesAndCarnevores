@@ -20,6 +20,8 @@ public class FXBaseTestScreen extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("BaseScreen.fxml"));
         Stage primaryStage = new Stage();
+        primaryStage.setTitle("Caves and Carnivores");
+
 
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
