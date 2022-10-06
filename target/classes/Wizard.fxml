@@ -17,10 +17,74 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="836.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneController">
    <children>
-      <Button layoutX="7.0" layoutY="563.0" mnemonicParsing="false" onAction="#previousPane" text="&lt;&lt;" />
-      <Button layoutX="795.0" layoutY="563.0" mnemonicParsing="false" onAction="#nextPane" text="&gt;&gt;" />
       <StackPane layoutX="58.0" prefHeight="646.0" prefWidth="720.0">
          <children>
+            <AnchorPane fx:id="lorePane" prefHeight="646.0" prefWidth="713.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Lore" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="116.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="170.0" layoutY="143.0" styleClass="Text_enter" stylesheets="@Font.css" text="Earlier life" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="396.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="166.0" layoutY="416.0" styleClass="Text_enter" stylesheets="@Font.css" text="Core memories" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="254.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="171.0" layoutY="276.0" styleClass="Text_enter" stylesheets="@Font.css" text="Organisations" />
+                  <TextArea layoutX="310.0" layoutY="128.0" prefHeight="91.0" prefWidth="268.0" />
+                  <TextArea layoutX="310.0" layoutY="265.0" prefHeight="91.0" prefWidth="268.0" />
+                  <TextArea layoutX="310.0" layoutY="408.0" prefHeight="91.0" prefWidth="268.0" />
+                  <Button layoutX="73.0" layoutY="562.0" mnemonicParsing="false" onAction="#toInventoryPane" text="&lt;&lt;" />
+                  <Button layoutX="633.0" layoutY="563.0" mnemonicParsing="false" text="Finish" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="inventoryPane" prefHeight="646.0" prefWidth="708.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="27.0" styleClass="Header_font" stylesheets="@Font.css" text="Items" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="116.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Label layoutX="180.0" layoutY="137.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="273.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+                  <TextField layoutX="399.0" layoutY="130.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
+                  <ComboBox layoutX="254.0" layoutY="136.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
+                  <Label layoutX="180.0" layoutY="215.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
+                  <Label layoutX="180.0" layoutY="291.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
+                  <ComboBox layoutX="254.0" layoutY="214.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
+                  <ComboBox layoutX="254.0" layoutY="290.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
+                  <TextField layoutX="399.0" layoutY="207.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
+                  <TextField layoutX="399.0" layoutY="284.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
+                  <Button layoutX="633.0" layoutY="563.0" mnemonicParsing="false" onAction="#toLorePane" text="&gt;&gt;" />
+                  <Button layoutX="77.0" layoutY="563.0" mnemonicParsing="false" onAction="#toWeaponsAndArmourPane" text="&lt;&lt;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="jobSpecificPane" prefHeight="646.0" prefWidth="710.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
+                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Class Specific" />
+                  <Button layoutX="630.0" layoutY="563.0" mnemonicParsing="false" onAction="#toWeaponsAndArmourPane" text="&gt;&gt;" />
+                  <Button layoutX="70.0" layoutY="563.0" mnemonicParsing="false" onAction="#toStatsAndSkillPane" text="&lt;&lt;" />
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="satsAndSkillsPane" prefHeight="646.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
@@ -131,22 +195,11 @@
                   <TextField layoutX="288.0" layoutY="282.0" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
                   <TextField layoutX="382.0" layoutY="282.0" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
                   <TextField layoutX="339.0" layoutY="372.0" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
+                  <Button layoutX="649.0" layoutY="570.0" mnemonicParsing="false" onAction="#toJobSpecificPane" text="&gt;&gt;" />
+                  <Button layoutX="59.0" layoutY="570.0" mnemonicParsing="false" onAction="#toBasicsPane" text="&lt;&lt;" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="jobSpecificPane" prefHeight="646.0" prefWidth="710.0" style="-fx-background-color: #FFFFFF;">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
-                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
-                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Class Specific" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="weaponsAndArmourPane" prefHeight="646.0" prefWidth="702.0" style="-fx-background-color: #FFFFFF;" visible="false">
+            <AnchorPane fx:id="weaponsAndArmourPane" prefHeight="646.0" prefWidth="702.0" style="-fx-background-color: #FFFFFF;">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
                   <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -169,53 +222,8 @@
                   <ComboBox layoutX="358.0" layoutY="208.0" prefHeight="37.0" prefWidth="228.0" promptText="Choose Shield" styleClass="Text_enter" stylesheets="@Font.css" />
                   <ComboBox layoutX="358.0" layoutY="285.0" prefHeight="37.0" prefWidth="228.0" promptText="Choose Weapon" styleClass="Text_enter" stylesheets="@Font.css" />
                   <ComboBox layoutX="358.0" layoutY="363.0" prefHeight="37.0" prefWidth="228.0" promptText="Choose Weapon" styleClass="Text_enter" stylesheets="@Font.css" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="inventoryPane" prefHeight="646.0" prefWidth="708.0" style="-fx-background-color: #FFFFFF;" visible="false">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
-                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
-                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#e4e4e4" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="27.0" styleClass="Header_font" stylesheets="@Font.css" text="Items" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="116.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <Label layoutX="180.0" layoutY="137.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="132.0" layoutY="273.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <TextField layoutX="399.0" layoutY="130.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
-                  <ComboBox layoutX="254.0" layoutY="136.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
-                  <Label layoutX="180.0" layoutY="215.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
-                  <Label layoutX="180.0" layoutY="291.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item" />
-                  <ComboBox layoutX="254.0" layoutY="214.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
-                  <ComboBox layoutX="254.0" layoutY="290.0" prefHeight="26.0" prefWidth="130.0" promptText="Choose type" styleClass="skills_font" stylesheets="@Font.css" />
-                  <TextField layoutX="399.0" layoutY="207.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
-                  <TextField layoutX="399.0" layoutY="284.0" prefHeight="37.0" prefWidth="169.0" styleClass="Text_enter" stylesheets="@Font.css" text="Item description" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="lorePane" prefHeight="646.0" prefWidth="713.0" style="-fx-background-color: #FFFFFF;">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
-                  <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
-                  <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Circle fill="#82b170" layoutX="557.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="335.0" layoutY="23.0" styleClass="Header_font" stylesheets="@Font.css" text="Lore" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="116.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <Label layoutX="170.0" layoutY="143.0" styleClass="Text_enter" stylesheets="@Font.css" text="Earlier life" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="396.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <Label layoutX="166.0" layoutY="416.0" styleClass="Text_enter" stylesheets="@Font.css" text="Core memories" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="115.0" layoutX="132.0" layoutY="254.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-                  <Label layoutX="171.0" layoutY="276.0" styleClass="Text_enter" stylesheets="@Font.css" text="Organisations" />
-                  <TextArea layoutX="310.0" layoutY="128.0" prefHeight="91.0" prefWidth="268.0" />
-                  <TextArea layoutX="310.0" layoutY="265.0" prefHeight="91.0" prefWidth="268.0" />
-                  <TextArea layoutX="310.0" layoutY="408.0" prefHeight="91.0" prefWidth="268.0" />
+                  <Button layoutX="628.0" layoutY="563.0" mnemonicParsing="false" onAction="#toInventoryPane" text="&gt;&gt;" />
+                  <Button layoutX="88.0" layoutY="562.0" mnemonicParsing="false" onAction="#toJobSpecificPane" text="&lt;&lt;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF;">
@@ -241,6 +249,7 @@
                   <ComboBox fx:id="raceComboBox" editable="true" layoutX="370.0" layoutY="207.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Race" styleClass="Text_enter" stylesheets="@Font.css" />
                   <ComboBox editable="true" layoutX="370.0" layoutY="291.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Class" styleClass="Text_enter" stylesheets="@Font.css" />
                   <ComboBox editable="true" layoutX="370.0" layoutY="376.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Background" styleClass="Text_enter" stylesheets="@Font.css" />
+                  <Button layoutX="623.0" layoutY="562.0" mnemonicParsing="false" onAction="#toStatsAndSkillPane" text="&gt;&gt;" />
                </children>
             </AnchorPane>
          </children>

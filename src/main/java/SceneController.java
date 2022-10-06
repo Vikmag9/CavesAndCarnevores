@@ -45,6 +45,7 @@ public class SceneController implements Initializable {
     @FXML private ComboBox levelComboBox;
 
 
+    //navigational methods to switch fxml files in the center part of the border pane
     @FXML protected void openStartScreen() {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
@@ -73,18 +74,40 @@ public class SceneController implements Initializable {
         }
     }
 
+    //opens the start screen on launch
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
     }
 
-    @FXML private void nextPane() {
+
+
+    //navigation methods for the wizard within the stackpane
+    @FXML private void toBasicsPane() {
+        basicsPane.toFront();
+    }
+
+    @FXML private void toStatsAndSkillPane() {
         satsAndSkillsPane.toFront();
     }
 
-    @FXML private void previousPane() {
-        basicsPane.toFront();
+    @FXML private void toJobSpecificPane() {
+        jobSpecificPane.toFront();
     }
+
+    @FXML private void toWeaponsAndArmourPane() {
+        weaponsAndArmourPane.toFront();
+    }
+
+    @FXML private void toInventoryPane() {
+        inventoryPane.toFront();
+    }
+
+    @FXML private void toLorePane() {
+        lorePane.toFront();
+    }
+
+
 
 
 /*
