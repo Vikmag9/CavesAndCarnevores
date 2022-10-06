@@ -1,6 +1,8 @@
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -8,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -29,6 +32,7 @@ public class SceneController implements Initializable {
     @FXML private ImageView rightArrow;
     @FXML private ImageView leftArrow;
     @FXML private ImageView logoImage;
+    @FXML private StackPane stackPane;
 
     private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
 
@@ -48,7 +52,6 @@ public class SceneController implements Initializable {
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
         }
-
     }
 
     @FXML private void openCreateCharacterScreen() {
@@ -58,9 +61,7 @@ public class SceneController implements Initializable {
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
         }
-        //initializeWizard();
-        rightArrow.setVisible(true);
-        leftArrow.setVisible(true);
+
     }
 
     @FXML private void openCharacterInfoScreen() {
@@ -76,6 +77,16 @@ public class SceneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
     }
+
+    @FXML private void nextPane() {
+        satsAndSkillsPane.toFront();
+    }
+
+    @FXML private void previousPane() {
+        basicsPane.toFront();
+    }
+
+
 /*
     private void showNextPane() {
         for (int i = 0; i < AnchorPaneList.size(); i++) {
