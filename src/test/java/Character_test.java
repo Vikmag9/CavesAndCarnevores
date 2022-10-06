@@ -18,7 +18,9 @@ public class Character_test {
         Job charJob = new Job("Barbarian");
         List<Feature> featureList = charJob.getFeatures();
         List<InventoryItem> inventoryList = new ArrayList<>();
-        inventoryList.add(new Armour(12, "Armor", "Cheesetplate", "A cheese-splate", 15, 10.0, true));
+        Armour cheeseArmor = new Armour(12, "Armor", "Cheese-tplate", "A cheese-splate", 15, 10.0, true);
+        cheeseArmor.equip();
+        inventoryList.add(cheeseArmor);
         Inventory inventory = new Inventory(inventoryList,0);
 
         Character character = new Character("Gregg", new Race() {
@@ -44,8 +46,82 @@ public class Character_test {
         assertEquals(character.getFeats(), featureList);
         assertEquals(character.getInventory(), inventory);
         assertEquals(character.getHealth(), 7);
-        assertEquals(character.getArmorClass(), 0);
+        assertEquals(character.getArmorClass(), 12);
 
+    }
+
+    @Test
+    public void createBardTest() throws IOException, ClassNotFoundException {
+        Job charJob = new Job("Bard");
+        List<Feature> featureList = charJob.getFeatures();
+        List<InventoryItem> inventoryList = new ArrayList<>();
+        Armour cheeseArmor = new Armour(12, "Armor", "Cheese-tplate", "A cheese-splate", 15, 10.0, true);
+        cheeseArmor.equip();
+        inventoryList.add(cheeseArmor);
+        Inventory inventory = new Inventory(inventoryList,0);
+
+        Character character = new Character("Gregg", new Race() {
+            public String getRaceName() {
+                return "Batman";
+            }
+            public int getMovementSpeed() {
+                return 30;
+            }
+            public List<String> getRaceActions() {
+                return null;
+            }
+        },
+                charJob,
+                featureList,
+                inventory,
+                1);
+
+
+        assertEquals(character.getName(), "Gregg");
+        assertEquals(character.getRace().getRaceName(), "Batman");
+        assertEquals(character.getJob().getJobName(), "Bard");
+        assertEquals(character.getFeats(), featureList);
+        assertEquals(character.getInventory(), inventory);
+        assertEquals(character.getHealth(), 5);
+        assertEquals(character.getArmorClass(), 12);
+
+    }
+
+    @Test
+    public void createClericTest() throws IOException, ClassNotFoundException {
+        Job charJob = new Job("Cleric");
+        List<Feature> featureList = charJob.getFeatures();
+        List<InventoryItem> inventoryList = new ArrayList<>();
+        Armour cheeseArmor = new Armour(12, "Armor", "Cheese-tplate", "A cheese-splate", 15, 10.0, true);
+        cheeseArmor.equip();
+        inventoryList.add(cheeseArmor);
+        Inventory inventory = new Inventory(inventoryList, 0);
+        Character character = new Character("Gregg", new Race() {
+            public String getRaceName() {
+                return "Batman";
+            }
+
+            public int getMovementSpeed() {
+                return 30;
+            }
+
+            public List<String> getRaceActions() {
+                return null;
+            }
+        },
+                charJob,
+                featureList,
+                inventory,
+                1);
+
+
+        assertEquals(character.getName(), "Gregg");
+        assertEquals(character.getRace().getRaceName(), "Batman");
+        assertEquals(character.getJob().getJobName(), "Cleric");
+        assertEquals(character.getFeats(), featureList);
+        assertEquals(character.getInventory(), inventory);
+        assertEquals(character.getHealth(), 5);
+        assertEquals(character.getArmorClass(), 12);
     }
 
 
