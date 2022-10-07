@@ -115,6 +115,7 @@ public class SceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
+        prepareComboBoxes();
     }
 
 
@@ -145,12 +146,11 @@ public class SceneController implements Initializable {
     }
 
 
-    protected void prepareComboBoxes() throws IOException, ClassNotFoundException {
-        List<String> listOfJobs= Job.getAllJobs();
+    protected void prepareComboBoxes(){
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
 
-        jobComboBox.getItems().addAll(listOfJobs);
+        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
         jobComboBox.getSelectionModel().selectFirst();
 
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
