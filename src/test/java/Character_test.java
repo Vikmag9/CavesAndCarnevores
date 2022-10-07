@@ -235,6 +235,45 @@ public class Character_test {
         assertEquals(character.getArmorClass(), 12);
     }
 
+    @Test
+    public void createPaladinTest() throws IOException, ClassNotFoundException {
+        Job charJob = new Job("Paladin");
+        List<Feature> featureList = charJob.getFeatures();
+        List<InventoryItem> inventoryList = new ArrayList<>();
+        Armour cheeseArmor = new Armour(12, "Armor", "Cheese-tplate", "A cheese-splate", 15, 10.0, true);
+        cheeseArmor.equip();
+        inventoryList.add(cheeseArmor);
+        Inventory inventory = new Inventory(inventoryList, 0);
+        Character character = new Character("Gregg", new Race() {
+            public String getRaceName() {
+                return "Batman";
+            }
+
+            public int getMovementSpeed() {
+                return 30;
+            }
+
+            public List<String> getRaceActions() {
+                return null;
+            }
+        },
+                charJob,
+                featureList,
+                inventory,
+                1);
+
+
+        assertEquals(character.getName(), "Gregg");
+        assertEquals(character.getRace().getRaceName(), "Batman");
+        assertEquals(character.getJob().getJobName(), "Paladin");
+        assertEquals(character.getFeats(), featureList);
+        assertEquals(character.getInventory(), inventory);
+        assertEquals(character.getHealth(), 6);
+        assertEquals(character.getArmorClass(), 12);
+    }
+
+
+
 
     @Test
     public void testBarbarianParsing() throws IOException, ClassNotFoundException {

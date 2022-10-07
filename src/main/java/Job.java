@@ -24,6 +24,7 @@ public class Job {
         this.features = parseFeatures();
         this.hitdie = getHitDie();
         this.proficiencies = getProficiencies();
+        getAllJobs();
     }
 
 
@@ -45,6 +46,15 @@ public class Job {
             features.add(new Feature(featureNames.getString(i), featureDescs.getString(i), featurePreReqs.getInt(i)));
         }
         return features;
+    }
+
+    public List<String> getAllJobs() throws IOException, ClassNotFoundException {
+        JSONObject jobs = fm.readFile("jobs.json");
+        List<String> jobNames = new ArrayList<>();
+        jobs.keySet().forEach(jobName -> {
+            jobNames.add(jobName);
+        });
+        return jobNames;
     }
 
     public List<Feature> getFeatures() {
