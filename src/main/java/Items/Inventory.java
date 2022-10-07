@@ -11,7 +11,7 @@ public class Inventory {
 
 
 
-        Inventory(List<InventoryItem> startingItems, int startingCoins) {
+        public Inventory(List<InventoryItem> startingItems, int startingCoins) {
                 this.inventory = startingItems;
                 this.coinBag = new CoinBag(startingCoins);
                 this.inventoryItemCreator = new InventoryItemCreator();
@@ -32,5 +32,9 @@ public class Inventory {
 
         private void removeItem(int index){
                 this.inventory.remove(index);
+        }
+
+        public List<InventoryItem> getInventory(){
+                return this.inventory;
         }
 }
