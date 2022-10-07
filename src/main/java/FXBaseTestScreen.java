@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class FXBaseTestScreen extends Application {
 
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, ClassNotFoundException {
         String javaVersion = System.getProperty("java.version");
         String javafxVersion = System.getProperty("javafx.version");
 
@@ -26,6 +26,8 @@ public class FXBaseTestScreen extends Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
         primaryStage.setMaximized(true);
+        //sceneController.prepareComboBoxes();
+
 
         //sceneController.openStartScreen();
 

@@ -24,7 +24,6 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         this.itemDescription = itemDescription;
         this.itemWeight = itemWeight;
         this.isMagical = isMagical;
-        this.effect = effect;
 
     }
 
