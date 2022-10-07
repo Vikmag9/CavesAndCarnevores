@@ -13,6 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
@@ -91,7 +92,7 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML private void openCreateCharacterScreen() {
+    @FXML private void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
             borderPane.setCenter(startScreen);
@@ -144,11 +145,12 @@ public class SceneController implements Initializable {
     }
 
 
-    private void prepareComboBoxes() {
+    protected void prepareComboBoxes() throws IOException, ClassNotFoundException {
+        List<String> listOfJobs= Job.getAllJobs();
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
 
-        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+        jobComboBox.getItems().addAll(listOfJobs);
         jobComboBox.getSelectionModel().selectFirst();
 
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
