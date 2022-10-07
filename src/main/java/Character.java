@@ -1,6 +1,4 @@
 import Items.Inventory;
-import Items.InventoryItem;
-import Items.Armour;
 
 import java.util.List;
 import java.util.Map;

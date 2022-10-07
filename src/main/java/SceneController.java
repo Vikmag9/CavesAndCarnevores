@@ -38,9 +38,12 @@ public class SceneController implements Initializable {
 
     //Basics AnchorPane
     @FXML private TextField nameField;
-    @FXML private ComboBox<String> raceComboBox;
-    @FXML private ComboBox<String> jobComboBox;
-    @FXML private ComboBox<String> backgroundComboBox;
+    @FXML
+    private ComboBox<String> raceComboBox;
+    @FXML
+    private ComboBox<String> jobComboBox;
+    @FXML
+    private ComboBox<String> backgroundComboBox;
 
     //StatsAndSkill AnchorPane
     //Dex
@@ -115,7 +118,7 @@ public class SceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
-        //prepareComboBoxes();
+        prepareComboBoxes();
     }
 
 
@@ -146,7 +149,7 @@ public class SceneController implements Initializable {
     }
 
 
-    protected void prepareComboBoxes(){
+    @FXML protected void prepareComboBoxes(){
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
 

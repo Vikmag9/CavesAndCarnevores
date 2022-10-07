@@ -16,14 +16,13 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     private String effect;
 
-    public InventoryItem(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical) {
-        this.itemType = itemType;
-        this.itemAmount = itemAmount;
-        this.itemName = itemName;
-        this.itemValue = itemValue;
-        this.itemDescription = itemDescription;
-        this.itemWeight = itemWeight;
-        this.isMagical = isMagical;
+    public InventoryItem(InventoryItemBuilder builder) {
+        this.itemType = builder.getItemType();
+        this.itemName = builder.getItemName();
+        this.itemValue = builder.getItemValue();
+        this.itemDescription = builder.getItemDescription();
+        this.itemWeight = builder.getItemWeight();
+        this.isMagical = builder.getIsMagical();
 
     }
 

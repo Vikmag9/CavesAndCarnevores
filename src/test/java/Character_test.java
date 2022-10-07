@@ -1,15 +1,11 @@
-import Items.Armour;
-import Items.CoinBag;
 import Items.Inventory;
 import Items.InventoryItem;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.util.Collections.emptyList;
 import static org.junit.Assert.*;
 
 public class Character_test {
