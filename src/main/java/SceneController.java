@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -29,8 +30,6 @@ public class SceneController implements Initializable {
     @FXML private AnchorPane lorePane;
     @FXML private AnchorPane satsAndSkillsPane;
     @FXML private AnchorPane weaponsAndArmourPane;
-    @FXML private ImageView rightArrow;
-    @FXML private ImageView leftArrow;
     @FXML private ImageView logoImage;
     @FXML private StackPane stackPane;
 
@@ -38,11 +37,48 @@ public class SceneController implements Initializable {
 
     //Basics AnchorPane
     @FXML private TextField nameField;
-    private String name;
-    @FXML private ComboBox raceComboBox;
-    @FXML private ComboBox jobComboBox;
-    @FXML private ComboBox backgroundComboBox;
-    @FXML private ComboBox levelComboBox;
+    @FXML private ComboBox<String> raceComboBox;
+    @FXML private ComboBox<String> jobComboBox;
+    @FXML private ComboBox<String> backgroundComboBox;
+
+    //StatsAndSkill AnchorPane
+    //Dex
+    @FXML private CheckBox AcrobaticsCheckBox;
+    @FXML private CheckBox SleightOfHandCheckBox;
+    @FXML private CheckBox StealthCheckBox;
+
+    //Wis
+    @FXML private CheckBox AnimalHandlingCheckBox;
+    @FXML private CheckBox InsightCheckBox;
+    @FXML private CheckBox MedicineCheckBox;
+    @FXML private CheckBox PerceptionCheckBox;
+    @FXML private CheckBox SurvivalCheckBox;
+
+    //Int
+    @FXML private CheckBox ArcanaCheckBox;
+    @FXML private CheckBox HistoryCheckBox;
+    @FXML private CheckBox InvestigationCheckBox;
+    @FXML private CheckBox NatureCheckBox;
+    @FXML private CheckBox ReligionCheckBox;
+
+    //Str
+    @FXML private CheckBox AthleticsCheckBox;
+    @FXML private CheckBox IntimidationCheckBox;
+
+    //Cha
+    @FXML private CheckBox DeceptionCheckBox;
+    @FXML private CheckBox PerformanceCheckBox;
+    @FXML private CheckBox PersuasionCheckBox;
+
+    //Stats
+    @FXML private TextField StrengthTextField;
+    @FXML private TextField DexterityTextField;
+    @FXML private TextField ConstitutionTextField;
+    @FXML private TextField IntelligenceTextField;
+    @FXML private TextField WisdomTextField;
+    @FXML private TextField CharismaTextField;
+
+
 
 
     //navigational methods to switch fxml files in the center part of the border pane
@@ -107,6 +143,17 @@ public class SceneController implements Initializable {
         lorePane.toFront();
     }
 
+
+    private void prepareComboBoxes() {
+        raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
+        raceComboBox.getSelectionModel().selectFirst();
+
+        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+        jobComboBox.getSelectionModel().selectFirst();
+
+        backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
+        backgroundComboBox.getSelectionModel().selectFirst();
+    }
 
 
 }
