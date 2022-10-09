@@ -7,10 +7,11 @@ public class InventoryItemBuilder {
     private int itemAmount;
     private int itemValue;
     private double itemWeight;
-    private int ac;
-    private int atkBonus;
+    int ac;
+    int atkBonus;
     private boolean isMagical;
-    private boolean isequipped;
+    boolean isequipped;
+
 
     public InventoryItemBuilder(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical) {
         //Compulsory attributes
@@ -37,6 +38,8 @@ public class InventoryItemBuilder {
         this.isequipped = isequipped;
         return this;
     }
+
+
 
     public String getItemType(){
         return this.itemType;

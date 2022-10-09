@@ -38,12 +38,9 @@ public class SceneController implements Initializable {
 
     //Basics AnchorPane
     @FXML private TextField nameField;
-    @FXML
-    private ComboBox<String> raceComboBox;
-    @FXML
-    private ComboBox<String> jobComboBox;
-    @FXML
-    private ComboBox<String> backgroundComboBox;
+    @FXML private ComboBox<String> raceComboBox;
+    @FXML private ComboBox<String> jobComboBox;
+    @FXML private ComboBox<String> backgroundComboBox;
 
     //StatsAndSkill AnchorPane
     //Dex
@@ -86,8 +83,9 @@ public class SceneController implements Initializable {
 
 
     //navigational methods to switch fxml files in the center part of the border pane
-    @FXML protected void openStartScreen() {
+        @FXML protected void openStartScreen() {
         try {
+
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
@@ -95,7 +93,7 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML private void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
+    @FXML public void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
             borderPane.setCenter(startScreen);
@@ -118,7 +116,8 @@ public class SceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
-        prepareComboBoxes();
+
+        //prepareComboBoxes();
     }
 
 
@@ -149,7 +148,7 @@ public class SceneController implements Initializable {
     }
 
 
-    @FXML protected void prepareComboBoxes(){
+    protected void prepareComboBoxes(){
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
 

@@ -1,12 +1,10 @@
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Race.java
-C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\Consumable.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Stats.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\FxmlHelper.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\InventoryItem.java
-C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\Armour.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\FXBaseTestScreen.java
-C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\Jewellery.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\CharacterScreen.java
+C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\InventoryItemBuilder.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\CoinBag.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\InventoryController.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Job.java
@@ -16,7 +14,5 @@ C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Feature.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Character.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\Inventory.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\InventoryItemCreator.java
-C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\Weapon.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\DiceBag.java
 C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\SceneController.java
-C:\Users\Viktoria\Documents\CavesAndCarnevores\src\main\java\Items\ItemType.java
