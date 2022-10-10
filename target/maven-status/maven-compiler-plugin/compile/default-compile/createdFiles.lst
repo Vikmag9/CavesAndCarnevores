@@ -2,15 +2,13 @@ FXBaseTestScreen.class
 SceneController.class
 FileManager.class
 Character.class
-Items\Jewellery.class
 Race.class
 Feature.class
 Items\InventoryItem.class
+Items\InventoryItemBuilder.class
 Job.class
-Items\Weapon.class
 DiceBag.class
 Items\CoinBag.class
 Items\Inventory.class
 Items\Equippable.class
 FxmlHelper.class
-Items\Consumable.class
