@@ -17,6 +17,7 @@ public class Job {
     private JSONObject jobContent;
 
     FileManager fm = new FileManager();
+    static FileManager fm2 = new FileManager();
 
     public Job(String jobName) throws IOException, ClassNotFoundException {
         this.jobName = jobName;
@@ -48,8 +49,8 @@ public class Job {
     }
 
     public static List<String> getAllJobs() throws IOException, ClassNotFoundException {
-        FileManager fm = new FileManager();
-        JSONObject jobs = fm.readFile("jobs.json");
+        FileManager fm2 = new FileManager();
+        JSONObject jobs = fm2.readFile("jobs.json");
         List<String> jobNames = new ArrayList<>();
         jobs.keySet().forEach(jobName -> {
             jobNames.add(jobName);

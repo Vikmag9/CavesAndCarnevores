@@ -14,17 +14,23 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     private boolean isMagical;
 
-    private String effect;
+    private int ac;
 
-    public InventoryItem(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical) {
-        this.itemType = itemType;
-        this.itemAmount = itemAmount;
-        this.itemName = itemName;
-        this.itemValue = itemValue;
-        this.itemDescription = itemDescription;
-        this.itemWeight = itemWeight;
-        this.isMagical = isMagical;
+    private int atkBonus;
 
+    private boolean isequipped;
+
+
+    public InventoryItem(InventoryItemBuilder builder) {
+        this.itemType = builder.getItemType();
+        this.itemName = builder.getItemName();
+        this.itemValue = builder.getItemValue();
+        this.itemDescription = builder.getItemDescription();
+        this.itemWeight = builder.getItemWeight();
+        this.isMagical = builder.getIsMagical();
+        this.ac = builder.ac;
+        this.atkBonus = builder.atkBonus;
+        this.isequipped = builder.isequipped;
     }
 
     public String getItemType() {
@@ -50,6 +56,7 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
     public Double getItemWeight() {
         return itemWeight;
      }
+
 
 
 
