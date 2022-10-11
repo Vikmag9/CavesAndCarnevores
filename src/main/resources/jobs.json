@@ -1936,7 +1936,7 @@
   "Paladin": {
     "Class Features": {
       "content": "As a paladin, you gain the following class features.",
-      "Hit Points": 10,
+      "Hit Die": 10,
       "Proficiencies": {
 
         "Armor": ["All armor", "Shields"],
@@ -1961,7 +1961,11 @@
         "table": {
           "Level": [
             1,
+            1,
             2,
+            2,
+            2,
+            3,
             3,
             4,
             5,
@@ -2009,7 +2013,8 @@
             "Fighting Style",
             "Spellcasting",
             "Divine Smite",
-            "Divine Health, Sacred Oath",
+            "Divine Health",
+            "Sacred Oath",
             "Ability Score Improvement",
             "Extra Attack",
             "Aura of Protection",
@@ -2024,7 +2029,7 @@
             "Sacred Oath feature",
             "Ability Score Improvement",
             "-",
-            "Aura improvements",
+            "-",
             "Ability Score Improvement",
             "Sacred Oath feature"
           ],
@@ -2140,163 +2145,123 @@
           ]
         }
       },
-      "Divine Sense": {
+      "Divine Sense": "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the *hallow* spell. You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.",
+      "Lay on Hands": "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool. Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one. This feature has no effect on undead and constructs.",
+      "Fighting Style": "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
+      "Spellcasting": "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
+      "Preparing and Casting Spells": {
         "content": [
-          "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire",
-          "Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the *hallow* spell.",
-          "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
+          "The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.",
+          "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
+          "For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell *cure wounds,* you can cast it using a 1st-level or a 2nd- level slot. Casting the spell doesn’t remove it from your list of prepared spells.",
+          "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
         ]
       },
-      "Lay on Hands": {
+      "Spellcasting Ability": {
         "content": [
-          "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.",
-          "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.",
-          "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.",
-          "This feature has no effect on undead and constructs."
+          "Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.",
+          "**Spell save DC** = 8 + your proficiency bonus + your Charisma modifier",
+          "**Spell attack modifier** = your proficiency bonus + your Charisma modifier"
         ]
       },
-      "Fighting Style": {
-        "content": "At 2nd level, you adopt a style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
-        "Defense": "While you are wearing armor, you gain a +1 bonus to AC.",
-        "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
-        "Great Weapon Fighting": "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll. The weapon must have the two-handed or versatile property for you to gain this benefit.",
-        "Protection": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
-      },
-      "Spellcasting": {
-        "content": "By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
-        "Preparing and Casting Spells": {
-          "content": [
-            "The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.",
-            "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
-            "For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell *cure wounds,* you can cast it using a 1st-level or a 2nd- level slot. Casting the spell doesn’t remove it from your list of prepared spells.",
-            "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
-          ]
-        },
-        "Spellcasting Ability": {
-          "content": [
-            "Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.",
-            "**Spell save DC** = 8 + your proficiency bonus + your Charisma modifier",
-            "**Spell attack modifier** = your proficiency bonus + your Charisma modifier"
-          ]
-        },
-        "Spellcasting Focus": "You can use a holy symbol as a spellcasting focus for your paladin spells."
-      },
+      "Spellcasting Focus": "You can use a holy symbol as a spellcasting focus for your paladin spells.",
       "Divine Smite": "Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.",
       "Divine Health": "By 3rd level, the divine magic flowing through you makes you immune to disease.",
-      "Sacred Oath": {
-        "content": [
-          "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose the Oath of Devotion, the Oath of the Ancients, or the Oath of Vengeance, all detailed at the end of the class description.",
-          "Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature."
-        ],
-        "Oath Spells": {
-          "content": [
-            "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don’t count against the number of spells you can prepare each day.",
-            "If you gain an oath spell that doesn’t appear on the paladin spell list, the spell is nonetheless a paladin spell for you."
-          ]
-        },
-        "Channel Divinity": {
-          "content": [
-            "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it.",
-            "When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.",
-            "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
-          ]
-        }
-      },
+      "Sacred Oath": "When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Now you choose the Oath of Devotion, the Oath of the Ancients, or the Oath of Vengeance, all detailed at the end of the class description. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature.",
+      "Oath Spells": "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don’t count against the number of spells you can prepare each day. If you gain an oath spell that doesn’t appear on the paladin spell list, the spell is nonetheless a paladin spell for you.",
+      "Channel Divinity": "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC.",
       "Ability Score Improvement": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
       "Extra Attack": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
-      "Aura of Protection": {
-        "content": [
-          "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.",
-          "At 18th level, the range of this aura increases to 30 feet."
-        ]
-      },
-      "Aura of Courage": {
-        "content": [
-          "Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious.",
-          "At 18th level, the range of this aura increases to 30 feet."
-        ]
-      },
+      "Aura of Protection": "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus. At 18th level, the range of this aura increases to 30 feet.",
+      "Aura of Courage": "Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious. At 18th level, the range of this aura increases to 30 feet.",
       "Improved Divine Smite": "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.",
-      "Cleansing Touch": {
-        "content": [
-          "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.",
-          "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
-        ]
-      }
-    },
-    "Sacred Oaths": {
-      "content": "Becoming a paladin involves taking vows that commit the paladin to the cause of righteousness, an active path of fighting wickedness. The final oath, taken when he or she reaches 3rd level, is the culmination of all the paladin’s training. Some characters with this class don’t consider themselves true paladins until they have reached 3rd level and made this oath. For others, the actual swearing of the oath is a formality, an official stamp on what has always been true in the paladin’s heart.",
-      "Oath of Devotion": {
-        "content": "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods’ tenets as the measure of their devotion. They hold angels—the perfect servants of good—as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.",
-        "Tenets of Devotion": {
-          "content": [
-            "Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.",
-            "***Honesty.*** Don’t lie or cheat. Let your word be your promise.",
-            "***Courage.*** Never fear to act, though caution is wise.",
-            "***Compassion.*** Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom.",
-            "***Honor.*** Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.",
-            "***Duty.*** Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you."
-          ]
-        },
-        "Oath Spells": {
-          "content": "You gain oath spells at the paladin levels listed.",
-          "Oath of Devotion Spells": {
-            "table": {
-              "Level": [
-                "3rd",
-                "5th",
-                "9th",
-                "13th",
-                "17th"
-              ],
-              "Paladin Spells": [
-                "protection from evil and good, sanctuary",
-                "lesser restoration, zone of truth",
-                "beacon of hope, dispel magic",
-                "freedom of movement, guardian of faith",
-                "commune, flame strike"
+      "Cleansing Touch": "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.",
+      "Sacred Oaths": "Becoming a paladin involves taking vows that commit the paladin to the cause of righteousness, an active path of fighting wickedness. The final oath, taken when he or she reaches 3rd level, is the culmination of all the paladin’s training. Some characters with this class don’t consider themselves true paladins until they have reached 3rd level and made this oath. For others, the actual swearing of the oath is a formality, an official stamp on what has always been true in the paladin’s heart.",
+      "Sacred Oath feature": "At 7th, 15th, and 20th level, you gain a feature from your oath.",
+      "-": "",
+      "subtypes": [
+        {
+          "Oath of Devotion": {
+            "content": "The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods’ tenets as the measure of their devotion. They hold angels—the perfect servants of good—as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.",
+            "Tenets of Devotion": {
+              "content": [
+                "Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.",
+                "***Honesty.*** Don’t lie or cheat. Let your word be your promise.",
+                "***Courage.*** Never fear to act, though caution is wise.",
+                "***Compassion.*** Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom.",
+                "***Honor.*** Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.",
+                "***Duty.*** Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you."
+              ]
+            },
+            "Oath Spells": {
+              "content": "You gain oath spells at the paladin levels listed.",
+              "Oath of Devotion Spells": {
+                "table": {
+                  "Level": [
+                    "3rd",
+                    "5th",
+                    "9th",
+                    "13th",
+                    "17th"
+                  ],
+                  "Paladin Spells": [
+                    "protection from evil and good, sanctuary",
+                    "lesser restoration, zone of truth",
+                    "beacon of hope, dispel magic",
+                    "freedom of movement, guardian of faith",
+                    "commune, flame strike"
+                  ]
+                }
+              }
+            },
+            "Channel Divinity": {
+              "content": [
+                "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                "***Sacred Weapon.*** As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
+                "You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends.",
+                "***Turn the Unholy.*** As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
+                "A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action."
+              ]
+            },
+            "Aura of Devotion": {
+              "content": [
+                "Starting at 7th level, you and friendly creatures within 10 feet of you can’t be charmed while you are conscious.",
+                "At 18th level, the range of this aura increases to 30 feet."
+              ]
+            },
+            "Purity of Spirit": "Beginning at 15th level, you are always under the effects of a *protection from evil and good* spell.",
+            "Holy Nimbus": {
+              "content": [
+                "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.",
+                "Whenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.",
+                "In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.",
+                "Once you use this feature, you can’t use it again until you finish a long rest."
               ]
             }
           }
-        },
-        "Channel Divinity": {
-          "content": [
-            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
-            "***Sacred Weapon.*** As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
-            "You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends.",
-            "***Turn the Unholy.*** As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
-            "A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action."
-          ]
-        },
-        "Aura of Devotion": {
-          "content": [
-            "Starting at 7th level, you and friendly creatures within 10 feet of you can’t be charmed while you are conscious.",
-            "At 18th level, the range of this aura increases to 30 feet."
-          ]
-        },
-        "Purity of Spirit": "Beginning at 15th level, you are always under the effects of a *protection from evil and good* spell.",
-        "Holy Nimbus": {
-          "content": [
-            "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.",
-            "Whenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.",
-            "In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.",
-            "Once you use this feature, you can’t use it again until you finish a long rest."
-          ]
         }
-      },
-      "Breaking Your Oath": {
-        "content": [
-          "A paladin tries to hold to the highest standards of conduct, but even the most virtuous paladin is fallible. Sometimes the right path proves too demanding, sometimes a situation calls for the lesser of two evils, and sometimes the heat of emotion causes a paladin to transgress his or her oath.",
-          "A paladin who has broken a vow typically seeks absolution from a cleric who shares his or her faith or from another paladin of the same order. The paladin might spend an all- night vigil in prayer as a sign of penitence, or undertake a fast or similar act of self-denial. After a rite of confession and forgiveness, the paladin starts fresh.",
-          "If a paladin willfully violates his or her oath and shows no sign of repentance, the consequences can be more serious. At the GM’s discretion, an impenitent paladin might be forced to abandon this class and adopt another."
-        ]
-      }
+      ],
+      "2nd_subtypes": [
+        {
+          "Defense": "While you are wearing armor, you gain a +1 bonus to AC."
+        },
+        {
+          "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+        },
+        {
+          "Great Weapon Fighting": "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll. The weapon must have the two-handed or versatile property for you to gain this benefit."
+        },
+        {
+          "Protection": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield."
+        }
+      ],
+      "Breaking Your Oath": "A paladin tries to hold to the highest standards of conduct, but even the most virtuous paladin is fallible. Sometimes the right path proves too demanding, sometimes a situation calls for the lesser of two evils, and sometimes the heat of emotion causes a paladin to transgress his or her oath. A paladin who has broken a vow typically seeks absolution from a cleric who shares his or her faith or from another paladin of the same order. The paladin might spend an all- night vigil in prayer as a sign of penitence, or undertake a fast or similar act of self-denial. After a rite of confession and forgiveness, the paladin starts fresh. If a paladin willfully violates his or her oath and shows no sign of repentance, the consequences can be more serious. At the GM’s discretion, an impenitent paladin might be forced to abandon this class and adopt another."
     }
   },
   "Ranger": {
     "Class Features": {
       "content": "As a ranger, you gain the following class features.",
-      "Hit Points": 10,
+      "Hit Die": 10,
       "Proficiencies": {
 
         "Armor": ["Light armor", "Medium armor", "Shields"],
@@ -2320,26 +2285,30 @@
       "The Ranger": {
         "table": {
           "Level": [
-            "1st",
-            "2nd",
-            "3rd",
-            "4th",
-            "5th",
-            "6th",
-            "7th",
-            "8th",
-            "9th",
-            "10th",
-            "11th",
-            "12th",
-            "13th",
-            "14th",
-            "15th",
-            "16th",
-            "17th",
-            "18th",
-            "19th",
-            "20th"
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
           ],
           "Proficiency Bonus": [
             "+2",
@@ -2364,20 +2333,24 @@
             "+6"
           ],
           "Features": [
-            "Favored Enemy, Natural Explorer",
-            "Fighting Style, Spellcasting",
-            "Ranger Archetype, Primeval Awareness",
+            "Favored Enemy",
+            "Natural Explorer",
+            "Fighting Style",
+            "Spellcasting",
+            "Ranger Archetype",
+            "Primeval Awareness",
             "Ability Score Improvement",
             "Extra Attack",
-            "Favored Enemy and Natural Explorer improvements",
-            "Ranger Archetype feature",
-            "Ability Score Improvement, Land’s Stride",
             "-",
-            "Natural Explorer improvement, Hide in Plain Sight",
+            "Ranger Archetype feature",
+            "Ability Score Improvement",
+            "Land’s Stride",
+            "-",
+            "Hide in Plain Sight",
             "Ranger Archetype feature",
             "Ability Score Improvement",
             "-",
-            "Favored Enemy improvement, Vanish",
+            "Vanish",
             "Ranger Archetype feature",
             "Ability Score Improvement",
             "-",
@@ -2519,85 +2492,57 @@
           ]
         }
       },
-      "Favored Enemy": {
+      "Favored Enemy": "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them. When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
+      "Natural Explorer": "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.\nWhile traveling for an hour or more in your favored terrain, you gain the following benefits:\nDifficult terrain doesn’t slow your group’s travel.\nYour group can’t become lost except by magical means.\nEven when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\nIf you are traveling alone, you can move stealthily at a normal pace.\nWhen you forage, you find twice as much food as you normally would.\nWhile tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n You choose additional favored terrain types at 6th and 10th level.",
+      "Fighting Style": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
+      "Spellcasting": "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See chapter 10 for the general rules of spellcasting and chapter 11 for the ranger spell list.",
+      "Spell Slots": {
         "content": [
-          "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-          "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
-          "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-          "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-          "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+          "The Ranger table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.",
+          "For example, if you know the 1st-level spell *animal friendship* and have a 1st-level and a 2nd-level spell slot available, you can cast *animal friendship* using either slot."
         ]
       },
-      "Natural Explorer": {
+      "Spells Known of 1st Level and Higher": {
         "content": [
-          "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.",
-          "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
-          [
-            "Difficult terrain doesn’t slow your group’s travel.",
-            "Your group can’t become lost except by magical means.",
-            "Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-            "If you are traveling alone, you can move stealthily at a normal pace.",
-            "When you forage, you find twice as much food as you normally would.",
-            "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area."
-          ],
-          "You choose additional favored terrain types at 6th and 10th level."
+          "You know two 1st-level spells of your choice from the ranger spell list.",
+          "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
+          "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
         ]
       },
-      "Fighting Style": {
-        "content": "At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.",
-        "Archery": "You gain a +2 bonus to attack rolls you make with ranged weapons.",
-        "Defense": "While you are wearing armor, you gain a +1 bonus to AC.",
-        "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
-        "Two-Weapon Fighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
-      },
-      "Spellcasting": {
-        "content": "By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See chapter 10 for the general rules of spellcasting and chapter 11 for the ranger spell list.",
-        "Spell Slots": {
-          "content": [
-            "The Ranger table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.",
-            "For example, if you know the 1st-level spell *animal friendship* and have a 1st-level and a 2nd-level spell slot available, you can cast *animal friendship* using either slot."
-          ]
-        },
-        "Spells Known of 1st Level and Higher": {
-          "content": [
-            "You know two 1st-level spells of your choice from the ranger spell list.",
-            "The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
-            "Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots."
-          ]
-        },
-        "Spellcasting Ability": {
-          "content": [
-            "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
-            "**Spell save DC** = 8 + your proficiency bonus + your Wisdom modifier",
-            "**Spell attack modifier** = your proficiency bonus + your Wisdom modifier"
-          ]
-        }
+      "Spellcasting Ability": {
+        "content": [
+          "Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.",
+          "**Spell save DC** = 8 + your proficiency bonus + your Wisdom modifier",
+          "**Spell attack modifier** = your proficiency bonus + your Wisdom modifier"
+        ]
       },
       "Ranger Archetype": "At 3rd level, you choose an archetype that you strive to emulate: Hunter or Beast Master, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level.",
       "Primeval Awareness": "Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn’t reveal the creatures’ location or number.",
       "Ability Score Improvement": "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
       "Extra Attack": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
-      "Land’s Stride": {
-        "content": [
-          "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-          "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the *entangle* spell."
-        ]
-      },
-      "Hide in Plain Sight": {
-        "content": [
-          "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.",
-          "Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit."
-        ]
-      },
+      "Land’s Stride": "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the *entangle* spell.",
+      "Hide in Plain Sight": "Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage. Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.",
       "Vanish": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.",
-      "Feral Senses": {
-        "content": [
-          "At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it.",
-          "You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened."
-        ]
-      },
+      "Feral Senses": "At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it. You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.",
+      "-": "",
+      "Ranger Archetype feature": "Your choice of archetype grants you features at 3rd level and again at 7th, 11th, and 15th level.",
       "Foe Slayer": "At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied."
     },
+    "subtypes": [
+      {
+
+      }
+
+    ],
+    "2nd_subtypes": [
+      {
+        "Archery": "You gain a +2 bonus to attack rolls you make with ranged weapons.",
+        "Defense": "While you are wearing armor, you gain a +1 bonus to AC.",
+        "Dueling": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+        "Two-Weapon Fighting": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+
+      }
+    ],
     "Ranger Archetypes": {
       "content": "The ideal of the ranger has two classic expressions: the Hunter and the Beast Master.",
       "Hunter": {
@@ -2639,7 +2584,7 @@
   "Rogue": {
     "Class Features": {
       "content": "As a rogue, you have the following class features.",
-      "Hit Points": 8,
+      "Hit Die": 8,
       "Proficiencies": {
 
         "Armor": ["Light armor"],
@@ -2662,30 +2607,30 @@
         ]
       },
       "The Rogue": {
-        "content": [
-          {
-            "table": {
+          "table": {
               "Level": [
-                "1st",
-                "2nd",
-                "3rd",
-                "4th",
-                "5th",
-                "6th",
-                "7th",
-                "8th",
-                "9th",
-                "10th",
-                "11th",
-                "12th",
-                "13th",
-                "14th",
-                "15th",
-                "16th",
-                "17th",
-                "18th",
-                "19th",
-                "20th"
+                1,
+                1,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
               ],
               "Proficiency Bonus": [
                 "+2",
@@ -2732,7 +2677,9 @@
                 "10d6"
               ],
               "Features": [
-                "Expertise, Sneak Attack, Thieves’ Cant",
+                "Expertise",
+                "Sneak Attack",
+                "Thieves’ Cant",
                 "Cunning Action",
                 "Roguish Archetype",
                 "Ability Score Improvement",
@@ -2740,36 +2687,24 @@
                 "Expertise",
                 "Evasion",
                 "Ability Score Improvement",
-                "Roguish Archetype feature",
+                "Roguish Archetype Feature",
                 "Ability Score Improvement",
                 "Reliable Talent",
                 "Ability Score Improvement",
-                "Roguish Archetype Feature",
+                "-",
                 "Blindsense",
                 "Slippery Mind",
                 "Ability Score Improvement",
-                "Roguish Archetype Feature",
+                "-",
                 "Elusive",
                 "Ability Score Improvement",
                 "Stroke of Luck"
               ]
             }
-          },
-          "**Expertise**",
-          "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
-          "At 6th level, you can choose two more of your proficiencies (in skills or with thieves’ tools) to gain this benefit.",
-          "**Sneak Attack**",
-          "Beginning at 1st level, you know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.",
-          "You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.",
-          "The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table."
-        ]
       },
-      "Thieves’ Cant": {
-        "content": [
-          "During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.",
-          "In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run."
-        ]
-      },
+      "Expertise": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. At 6th level, you can choose two more of your proficiencies (in skills or with thieves’ tools) to gain this benefit.",
+      "Thieves’ Cant": "During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly. In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.",
+      "Sneak Attack": "Beginning at 1st level, you know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon. You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll. At 3rd level and above, the amount of the extra damage increases to {your level}/2 rounded up.",
       "Cunning Action": "Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.",
       "Roguish Archetype": "At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities: Thief, Assassin, or Arcane Trickster, all detailed at the end of the class description. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.",
       "Ability Score Improvement": "When you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.",
@@ -2778,28 +2713,25 @@
       "Reliable Talent": "By 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.",
       "Blindsense": "Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.",
       "Slippery Mind": "By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.",
+      "Roguish Archetype Feature": "At 3rd level, you gain the feature specified by your rogue archetype. At 9th, 13th, and 17th level, you gain another feature.",
+      "-": "",
       "Elusive": "Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren’t incapacitated.",
-      "Stroke of Luck": {
-        "content": [
-          "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.",
-          "Once you use this feature, you can’t use it again until you finish a short or long rest."
-        ]
-      }
-    },
-    "Roguish Archetypes": {
-      "content": "Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus—not necessarily an indication of your chosen profession, but a description of your preferred techniques.",
-      "Thief": {
-        "content": "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn’t employ.",
-        "Fast Hands": "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves’ tools to disarm a trap or open a lock, or take the Use an Object action.",
-        "Second-Story Work": {
-          "content": [
-            "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
-            "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
-          ]
-        },
-        "Supreme Sneak": "Starting at 9th level, you have advantage on a Dexterity (Stealth) check if you move no more than half your speed on the same turn.",
-        "Use Magic Device": "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items.",
-        "Thief’s Reflexes": "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can’t use this feature when you are surprised."
+      "Stroke of Luck": "At 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20. Once you use this feature, you can’t use it again until you finish a short or long rest.",
+      "Roguish Archetypes": {
+        "content": "Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus—not necessarily an indication of your chosen profession, but a description of your preferred techniques.",
+        "Thief": {
+          "content": "You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn’t employ.",
+          "Fast Hands": "Starting at 3rd level, you can use the bonus action granted by your Cunning Action to make a Dexterity (Sleight of Hand) check, use your thieves’ tools to disarm a trap or open a lock, or take the Use an Object action.",
+          "Second-Story Work": {
+            "content": [
+              "When you choose this archetype at 3rd level, you gain the ability to climb faster than normal; climbing no longer costs you extra movement.",
+              "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
+            ]
+          },
+          "Supreme Sneak": "Starting at 9th level, you have advantage on a Dexterity (Stealth) check if you move no more than half your speed on the same turn.",
+          "Use Magic Device": "By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items.",
+          "Thief’s Reflexes": "When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can’t use this feature when you are surprised."
+        }
       }
     }
   },
