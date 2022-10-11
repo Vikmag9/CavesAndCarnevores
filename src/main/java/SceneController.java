@@ -71,7 +71,7 @@ public class SceneController implements Initializable {
     @FXML private CheckBox PerformanceCheckBox;
     @FXML private CheckBox PersuasionCheckBox;
 
-    //Stats
+    //StatGenerator.Stats
     @FXML private TextField StrengthTextField;
     @FXML private TextField DexterityTextField;
     @FXML private TextField ConstitutionTextField;

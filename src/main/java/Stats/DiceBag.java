@@ -1,3 +1,5 @@
+package Stats;
+
 import java.util.Random;
 
 public class DiceBag {

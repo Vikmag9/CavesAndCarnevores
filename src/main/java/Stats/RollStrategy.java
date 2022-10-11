@@ -1,17 +1,17 @@
-import java.lang.reflect.Array;
+package Stats;
+
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
-public class Stats {
-    List<Integer> listOfRolls;
-    List<Integer> listOfStats;
+public class RollStrategy implements StatStrategy{
+    ArrayList<Integer> listOfRolls;
+    ArrayList<Integer> listOfStats;
     DiceBag diceBag;
     int stat;
 
-    public Stats(){
-         diceBag = new DiceBag();
+    public RollStrategy(){
+         this.diceBag = new DiceBag();
     }
 
     private int rollOneStat(){
@@ -28,13 +28,15 @@ public class Stats {
         return stat;
     }
 
-    private void rollStats(){
+    private ArrayList<Integer> rollStats(){
         for(int i= 1; i < 7; i++)
             listOfStats.add(this.rollOneStat());
+        return listOfStats;
     }
 
-
-    public List<Integer> getStats(){
+    @Override
+    public ArrayList<Integer> getListOfStats(){
+        listOfStats = rollStats();
         return listOfStats;
     }
 }
