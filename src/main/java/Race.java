@@ -1,10 +1,84 @@
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.List;
 
-public interface Race {
-    public String getRaceName();
+public class Race {
+    private String name;
+    private String description;
+    private int speed;
+    private List<String> languages;
+    private List<String> traits;
+    private List<String> proficiencies;
+    private JSONObject raceContent;
+    static private final FileManager fm = new FileManager();
 
-    public int getMovementSpeed();
+    public Race(String name) throws IOException, ClassNotFoundException {
+        this.name = name;
+        this.raceContent = getRace(name);
+        this.description = getDescription();
+        this.speed = getSpeed();
 
-    public List<String> getRaceActions();
+    }
+
+    public JSONObject getRace(String jobName) throws IOException, ClassNotFoundException {
+        JSONObject jsonRace = fm.readFile("races.json").getJSONObject(jobName);
+        return jsonRace;
+    }
+
+    //--------------------------------- GETTERS AND SETTERS -------------------------------------
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
+    }
+
+    public List<String> getTraits() {
+        return traits;
+    }
+
+    public void setTraits(List<String> traits) {
+        this.traits = traits;
+    }
+
+    public List<String> getProficiencies() {
+        return proficiencies;
+    }
+
+    public void setProficiencies(List<String> proficiencies) {
+        this.proficiencies = proficiencies;
+    }
+
+
+
+
+
+
 
 }

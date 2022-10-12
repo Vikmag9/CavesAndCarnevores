@@ -8,8 +8,8 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 /*
-public class Character_test {
 
+public class Character_test {
     @Test
     public void createBarbarianTest() throws IOException, ClassNotFoundException {
         Job charJob = new Job("Barbarian");

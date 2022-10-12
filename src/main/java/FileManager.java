@@ -14,13 +14,6 @@ public class FileManager {
     public FileManager(){
     }
 
-
-    public void dosomething(String hej2, int hej){
-        System.out.println(hej + hej2);
-    }
-    public void dosomething(int hej1, String hej2){
-        System.out.println(hej1);
-    }
     public JSONObject readFile(String resourceName) throws IOException, ClassNotFoundException {
 
         InputStream is = Class.forName("FileManager").getResourceAsStream(resourceName);
