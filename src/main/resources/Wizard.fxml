@@ -41,7 +41,7 @@
                   <TextArea layoutX="310.0" layoutY="265.0" prefHeight="91.0" prefWidth="268.0" />
                   <TextArea layoutX="310.0" layoutY="408.0" prefHeight="91.0" prefWidth="268.0" />
                   <Button layoutX="73.0" layoutY="562.0" mnemonicParsing="false" onAction="#toInventoryPane" text="&lt;&lt;" />
-                  <Button layoutX="633.0" layoutY="563.0" mnemonicParsing="false" text="Finish" />
+                  <Button fx:id="finishButton" layoutX="633.0" layoutY="563.0" mnemonicParsing="false" text="Finish" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="inventoryPane" prefHeight="646.0" prefWidth="708.0" style="-fx-background-color: #FFFFFF;">

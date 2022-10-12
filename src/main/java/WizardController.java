@@ -92,6 +92,7 @@ public class WizardController implements Initializable{
     @FXML private TextField earlyLifeTextField;
     @FXML private TextField organisationTextField;
     @FXML private TextField coreMemoriesTextField;
+    @FXML private Button finishButton;
 
     //JobSpecific AnchorPane
     @FXML private FlowPane jobSpecificFlowPane;
