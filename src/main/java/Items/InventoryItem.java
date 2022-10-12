@@ -20,6 +20,8 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     private boolean isequipped;
 
+    private int serialNumber;
+
 
     public InventoryItem(InventoryItemBuilder builder) {
         this.itemType = builder.getItemType();
@@ -28,6 +30,8 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         this.itemDescription = builder.getItemDescription();
         this.itemWeight = builder.getItemWeight();
         this.isMagical = builder.getIsMagical();
+        this.serialNumber = 0;
+        //Optional
         this.ac = builder.ac;
         this.atkBonus = builder.atkBonus;
         this.isequipped = builder.isequipped;
@@ -35,6 +39,10 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
 
     public String getItemType() {
         return this.itemType;
+    }
+
+    void setSerialNumber(int serialNumber){
+        this.serialNumber = serialNumber;
     }
 
     public String getItemName() {

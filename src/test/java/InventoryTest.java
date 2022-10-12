@@ -29,6 +29,7 @@ public class InventoryTest {
         builder.isequipped(false);
         InventoryItem item = new InventoryItem(builder);
         map = new HashMap<String, InventoryItem>();
+        map.put(item.getItemName(), item);
 
 
     }

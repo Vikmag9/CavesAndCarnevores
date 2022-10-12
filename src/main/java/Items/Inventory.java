@@ -4,26 +4,29 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Inventory {
-        HashMap<String, InventoryItem> inventory;
+        HashMap<Integer, InventoryItem> inventory;
         CoinBag coinBag;
         InventoryItemCreator inventoryItemCreator;
         InventoryItem item;
         int value;
+        int serialNumber;
 
 
 
-        public Inventory(HashMap<String, InventoryItem> startingItems, int startingCoins) {
-                this.inventory = new HashMap<String, InventoryItem>();
-                inventory.putAll(startingItems);
+        public Inventory(int startingCoins) {
+                this.inventory = new HashMap<Integer, InventoryItem>();
                 this.coinBag = new CoinBag(startingCoins);
                 this.inventoryItemCreator = new InventoryItemCreator();
+                this.serialNumber = 1;
         }
 
-        public void addItem(String key, InventoryItem item){
-                inventory.put(key, item);
+        public void addItem(InventoryItem item){
+                this.serialNumber += 1;
+                item.setSerialNumber(this.serialNumber);
+                inventory.put(serialNumber, item);
         }
 
-        public void sellItem(String key){
+        public void sellItem(int key){
                item = inventory.get(key);
                value = item.getItemValue();
                coinBag.addCoin(value);
