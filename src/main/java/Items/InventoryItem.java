@@ -57,6 +57,15 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         return itemWeight;
      }
 
+    public int getac(){
+        return this.ac;
+    }
+
+    public int getAtkBonus(){
+        return this.atkBonus;
+    }
+
+
 
 
 

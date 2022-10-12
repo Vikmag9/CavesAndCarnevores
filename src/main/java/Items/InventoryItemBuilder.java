@@ -34,7 +34,7 @@ public class InventoryItemBuilder {
         return this;
     }
 
-    public InventoryItemBuilder equipped(boolean isequipped){
+    public InventoryItemBuilder isequipped(boolean isequipped){
         this.isequipped = isequipped;
         return this;
     }
