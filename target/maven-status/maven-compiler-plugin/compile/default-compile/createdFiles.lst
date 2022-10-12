@@ -16,6 +16,5 @@ Items\CoinBag.class
 Items\Inventory.class
 Stats\Modifier.class
 Stats\StatStrategy.class
-Items\Equippable.class
 Stats\RollStrategy.class
 FxmlHelper.class

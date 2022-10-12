@@ -1,3 +1,5 @@
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -109,6 +111,14 @@ public class WizardController implements Initializable{
     //JobSpecific AnchorPane
     @FXML private FlowPane jobSpecificFlowPane;
 
+    //Radiobuttons on stats
+    private ToggleGroup statToggleGroup;
+    @FXML private RadioButton rollDropRadio;
+    @FXML private RadioButton arrayRadio;
+    @FXML private RadioButton nightmareRadio;
+
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -150,4 +160,26 @@ public class WizardController implements Initializable{
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
     }
+
+    private void prepareRadioButtons(){
+        statToggleGroup = new ToggleGroup();
+        rollDropRadio.setToggleGroup(statToggleGroup);
+        arrayRadio.setToggleGroup(statToggleGroup);
+        nightmareRadio.setToggleGroup(statToggleGroup);
+        statToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                if (statToggleGroup.getSelectedToggle() != null){
+                    RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
+                    selected.getText();
+                }
+            }
+        });
+    }
+
+
 }
+
+
+
+
