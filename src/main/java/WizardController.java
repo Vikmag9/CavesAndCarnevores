@@ -8,10 +8,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -68,13 +65,36 @@ public class WizardController implements Initializable{
     @FXML private CheckBox PerformanceCheckBox;
     @FXML private CheckBox PersuasionCheckBox;
 
-    //StatGenerator.Stats
+    //Stats
     @FXML private TextField StrengthTextField;
     @FXML private TextField DexterityTextField;
     @FXML private TextField ConstitutionTextField;
     @FXML private TextField IntelligenceTextField;
     @FXML private TextField WisdomTextField;
     @FXML private TextField CharismaTextField;
+
+    //WeaponsAndArmour AnchorPane
+    @FXML private ComboBox<String> weaponComboBox;
+    @FXML private ComboBox<String> armourComboBox;
+    @FXML private ComboBox<String> shieldComboBox;
+    @FXML private ComboBox<String> additionalWeaponComboBox;
+
+    //Inventory AnchorPane
+    @FXML private ComboBox<String> inventoryComboBox1;
+    @FXML private ComboBox<String> inventoryComboBox2;
+    @FXML private ComboBox<String> inventoryComboBox3;
+    @FXML private TextField inventoryTextField1;
+    @FXML private TextField inventoryTextField2;
+    @FXML private TextField inventoryTextField3;
+
+
+    // Lore AnchorPane
+    @FXML private TextField earlyLifeTextField;
+    @FXML private TextField organisationTextField;
+    @FXML private TextField coreMemoriesTextField;
+
+    //JobSpecific AnchorPane
+    @FXML private FlowPane jobSpecificFlowPane;
 
 
     @Override

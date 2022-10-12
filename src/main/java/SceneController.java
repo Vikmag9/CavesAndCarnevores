@@ -60,7 +60,6 @@ public class SceneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();
 
-        //prepareComboBoxes();
     }
 
 
