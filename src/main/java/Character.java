@@ -24,9 +24,9 @@ public class Character {
         this.race = race;
         this.job = job;
         this.background = background;
-        //this.level = level;
+        this.level = level;
         this.health = calculateHealth();
-        //this.feats = assembleFeats(); List<Feature> feats
+        //this.feats = assembleFeats();
         this.inventory = inventory;
         //this.armorClass = calculateAC();
 
@@ -37,6 +37,7 @@ public class Character {
 
 /*
     private int calculateAC() {
+
         AtomicInteger ac = new AtomicInteger(0);
         this.inventory.getInventory().forEach(item -> {
             if hasattr(item, ac) {
