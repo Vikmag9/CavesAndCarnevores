@@ -7,7 +7,6 @@ public class Inventory {
 
         HashMap<Integer, InventoryItem> inventory;
         CoinBag coinBag;
-        InventoryItemCreator inventoryItemCreator;
         InventoryItem item;
         int value;
         int serialNumber;
@@ -17,7 +16,6 @@ public class Inventory {
         public Inventory(int startingCoins) {
                 this.inventory = new HashMap<Integer, InventoryItem>();
                 this.coinBag = new CoinBag(startingCoins);
-                this.inventoryItemCreator = new InventoryItemCreator();
                 this.serialNumber = 1;
         }
 
@@ -35,7 +33,7 @@ public class Inventory {
 
         }
 
-    public HashMap<String, InventoryItem> getInventory() {
+    public HashMap<Integer, InventoryItem> getInventory() {
         return inventory;
     }
 

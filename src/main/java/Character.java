@@ -19,16 +19,16 @@ public class Character {
 
 
 
-    public Character(String name, Race race, Job job,Inventory inventory, String background){
+    public Character(String name, Race race, Job job,Inventory inventory, int level, String background){
         this.name = name;
         this.race = race;
         this.job = job;
         this.background = background;
         this.level = level;
         this.health = calculateHealth();
-        //this.feats = assembleFeats();
+        this.feats = assembleFeats();
         this.inventory = inventory;
-        //this.armorClass = calculateAC();
+        this.armorClass = calculateAC();
 
     }
 

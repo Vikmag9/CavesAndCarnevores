@@ -19,18 +19,18 @@ public class Character_test {
 
 
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
 
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -48,18 +48,18 @@ public class Character_test {
         Job charJob = new Job("Bard");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
 
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -77,17 +77,17 @@ public class Character_test {
         Job charJob = new Job("Cleric");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -104,18 +104,18 @@ public class Character_test {
         Job charJob = new Job("Druid");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
 
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -132,18 +132,18 @@ public class Character_test {
             Job charJob = new Job("Fighter");
             List<Feature> featureList = charJob.getFeatures();
             HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-            Inventory inventory = new Inventory(inventoryMap, 1);
+            Inventory inventory = new Inventory(1);
             InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
             builder.ac(12);
             builder.isequipped(true);
             InventoryItem cheeseArmor = new InventoryItem(builder);
-            inventory.addItem("Cheese armour",cheeseArmor);
+            inventory.addItem(cheeseArmor);
 
             Character character = new Character("Gregg", new Race("Batman"),
-                charJob,
-                featureList,
-                inventory,
-                1);
+                    charJob,
+                    inventory,
+                    1,
+                    "Orphan");
 
 
             assertEquals(character.getName(), "Gregg");
@@ -160,18 +160,18 @@ public class Character_test {
         Job charJob = new Job("Monk");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
 
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -188,17 +188,17 @@ public class Character_test {
         Job charJob = new Job("Paladin");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -215,17 +215,17 @@ public class Character_test {
         Job charJob = new Job("Ranger");
         List<Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
 
         assertEquals(character.getName(), "Gregg");
@@ -242,19 +242,18 @@ public class Character_test {
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
 
-        HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(inventoryMap, 1);
+        Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem("Cheese armour",cheeseArmor);
+        inventory.addItem(cheeseArmor);
 
         Character character = new Character("Gregg", new Race("Batman"),
                 charJob,
-                featureList,
                 inventory,
-                1);
+                1,
+                "Orphan");
 
         assertEquals(character.getName(), "Gregg");
         assertEquals(character.getRace().getName(), "Batman");
@@ -268,11 +267,12 @@ public class Character_test {
     @Test
     public void testBarbarianParsing() throws IOException, ClassNotFoundException {
         Job charJob = new Job("Barbarian");
+        Inventory inventory = new Inventory(1);
         Character BarbarianCharacter = new Character("Gregg", new Race("Batman"),
                 charJob,
-                null,
-                null,
-                1);
+                inventory,
+                1,
+                "Orphan");
 
         ArrayList<String> barbArmorProf = new ArrayList<>(); // Tests if the armor proficiencies are retrieved correctly
         barbArmorProf.add("Light armor");
