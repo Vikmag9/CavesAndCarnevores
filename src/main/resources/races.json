@@ -1,98 +1,259 @@
 {
   "Dwarf": {
-    "Traits": {
-      "content": [
-        "Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.",
-        "***Ability Score Increase.*** Your Constitution score increases by 2.",
-        "***Age.*** Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.",
-        "***Alignment.*** Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.",
-        "***Size.*** Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
-        "***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.",
-        "***Darkvision.*** Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "***Dwarven Resilience.*** You have advantage on saving throws against poison, and you have resistance against poison damage.",
-        "***Dwarven Combat Training.*** You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
-        "***Tool Proficiency.*** You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.",
-        "***Stonecunning.*** Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
-        "***Languages.*** You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak."
-      ]
+    "Ability score increase": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    "Description": "Dwarves are short, stocky, and sturdy. They are known for their resilience and their love of stone and metal. Dwarves are also known for their love of ale, mead, and good food. They are",
+    "Speed": 25,
+    "Traits": [
+      "Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+      "Dwarven Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.",
+      "Dwarven Combat Training: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+      "Tool Proficiency: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
+      "Strong: Heavy armour does not reduce your speed.",
+      "Stonecunning: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
+      "Languages:You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak."
+    ],
+    "Proficiencies": {
+      "Armor": [],
+      "Weapons": ["Battleaxe", "Handaxe", "Light hammer", "Warhammer"],
+      "Tools": [],
+      "Saving throws": [],
+      "SkillOptions": []
+    },
+    "Subcraces": [
+     {
+       "Hill Dwarf": {
+         "Ability score increase": [
+           0,
+           0,
+           0,
+           1,
+           0,
+           0
+         ],
+         "Description": "Hill dwarves are stout and hardy, with a strong sense of tradition and a belief in the benefits of a well-ordered society. They tend to be on the good side of the law, and they value loyalty and hard work. Hill dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Hill dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Hill dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
+         "Traits": ["Ability Score Increase: Your Wisdom score increases by 1.", "Dwarven Toughness: Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."],
+         "Proficiencies": {
+           "Armor": [],
+           "Weapons": [],
+           "Tools": [],
+           "Saving throws": [],
+           "SkillOptions": [""]
+         }
+       }
+     },
+     {
+       "Mountain Dwarf": {
+         "Ability score increase": [
+           2,
+           0,
+           0,
+           0,
+           0,
+           0
+         ],
+         "Description": "Mountain dwarves are strong, hardy, and tough, with a penchant for the military life. They tend to be on the lawful side of the law, and they value honor and tradition. Mountain dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Mountain dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Mountain dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
+         "Traits": ["Ability Score Increase: Your Strength score increases by 2.", "Dwarven Armor Training: You have proficiency with light and medium armor."],
 
-    }
-  },
+         "Proficiencies": {
+           "Armor": ["Light armor", "Medium armor"],
+           "Weapons": [],
+           "Tools": [],
+           "Saving throws": [],
+           "SkillOptions": []
+         }
+       }
+     }
+    ]
+ },
 
-  "Hill Dwarf": {
-    "content": [
-      "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
-      "***Ability Score Increase.*** Your Wisdom score increases by 1.",
-      "***Dwarven Toughness.*** Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+  "Elf": {
+    "Ability score increase": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Speed": 30,
+    "Description": "Elves are a magical people of otherworldly grace, living in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry.",
+    "Traits": [
+          "Darkvision: Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+          "Keen Senses: You have proficiency in the Perception skill.",
+          "Fey Ancestry: You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+          "Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
+          "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+          "Languages: You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among"
+      ],
+    "Proficiencies": {
+      "Armor": [],
+      "Weapons": ["Longsword", "Shortsword", "Shortbow", "Longbow"],
+      "Tools": [],
+      "Saving throws": [],
+      "SkillOptions": ["Perception"]
+    },
+    "Subraces": [
+      {
+        "High Elf": {
+          "Ability score increase": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "Description": "As a high elf, you have a Keen Mind and a mastery of at least The Basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more Common and more friendly, and often encountered among Humans and Other Races.",
+          "Traits": [
+            "Ability Score Increase: Your Intelligence score increases by 1.",
+            "Cantrip: You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
+            "Extra Language: You can speak, read, and write one extra language of your choice.",
+            "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow."
+          ],
+          "Proficiencies": [
+            "Longsword",
+            "Shortsword",
+            "Shortbow",
+            "Longbow"
+          ]
+        }
+      },
+      {
+        "Wood Elf": {
+          "Ability score increase": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "Description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerûn, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.\n\n",
+          "Traits": [
+            "Ability Score Increase: Your Wisdom score increases by 1.",
+            "Fleet of Foot: Your base walking speed increases to 35 feet.",
+            "Mask of the Wild: You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
+          ],
+          "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "Saving throws": [],
+            "SkillOptions": []
+          }
+        }
+      }
     ]
   },
 
-  "Elf": {
-    "Elf Traits": {
-      "content": [
-        "Your elf character has a variety of natural abilities, the result of thousands of years of elven refinement.",
-        "***Ability Score Increase.*** Your Dexterity score increases by 2.",
-        "***Age.*** Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
-        "***Alignment.*** Elves love freedom, variety, and self- expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others’ freedom as well as their own, and they are more often good than not. The drow are an exception; their exile has made them vicious and dangerous. Drow are more often evil than not.",
-        "***Size.*** Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
-        "***Speed.*** Your base walking speed is 30 feet.",
-        "***Darkvision.*** Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "***Keen Senses.*** You have proficiency in the Perception skill.",
-        "***Fey Ancestry.*** You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
-        "***Trance.*** Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice.",
-        "After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
-        "***Languages.*** You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires."
-      ],
-      "High Elf": {
-        "content": [
-          "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more common and more friendly, and often encountered among humans and other races.",
-          "***Ability Score Increase.*** Your Intelligence score increases by 1.",
-          "***Elf Weapon Training.*** You have proficiency with the longsword, shortsword, shortbow, and longbow.",
-          "***Cantrip.*** You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
-          "***Extra Language.*** You can speak, read, and write one extra language of your choice."
-        ]
-      }
-    }
-  },
   "Halfling": {
-    "Halfling Traits": {
-      "content": [
-        "Your halfling character has a number of traits in common with all other halflings.",
-        "***Ability Score Increase.*** Your Dexterity score increases by 2.",
-        "***Age.*** A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
-        "***Alignment.*** Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.",
-        "***Size.*** Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
-        "***Speed.*** Your base walking speed is 25 feet.",
-        "***Lucky.*** When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
-        "***Brave.*** You have advantage on saving throws against being frightened.",
-        "***Halfling Nimbleness.*** You can move through the space of any creature that is of a size larger than yours.",
-        "***Languages.*** You can speak, read, and write Common and Halfling. The Halfling language isn’t secret, but halflings are loath to share it with others. They write very little, so they don’t have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling."
-      ],
-      "Lightfoot": {
-        "content": [
-          "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others.",
-          "Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
-          "***Ability Score Increase.*** Your Charisma score increases by 1.",
-          "***Naturally Stealthy.*** You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
-        ]
+    "Ability score increase": [0, 2, 0, 0, 0, 0],
+    "Speed": 25,
+    "Desciption": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened.\n\n",
+    "Traits": [
+      "Lucky: When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
+      "Brave: You have advantage on saving throws against being frightened.",
+      "Halfling Nimbleness: You can move through the space of any creature that is of a size larger than yours.",
+      "Languages: You can speak, read, and write Common and Halfling."
+    ],
+    "Proficiencies": {
+      "Armor": [],
+      "Weapons": [],
+      "Tools": [],
+      "Saving throws": [],
+      "SkillOptions": []
+    },
+    "Subraces":[
+      {
+        "Lightfoot": {
+            "Ability score increase": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "Description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.\n\nLightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, these halflings are called hairfeet or tallfellows.",
+            "Traits": [
+                "Ability Score Increase: Your Charisma score increases by 1.",
+                "Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+            ],
+            "Proficiencies": {
+                "Armor": [],
+                "Weapons": [],
+                "Tools": [],
+                "Saving throws": [],
+                "SkillOptions": []
+            }
+        }
+      },
+      {
+        "Stout": {
+            "Ability score increase": [
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+            ],
+            "Description": "As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.\n\n",
+            "Traits": [
+                "Ability Score Increase: Your Constitution score increases by 1.",
+                "Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage."
+            ],
+            "Proficiencies": {
+                "Armor": [],
+                "Weapons": [],
+                "Tools": [],
+                "Saving throws": [],
+                "SkillOptions": []
+            }
+        }
       }
-    }
+    ]
   },
+
   "Human": {
-    "Human Traits": {
-      "content": [
-        "It’s hard to make generalizations about humans, but your human character has these traits.",
-        "***Ability Score Increase.*** Your ability scores each increase by 1.",
-        "***Age.*** Humans reach adulthood in their late teens and live less than a century.",
-        "***Alignment.*** Humans tend toward no particular alignment. The best and the worst are found among them.",
-        "***Size.*** Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
-        "***Speed.*** Your base walking speed is 30 feet.",
-        "***Languages.*** You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on."
-      ]
-    }
-  },
-  "Dragonborn": {
-    "Dragonborn Traits": {
+    "Ability score increase": [1, 1, 1, 1, 1, 1],
+    "Speed": 30,
+    "Description": "Humans are the most adaptable and ambitious people among the common",
+    "Traits": ["Ability Score Increase: Your ability scores each increase by 1."],
+    "Proficiencies": {
+        "Armor": [],
+        "Weapons": [],
+        "Tools": [],
+        "Saving throws": [],
+        "SkillOptions": []
+        },
+    "Subraces": []
+    },
+
+   "Dragonborn": {
+      "Ability score increase": [2, 0, 0, 0, 0, 1],
+      "Speed": 30,
+      "Description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Most dragonborn are good, but a few are evil. Those who are good are often noble, valiant, and selfless, while those who are evil can be cruel, brutal, and tyrannical. Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+      "Traits": [
+        "Ability Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.",
+        "Draconic Ancestry: You have draconic ancestry. Choose one type of tyoe of dragon. Your breath weapon and damage resistance are determined by the dragon type ",
+        "Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest.",
+        "Damage Resistance: You have resistance to the damage type associated with your draconic ancestry."
+      ],
+        "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "Saving throws": [],
+            "SkillOptions": []
+        },
       "content": [
         "Your draconic heritage manifests in a variety of traits you share with other dragonborn.",
         "***Ability Score Increase.*** Your Strength score increases by 2, and your Charisma score increases by 1.",
@@ -100,47 +261,6 @@
         "***Alignment.*** Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.",
         "***Size.*** Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
         "***Speed.*** Your base walking speed is 30 feet.",
-        "***Draconic Ancestry.***",
-        {
-          "table": {
-            "**Dragon**": [
-              "Black",
-              "Blue",
-              "Brass",
-              "Bronze",
-              "Copper",
-              "Gold",
-              "Green",
-              "Red",
-              "Silver",
-              "White"
-            ],
-            "**Damage Type**": [
-              "Acid",
-              "Lightning",
-              "Fire",
-              "Lightning",
-              "Acid",
-              "Fire",
-              "Poison",
-              "Fire",
-              "Cold",
-              "Cold"
-            ],
-            "**Breath Weapon**": [
-              "5 by 30 ft. line (Dex. save)",
-              "5 by 30 ft. line (Dex. save)",
-              "5 by 30 ft. line (Dex. save)",
-              "5 by 30 ft. line (Dex. save)",
-              "5 by 30 ft. line (Dex. save)",
-              "15 ft. cone (Dex. save)",
-              "15 ft. cone (Con. save)",
-              "15 ft. cone (Dex. save)",
-              "15 ft. cone (Con. save)",
-              "15 ft. cone (Con. save)"
-            ]
-          }
-        },
         "***Draconic Ancestry.*** You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
         "***Breath Weapon.*** You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
         "When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.",
@@ -148,7 +268,6 @@
         "***Damage Resistance.*** You have resistance to the damage type associated with your draconic ancestry.",
         "***Languages.*** You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
       ]
-    }
   },
   "Gnome": {
     "Gnome Traits": {
