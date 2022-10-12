@@ -5,8 +5,10 @@ Character.class
 Stats\DiceBag.class
 Stats\StatGenerator.class
 Stats\NightmareStrategy.class
+Stats\Stats.class
 WizardController.class
 Stats\ArrayStrategy.class
+WizardController$1.class
 Race.class
 Feature.class
 Items\InventoryItem.class
@@ -14,6 +16,7 @@ Items\InventoryItemBuilder.class
 Job.class
 Items\CoinBag.class
 Items\Inventory.class
+CharacterViewController.class
 Stats\Modifier.class
 Stats\StatStrategy.class
 Stats\RollStrategy.class

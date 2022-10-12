@@ -1,3 +1,4 @@
+import Stats.Stats;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -8,9 +9,10 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-
+import Stats.StatView;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -28,6 +30,8 @@ public class WizardController implements Initializable{
     @FXML private StackPane stackPane;
 
     private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
+    Stats stats = new Stats();
+    StatView statView;
 
     //Basics AnchorPane
     @FXML private TextField nameField;
@@ -72,19 +76,7 @@ public class WizardController implements Initializable{
     @FXML private TextField WisdomTextField;
     @FXML private TextField CharismaTextField;
 
-    //StatView
-    @FXML private Label StatView1Big;
-    @FXML private Label StatView2Big;
-    @FXML private Label StatView3Big;
-    @FXML private Label StatView4Big;
-    @FXML private Label StatView5Big;
-    @FXML private Label StatView6Big;
-    @FXML private Label StatView1Small;
-    @FXML private Label StatView2Small;
-    @FXML private Label StatView3Small;
-    @FXML private Label StatView4Small;
-    @FXML private Label StatView5Small;
-    @FXML private Label StatView6Small;
+
 
 
     //WeaponsAndArmour AnchorPane
@@ -123,6 +115,8 @@ public class WizardController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
+        statView = new StatView();
+        prepareRadioButtons();
     }
 
     //navigation methods for the wizard within the stackpane
@@ -170,8 +164,12 @@ public class WizardController implements Initializable{
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
                 if (statToggleGroup.getSelectedToggle() != null){
+                    System.out.println("here");
                     RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
-                    selected.getText();
+                    stats.chooseStrategy(selected.getText());
+                    ArrayList<Integer> listOfStats = stats.getStats();
+                    statView.updateStatView(listOfStats);
+
                 }
             }
         });

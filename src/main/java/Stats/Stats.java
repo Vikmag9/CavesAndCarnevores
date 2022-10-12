@@ -1,15 +1,28 @@
 package Stats;
 
-public class Stats {
+import java.util.ArrayList;
 
-    Stats(){
+public class Stats {
+    StatGenerator statGenerator;
+    public Stats(){
+        this.statGenerator = new StatGenerator();
     }
 
     public void chooseStrategy(String strategy){
+        System.out.println("here");
         switch(strategy){
-            case(""):
-                int i = 3;
+            case("Roll drop one"):
+                statGenerator.setStrategy(new RollStrategy());
+            case("Array"):
+                statGenerator.setStrategy(new ArrayStrategy());
+            case("Nightmare"):
+                statGenerator.setStrategy(new NightmareStrategy());
+
 
         }
+    }
+
+    public ArrayList<Integer> getStats(){
+        return this.statGenerator.getListOfStats();
     }
 }
