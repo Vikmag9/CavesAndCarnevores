@@ -3,10 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
@@ -72,6 +69,21 @@ public class WizardController implements Initializable{
     @FXML private TextField IntelligenceTextField;
     @FXML private TextField WisdomTextField;
     @FXML private TextField CharismaTextField;
+
+    //StatView
+    @FXML private Label StatView1Big;
+    @FXML private Label StatView2Big;
+    @FXML private Label StatView3Big;
+    @FXML private Label StatView4Big;
+    @FXML private Label StatView5Big;
+    @FXML private Label StatView6Big;
+    @FXML private Label StatView1Small;
+    @FXML private Label StatView2Small;
+    @FXML private Label StatView3Small;
+    @FXML private Label StatView4Small;
+    @FXML private Label StatView5Small;
+    @FXML private Label StatView6Small;
+
 
     //WeaponsAndArmour AnchorPane
     @FXML private ComboBox<String> weaponComboBox;
