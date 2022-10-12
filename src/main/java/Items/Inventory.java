@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Inventory {
-        HashMap<String, InventoryItem> inventory;
+
+
+    HashMap<String, InventoryItem> inventory;
         CoinBag coinBag;
         InventoryItemCreator inventoryItemCreator;
         InventoryItem item;
@@ -30,6 +32,10 @@ public class Inventory {
                inventory.remove(key);
 
         }
+
+    public HashMap<String, InventoryItem> getInventory() {
+        return inventory;
+    }
 
 
 }

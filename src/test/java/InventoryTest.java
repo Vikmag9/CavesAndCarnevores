@@ -19,7 +19,7 @@ public class InventoryTest {
 
         assertTrue(item.getAtkBonus() == 4);
         //assertTrue(isNull(item.getac()));
-        System.out.println(item.getac());
+        System.out.println(item.getAc());
     }
 
     @Test
