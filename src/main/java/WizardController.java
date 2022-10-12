@@ -150,4 +150,5 @@ public class WizardController implements Initializable{
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
     }
+
 }

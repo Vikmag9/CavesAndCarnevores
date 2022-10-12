@@ -15,16 +15,18 @@ public class Character {
     private int armorClass;
     private Inventory inventory;
     private Map<String, List<String>> proficiencies;
+    private String background;
 
 
 
-    public Character(String name, Race race, Job job, List<Feature> feats, Inventory inventory, int level){
+    public Character(String name, Race race, Job job,Inventory inventory, String background){
         this.name = name;
         this.race = race;
         this.job = job;
-        this.level = level;
+        this.background = background;
+        //this.level = level;
         this.health = calculateHealth();
-        this.feats = assembleFeats();
+        //this.feats = assembleFeats(); List<Feature> feats
         this.inventory = inventory;
         //this.armorClass = calculateAC();
 
