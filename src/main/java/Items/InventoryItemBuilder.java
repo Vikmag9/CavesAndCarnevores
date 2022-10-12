@@ -1,13 +1,14 @@
 package Items;
 
 public class InventoryItemBuilder {
-    private String itemType;
+    private String itemType; //TODO Make into ENUM
     private String itemName;
     private String itemDescription;
     private int itemAmount;
     private int itemValue;
     private double itemWeight;
     int ac;
+    private boolean hasAc = false;
     int atkBonus;
     private boolean isMagical;
     boolean isequipped;
@@ -25,6 +26,7 @@ public class InventoryItemBuilder {
         //Optional attributes
 
     public InventoryItemBuilder ac(int ac){
+        this.hasAc = true;
         this.ac = ac;
         return this;
     }
@@ -38,8 +40,12 @@ public class InventoryItemBuilder {
         this.isequipped = isequipped;
         return this;
     }
-
-
+    public boolean gethasAc(){
+        return this.hasAc;
+    }
+    public boolean getIsEquipped(){
+        return this.isequipped;
+    }
 
     public String getItemType(){
         return this.itemType;

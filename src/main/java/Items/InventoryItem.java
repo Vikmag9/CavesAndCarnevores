@@ -13,6 +13,7 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
     private double itemWeight;
 
     private boolean isMagical;
+    private boolean hasAc;
 
     private int ac;
 
@@ -33,6 +34,7 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         this.serialNumber = 0;
         //Optional
         this.ac = builder.ac;
+        this.hasAc = builder.gethasAc();
         this.atkBonus = builder.atkBonus;
         this.isequipped = builder.isequipped;
     }
@@ -65,12 +67,20 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         return itemWeight;
      }
 
-    public int getac(){
+    public int getAc(){
         return this.ac;
     }
 
     public int getAtkBonus(){
         return this.atkBonus;
+    }
+
+    public boolean getHasAc() {
+        return this.hasAc;
+    }
+
+    public boolean getIsEquipped() {
+        return this.isequipped;
     }
 
 
