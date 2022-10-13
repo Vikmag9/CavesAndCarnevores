@@ -6,11 +6,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class WizardController implements Initializable{
 
@@ -74,10 +72,10 @@ public class WizardController implements Initializable{
 
 
     //WeaponsAndArmour AnchorPane
-    @FXML private ComboBox<String> weaponComboBox;
-    @FXML private ComboBox<String> armourComboBox;
-    @FXML private ComboBox<String> shieldComboBox;
-    @FXML private ComboBox<String> additionalWeaponComboBox;
+    @FXML private FlowPane WeaponsFlowPane;
+    List<ComboBox<String>> comboBoxList = new ArrayList<>();
+
+
 
     //Inventory AnchorPane
     @FXML private ComboBox<String> inventoryComboBox1;
@@ -149,12 +147,21 @@ public class WizardController implements Initializable{
     }
 
     protected void prepareComboBoxes(){
-        raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
+        List<String> jobs = new ArrayList<>();
+        List<String> races = new ArrayList<>();
+        try {
+            jobs = Job.getAllJobs();
+            races = Race.getAllRaces();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
 
-        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+        jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
 
+        //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
     }
@@ -168,11 +175,7 @@ public class WizardController implements Initializable{
         StatView5Big.setText(stats.get(4).toString());
         StatView6Big.setText(stats.get(5).toString());
 
-
-
-
     }
-
 
     private void prepareRadioButtons(){
         statToggleGroup = new ToggleGroup();
@@ -252,6 +255,20 @@ public class WizardController implements Initializable{
             listOfProficiencies.add("Athletics");
         }
         return listOfProficiencies;
+    }
+
+    private void loadWeaponsArmourTools(Map<String, List<String>> map){
+
+        map.forEach((key, value) -> {
+            ComboBox<String> combobox = new ComboBox<>();
+            combobox.setPlaceholder(new Label(key));
+            combobox.getItems().addAll(value);
+            comboBoxList.add(combobox);
+            });
+
+
+        WeaponsFlowPane.getChildren().clear();
+        WeaponsFlowPane.getChildren().add(comboBoxList.get(0));
     }
 
 
