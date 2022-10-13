@@ -21,6 +21,8 @@ public class CharacterViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setActionsTextArea();
+        setReactionsTextArea();
+        setBonusActionsTextArea();
     }
 
     private void setActionsTextArea() {
@@ -36,7 +38,8 @@ public class CharacterViewController implements Initializable {
                 - Grapple
                 - Shove
                 - Cast a Spell
-                - Ready An Action""";
+                - Ready An Action
+                - Use a Class Feature""";
 
         actionsTextArea.setText(actions);
     }
@@ -51,6 +54,15 @@ public class CharacterViewController implements Initializable {
         reactionsTextArea.setText(reactions);
     }
 
+    private void setBonusActionsTextArea() {
+        String bonusActions = """
+                - Offhand Attack
+                - Cast a spell
+                - Use a Class Feature
+                """;
+
+        bonusActionsTextArea.setText(bonusActions);
+    }
 
 
 }
