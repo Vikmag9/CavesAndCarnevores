@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="730.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="730.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharacterViewController">
    <children>
       <TabPane prefHeight="650.0" prefWidth="730.0" stylesheets="@ModuleTabs.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>

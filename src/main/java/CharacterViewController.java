@@ -14,9 +14,43 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CharacterViewController implements Initializable {
+    @FXML private TextArea actionsTextArea;
+    @FXML private TextArea reactionsTextArea;
+    @FXML private TextArea bonusActionsTextArea;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        setActionsTextArea();
     }
+
+    private void setActionsTextArea() {
+        String actions = """
+                - Attack
+                - Dash
+                - Disengage
+                - Dodge
+                - Help
+                - Hide
+                - Search
+                - Use an Object
+                - Grapple
+                - Shove
+                - Cast a Spell
+                - Ready An Action""";
+
+        actionsTextArea.setText(actions);
+    }
+
+    private void setReactionsTextArea() {
+        String reactions = """
+                - Opporty Attack
+                - Perform a readied action
+                - Cast a spell
+                """;
+
+        reactionsTextArea.setText(reactions);
+    }
+
+
 
 }
