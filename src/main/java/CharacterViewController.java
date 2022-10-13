@@ -116,7 +116,7 @@ public class CharacterViewController implements Initializable {
 
             acCheckBox.setDisable(bool);
             atkBonusCheckBox.setDisable(bool);
-            isMagicalCheckBox.setDisable(bool);
+
 
 
     }
