@@ -1,4 +1,6 @@
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -17,11 +19,20 @@ public class CharacterViewController implements Initializable {
     List<List<String>> spellList;
     Character character;
 
+    @FXML private RadioButton equippableRadioButton;
+    @FXML private RadioButton consumableRadioButton;
+    @FXML private RadioButton miscellaneousRadioButton;
+
+    @FXML private CheckBox acCheckBox;
+    @FXML private CheckBox atkBonusCheckBox;
+    @FXML private CheckBox isMagicalCheckBox;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setActionsTextArea();
         setReactionsTextArea();
         setBonusActionsTextArea();
+        prepareRadioButtons();
     }
 
     private void setActionsTextArea() {
@@ -91,7 +102,6 @@ public class CharacterViewController implements Initializable {
 
     }
 
-
     private void prepareSpell(Map<String, String> map) {
         String name = map.get("name");
         String level = map.get("level");
@@ -101,5 +111,40 @@ public class CharacterViewController implements Initializable {
         spellList.add(spell);
     }
 
+    @FXML
+    private void disablecheckboxes(Boolean bool) {
+
+            acCheckBox.setDisable(bool);
+            atkBonusCheckBox.setDisable(bool);
+            isMagicalCheckBox.setDisable(bool);
+
+
+    }
+
+    private void prepareRadioButtons(){
+        ToggleGroup itemToggleGroup = new ToggleGroup();
+        consumableRadioButton.setToggleGroup(itemToggleGroup);
+        equippableRadioButton.setToggleGroup(itemToggleGroup);
+        miscellaneousRadioButton.setToggleGroup(itemToggleGroup);
+        itemToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                if (itemToggleGroup.getSelectedToggle() != null){
+                    RadioButton selected = (RadioButton) itemToggleGroup.getSelectedToggle();
+                    System.out.println(selected.getText());
+                    if (consumableRadioButton.isSelected()){
+                        disablecheckboxes(true);
+                        System.out.println("disable");
+                    }
+                    else {
+                        disablecheckboxes(false);
+                        System.out.println("enable");
+                    }
+
+
+                }
+            }
+        });
+    }
 
 }
