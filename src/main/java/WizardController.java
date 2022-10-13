@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -149,10 +150,20 @@ public class WizardController implements Initializable{
     }
 
     protected void prepareComboBoxes(){
-        raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
+        List<String> jobs = new ArrayList<>();
+        List<String> races = new ArrayList<>();
+        try {
+            jobs = Job.getAllJobs();
+            races = Race.getAllRaces();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
 
-        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+        jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
 
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
