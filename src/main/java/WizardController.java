@@ -5,9 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import Stats.StatView;
+
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -20,11 +21,11 @@ public class WizardController implements Initializable{
     @FXML private AnchorPane lorePane;
     @FXML private AnchorPane satsAndSkillsPane;
     @FXML private AnchorPane weaponsAndArmourPane;
+
     @FXML private StackPane stackPane;
 
 
     Stats stats = new Stats();
-    StatView statView;
 
     //Basics AnchorPane
     @FXML private TextField nameField;
@@ -102,13 +103,23 @@ public class WizardController implements Initializable{
     @FXML private RadioButton arrayRadio;
     @FXML private RadioButton nightmareRadio;
 
-
+    @FXML private Label StatView1Big;
+    @FXML private Label StatView2Big;
+    @FXML private Label StatView3Big;
+    @FXML private Label StatView4Big;
+    @FXML private Label StatView5Big;
+    @FXML private Label StatView6Big;
+    @FXML private Label StatView1Small;
+    @FXML private Label StatView2Small;
+    @FXML private Label StatView3Small;
+    @FXML private Label StatView4Small;
+    @FXML private Label StatView5Small;
+    @FXML private Label StatView6Small;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
-        statView = new StatView();
         prepareRadioButtons();
     }
 
@@ -137,7 +148,6 @@ public class WizardController implements Initializable{
         lorePane.toFront();
     }
 
-    //preparing methods for the wizard
     protected void prepareComboBoxes(){
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
@@ -149,6 +159,21 @@ public class WizardController implements Initializable{
         backgroundComboBox.getSelectionModel().selectFirst();
     }
 
+    @FXML
+    public void updateStatView(ArrayList<Integer> stats){
+        StatView1Big.setText(stats.get(0).toString());
+        StatView2Big.setText(stats.get(1).toString());
+        StatView3Big.setText(stats.get(2).toString());
+        StatView4Big.setText(stats.get(3).toString());
+        StatView5Big.setText(stats.get(4).toString());
+        StatView6Big.setText(stats.get(5).toString());
+
+
+
+
+    }
+
+
     private void prepareRadioButtons(){
         statToggleGroup = new ToggleGroup();
         rollDropRadio.setToggleGroup(statToggleGroup);
@@ -156,13 +181,13 @@ public class WizardController implements Initializable{
         nightmareRadio.setToggleGroup(statToggleGroup);
         statToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
-            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
                 if (statToggleGroup.getSelectedToggle() != null){
-                    System.out.println("here");
                     RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
+                    System.out.println(selected.getText());
                     stats.chooseStrategy(selected.getText());
                     ArrayList<Integer> listOfStats = stats.getStats();
-                    statView.updateStatView(listOfStats);
+                    updateStatView(listOfStats);
 
                 }
             }

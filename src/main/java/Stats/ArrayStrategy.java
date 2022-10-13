@@ -9,6 +9,7 @@ public class ArrayStrategy implements StatStrategy{
     @Override
     public ArrayList<Integer> getListOfStats() {
         listOfStats = new ArrayList<Integer>(List.of(15, 14, 13, 12, 10, 8));
+        System.out.println("array");
         return listOfStats;
     }
 }

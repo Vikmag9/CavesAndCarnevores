@@ -11,6 +11,7 @@ public class StatGenerator {
 
     public void setStrategy(StatStrategy strategy) {
         this.strategy = strategy;
+        System.out.println(this.strategy + " is of type " + ((Object)this.strategy).getClass().getSimpleName());
     }
 
     public ArrayList<Integer> getListOfStats(){

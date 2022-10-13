@@ -17,13 +17,13 @@ public class RollStrategy implements StatStrategy{
     private int rollOneStat(){
         listOfRolls = new ArrayList<Integer>();
         for(int i = 0; i < 4; i++){
-            listOfRolls.add(diceBag.rollDice(6));
+            listOfRolls.add(this.diceBag.rollDice(6));
         }
         listOfRolls.remove(listOfRolls.indexOf(Collections.min(listOfRolls)));
 
-        for(int i : listOfRolls) {
+        for(int u = 0; u<listOfRolls.size(); u++) {
             stat = 0;
-            stat+= listOfRolls.get(i);
+            stat+= listOfRolls.get(u);
         }
         return stat;
     }
