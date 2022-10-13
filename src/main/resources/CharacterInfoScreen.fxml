@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Circle?>
@@ -162,20 +163,82 @@
           </Tab>
             <Tab fx:id="tabCombat" text="Combat">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@Font.css">
                      <children>
-                        <AnchorPane layoutX="154.0" layoutY="17.0" prefHeight="500.0" prefWidth="482.0">
+                        <AnchorPane layoutX="55.0" layoutY="3.0" prefHeight="616.0" prefWidth="100.0">
                            <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="185.0" layoutX="129.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" width="225.0" AnchorPane.bottomAnchor="118.20000000000005" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="128.39999999999998" AnchorPane.topAnchor="356.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="19.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="97.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="174.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="250.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="328.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="405.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="45.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="200.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="354.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#9bb193" height="615.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                              <Text layoutX="20.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Strength" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="15.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="23.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="15.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="15.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="14.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="14.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="16.0" layoutY="327.0" stroke="BLACK" strokeType="INSIDE" width="70.0" AnchorPane.leftAnchor="16.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="16.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="35.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="16.0" layoutY="529.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Text layoutX="18.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Dexterity" />
+                              <Text fx:id="strengthsPtsText1" layoutX="24.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
+                              <Text fx:id="dexterityPtsText1" layoutX="23.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="55.7366943359375" />
+                              <Text fx:id="IntelligencePtsText1" layoutX="23.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="55.7366943359375" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="35.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Text layoutX="5.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Constitution" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="35.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="35.0" layoutY="483.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Text layoutX="21.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Wisdom" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="37.0" layoutY="585.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="28.0" layoutX="36.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" width="28.0" />
+                              <Text fx:id="charismaPtsText1" layoutX="23.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="56.536712646484375" />
+                              <Text fx:id="wisdomPtsText1" layoutX="23.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="55.7366943359375" />
+                              <Text fx:id="constitutionPtsText1" layoutX="22.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="55.7366943359375" />
+                              <Text layoutX="9.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Intelligence" />
+                              <Text layoutX="15.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Charisma" />
+                              <Text fx:id="strengthModifierText1" layoutX="39.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                              <Text fx:id="dexterityModifierText1" layoutX="39.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                              <Text fx:id="constitutionModifierText1" layoutX="39.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                              <Text fx:id="wisdomModifierText1" layoutX="40.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                              <Text fx:id="intelligenceModifierText1" layoutX="39.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                              <Text fx:id="charismaModifierText1" layoutX="41.0" layoutY="603.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="XX" />
+                           </children>
+                        </AnchorPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="220.0" layoutY="75.0" prefHeight="144.0" prefWidth="290.0" styleClass="skills_font" text="Actions">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="290.0">
+                                 <children>
+                                    <TextArea fx:id="actionsTextArea" layoutX="-1.0" layoutY="-1.0" prefHeight="118.0" prefWidth="290.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="220.0" layoutY="239.0" prefHeight="144.0" prefWidth="290.0" styleClass="skills_font" text="Reactions">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="290.0">
+                                 <children>
+                                    <TextArea fx:id="reactionsTextArea" layoutX="-1.0" layoutY="-1.0" prefHeight="118.0" prefWidth="290.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="220.0" layoutY="402.0" prefHeight="144.0" prefWidth="290.0" styleClass="skills_font" text="Bonus Actions">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="290.0">
+                                 <children>
+                                    <TextArea fx:id="bonusActionsTextArea" layoutX="-1.0" layoutY="-1.0" prefHeight="118.0" prefWidth="290.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <AnchorPane layoutX="558.0" layoutY="147.0" prefHeight="313.0" prefWidth="134.0">
+                           <children>
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#9bb193" height="317.0" stroke="BLACK" strokeType="INSIDE" width="131.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="29.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="29.0" layoutY="128.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="32.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Text layoutX="53.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="AC" />
+                              <Text layoutX="32.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Initiative" />
+                              <Text layoutX="7.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Movement speed" />
+                              <Text fx:id="acText" layoutX="37.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
+                              <Text fx:id="initiativeText" layoutX="40.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
+                              <Text fx:id="movementSpeedText" layoutX="40.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>
