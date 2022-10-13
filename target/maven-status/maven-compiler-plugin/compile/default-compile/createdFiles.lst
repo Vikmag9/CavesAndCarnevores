@@ -5,6 +5,7 @@ Character.class
 Stats\DiceBag.class
 Stats\StatGenerator.class
 Stats\NightmareStrategy.class
+Items\InventoryItemDirector.class
 Stats\Stats.class
 WizardController.class
 Stats\ArrayStrategy.class
