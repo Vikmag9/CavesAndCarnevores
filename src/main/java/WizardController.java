@@ -1,19 +1,13 @@
 import Stats.Stats;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import Stats.StatView;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -26,10 +20,9 @@ public class WizardController implements Initializable{
     @FXML private AnchorPane lorePane;
     @FXML private AnchorPane satsAndSkillsPane;
     @FXML private AnchorPane weaponsAndArmourPane;
-    @FXML private ImageView logoImage;
     @FXML private StackPane stackPane;
 
-    private List<AnchorPane> AnchorPaneList = Arrays.asList(basicsPane,  jobSpecificPane,  satsAndSkillsPane, weaponsAndArmourPane, inventoryPane, lorePane);
+
     Stats stats = new Stats();
     StatView statView;
 
@@ -144,6 +137,7 @@ public class WizardController implements Initializable{
         lorePane.toFront();
     }
 
+    //preparing methods for the wizard
     protected void prepareComboBoxes(){
         raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
         raceComboBox.getSelectionModel().selectFirst();
@@ -173,6 +167,66 @@ public class WizardController implements Initializable{
                 }
             }
         });
+    }
+
+    private List<String> checkBoxProficiencyToList(){
+        //this is not very extensible, however, due to how the game Dungeons & Dragons (5e) is written, there will never be a need to add more skill proficiencies.
+        List<String> listOfProficiencies = new ArrayList<>();
+        if (AcrobaticsCheckBox.isSelected()){
+            listOfProficiencies.add("Acrobatics");
+        }
+        if (SleightOfHandCheckBox.isSelected()){
+            listOfProficiencies.add("Sleight of Hand");
+        }
+        if (StealthCheckBox.isSelected()){
+            listOfProficiencies.add("Stealth");
+        }
+        if (AnimalHandlingCheckBox.isSelected()){
+            listOfProficiencies.add("Animal Handling");
+        }
+        if (InsightCheckBox.isSelected()){
+            listOfProficiencies.add("Insight");
+        }
+        if (MedicineCheckBox.isSelected()){
+            listOfProficiencies.add("Medicine");
+        }
+        if (PerceptionCheckBox.isSelected()){
+            listOfProficiencies.add("Perception");
+        }
+        if (SurvivalCheckBox.isSelected()){
+            listOfProficiencies.add("Survival");
+        }
+        if (ArcanaCheckBox.isSelected()){
+            listOfProficiencies.add("Arcana");
+        }
+        if (HistoryCheckBox.isSelected()){
+            listOfProficiencies.add("History");
+        }
+        if (InvestigationCheckBox.isSelected()){
+            listOfProficiencies.add("Investigation");
+        }
+        if (NatureCheckBox.isSelected()){
+            listOfProficiencies.add("Nature");
+        }
+        if (ReligionCheckBox.isSelected()){
+            listOfProficiencies.add("Religion");
+        }
+        if (DeceptionCheckBox.isSelected()){
+            listOfProficiencies.add("Deception");
+        }
+        if (IntimidationCheckBox.isSelected()){
+            listOfProficiencies.add("Intimidation");
+        }
+        if (PerformanceCheckBox.isSelected()){
+            listOfProficiencies.add("Performance");
+        }
+        if (PersuasionCheckBox.isSelected()){
+            listOfProficiencies.add("Persuasion");
+        }
+        if (AthleticsCheckBox.isSelected()){
+            listOfProficiencies.add("Athletics");
+        }
+        return listOfProficiencies;
     }
 
 

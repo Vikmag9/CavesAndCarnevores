@@ -11,6 +11,7 @@ Stats\ArrayStrategy.class
 WizardController$1.class
 Race.class
 Feature.class
+Stats\StatView.class
 Items\InventoryItem.class
 Items\InventoryItemBuilder.class
 Job.class
