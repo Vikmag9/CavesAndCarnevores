@@ -268,7 +268,7 @@ public class Character_test {
     public void testBarbarianParsing() throws IOException, ClassNotFoundException {
         Job charJob = new Job("Barbarian");
         Inventory inventory = new Inventory(1);
-        Character BarbarianCharacter = new Character("Gregg", new Race("Batman"),
+        Character BarbarianCharacter = new Character("Gregg", new Race("Human"),
                 charJob,
                 inventory,
                 1,

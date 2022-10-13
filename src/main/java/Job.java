@@ -10,7 +10,6 @@ import static java.util.Collections.emptyList;
 
 public class Job {
     private final String jobName;
-
     private final int hitdie;
     private Map proficiencies;
     private List<Feature> features;
@@ -22,7 +21,7 @@ public class Job {
         this.jobContent = getJob(jobName);
         this.features = parseFeatures();
         this.hitdie = getHitDie();
-        this.proficiencies = getProficiencies();
+        this.proficiencies = parseProficiencies();
     }
 
 
@@ -66,7 +65,7 @@ public class Job {
         return hitDie;
     }
 
-    public Map getProficiencies() {
+    public Map parseProficiencies() {
         jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies");
         return jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
     }
@@ -93,5 +92,13 @@ public class Job {
 
     public void setJobContent(JSONObject jobContent) {
         this.jobContent = jobContent;
+    }
+
+    public int getHitdie() {
+        return hitdie;
+    }
+
+    public Map getProficiencies() {
+        return proficiencies;
     }
 }
