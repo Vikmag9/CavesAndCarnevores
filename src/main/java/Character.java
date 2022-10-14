@@ -32,6 +32,17 @@ public class Character {
 
     }
 
+    public Character(Character character, int level){
+        this.name = character.getName();
+        this.level = level;
+        this.race = character.getRace();
+        this.job = character.getJob();
+        this.background = character.getBackground();
+        this.health = calculateHealth();
+        this.feats = assembleFeats();
+        this.inventory = character.getInventory();
+        this.armorClass = calculateAC();
+    }
 
 
 
@@ -132,6 +143,10 @@ public class Character {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    private String getBackground() {
+        return this.background;
     }
 
 }
