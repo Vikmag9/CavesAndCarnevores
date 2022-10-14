@@ -58,6 +58,11 @@ public class CharacterViewController implements Initializable {
     @FXML TextArea languagesTextArea;
     @FXML TextArea proficienciesTextArea;
 
+    @FXML Label characterNameLabel;
+    @FXML Label characterRaceLabel;
+    @FXML Label characterClassLabel;
+    @FXML Label characterLevelLabel;
+
 
     // Combat fx:ids
 
