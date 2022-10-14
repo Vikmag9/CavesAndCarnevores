@@ -10,6 +10,7 @@ Stats\Stats.class
 WizardController.class
 Stats\ArrayStrategy.class
 WizardController$1.class
+Items\clientInventory.class
 Race.class
 Feature.class
 Items\InventoryItem.class

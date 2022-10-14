@@ -30,7 +30,8 @@ public class Stats {
     }
 
     public ArrayList<Integer> getStats(){
-
         return this.statGenerator.getListOfStats();
     }
+
+
 }

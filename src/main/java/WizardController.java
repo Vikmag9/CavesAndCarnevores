@@ -210,6 +210,16 @@ public class WizardController implements Initializable{
         StatView6Small.setText(modifierList.get(5).toString());
     }
 
+    private void setStats() {
+        /*StrengthTextField;
+        @FXML private TextField DexterityTextField;
+        @FXML private TextField ConstitutionTextField;
+        @FXML private TextField IntelligenceTextField;
+        @FXML private TextField WisdomTextField;
+        @FXML private TextField CharismaTextField;
+         */
+    }
+
     private void prepareRadioButtons(){
         statToggleGroup = new ToggleGroup();
         rollDropRadio.setToggleGroup(statToggleGroup);

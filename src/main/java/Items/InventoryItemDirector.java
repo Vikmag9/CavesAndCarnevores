@@ -2,7 +2,7 @@ package Items;
 
 public class InventoryItemDirector {
 
-    public InventoryItem createConsumableItem(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical, int ac){
+    public InventoryItem createConsumableItem(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical){
         InventoryItemBuilder consumableBuilder = new InventoryItemBuilder(itemType, itemName, itemDescription, itemValue, itemWeight, isMagical);
         consumableBuilder.setconsumability(true);
         return new InventoryItem(consumableBuilder);
