@@ -33,6 +33,7 @@ public class Inventory {
 
     public List<InventoryItem> getInventory() {
         return inventory;
+
     }
 
     public InventoryItem getItem(int key){
