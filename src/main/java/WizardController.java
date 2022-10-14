@@ -212,12 +212,12 @@ public class WizardController implements Initializable{
 
     private void setStats() {
         /*StrengthTextField;
-        @FXML private TextField DexterityTextField;
-        @FXML private TextField ConstitutionTextField;
-        @FXML private TextField IntelligenceTextField;
-        @FXML private TextField WisdomTextField;
-        @FXML private TextField CharismaTextField;
-         */
+        DexterityTextField
+        ConstitutionTextField
+        IntelligenceTextField
+        WisdomTextField
+        CharismaTextField
+        */
     }
 
     private void prepareRadioButtons(){

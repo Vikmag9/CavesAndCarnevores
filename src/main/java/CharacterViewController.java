@@ -165,6 +165,7 @@ public class CharacterViewController implements Initializable {
     @FXML private Button createItemButton;
     @FXML private Button clearItemCreationButton;
 
+
     @FXML private Text itemNameText;
     @FXML private Text itemTypeText;
     @FXML private Text itemMagicalText;
@@ -305,6 +306,11 @@ public class CharacterViewController implements Initializable {
     // Spells features
 
     // Lore & Notes features
+
+    @FXML
+    private void saveLoreAndNotesTab(){
+        // Save the current state of the Lore & Notes tab
+    }
 
     // Inventory features
 
