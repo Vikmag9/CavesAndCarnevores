@@ -32,10 +32,11 @@ public class Character implements CharacterDataCollection{
         this.background = data.getBackground();
         this.level = level;
         this.health = calculateHealth();
-        //this.feats = assembleFeats();
-        this.inventory = data.getInventory();
-        //this.armorClass = calculateAC();
+        this.feats = assembleFeats();
+        this.inventory = inventory;
+        this.armorClass = calculateAC();
         this.stats = data.getStats();
+
 
     }
 
@@ -53,20 +54,22 @@ public class Character implements CharacterDataCollection{
 
 
 
-/*
+
     private int calculateAC() {
 
         AtomicInteger ac = new AtomicInteger(0);
-        this.inventory.getInventory().forEach(item -> {
-            if hasattr(item, ac) {
-                 if ( ((Armour) item).isEquipped()) {
-                    ac.set(((Armour) item).getArmorClass());
-                }
+        AtomicInteger additionalAC = new AtomicInteger(0);
+        this.inventory.getInventory().forEach((value) -> {
+            if (value.getItemType().equals("Armour") && value.getHasAc() && value.getIsEquipped()) {
+                ac.set(value.getAc());
+            }
+            else if (!value.getItemType().equals("Armour") && value.getHasAc() && value.getIsEquipped()) {
+                additionalAC.getAndAdd(value.getAc());
             }
         });
-        return ac.get();
+        return (ac.get() + additionalAC.get());
     }
-*/
+
     private int calculateHealth() {
         return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * getLevel();
     }
@@ -168,10 +171,6 @@ public class Character implements CharacterDataCollection{
 
     public void setLevel(int level) {
         this.level = level;
-    }
-
-    private String getBackground() {
-        return this.background;
     }
 
 }
