@@ -52,6 +52,15 @@ public class SceneController implements Initializable {
         }
     }
 
+    @FXML private void openCharacterScreen() {
+        try {
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterScreen.fxml"));
+            borderPane.setCenter(startScreen);
+        } catch (Exception e) {
+            System.out.println("Error loading FXML file: " + e);
+        }
+    }
+
     //opens the start screen on launch
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
