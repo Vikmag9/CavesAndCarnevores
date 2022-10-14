@@ -15,7 +15,6 @@ public class InventoryItemBuilder {
     boolean isequippable;
     boolean isconsumable;
 
-
     public InventoryItemBuilder(String itemType, String itemName, String itemDescription, int itemValue, Double itemWeight, boolean isMagical) {
         //Compulsory attributes
         this.itemType = itemType;
@@ -24,7 +23,6 @@ public class InventoryItemBuilder {
         this.itemDescription = itemDescription;
         this.itemWeight = itemWeight;
         this.isMagical = isMagical;
-        this.isequippable = isequippable;
         this.isconsumable = false;
         this.isequippable = false;
     }
@@ -56,6 +54,7 @@ public class InventoryItemBuilder {
     public boolean gethasAc(){
         return this.hasAc;
     }
+
     public boolean getIsEquipped(){
         return this.isequipped;
     }

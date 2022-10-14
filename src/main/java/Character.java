@@ -1,5 +1,6 @@
 import Items.Inventory;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -16,6 +17,7 @@ public class Character {
     private Inventory inventory;
     private Map<String, List<String>> proficiencies;
     private String background;
+    private HashMap<StatName, Integer> stats;
 
 
 
@@ -26,31 +28,30 @@ public class Character {
         this.background = background;
         this.level = level;
         this.health = calculateHealth();
-        this.feats = assembleFeats();
+        //this.feats = assembleFeats();
         this.inventory = inventory;
-        this.armorClass = calculateAC();
+        //this.armorClass = calculateAC();
+        this.stats = new HashMap<StatName, Integer>();
 
     }
 
 
 
 
-
+/*
     private int calculateAC() {
 
         AtomicInteger ac = new AtomicInteger(0);
-        AtomicInteger additionalAC = new AtomicInteger(0);
-        this.inventory.getInventory().forEach((key, value) -> {
-            if (value.getItemType().equals("Armour") && value.getHasAc() && value.getIsEquipped()) {
-                ac.set(value.getAc());
-            }
-            else if (!value.getItemType().equals("Armour") && value.getHasAc() && value.getIsEquipped()) {
-                additionalAC.getAndAdd(value.getAc());
+        this.inventory.getInventory().forEach(item -> {
+            if hasattr(item, ac) {
+                 if ( ((Armour) item).isEquipped()) {
+                    ac.set(((Armour) item).getArmorClass());
+                }
             }
         });
-        return (ac.get() + additionalAC.get());
+        return ac.get();
     }
-
+*/
     private int calculateHealth() {
         return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * getLevel();
     }
