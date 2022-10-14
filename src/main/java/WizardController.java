@@ -24,6 +24,7 @@ public class WizardController implements Initializable{
 
 
     Stats stats = new Stats();
+    CharacterDataClass dataClass = new CharacterDataClass();
 
     //Basics AnchorPane
     @FXML private TextField nameField;
@@ -115,10 +116,42 @@ public class WizardController implements Initializable{
     @FXML private Label StatView6Small;
 
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
         prepareRadioButtons();
+        prepareTextFields();
+    }
+
+    private void prepareTextFields(){
+        nameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setName(nameField.getText());
+        });
+
+        }
+
+
+
+    @FXML
+    private void setName(){
+        dataClass.setName(nameField.getText());
+    }
+
+    @FXML
+    private void setJobName(){
+        dataClass.setJobName(jobComboBox.getValue());
+    }
+
+    @FXML
+    private void setRaceName(){
+        dataClass.setRaceName(raceComboBox.getValue());
+    }
+
+    @FXML
+    private void setBackground(){
+        dataClass.setBackground(backgroundComboBox.getValue());
     }
 
     //navigation methods for the wizard within the stackpane
@@ -157,13 +190,22 @@ public class WizardController implements Initializable{
         }
         raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
+        raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(raceComboBox.getValue());
+        });
 
         jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
+        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(jobComboBox.getValue());
+        });
 
         //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
+        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(backgroundComboBox.getValue());
+        });
     }
 
     @FXML
@@ -225,17 +267,14 @@ public class WizardController implements Initializable{
         rollDropRadio.setToggleGroup(statToggleGroup);
         arrayRadio.setToggleGroup(statToggleGroup);
         nightmareRadio.setToggleGroup(statToggleGroup);
-        statToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                if (statToggleGroup.getSelectedToggle() != null){
-                    RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
-                    System.out.println(selected.getText());
-                    stats.chooseStrategy(selected.getText());
-                    ArrayList<Integer> listOfStats = stats.getStats();
-                    updateStatView(listOfStats);
+        statToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (statToggleGroup.getSelectedToggle() != null){
+                RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
+                System.out.println(selected.getText());
+                stats.chooseStrategy(selected.getText());
+                ArrayList<Integer> listOfStats = stats.getStats();
+                updateStatView(listOfStats);
 
-                }
             }
         });
     }
