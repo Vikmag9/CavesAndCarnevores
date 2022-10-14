@@ -312,4 +312,33 @@ public class Character_test {
 
         // TODO add equal tests for other jobs
     }
+
+    @Test
+    public void createRaceTest() throws IOException, ClassNotFoundException {
+        Job charJob = new Job("Rogue");
+        List<Feature> featureList = charJob.getFeatures();
+        Inventory inventory = new Inventory(1);
+        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
+        builder.ac(12);
+        builder.isequipped(true);
+        InventoryItem cheeseArmor = new InventoryItem(builder);
+        inventory.addItem(cheeseArmor);
+
+        Character character = new Character("Gregg", new Race("Dwarf"),
+                charJob,
+                inventory,
+                1,
+                "Orphan");
+
+        character.getRace().setSubRace(Race.getAllSubraces("Dwarf").get(1));
+
+        assertEquals(character.getRace().getName(), "Dwarf");
+        assertEquals(character.getRace().getSpeed(), 25);
+        assertEquals(character.getRace().getSubRace().getName(), "Mountain Dwarf");
+
+
+    }
+
 }
+
+

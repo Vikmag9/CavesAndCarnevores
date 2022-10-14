@@ -8,8 +8,8 @@
       0,
       0
     ],
-    "Description": "Dwarves are short, stocky, and sturdy. They are known for their resilience and their love of stone and metal. Dwarves are also known for their love of ale, mead, and good food. They are",
     "Speed": 25,
+    "Description": "Dwarves are short, stocky, and sturdy. They are known for their resilience and their love of stone and metal. Dwarves are also known for their love of ale, mead, and good food. They are",
     "Traits": [
       "Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
       "Dwarven Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.",
@@ -26,7 +26,7 @@
       "Saving throws": [],
       "SkillOptions": []
     },
-    "Subcraces": [
+    "Subraces": [
      {
        "Hill Dwarf": {
          "Ability score increase": [
@@ -37,6 +37,7 @@
            0,
            0
          ],
+         "Speed": 25,
          "Description": "Hill dwarves are stout and hardy, with a strong sense of tradition and a belief in the benefits of a well-ordered society. They tend to be on the good side of the law, and they value loyalty and hard work. Hill dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Hill dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Hill dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
          "Traits": ["Ability Score Increase: Your Wisdom score increases by 1.", "Dwarven Toughness: Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."],
          "Proficiencies": {
@@ -44,7 +45,7 @@
            "Weapons": [],
            "Tools": [],
            "Saving throws": [],
-           "SkillOptions": [""]
+           "SkillOptions": []
          }
        }
      },
@@ -58,9 +59,9 @@
            0,
            0
          ],
+         "Speed": 25,
          "Description": "Mountain dwarves are strong, hardy, and tough, with a penchant for the military life. They tend to be on the lawful side of the law, and they value honor and tradition. Mountain dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Mountain dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Mountain dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
          "Traits": ["Ability Score Increase: Your Strength score increases by 2.", "Dwarven Armor Training: You have proficiency with light and medium armor."],
-
          "Proficiencies": {
            "Armor": ["Light armor", "Medium armor"],
            "Weapons": [],
@@ -89,8 +90,7 @@
           "Keen Senses: You have proficiency in the Perception skill.",
           "Fey Ancestry: You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
           "Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
-          "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow.",
-          "Languages: You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among"
+          "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow."
       ],
     "Proficiencies": {
       "Armor": [],
@@ -110,6 +110,7 @@
             1,
             0
           ],
+          "Speed": 30,
           "Description": "As a high elf, you have a Keen Mind and a mastery of at least The Basics of magic. In many fantasy gaming worlds, there are two kinds of high elves. One type is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type is more Common and more friendly, and often encountered among Humans and Other Races.",
           "Traits": [
             "Ability Score Increase: Your Intelligence score increases by 1.",
@@ -117,12 +118,13 @@
             "Extra Language: You can speak, read, and write one extra language of your choice.",
             "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow."
           ],
-          "Proficiencies": [
-            "Longsword",
-            "Shortsword",
-            "Shortbow",
-            "Longbow"
-          ]
+          "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "Saving throws": [],
+            "SkillOptions": []
+          }
         }
       },
       {
@@ -135,6 +137,7 @@
             0,
             0
           ],
+          "Speed": 35,
           "Description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerûn, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.\n\n",
           "Traits": [
             "Ability Score Increase: Your Wisdom score increases by 1.",
@@ -181,6 +184,7 @@
                 0,
                 1
             ],
+             "Speed": 25,
             "Description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.\n\nLightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, these halflings are called hairfeet or tallfellows.",
             "Traits": [
                 "Ability Score Increase: Your Charisma score increases by 1.",
@@ -205,6 +209,7 @@
                 0,
                 0
             ],
+            "Speed": 25,
             "Description": "As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.\n\n",
             "Traits": [
                 "Ability Score Increase: Your Constitution score increases by 1.",
@@ -237,7 +242,7 @@
     "Subraces": []
     },
 
-   "Dragonborn": {
+  "Dragonborn": {
       "Ability score increase": [2, 0, 0, 0, 0, 1],
       "Speed": 30,
       "Description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Most dragonborn are good, but a few are evil. Those who are good are often noble, valiant, and selfless, while those who are evil can be cruel, brutal, and tyrannical. Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
@@ -256,6 +261,7 @@
       },
      "Subraces": []
   },
+
   "Gnome": {
     "Gnome Traits": {
       "content": [
@@ -285,6 +291,7 @@
       }
     }
   },
+
   "Half-Elf": {
     "Half-Elf Traits": {
       "content": [
@@ -301,6 +308,7 @@
       ]
     }
   },
+
   "Half-Orc": {
     "Half-Orc Traits": {
       "content": [
@@ -318,6 +326,7 @@
       ]
     }
   },
+
   "Tiefling": {
     "Tiefling Traits": {
       "content": [

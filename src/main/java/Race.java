@@ -1,27 +1,40 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONString;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class Race {
     private String name;
     private String description;
     private int speed;
     private List<String> traits;
-    private List<String> proficiencies;
+    private Map proficiencies;
+    private Race subRace;
     private JSONObject raceContent;
     static private final FileManager fm = new FileManager();
 
     public Race(String raceName) throws IOException, ClassNotFoundException {
         this.name = raceName;
         this.raceContent = getRaceContent(name);
-        this.description = getDescription();
-        this.speed = getSpeed();
+        this.description = parseDescription();
+        this.speed = parseSpeed();
+        this.traits = parseTraits();
+        this.proficiencies = parseProficiencies();
+    }
 
+    public Race(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
+        this.name = subraceName;
+        if (getSubraceContent(superRaceName,subraceName) != null) {
+            this.raceContent = getSubraceContent(superRaceName, subraceName);
+            this.description = parseDescription();
+            this.speed = parseSpeed();
+            this.traits = parseTraits();
+            this.proficiencies = parseProficiencies();
+        }
     }
 
     public JSONObject getRaceContent(String jobName) throws IOException, ClassNotFoundException {
@@ -29,19 +42,53 @@ public class Race {
         return jsonRace;
     }
 
+    public JSONObject getSubraceContent(String superRace, String subRace) throws IOException, ClassNotFoundException {
+        JSONArray jsonRace = fm.readFile("races.json").getJSONObject(superRace).getJSONArray("Subraces");
+        AtomicReference<JSONObject> subRaceContent = null;
+        JSONObject subRaceContent1 = null;
+        for (int i = 0; i < jsonRace.length(); i++) {
+            if (jsonRace.getJSONObject(i).toMap().containsKey(subRace)) {
+                return jsonRace.getJSONObject(i).getJSONObject(subRace);
+            }
+        }
+        return null;
+    }
+
     public static List<String> getAllRaces() throws IOException, ClassNotFoundException {
         JSONObject races = fm.readFile("races.json");
         List<String> raceNames = new ArrayList<>();
-        races.keySet().forEach(jobName -> {
-            raceNames.add(jobName);
+        races.keySet().forEach(raceName -> {
+            raceNames.add(raceName);
         });
         return raceNames;
     }
 
+    public static List<Race> getAllSubraces(String superRace) throws IOException, ClassNotFoundException {
+        JSONObject races = fm.readFile("races.json");
+        List<Race> SubraceNames = new ArrayList<>();
+        JSONArray w = races.getJSONObject(superRace).getJSONArray("Subraces");
+        JSONObject x = w.getJSONObject(1);
+        for (int i = 0; i < w.length(); i++) {
+            String subName = w.getJSONObject(i).keySet().toString().replace("[","").replace("]","");
+            SubraceNames.add(new Race(superRace, subName));
+        }
+        w.getJSONObject(0).keySet().forEach(subRaceName -> {
+            try {
+                SubraceNames.add(new Race(superRace,subRaceName));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        return SubraceNames;
+    }
+
+
+
     public List<String> parseTraits() {
         ArrayList<String> traits = new ArrayList<>();
-        JSONObject race = raceContent.getJSONObject(name);
-        JSONArray featureNames = race.getJSONArray("Traits");
+        JSONArray featureNames = raceContent.getJSONArray("Traits");
         featureNames.forEach(featureName -> {
             traits.add(featureName.toString());
         });
@@ -49,23 +96,27 @@ public class Race {
     }
 
     public String parseDescription(){
-        JSONObject race = raceContent.getJSONObject(name);
-        return race.getString("Description");
+        return raceContent.getString("Description");
     }
 
     public Map parseProficiencies(){
-        JSONObject race = raceContent.getJSONObject(name);
-        return race.getJSONObject("Proficiencies").toMap();
+        return raceContent.getJSONObject("Proficiencies").toMap();
     }
     public Map<String, String> parseAbilityScores(){
-        JSONObject race = raceContent.getJSONObject(name);
-        JSONArray absScores = race.getJSONArray("Ability score increase");
+        JSONArray absScores = raceContent.getJSONArray("Ability score increase");
         return Map.of("Strength", String.valueOf(absScores.getInt(0)), "Dexterity", String.valueOf(absScores.getInt(1)), "Constitution", String.valueOf(absScores.getInt(2)), "Intelligence", String.valueOf(absScores.getInt(3)), "Wisdom", String.valueOf(absScores.getInt(4)), "Charisma", String.valueOf(absScores.getInt(5)));
+    }
+
+    public int parseSpeed(){
+        return raceContent.getInt("Speed");
     }
     public Race parseSubRace(){
         return null;
     }
 
+    public void setupSubrace(Race subRace) {
+        setSubRace(subRace);
+    }
 
     //--------------------------------- GETTERS AND SETTERS -------------------------------------
     public String getName() {
@@ -77,7 +128,7 @@ public class Race {
     }
 
     public String getDescription() {
-        return "description";
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -85,13 +136,22 @@ public class Race {
     }
 
     public int getSpeed() {
-        return 0;
+        return this.speed;
     }
 
     public void setSpeed(int speed) {
         this.speed = speed;
     }
 
+    public Race getSubRace() {
+        return this.subRace;
+    }
+
+
+    public void setSubRace(Race subrace){ // Use this when a subrace has been selected by the user from getAllSubraces()
+        this.subRace = subrace;
+        setSpeed(subrace.getSpeed());
+    }
 
     public List<String> getTraits() {
         return traits;
@@ -101,13 +161,11 @@ public class Race {
         this.traits = traits;
     }
 
-    public List<String> getProficiencies() {
+    public Map getProficiencies() {
         return proficiencies;
     }
 
-    public void setProficiencies(List<String> proficiencies) {
-        this.proficiencies = proficiencies;
-    }
+    public void setProficiencies(Map<String, String> proficiencies) {this.proficiencies = proficiencies;}
 
 
 

@@ -1,5 +1,5 @@
-FXBaseTestScreen.class
 SceneController.class
+FXBaseTestScreen.class
 CharacterListItem.class
 FileManager.class
 Character.class
@@ -10,6 +10,7 @@ Stats\NightmareStrategy.class
 Items\InventoryItemDirector.class
 Stats\Stats.class
 WizardController.class
+WizardController$1.class
 Stats\ArrayStrategy.class
 Race.class
 Feature.class
@@ -20,7 +21,4 @@ Items\CoinBag.class
 Items\Inventory.class
 CharacterViewController$1.class
 CharacterViewController.class
-Stats\Modifier.class
-Stats\StatStrategy.class
-Stats\RollStrategy.class
 FxmlHelper.class
