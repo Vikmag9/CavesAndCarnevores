@@ -33,30 +33,17 @@ public class Character implements CharacterDataCollection{
         this.level = level;
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = inventory;
+        this.inventory = data.getInventory();
         this.armorClass = calculateAC();
         this.stats = data.getStats();
 
 
     }
 
-    public Character(Character character, int level){
-        this.name = character.getName();
-        this.level = level;
-        this.race = character.getRace();
-        this.job = character.getJob();
-        this.background = character.getBackground();
-        this.health = calculateHealth();
-        this.feats = assembleFeats();
-        this.inventory = character.getInventory();
-        this.armorClass = calculateAC();
-    }
-
 
 
 
     private int calculateAC() {
-
         AtomicInteger ac = new AtomicInteger(0);
         AtomicInteger additionalAC = new AtomicInteger(0);
         this.inventory.getInventory().forEach((value) -> {
@@ -75,8 +62,9 @@ public class Character implements CharacterDataCollection{
     }
     
     private List<Feature> assembleFeats() {
-
-        //TODO Add features from race and background etc
+        List<Feature> feats = this.job.getFeatures();
+        feats.addAll(this.race.getTraits());
+        //TODO Add features from background etc
         return this.job.getFeatures();
     }
     // --------------------------------- GETTERS AND SETTERS -------------------------------------
