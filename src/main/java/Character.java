@@ -1,11 +1,12 @@
 import Items.Inventory;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Character {
+public class Character implements CharacterDataCollection{
     private String name;
     private Race race;
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
@@ -18,20 +19,23 @@ public class Character {
     private Map<String, List<String>> proficiencies;
     private String background;
     private HashMap<StatName, Integer> stats;
+    private String raceName;
+    private String jobName;
 
 
 
-    public Character(String name, Race race, Job job,Inventory inventory, int level, String background){
-        this.name = name;
-        this.race = race;
-        this.job = job;
-        this.background = background;
+    public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException {
+        this.race = new Race(data.getName());
+        this.raceName = data.getRaceName();
+        this.job = new Job(data.getJobName());
+        this.jobName = data.getJobName();
+        this.background = data.getBackground();
         this.level = level;
         this.health = calculateHealth();
         //this.feats = assembleFeats();
-        this.inventory = inventory;
+        this.inventory = data.getInventory();
         //this.armorClass = calculateAC();
-        this.stats = new HashMap<StatName, Integer>();
+        this.stats = data.getStats();
 
     }
 
@@ -95,6 +99,21 @@ public class Character {
         return name;
     }
 
+    @Override
+    public String getRaceName() {
+        return this.raceName;
+    }
+
+    @Override
+    public String getJobName() {
+        return this.jobName;
+    }
+
+    @Override
+    public String getBackground() {
+        return this.background;
+    }
+
     public Race getRace() {
         return race;
     }
@@ -117,6 +136,11 @@ public class Character {
 
     public Inventory getInventory() {
         return inventory;
+    }
+
+    @Override
+    public HashMap<StatName, Integer> getStats() {
+        return this.stats;
     }
 
     public int getXp() {
