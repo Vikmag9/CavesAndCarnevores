@@ -1,12 +1,12 @@
 import Items.Inventory;
 /*
 This class has taken inspiration from the builder pattern. It behaves like a builder, but the builder pattern is not used.
-However, it can in the future, which makes it extensible.
+However, it can in the future, which makes it extendable.
  */
 public class CharacterDataClass {
     String name;
-    Job job;
-    Race race;
+    String jobName;
+    String raceName;
     Inventory inventory;
     int level;
     String background;
@@ -16,13 +16,13 @@ public class CharacterDataClass {
         return this;
     }
 
-    public CharacterDataClass setJob(Job job){
-        this.job = job;
+    public CharacterDataClass setJobName(String jobName){
+        this.jobName = jobName;
         return this;
     }
 
-    public CharacterDataClass setRace(Race race){
-        this.race = race;
+    public CharacterDataClass setRaceName(String raceName){
+        this.raceName = raceName;
         return this;
     }
 
