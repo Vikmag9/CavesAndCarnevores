@@ -2,9 +2,7 @@ import Items.Inventory;
 import Items.InventoryItem;
 import Items.InventoryItemBuilder;
 import org.junit.jupiter.api.Test;
-
 import java.util.HashMap;
-
 import static java.util.Objects.isNull;
 import static org.junit.Assert.assertTrue;
 
