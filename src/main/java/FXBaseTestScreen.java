@@ -9,12 +9,14 @@ import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
 public class FXBaseTestScreen extends Application {
+    Character character;
 
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         String javaVersion = System.getProperty("java.version");
         String javafxVersion = System.getProperty("javafx.version");
 
         Label l = new Label("Här står saker:, JavaFX version:" + javafxVersion + ", Java på version" + javaVersion + ".");
+
 
         SceneController sceneController = new SceneController();
 
