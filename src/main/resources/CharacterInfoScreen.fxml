@@ -239,9 +239,9 @@
                               </AnchorPane>
                            </content>
                         </TitledPane>
-                        <AnchorPane layoutX="558.0" layoutY="147.0" prefHeight="313.0" prefWidth="134.0">
+                        <AnchorPane layoutX="559.0" layoutY="65.0" prefHeight="428.0" prefWidth="134.0">
                            <children>
-                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#9bb193" height="317.0" stroke="BLACK" strokeType="INSIDE" width="131.0" />
+                              <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#9bb193" height="430.0" stroke="BLACK" strokeType="INSIDE" width="131.0" />
                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="29.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="29.0" layoutY="128.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
                               <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="32.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
@@ -251,6 +251,9 @@
                               <Text fx:id="acText" layoutX="37.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
                               <Text fx:id="initiativeText" layoutX="40.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
                               <Text fx:id="movementSpeedText" layoutX="40.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
+                              <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="70.0" layoutX="32.0" layoutY="328.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+                              <Text layoutX="27.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Hit Points" />
+                              <Text fx:id="HitPointsText" layoutX="38.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Number" wrappingWidth="54.936676025390625" />
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>

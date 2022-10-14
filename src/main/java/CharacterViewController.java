@@ -84,6 +84,8 @@ public class CharacterViewController implements Initializable {
     @FXML private TextArea reactionsTextArea;
     @FXML private TextArea bonusActionsTextArea;
 
+    @FXML private Text HitPointsText;
+
     @FXML private FlowPane spellsFlowPane;
 
     List<List<String>> spellList;
