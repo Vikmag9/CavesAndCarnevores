@@ -18,17 +18,19 @@ public class RollStrategy implements StatStrategy{
         listOfRolls = new ArrayList<Integer>();
         for(int i = 0; i < 4; i++){
             listOfRolls.add(this.diceBag.rollDice(6));
+            System.out.println(listOfRolls);
         }
         listOfRolls.remove(listOfRolls.indexOf(Collections.min(listOfRolls)));
-
+        stat = 0;
+        System.out.println("!" +listOfRolls);
         for(int u = 0; u<listOfRolls.size(); u++) {
-            stat = 0;
             stat+= listOfRolls.get(u);
         }
         return stat;
     }
 
     private ArrayList<Integer> rollStats(){
+        listOfStats = new ArrayList<Integer>();
         for(int i= 1; i < 7; i++)
             listOfStats.add(this.rollOneStat());
         return listOfStats;

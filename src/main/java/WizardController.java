@@ -6,11 +6,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class WizardController implements Initializable{
 
@@ -26,6 +24,7 @@ public class WizardController implements Initializable{
 
 
     Stats stats = new Stats();
+    CharacterDataClass dataClass = new CharacterDataClass();
 
     //Basics AnchorPane
     @FXML private TextField nameField;
@@ -74,10 +73,10 @@ public class WizardController implements Initializable{
 
 
     //WeaponsAndArmour AnchorPane
-    @FXML private ComboBox<String> weaponComboBox;
-    @FXML private ComboBox<String> armourComboBox;
-    @FXML private ComboBox<String> shieldComboBox;
-    @FXML private ComboBox<String> additionalWeaponComboBox;
+    @FXML private FlowPane WeaponsFlowPane;
+    List<ComboBox<String>> comboBoxList = new ArrayList<>();
+
+
 
     //Inventory AnchorPane
     @FXML private ComboBox<String> inventoryComboBox1;
@@ -117,10 +116,42 @@ public class WizardController implements Initializable{
     @FXML private Label StatView6Small;
 
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
         prepareRadioButtons();
+        prepareTextFields();
+    }
+
+    private void prepareTextFields(){
+        nameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setName(nameField.getText());
+        });
+
+        }
+
+
+
+    @FXML
+    private void setName(){
+        dataClass.setName(nameField.getText());
+    }
+
+    @FXML
+    private void setJobName(){
+        dataClass.setJobName(jobComboBox.getValue());
+    }
+
+    @FXML
+    private void setRaceName(){
+        dataClass.setRaceName(raceComboBox.getValue());
+    }
+
+    @FXML
+    private void setBackground(){
+        dataClass.setBackground(backgroundComboBox.getValue());
     }
 
     //navigation methods for the wizard within the stackpane
@@ -149,14 +180,32 @@ public class WizardController implements Initializable{
     }
 
     protected void prepareComboBoxes(){
-        raceComboBox.getItems().addAll("Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling");
+        List<String> jobs = new ArrayList<>();
+        List<String> races = new ArrayList<>();
+        try {
+            jobs = Job.getAllJobs();
+            races = Race.getAllRaces();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
+        raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(raceComboBox.getValue());
+        });
 
-        jobComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard");
+        jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
+        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(jobComboBox.getValue());
+        });
 
+        //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
+        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
+            dataClass.setRaceName(backgroundComboBox.getValue());
+        });
     }
 
     @FXML
@@ -168,28 +217,64 @@ public class WizardController implements Initializable{
         StatView5Big.setText(stats.get(4).toString());
         StatView6Big.setText(stats.get(5).toString());
 
-
-
+        updateStatViewSmall(stats);
 
     }
 
+    @FXML
+    private void updateStatViewSmall(ArrayList<Integer> stats){
+        List<Integer> modifierList = new ArrayList<>();
+        for (Integer stat : stats) {
+            switch (stat) {
+                case 1 -> modifierList.add(-5);
+                case 2, 3 -> modifierList.add(-4);
+                case 4, 5 -> modifierList.add(-3);
+                case 6, 7 -> modifierList.add(-2);
+                case 8, 9 -> modifierList.add(-1);
+                case 10, 11 -> modifierList.add(0);
+                case 12, 13 -> modifierList.add(1);
+                case 14, 15 -> modifierList.add(2);
+                case 16, 17 -> modifierList.add(3);
+                case 18, 19 -> modifierList.add(4);
+                case 20, 21 -> modifierList.add(5);
+                case 22, 23 -> modifierList.add(6);
+                case 24, 25 -> modifierList.add(7);
+                case 26, 27 -> modifierList.add(8);
+                case 28, 29 -> modifierList.add(9);
+                case 30 -> modifierList.add(10);
+            }
+        }
+        StatView1Small.setText(modifierList.get(0).toString());
+        StatView2Small.setText(modifierList.get(1).toString());
+        StatView3Small.setText(modifierList.get(2).toString());
+        StatView4Small.setText(modifierList.get(3).toString());
+        StatView5Small.setText(modifierList.get(4).toString());
+        StatView6Small.setText(modifierList.get(5).toString());
+    }
+
+    private void setStats() {
+        /*StrengthTextField;
+        DexterityTextField
+        ConstitutionTextField
+        IntelligenceTextField
+        WisdomTextField
+        CharismaTextField
+        */
+    }
 
     private void prepareRadioButtons(){
         statToggleGroup = new ToggleGroup();
         rollDropRadio.setToggleGroup(statToggleGroup);
         arrayRadio.setToggleGroup(statToggleGroup);
         nightmareRadio.setToggleGroup(statToggleGroup);
-        statToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                if (statToggleGroup.getSelectedToggle() != null){
-                    RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
-                    System.out.println(selected.getText());
-                    stats.chooseStrategy(selected.getText());
-                    ArrayList<Integer> listOfStats = stats.getStats();
-                    updateStatView(listOfStats);
+        statToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (statToggleGroup.getSelectedToggle() != null){
+                RadioButton selected = (RadioButton) statToggleGroup.getSelectedToggle();
+                System.out.println(selected.getText());
+                stats.chooseStrategy(selected.getText());
+                ArrayList<Integer> listOfStats = stats.getStats();
+                updateStatView(listOfStats);
 
-                }
             }
         });
     }
@@ -252,6 +337,20 @@ public class WizardController implements Initializable{
             listOfProficiencies.add("Athletics");
         }
         return listOfProficiencies;
+    }
+
+    private void loadWeaponsArmourTools(Map<String, List<String>> map){
+
+        map.forEach((key, value) -> {
+            ComboBox<String> combobox = new ComboBox<>();
+            combobox.setPlaceholder(new Label(key));
+            combobox.getItems().addAll(value);
+            comboBoxList.add(combobox);
+            });
+
+
+        WeaponsFlowPane.getChildren().clear();
+        WeaponsFlowPane.getChildren().add(comboBoxList.get(0));
     }
 
 
