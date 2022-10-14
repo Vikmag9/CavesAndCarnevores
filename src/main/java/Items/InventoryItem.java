@@ -83,6 +83,14 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         return this.isequipped;
     }
 
+    public boolean getIsMagical() {
+        return this.isMagical;
+    }
+
+    public int getSerialNumber(){
+        return this.serialNumber;
+    }
+
 
 
 

@@ -182,8 +182,8 @@ public class WizardController implements Initializable{
     @FXML
     private void updateStatViewSmall(ArrayList<Integer> stats){
         List<Integer> modifierList = new ArrayList<>();
-        for (int i = 0; i < stats.size(); i++) {
-            switch (stats.get(i)) {
+        for (Integer stat : stats) {
+            switch (stat) {
                 case 1 -> modifierList.add(-5);
                 case 2, 3 -> modifierList.add(-4);
                 case 4, 5 -> modifierList.add(-3);

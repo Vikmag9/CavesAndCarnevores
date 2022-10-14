@@ -1,4 +1,7 @@
 
+import Items.Inventory;
+import Items.InventoryItem;
+import Items.InventoryItemBuilder;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -103,6 +106,7 @@ public class CharacterViewController implements Initializable {
     @FXML private Text acText;
     @FXML private Text initiativeText;
     @FXML private Text movementSpeedText;
+    @FXML private Text HitpointsText;
 
     @FXML private TextArea actionsTextArea;
     @FXML private TextArea reactionsTextArea;
@@ -152,6 +156,7 @@ public class CharacterViewController implements Initializable {
     @FXML private FlowPane inventoryFlowPane;
     @FXML private TextField currentGoldTextField;
 
+    //listItem fx-ids
     @FXML private TextField itemNameTextField;
     @FXML private TextField itemValueTextField;
     @FXML private TextArea itemCreationDescriptionTextArea;
@@ -303,5 +308,20 @@ public class CharacterViewController implements Initializable {
 
     // Inventory features
 
+    private void updateRecipeList() {
+        //Inventory inventory = character.getInventory();
+        Inventory inventory = new Inventory(1);
+        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
+        builder.ac(12);
+        builder.isequipped(true);
+        InventoryItem cheeseArmor = new InventoryItem(builder);
+        inventory.addItem(cheeseArmor);
+        inventoryFlowPane.getChildren().clear();
+        List<InventoryItem> items = inventory.getCompleteInventory();
+        for (InventoryItem item : items) {
+            CharacterListItem rli = new CharacterListItem(item, this);
+            inventoryFlowPane.getChildren().add(rli);
+        }
+    }
 
 }

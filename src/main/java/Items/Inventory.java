@@ -1,11 +1,12 @@
 package Items;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Inventory {
 
-        HashMap<Integer, InventoryItem> inventory;
+        List<InventoryItem> inventory;
         CoinBag coinBag;
         InventoryItem item;
         int value;
@@ -14,15 +15,12 @@ public class Inventory {
 
 
         public Inventory(int startingCoins) {
-                this.inventory = new HashMap<Integer, InventoryItem>();
+                this.inventory = new ArrayList<InventoryItem>();
                 this.coinBag = new CoinBag(startingCoins);
-                this.serialNumber = 1;
         }
 
         public void addItem(InventoryItem item){
-                this.serialNumber += 1;
-                item.setSerialNumber(this.serialNumber);
-                inventory.put(serialNumber, item);
+                inventory.add(item);
         }
 
         public void sellItem(int key){
@@ -33,7 +31,14 @@ public class Inventory {
 
         }
 
-    public HashMap<Integer, InventoryItem> getInventory() {
+    public List<InventoryItem> getInventory() {
+        return inventory;
+    }
+
+    public InventoryItem getItem(int key){
+        return inventory.get(key);
+    }
+    public List<InventoryItem> getCompleteInventory() {
         return inventory;
     }
 
