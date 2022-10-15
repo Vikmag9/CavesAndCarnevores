@@ -11,7 +11,7 @@ public class Race {
     private String name;
     private String description;
     private int speed;
-    private List<String> traits;
+    private List<Feature> traits;
     private Map proficiencies;
     private Race subRace;
     private JSONObject raceContent;
@@ -86,11 +86,11 @@ public class Race {
 
 
 
-    public List<String> parseTraits() {
-        ArrayList<String> traits = new ArrayList<>();
+    public List<Feature> parseTraits() {
+        ArrayList<Feature> traits = new ArrayList<>();
         JSONArray featureNames = raceContent.getJSONArray("Traits");
         featureNames.forEach(featureName -> {
-            traits.add(featureName.toString());
+            traits.add(new Feature(featureName.toString(), "", 1));
         });
         return traits;
     }
@@ -153,11 +153,11 @@ public class Race {
         setSpeed(subrace.getSpeed());
     }
 
-    public List<String> getTraits() {
+    public List<Feature> getTraits() {
         return traits;
     }
 
-    public void setTraits(List<String> traits) {
+    public void setTraits(List<Feature> traits) {
         this.traits = traits;
     }
 

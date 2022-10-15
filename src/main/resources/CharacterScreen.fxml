@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="864.0" prefWidth="1506.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
@@ -38,7 +39,10 @@
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="331.0" layoutY="143.0" prefHeight="107.0" prefWidth="580.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="Here are your previously created characters and their stats. Click on one to expand." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="331.0" AnchorPane.topAnchor="143.0" />
             <ScrollPane fx:id="characterScrollPane" layoutX="14.0" layoutY="250.0" prefHeight="383.0" prefWidth="1212.0" style="-fx-background-color: #000000;">
               <content>
-                <AnchorPane fx:id="characterContainerAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="1210.0" style="-fx-background-color: #566e54;" />
+                <AnchorPane fx:id="characterContainerAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="1210.0" style="-fx-background-color: #566e54;">
+                     <children>
+                        <FlowPane fx:id="charactersFlowPane" prefHeight="383.0" prefWidth="1212.0" />
+                     </children></AnchorPane>
               </content>
             </ScrollPane>
          </children>
