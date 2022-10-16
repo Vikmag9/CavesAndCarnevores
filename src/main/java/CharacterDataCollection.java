@@ -9,6 +9,7 @@ public interface CharacterDataCollection {
     public String getJobName();
     public String getBackground();
     public Inventory getInventory();
+    public String getAlignment();
     public HashMap<StatName, Integer> getStats();
     public int getLevel();
 

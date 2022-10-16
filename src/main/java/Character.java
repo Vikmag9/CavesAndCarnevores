@@ -12,9 +12,11 @@ public class Character implements CharacterDataCollection {
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
     private List<Feature> feats;
     private int health;
+    private String Alignment;
     private int xp;
     private int level;
     private int armorClass;
+    private String alignment;
     private Inventory inventory;
     private Map<String, List<String>> proficiencies;
     private String background;
@@ -25,6 +27,8 @@ public class Character implements CharacterDataCollection {
 
     public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException, CloneNotSupportedException {
         CharacterDataCollection characterData = data; // Creates copy of data to avoid modifying original data
+        this.name = characterData.getName();
+        this.alignment = characterData.getAlignment();
         this.race = new Race(characterData.getRaceName());
         this.raceName = characterData.getRaceName();
         this.job = new Job(characterData.getJobName());
@@ -97,7 +101,7 @@ public class Character implements CharacterDataCollection {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override
@@ -160,4 +164,11 @@ public class Character implements CharacterDataCollection {
         this.level = level;
     }
 
+    public String getAlignment() {
+        return alignment;
+    }
+
+    public void setAlignment(String alignment) {
+        this.alignment = alignment;
+    }
 }

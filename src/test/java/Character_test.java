@@ -378,7 +378,7 @@ public class Character_test {
         charData.setLevel(1);
         charData.setInventory(inventory);
 
-        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
+        HashMap<StatName, Integer> charStats  = new HashMap<>();
         charStats.put(StatName.Strength, 10);
         charStats.put(StatName.Dexterity, 10);
         charStats.put(StatName.Constitution, 12);
@@ -395,8 +395,40 @@ public class Character_test {
         Character character2 = new Character(charData, 2);
         assertEquals(character2.getHealth(), 11);
 
+    }
 
+    @Test
+    public void saveCharacterTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+        Job charJob = new Job("Rogue");
+        List<Feature> featureList = charJob.getFeatures();
+        Inventory inventory = new Inventory(1);
+        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
+        builder.ac(12);
+        builder.isequipped(true);
+        InventoryItem cheeseArmor = new InventoryItem(builder);
+        inventory.addItem(cheeseArmor);
 
+        CharacterDataClass charData = new CharacterDataClass();
+        charData.setBackground("Orphan");
+        charData.setRaceName("Dwarf");
+        charData.setJobName("Rogue");
+        charData.setName("Gregg");
+        charData.setAlignment("Chaotic Good");
+        charData.setLevel(1);
+        charData.setInventory(inventory);
+
+        HashMap<StatName, Integer> charStats  = new HashMap<>();
+        charStats.put(StatName.Strength, 10);
+        charStats.put(StatName.Dexterity, 10);
+        charStats.put(StatName.Constitution, 12);
+        charStats.put(StatName.Intelligence, 10);
+        charStats.put(StatName.Wisdom, 10);
+        charStats.put(StatName.Charisma, 10);
+
+        charData.setStats(charStats);
+
+        Character character = new Character(charData, charData.getLevel());
+        CharacterHandler.saveCharacter(character);
     }
 
 

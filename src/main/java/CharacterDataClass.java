@@ -11,6 +11,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private String jobName;
     private String raceName;
     private Inventory inventory;
+    private String alignment;
     private int level;
     private String background;
     private HashMap<StatName, Integer> stats;
@@ -50,6 +51,11 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this;
     }
 
+    public CharacterDataClass setAlignment(String alignment){
+        this.alignment = alignment;
+        return this;
+    }
+
     @Override
     public String getName() {
         return this.name;
@@ -83,5 +89,10 @@ public class CharacterDataClass implements CharacterDataCollection{
     @Override
     public int getLevel() {
         return this.level;
+    }
+
+    @Override
+    public String getAlignment() {
+        return this.alignment;
     }
 }

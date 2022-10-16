@@ -323,7 +323,7 @@ public class CharacterViewController implements Initializable {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
         inventoryFlowPane.getChildren().clear();
-        List<InventoryItem> items = inventory.getCompleteInventory();
+        List<InventoryItem> items = inventory.getInventory();
         for (InventoryItem item : items) {
             CharacterListItem rli = new CharacterListItem(item, this);
             inventoryFlowPane.getChildren().add(rli);
