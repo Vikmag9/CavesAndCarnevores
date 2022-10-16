@@ -7,13 +7,13 @@ This class has taken inspiration from the builder pattern. It behaves like a bui
 However, it can in the future, which makes it extendable.
  */
 public class CharacterDataClass implements CharacterDataCollection{
-    String name;
-    String jobName;
-    String raceName;
-    Inventory inventory;
-    int level;
-    String background;
-    HashMap<StatName, Integer> stats;
+    private String name;
+    private String jobName;
+    private String raceName;
+    private Inventory inventory;
+    private int level;
+    private String background;
+    private HashMap<StatName, Integer> stats;
 
     public CharacterDataClass setName(String name){
         this.name = name;

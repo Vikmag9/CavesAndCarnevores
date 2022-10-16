@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Character implements CharacterDataCollection{
+public class Character implements CharacterDataCollection {
     private String name;
     private Race race;
     private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
@@ -23,20 +23,19 @@ public class Character implements CharacterDataCollection{
     private String jobName;
 
 
-
-    public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException {
-        this.race = new Race(data.getName());
-        this.raceName = data.getRaceName();
-        this.job = new Job(data.getJobName());
-        this.jobName = data.getJobName();
-        this.background = data.getBackground();
+    public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException, CloneNotSupportedException {
+        CharacterDataCollection characterData = data; // Creates copy of data to avoid modifying original data
+        this.race = new Race(characterData.getRaceName());
+        this.raceName = characterData.getRaceName();
+        this.job = new Job(characterData.getJobName());
+        this.jobName = characterData.getJobName();
+        this.background = characterData.getBackground();
         this.level = level;
+        this.stats = characterData.getStats();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = data.getInventory();
+        this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
-        this.stats = data.getStats();
-
 
     }
 
@@ -58,7 +57,7 @@ public class Character implements CharacterDataCollection{
     }
 
     private int calculateHealth() {
-        return ((this.job.getHitDie()/2)+1) /*TODO + constitution modifier*/ * getLevel();
+        return (((this.job.getHitDie()/2)+1) * getLevel()) + ((this.getStats().get(StatName.Constitution)-10)/2);
     }
     
     private List<Feature> assembleFeats() {

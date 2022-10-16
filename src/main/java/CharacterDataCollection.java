@@ -1,4 +1,5 @@
 import Items.Inventory;
+import org.w3c.dom.CharacterData;
 
 import java.util.HashMap;
 
@@ -10,4 +11,6 @@ public interface CharacterDataCollection {
     public Inventory getInventory();
     public HashMap<StatName, Integer> getStats();
     public int getLevel();
+
+
 }

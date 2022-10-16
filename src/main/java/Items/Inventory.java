@@ -43,5 +43,8 @@ public class Inventory {
         return inventory;
     }
 
+    public CoinBag getCoinBag() {
+        return coinBag;
+    }
 
 }

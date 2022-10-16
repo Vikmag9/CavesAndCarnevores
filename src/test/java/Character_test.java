@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import Stats.Stats.*;
 
 import static org.junit.Assert.*;
 
@@ -314,8 +315,10 @@ public class Character_test {
         // TODO add equal tests for other jobs
     }
 
+     */
+
     @Test
-    public void createRaceTest() throws IOException, ClassNotFoundException {
+    public void createRaceTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
@@ -325,21 +328,77 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Dwarf"),
-                charJob,
-                inventory,
-                1,
-                "Orphan");
+        CharacterDataClass charData = new CharacterDataClass();
+        charData.setBackground("Orphan");
+        charData.setRaceName("Dwarf");
+        charData.setJobName("Rogue");
+        charData.setName("Gregg");
+        charData.setLevel(1);
+        charData.setInventory(inventory);
+
+        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
+        charStats.put(StatName.Strength, 10);
+        charStats.put(StatName.Dexterity, 10);
+        charStats.put(StatName.Constitution, 12);
+        charStats.put(StatName.Intelligence, 10);
+        charStats.put(StatName.Wisdom, 10);
+        charStats.put(StatName.Charisma, 10);
+
+        charData.setStats(charStats);
+
+        Character character = new Character(charData, charData.getLevel());
 
         character.getRace().setSubRace(Race.getAllSubraces("Dwarf").get(1));
 
         assertEquals(character.getRace().getName(), "Dwarf");
         assertEquals(character.getRace().getSpeed(), 25);
         assertEquals(character.getRace().getSubRace().getName(), "Mountain Dwarf");
+        assertEquals(character.getHealth(), 5); // Tests that the hit die is 12
+
 
 
     }
-    */
+
+    @Test
+    public void calculateHpTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+        Job charJob = new Job("Rogue");
+        List<Feature> featureList = charJob.getFeatures();
+        Inventory inventory = new Inventory(1);
+        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
+        builder.ac(12);
+        builder.isequipped(true);
+        InventoryItem cheeseArmor = new InventoryItem(builder);
+        inventory.addItem(cheeseArmor);
+
+        CharacterDataClass charData = new CharacterDataClass();
+        charData.setBackground("Orphan");
+        charData.setRaceName("Dwarf");
+        charData.setJobName("Rogue");
+        charData.setName("Gregg");
+        charData.setLevel(1);
+        charData.setInventory(inventory);
+
+        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
+        charStats.put(StatName.Strength, 10);
+        charStats.put(StatName.Dexterity, 10);
+        charStats.put(StatName.Constitution, 12);
+        charStats.put(StatName.Intelligence, 10);
+        charStats.put(StatName.Wisdom, 10);
+        charStats.put(StatName.Charisma, 10);
+
+        charData.setStats(charStats);
+
+        Character character = new Character(charData, charData.getLevel());
+        assertEquals(character.getHealth(), 6);
+
+
+        Character character2 = new Character(charData, 2);
+        assertEquals(character2.getHealth(), 11);
+
+
+
+    }
+
 
 }
 

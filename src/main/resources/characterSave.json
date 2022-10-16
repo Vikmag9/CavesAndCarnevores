@@ -1,0 +1,60 @@
+{
+  "Name": "gregg",
+  "Race": "Dwarf",
+  "Job": "Fighter",
+  "Level": 1,
+  "xp": 0,
+  "Stats": {
+      "Strength": 16,
+      "Dexterity": 14,
+      "Constitution": 14,
+      "Intelligence": 8,
+      "Wisdom": 10,
+      "Charisma": 8
+  },
+  "Inventory": [
+    {
+    "Itemtype": "Weapon",
+    "Itemname": "Longsword",
+    "Itemdescription": "A longsword",
+    "Itemamount": 1,
+    "Itemweight": 3,
+    "Itemvalue": 15,
+    "IsMagical": false,
+    "IsEquipped": true,
+    "HasAC": false,
+    "AttackBonus": 8,
+    "SerialNumber": 1
+  },
+    {
+    "Itemtype": "Armour",
+    "Itemname": "Chainmail",
+    "Itemdescription": "A suit of chainmail",
+    "Itemamount": 1,
+    "Itemweight": 55,
+    "Itemvalue": 150,
+    "IsMagical": false,
+    "IsEquipped": true,
+    "HasAC": true,
+    "AC": 6,
+    "SerialNumber": 2
+  },
+  {
+    "Itemtype": "Potion",
+    "Itemname": "Healing Potion",
+    "Itemdescription": "A healing potion",
+    "Itemamount": 1,
+    "Itemweight": 1,
+    "Itemvalue": 50,
+    "IsMagical": false,
+    "IsEquipped": false,
+    "HasAC": false,
+    "HealingAmount": 2,
+    "SerialNumber": 3
+  }
+  ],
+    "Gold": 120,
+    "AC": 6,
+    "background": "Orphan",
+    "alignment": "Lawful Good"
+}
