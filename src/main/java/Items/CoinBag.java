@@ -15,4 +15,8 @@ public class CoinBag {
     public void takeCoins(int amount){
         this.goldCoin -= amount;
     }
+
+    public int getCoins(){
+        return this.goldCoin;
+    }
 }
