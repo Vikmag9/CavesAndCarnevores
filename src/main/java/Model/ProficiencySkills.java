@@ -1,3 +1,5 @@
+package Model;
+
 public enum ProficiencySkills {
     Deception,
     Intimidation,

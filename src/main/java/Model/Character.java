@@ -1,4 +1,9 @@
+package Model;
+
 import Items.Inventory;
+import Model.CharacterDataCollection;
+import Model.Job;
+import Model.StatName;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Character implements CharacterDataCollection {
     private String name;
     private Race race;
-    private Job job; // Job represents a D&D Class since "class" is otherwise a keyword in java.
+    private Job job; // Model.Job represents a D&D Class since "class" is otherwise a keyword in java.
     private List<Feature> feats;
     private int health;
     private String Alignment;

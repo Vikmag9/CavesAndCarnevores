@@ -1,5 +1,6 @@
+package Model;
+
 import Items.Inventory;
-import org.w3c.dom.CharacterData;
 
 import java.util.HashMap;
 

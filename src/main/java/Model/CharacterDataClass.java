@@ -1,3 +1,5 @@
+package Model;
+
 import Items.Inventory;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 This class has taken inspiration from the builder pattern. It behaves like a builder, but the builder pattern is not used.
 However, it can in the future, which makes it extendable.
  */
-public class CharacterDataClass implements CharacterDataCollection{
+public class CharacterDataClass implements CharacterDataCollection {
 
     String languages;
     String organisations;
@@ -23,7 +25,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private HashMap<StatName, Integer> stats;
     private ArrayList<ProficiencySkills> proficiencySkills;
 
-    CharacterDataClass(){
+    public CharacterDataClass(){
         this.stats = new HashMap<StatName, Integer>();
         this.proficiencySkills = new ArrayList<ProficiencySkills>();
     }

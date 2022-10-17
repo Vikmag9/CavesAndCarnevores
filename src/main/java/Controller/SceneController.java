@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,7 +56,7 @@ public class SceneController implements Initializable {
 
     @FXML private void openCharacterScreen() {
         try {
-            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterScreen.fxml"));
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Controller.CharacterScreen.fxml"));
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
