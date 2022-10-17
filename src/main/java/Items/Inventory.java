@@ -39,9 +39,6 @@ public class Inventory {
     public InventoryItem getItem(int key){
         return inventory.get(key);
     }
-    public List<InventoryItem> getCompleteInventory() {
-        return inventory;
-    }
 
     public CoinBag getCoinBag() {
         return coinBag;

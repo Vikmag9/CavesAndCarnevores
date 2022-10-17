@@ -2,10 +2,13 @@ import Items.InventoryItem;
 
 import java.io.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.InputStream;
+import java.util.HashMap;
 
 
 public class FileManager {
@@ -28,4 +31,20 @@ public class FileManager {
     }
 
 
+    public void saveMap(HashMap map, String filePath) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            String json = mapper.writeValueAsString(map);
+            FileOutputStream fileOut = new FileOutputStream( filePath + ".json");
+            mapper.writeValue(fileOut, map);
+            fileOut.close();
+        }
+        catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
