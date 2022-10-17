@@ -16,6 +16,7 @@ Feature.class
 Items\InventoryItem.class
 Items\InventoryItemBuilder.class
 Job.class
+ProficiencySkills.class
 Items\CoinBag.class
 Items\Inventory.class
 CharacterViewController$1.class
