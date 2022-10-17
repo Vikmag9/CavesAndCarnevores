@@ -1,22 +1,27 @@
 package Items;
 
 public class CoinBag {
-    private int goldCoin;
-    private int startingCoins;
+    private double goldCoin;
 
-    CoinBag(int startingCoins){
-        this.startingCoins = startingCoins;
+    CoinBag(double startingCoins){
+        this.goldCoin = startingCoins;
     }
 
-    public void addCoin(int amount){
+    void addCoin(double amount){
         this.goldCoin += amount;
     }
 
-    public void takeCoins(int amount){
+    void takeCoins(double amount){
         this.goldCoin -= amount;
     }
 
-    public int getCoins(){
+    double getCoinAmount(){
         return this.goldCoin;
     }
+
+    public double getGoldCoin(){
+        return this.goldCoin;
+    }
+
+
 }

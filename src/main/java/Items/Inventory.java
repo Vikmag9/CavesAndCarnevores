@@ -7,14 +7,16 @@ import java.util.List;
 public class Inventory {
 
         List<InventoryItem> inventory;
-        CoinBag coinBag;
+        private CoinBag coinBag;
         InventoryItem item;
         int value;
-        int serialNumber;
 
 
+    public double getCoinAmount(){
+           return this.coinBag.getCoinAmount();
+    }
 
-        public Inventory(int startingCoins) {
+        public Inventory(double startingCoins) {
                 this.inventory = new ArrayList<InventoryItem>();
                 this.coinBag = new CoinBag(startingCoins);
         }
@@ -32,12 +34,15 @@ public class Inventory {
         }
 
     public List<InventoryItem> getInventory() {
-        return inventory;
+        return this.inventory;
 
     }
 
     public InventoryItem getItem(int key){
         return inventory.get(key);
+    }
+    public List<InventoryItem> getCompleteInventory() {
+        return this.inventory;
     }
 
     public CoinBag getCoinBag() {

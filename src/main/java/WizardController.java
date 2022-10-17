@@ -27,7 +27,7 @@ public class WizardController implements Initializable{
     CharacterDataClass dataClass = new CharacterDataClass();
 
     //Basics AnchorPane
-    @FXML private TextField nameField;
+    @FXML private TextField ameTextField;
     @FXML private ComboBox<String> raceComboBox;
     @FXML private ComboBox<String> jobComboBox;
     @FXML private ComboBox<String> backgroundComboBox;
@@ -88,9 +88,10 @@ public class WizardController implements Initializable{
 
 
     // Lore AnchorPane
-    @FXML private TextField earlyLifeTextField;
-    @FXML private TextField organisationTextField;
-    @FXML private TextField coreMemoriesTextField;
+    @FXML private TextField arlyLifeTextField;
+    @FXML private TextField rganisationTextField;
+    @FXML private TextField oreMemoriesTextField;
+    @FXML private TextField anguagesTextField;
     @FXML private Button finishButton;
 
     //JobSpecific AnchorPane
@@ -122,37 +123,37 @@ public class WizardController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
         prepareRadioButtons();
-        prepareTextFields();
+        //prepareTextFields();
     }
-
+/*
     private void prepareTextFields(){
-        nameField.textProperty().addListener((observable, oldValue, newValue) -> {
-            dataClass.setName(nameField.getText());
+        nameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            //dataClass.setName(nameTextField.getText());
+            System.out.println("Bob");
         });
-
+/*
+        earlyLifeTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setEarlierLife(earlyLifeTextField.getText());
+        });
+        coreMemoriesTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setCoreMemories(coreMemoriesTextField.getText());
+        });
+        organisationTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setOrganisations(organisationTextField.getText());
+        });
+        languagesTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            dataClass.setLanguages(languagesTextField.getText());
+        });
         }
+ */
 
 
 
-    @FXML
-    private void setName(){
-        dataClass.setName(nameField.getText());
-    }
 
-    @FXML
-    private void setJobName(){
-        dataClass.setJobName(jobComboBox.getValue());
-    }
 
-    @FXML
-    private void setRaceName(){
-        dataClass.setRaceName(raceComboBox.getValue());
-    }
 
-    @FXML
-    private void setBackground(){
-        dataClass.setBackground(backgroundComboBox.getValue());
-    }
+
+
 
     //navigation methods for the wizard within the stackpane
     @FXML private void toBasicsPane() {
@@ -252,14 +253,44 @@ public class WizardController implements Initializable{
         StatView6Small.setText(modifierList.get(5).toString());
     }
 
-    private void setStats() {
-        /*StrengthTextField;
-        DexterityTextField
-        ConstitutionTextField
-        IntelligenceTextField
-        WisdomTextField
-        CharismaTextField
-        */
+    @FXML
+    private void setStrength(){
+        dataClass.setStrength((Integer.parseInt(StrengthTextField.getText())));
+        System.out.println("str");
+    }
+
+    @FXML
+    private void setIntelligence(){
+        dataClass.setIntelligence((Integer.parseInt(IntelligenceTextField.getText())));
+        System.out.println("int");
+
+
+    }
+
+    @FXML
+    private void setWisdom(){
+        dataClass.setWisdom((Integer.parseInt(WisdomTextField.getText())));
+        System.out.println("wis");
+
+    }
+
+    @FXML
+    private void setCharisma(){
+        dataClass.setCharisma((Integer.parseInt(CharismaTextField.getText())));
+        System.out.println("cha");
+
+    }
+
+    @FXML
+    private void setDexterity(){
+        dataClass.setDexterity((Integer.parseInt(DexterityTextField.getText())));
+        System.out.println("dex");
+
+    }
+
+    @FXML
+    private void setConstitution(){
+        dataClass.setConstitution((Integer.parseInt(ConstitutionTextField.getText())));
     }
 
     private void prepareRadioButtons(){
@@ -353,6 +384,10 @@ public class WizardController implements Initializable{
         WeaponsFlowPane.getChildren().add(comboBoxList.get(0));
     }
 
+    @FXML
+    private void finishCreation() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+        CharacterHandler.createCharacter(dataClass, 1);
+    }
 
 }
 

@@ -12,6 +12,7 @@ public interface CharacterDataCollection {
     public String getAlignment();
     public HashMap<StatName, Integer> getStats();
     public int getLevel();
-
-
+    public String getLanguages();
+    public String getOrganisations();
+    public String getEarlierLife();
 }

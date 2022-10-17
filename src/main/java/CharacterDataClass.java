@@ -7,6 +7,11 @@ This class has taken inspiration from the builder pattern. It behaves like a bui
 However, it can in the future, which makes it extendable.
  */
 public class CharacterDataClass implements CharacterDataCollection{
+
+    String languages;
+    String organisations;
+    String earlierLife;
+    String coreMemories;
     private String name;
     private String jobName;
     private String raceName;
@@ -15,6 +20,10 @@ public class CharacterDataClass implements CharacterDataCollection{
     private int level;
     private String background;
     private HashMap<StatName, Integer> stats;
+
+    CharacterDataClass(){
+        this.stats = new HashMap<StatName, Integer>();
+    }
 
     public CharacterDataClass setName(String name){
         this.name = name;
@@ -56,6 +65,55 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this;
     }
 
+    public CharacterDataClass setLanguages(String languages){
+        this.languages = languages;
+        return this;
+    }
+
+    public CharacterDataClass setEarlierLife(String earlierLife){
+        this.earlierLife = earlierLife;
+        return this;
+    }
+
+    public CharacterDataClass setCoreMemories(String coreMemories){
+        this.coreMemories = coreMemories;
+        return this;
+    }
+
+    public CharacterDataClass setOrganisations(String organisations){
+        this.organisations = organisations;
+        return this;
+    }
+
+    public void setStrength(int strength){
+        stats.put(StatName.Strength, strength);
+        System.out.println(strength);
+    }
+
+    public void setIntelligence(int intelligence){
+        stats.put(StatName.Intelligence, intelligence);
+        System.out.println(intelligence);
+
+    }
+
+    public void setConstitution(int constitution){
+        stats.put(StatName.Intelligence, constitution);
+    }
+
+    public void setWisdom(int wisdom){
+        stats.put(StatName.Wisdom, wisdom);
+        System.out.println(wisdom);
+
+    }
+
+    public void setCharisma(int charisma){
+        stats.put(StatName.Charisma, charisma);
+    }
+
+    public void setDexterity(int dexterity){
+        stats.put(StatName.Dexterity, dexterity);
+    }
+
     @Override
     public String getName() {
         return this.name;
@@ -94,5 +152,20 @@ public class CharacterDataClass implements CharacterDataCollection{
     @Override
     public String getAlignment() {
         return this.alignment;
+    }
+
+    @Override
+    public String getLanguages() {
+        return this.languages;
+    }
+
+    @Override
+    public String getOrganisations() {
+        return this.organisations;
+    }
+
+    @Override
+    public String getEarlierLife() {
+        return this.earlierLife;
     }
 }

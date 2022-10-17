@@ -23,7 +23,9 @@ public class Character implements CharacterDataCollection {
     private HashMap<StatName, Integer> stats;
     private String raceName;
     private String jobName;
-
+    private String languages;
+    private String organisation;
+    private String earlierLife;
 
     public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException, CloneNotSupportedException {
         CharacterDataCollection characterData = data; // Creates copy of data to avoid modifying original data
@@ -158,6 +160,21 @@ public class Character implements CharacterDataCollection {
 
     public int getLevel() {
         return level;
+    }
+
+    @Override
+    public String getLanguages() {
+        return this.languages;
+    }
+
+    @Override
+    public String getOrganisations() {
+        return this.organisation;
+    }
+
+    @Override
+    public String getEarlierLife() {
+        return this.earlierLife;
     }
 
     public void setLevel(int level) {

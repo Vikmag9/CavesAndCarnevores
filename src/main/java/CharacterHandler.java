@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -22,7 +21,7 @@ public class CharacterHandler {
         characterData.put("Job", character.getJobName());
         characterData.put("Background", character.getBackground());
         characterData.put("xp", String.valueOf(character.getXp()));
-        characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoins()));
+        characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getGoldCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
         characterData.put("Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
