@@ -124,6 +124,7 @@ public class WizardController implements Initializable{
         prepareComboBoxes();
         prepareRadioButtons();
         //prepareTextFields();
+        prepareProficiencyCheckBoxes();
     }
 /*
     private void prepareTextFields(){
@@ -198,7 +199,7 @@ public class WizardController implements Initializable{
         jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
         jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
-            dataClass.setRaceName(jobComboBox.getValue());
+            dataClass.setJobName(jobComboBox.getValue());
         });
 
         //Background is not extensible yet, need to parse json file but don't have the time
@@ -310,64 +311,49 @@ public class WizardController implements Initializable{
         });
     }
 
-    private List<String> checkBoxProficiencyToList(){
+    private void prepareProficiencyCheckBoxes(){
         //this is not very extensible, however, due to how the game Dungeons & Dragons (5e) is written, there will never be a need to add more skill proficiencies.
-        List<String> listOfProficiencies = new ArrayList<>();
-        if (AcrobaticsCheckBox.isSelected()){
-            listOfProficiencies.add("Acrobatics");
-        }
-        if (SleightOfHandCheckBox.isSelected()){
-            listOfProficiencies.add("Sleight of Hand");
-        }
-        if (StealthCheckBox.isSelected()){
-            listOfProficiencies.add("Stealth");
-        }
-        if (AnimalHandlingCheckBox.isSelected()){
-            listOfProficiencies.add("Animal Handling");
-        }
-        if (InsightCheckBox.isSelected()){
-            listOfProficiencies.add("Insight");
-        }
-        if (MedicineCheckBox.isSelected()){
-            listOfProficiencies.add("Medicine");
-        }
-        if (PerceptionCheckBox.isSelected()){
-            listOfProficiencies.add("Perception");
-        }
-        if (SurvivalCheckBox.isSelected()){
-            listOfProficiencies.add("Survival");
-        }
-        if (ArcanaCheckBox.isSelected()){
-            listOfProficiencies.add("Arcana");
-        }
-        if (HistoryCheckBox.isSelected()){
-            listOfProficiencies.add("History");
-        }
-        if (InvestigationCheckBox.isSelected()){
-            listOfProficiencies.add("Investigation");
-        }
-        if (NatureCheckBox.isSelected()){
-            listOfProficiencies.add("Nature");
-        }
-        if (ReligionCheckBox.isSelected()){
-            listOfProficiencies.add("Religion");
-        }
-        if (DeceptionCheckBox.isSelected()){
-            listOfProficiencies.add("Deception");
-        }
-        if (IntimidationCheckBox.isSelected()){
-            listOfProficiencies.add("Intimidation");
-        }
-        if (PerformanceCheckBox.isSelected()){
-            listOfProficiencies.add("Performance");
-        }
-        if (PersuasionCheckBox.isSelected()){
-            listOfProficiencies.add("Persuasion");
-        }
-        if (AthleticsCheckBox.isSelected()){
-            listOfProficiencies.add("Athletics");
-        }
-        return listOfProficiencies;
+
+        AcrobaticsCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Acrobatics));
+        SleightOfHandCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.SleightOfHand));
+        AnimalHandlingCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.AnimalHandling));
+        StealthCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Stealth));
+        InsightCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Insight));
+        MedicineCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Medicine));
+        PerceptionCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Perception));
+        SurvivalCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Survival));
+        HistoryCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.History));
+        ArcanaCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Arcana));
+        InvestigationCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Investigation));
+        NatureCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Nature));
+        NatureCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Nature));
+        ReligionCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Religion));
+        DeceptionCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Deception));
+        IntimidationCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Intimidation));
+        PerformanceCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Performance));
+        PersuasionCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Persuasion));
+        AthleticsCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
+                dataClass.setProficiencies(newValue, ProficiencySkills.Athletics));
+
+
     }
 
     private void loadWeaponsArmourTools(Map<String, List<String>> map){
