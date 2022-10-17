@@ -1,14 +1,12 @@
-import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
-public class FXBaseTestScreen extends Application {
+public class Application extends javafx.application.Application {
     Character character;
 
     public void start(Stage stage) throws IOException, ClassNotFoundException {
