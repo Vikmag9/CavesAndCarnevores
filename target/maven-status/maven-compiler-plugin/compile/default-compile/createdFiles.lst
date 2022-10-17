@@ -6,8 +6,10 @@ Items\InventoryItemDirector.class
 Stats\Stats.class
 Application.class
 Controller\FxmlHelper.class
+Stats\ArrayStrategy.class
 Controller\CharacterListItem.class
 Model\FileManager.class
+Controller\SceneController.class
 Model\Character.class
 Model\Feature.class
 Items\InventoryItem.class
@@ -16,8 +18,15 @@ Model\StatName.class
 Model\CharacterHandler.class
 Model\CharacterDataCollection.class
 Model\Job.class
+Controller\CharacterViewController$1.class
 Items\CoinBag.class
 Items\Inventory.class
 Stats\Modifier.class
+Controller\WizardController.class
 Controller\CharacterScreenController.class
+Model\ProficiencySkills.class
 Stats\StatStrategy.class
+Stats\RollStrategy.class
+Controller\CharacterViewController.class
+Model\CharacterDataClass.class
+Controller\CharacterScreen.class
