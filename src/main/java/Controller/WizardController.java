@@ -1,6 +1,7 @@
+package Controller;
+
+import Model.*;
 import Stats.Stats;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -21,7 +22,6 @@ public class WizardController implements Initializable{
     @FXML private AnchorPane weaponsAndArmourPane;
 
     @FXML private StackPane stackPane;
-
 
     Stats stats = new Stats();
     CharacterDataClass dataClass = new CharacterDataClass();

@@ -8,7 +8,7 @@
 
 
 <AnchorPane prefHeight="131.0" prefWidth="426.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/18"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharacterViewController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CharacterViewController">
     <Text fx:id="itemNameText" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
           styleClass="buttons_font_large" text="Name of Item"/>
     <Text fx:id="itemTypeText" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"

@@ -1,13 +1,13 @@
 import Items.Inventory;
 import Items.InventoryItem;
 import Items.InventoryItemBuilder;
+import Model.*;
+import Model.Character;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import Stats.Stats.*;
 
 import static org.junit.Assert.*;
 
@@ -16,8 +16,8 @@ public class Character_test {
     /*
     @Test
     public void createBarbarianTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Barbarian");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Barbarian");
+        List<Model.Feature> featureList = charJob.getFeatures();
 
 
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -28,7 +28,7 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -47,8 +47,8 @@ public class Character_test {
 
     @Test
     public void createBardTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Bard");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Bard");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -57,7 +57,7 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -76,8 +76,8 @@ public class Character_test {
 
     @Test
     public void createClericTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Cleric");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Cleric");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -85,7 +85,7 @@ public class Character_test {
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -103,8 +103,8 @@ public class Character_test {
 
     @Test
     public void createDruidTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Druid");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Druid");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -113,7 +113,7 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -131,8 +131,8 @@ public class Character_test {
 
     @Test
     public void createFighterTest() throws IOException, ClassNotFoundException {
-            Job charJob = new Job("Fighter");
-            List<Feature> featureList = charJob.getFeatures();
+            Model.Job charJob = new Model.Job("Fighter");
+            List<Model.Feature> featureList = charJob.getFeatures();
             HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
             Inventory inventory = new Inventory(1);
             InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -141,7 +141,7 @@ public class Character_test {
             InventoryItem cheeseArmor = new InventoryItem(builder);
             inventory.addItem(cheeseArmor);
 
-            Character character = new Character("Gregg", new Race("Batman"),
+            Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                     charJob,
                     inventory,
                     1,
@@ -159,8 +159,8 @@ public class Character_test {
 
     @Test
     public void createMonkTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Monk");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Monk");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -169,7 +169,7 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -187,8 +187,8 @@ public class Character_test {
 
     @Test
     public void createPaladinTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Paladin");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Paladin");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -196,7 +196,7 @@ public class Character_test {
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -214,8 +214,8 @@ public class Character_test {
 
     @Test
     public void createRangerTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Ranger");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Ranger");
+        List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -223,7 +223,7 @@ public class Character_test {
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -241,8 +241,8 @@ public class Character_test {
 
     @Test
     public void createRougeTest() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Rogue");
-        List<Feature> featureList = charJob.getFeatures();
+        Model.Job charJob = new Model.Job("Rogue");
+        List<Model.Feature> featureList = charJob.getFeatures();
 
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -251,7 +251,7 @@ public class Character_test {
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
 
-        Character character = new Character("Gregg", new Race("Batman"),
+        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
                 charJob,
                 inventory,
                 1,
@@ -268,9 +268,9 @@ public class Character_test {
 
     @Test
     public void testBarbarianParsing() throws IOException, ClassNotFoundException {
-        Job charJob = new Job("Barbarian");
+        Model.Job charJob = new Model.Job("Barbarian");
         Inventory inventory = new Inventory(1);
-        Character BarbarianCharacter = new Character("Gregg", new Race("Human"),
+        Model.Character BarbarianCharacter = new Model.Character("Gregg", new Model.Race("Human"),
                 charJob,
                 inventory,
                 1,

@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,7 +16,7 @@ public class CharacterScreenController implements Initializable {
     }
     @FXML
     private void setCharacterArea(){
-        // Load all existing characters to the flowpane in CharacterScreen.fxml
+        // Load all existing characters to the flowpane in Controller.CharacterScreen.fxml
     }
     @FXML
     private void deleteCharacter(){

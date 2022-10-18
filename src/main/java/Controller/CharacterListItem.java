@@ -1,3 +1,5 @@
+package Controller;
+
 import Items.Inventory;
 import Items.InventoryItem;
 import javafx.event.Event;
@@ -18,7 +20,7 @@ import static java.lang.String.valueOf;
 public class CharacterListItem  extends AnchorPane {
     private CharacterViewController parentController;
     private Character character;
-    private Inventory inventory;
+    private InventoryItem item;
 
 
 
@@ -36,16 +38,19 @@ public class CharacterListItem  extends AnchorPane {
     @FXML private Button itemConsumeButton;
 
     public CharacterListItem(InventoryItem item, CharacterViewController characterViewController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CharacterListItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ItemsListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
+
         try {
             fxmlLoader.load();
+
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
 
+        this.item = item;
         this.parentController = characterViewController;
         populateCharacterListView(item);
 

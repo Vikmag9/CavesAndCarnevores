@@ -65,7 +65,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>${javafx.maven.plugin.version}</version>
                 <configuration>
-                    <mainClass>FXBaseTestScreen</mainClass>
+                    <mainClass>Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>

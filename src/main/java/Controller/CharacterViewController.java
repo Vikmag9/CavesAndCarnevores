@@ -1,7 +1,10 @@
+package Controller;
 
+import Controller.CharacterListItem;
 import Items.Inventory;
 import Items.InventoryItem;
 import Items.InventoryItemBuilder;
+import Model.Character;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -11,8 +14,10 @@ import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
+
 import java.net.URL;
 import java.util.*;
+import Model.*;
 
 public class CharacterViewController implements Initializable {
 
@@ -185,6 +190,7 @@ public class CharacterViewController implements Initializable {
         setReactionsTextArea();
         setBonusActionsTextArea();
         prepareRadioButtons();
+        updateInventoryList();
     }
 
     // Basics features
@@ -314,7 +320,7 @@ public class CharacterViewController implements Initializable {
 
     // Inventory features
 
-    private void updateRecipeList() {
+    private void updateInventoryList() {
         //Inventory inventory = character.getInventory();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -326,6 +332,7 @@ public class CharacterViewController implements Initializable {
         List<InventoryItem> items = inventory.getInventory();
         for (InventoryItem item : items) {
             CharacterListItem rli = new CharacterListItem(item, this);
+            System.out.println(rli + " back");
             inventoryFlowPane.getChildren().add(rli);
         }
     }
