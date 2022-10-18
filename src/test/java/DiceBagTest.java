@@ -1,4 +1,4 @@
-import Stats.DiceBag;
+import Model.Stats.DiceBag;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

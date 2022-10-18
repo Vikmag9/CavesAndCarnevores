@@ -1,7 +1,7 @@
 package Controller;
 
 import Model.*;
-import Stats.Stats;
+import Model.Stats.Stats;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;

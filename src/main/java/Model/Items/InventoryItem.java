@@ -1,4 +1,4 @@
-package Items;
+package Model.Items;
 
 public class InventoryItem { // Functions as a data class, Each inventory item is to be constructed by this class
     private String itemType;

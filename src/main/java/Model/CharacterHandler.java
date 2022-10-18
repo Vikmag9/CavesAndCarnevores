@@ -3,9 +3,6 @@ package Model;
 import java.io.IOException;
 import java.util.HashMap;
 
-import Model.Character;
-import Model.CharacterDataCollection;
-
 public class CharacterHandler {
     // TODO: Create a character object with data class as parameter and return it
 
@@ -24,7 +21,7 @@ public class CharacterHandler {
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getGoldCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
-        characterData.put("Stats", character.getStats());
+        characterData.put("Model/Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
         characterData.put("Alignment", character.getAlignment());
 
