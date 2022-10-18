@@ -1,9 +1,8 @@
 package Controller;
 
-import Controller.CharacterListItem;
-import Items.Inventory;
-import Items.InventoryItem;
-import Items.InventoryItemBuilder;
+import Model.Items.Inventory;
+import Model.Items.InventoryItem;
+import Model.Items.InventoryItemBuilder;
 import Model.Character;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -17,7 +16,6 @@ import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.*;
-import Model.*;
 
 public class CharacterViewController implements Initializable {
 

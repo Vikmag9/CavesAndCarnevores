@@ -38,13 +38,11 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML public void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
+    @FXML public void openCreateCharacterScreen() {
         try {
             FXMLLoader loader = new FXMLLoader();
             URL fxmlURL = Paths.get("src/main/resources/Wizard.fxml").toUri().toURL();
             Parent startScreen = loader.load(fxmlURL);
-
-
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);

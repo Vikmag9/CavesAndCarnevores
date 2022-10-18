@@ -1,6 +1,6 @@
-import Items.Inventory;
-import Items.InventoryItem;
-import Items.InventoryItemBuilder;
+import Model.Items.Inventory;
+import Model.Items.InventoryItem;
+import Model.Items.InventoryItemBuilder;
 import Model.*;
 import Model.Character;
 import org.junit.Test;

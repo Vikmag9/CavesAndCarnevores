@@ -1,19 +1,14 @@
 package Controller;
 
-import Items.Inventory;
-import Items.InventoryItem;
-import javafx.event.Event;
+import Model.Items.InventoryItem;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.util.List;
 
 import static java.lang.String.valueOf;
 
