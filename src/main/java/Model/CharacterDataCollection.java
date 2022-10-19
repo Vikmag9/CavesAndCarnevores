@@ -1,8 +1,14 @@
-import Items.Inventory;
-import org.w3c.dom.CharacterData;
+package Model;
+
+import Model.Items.Inventory;
 
 import java.util.HashMap;
 
+/**
+ * A public interface for the CharacterDataCollection.
+ * This interface is implemented by the CharacterDataClass and the character class.
+ * Ensures that a character has all the necessary data to be created.
+ */
 public interface CharacterDataCollection {
     public String getName();
     public String getRaceName();

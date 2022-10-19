@@ -18,7 +18,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: --module-path=/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1.jar --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics FXBaseTestScreen
+Command Line: --module-path=/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1.jar --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics Application
 
 Host: "MacBookAir10,1" arm64, 8 cores, 8G, Darwin 21.3.0, macOS 12.2.1 (21D62)
 Time: Tue Oct  4 13:11:02 2022 CEST elapsed time: 21.009525 seconds (0d 0h 0m 21s)
@@ -937,7 +937,7 @@ Dynamic libraries:
 
 VM Arguments:
 jvm_args: --module-path=/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-base/17.0.1/javafx-base-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-controls/17.0.1/javafx-controls-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-fxml/17.0.1/javafx-fxml-17.0.1.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1-mac-aarch64.jar:/Users/jonathan/.m2/repository/org/openjfx/javafx-graphics/17.0.1/javafx-graphics-17.0.1.jar --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics 
-java_command: FXBaseTestScreen
+java_command: Application
 java_class_path (initial): /Users/jonathan/Documents/CavesAndCarnevores/target/classes:/Users/jonathan/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar:/Users/jonathan/.m2/repository/org/json/json/20220320/json-20220320.jar
 Launcher Type: SUN_STANDARD
 

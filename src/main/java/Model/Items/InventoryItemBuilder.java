@@ -1,4 +1,4 @@
-package Items;
+package Model.Items;
 
 public class InventoryItemBuilder {
     private String itemType; //TODO Make into ENUM
