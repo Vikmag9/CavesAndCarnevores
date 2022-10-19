@@ -183,12 +183,8 @@ public class WizardController implements Initializable{
     protected void prepareComboBoxes(){
         List<String> jobs = new ArrayList<>();
         List<String> races = new ArrayList<>();
-        try {
-            jobs = Job.getAllJobs();
-            races = Race.getAllRaces();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        jobs = Job.getAllJobs();
+        races = Race.getAllRaces();
         raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
         raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
