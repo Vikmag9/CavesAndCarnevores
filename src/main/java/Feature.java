@@ -8,4 +8,7 @@ public class Feature {
         this.levelPrerequisites = prerequisites;
     }
 
+    public int getLevel() {
+        return this.levelPrerequisites;
+    }
 }
