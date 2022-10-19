@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 
+
 public class Race {
     private String name;
     private String description;
@@ -13,7 +14,10 @@ public class Race {
     private Map proficiencies;
     private Race subRace;
 
-
+    /**
+     * One of the 3 constructors for the Race class.
+     * @param raceParsed The parsed information from the race JSON file.
+     */
     public Race(RaceParser raceParsed) {
         this.name = raceParsed.getName();
         this.description = raceParsed.getDescription();
@@ -22,6 +26,13 @@ public class Race {
         this.proficiencies = raceParsed.getProficiencies();
     }
 
+    /**
+     * One of the 3 constructors for the Race class.
+     * Uses the input parameter to then retrieve the data from the raceParser class.
+     * @param racename The name of a characters race, as a string.
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public Race(String racename) throws IOException, ClassNotFoundException {
         RaceParser raceParser = new RaceParser(racename);
         this.name = raceParser.getName();
@@ -31,6 +42,15 @@ public class Race {
         this.proficiencies = raceParser.getProficiencies();
     }
 
+    /**
+     * One of the 3 constructors for the Race Class.
+     * Used when setting a race with a subrace.
+     * Uses the input parameter to then retrieve the data from the raceParser class, that belongs to the race and subrace.
+     * @param superRaceName The name of the race of the character, as a string.
+     * @param subraceName The name of the subrace of the character, as a string.
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public Race(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
         RaceParser raceParser = new RaceParser(superRaceName,subraceName);
         this.name = raceParser.getName();
@@ -51,6 +71,10 @@ public class Race {
         return name;
     }
 
+    /**
+     * Sets the name of a characters race.
+     * @param name the name of a characters race, as a string.
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -59,6 +83,10 @@ public class Race {
         return this.description;
     }
 
+    /**
+     * Sets the race description of a character.
+     * @param description the description of the race, as a character
+     */
     public void setDescription(String description) {
         this.description = description;
     }
