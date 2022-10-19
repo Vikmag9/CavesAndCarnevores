@@ -9,6 +9,7 @@ import javafx.scene.layout.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import Stats.StatGenerator;
 
 public class WizardController implements Initializable{
 
@@ -222,24 +223,8 @@ public class WizardController implements Initializable{
     private void updateStatViewSmall(ArrayList<Integer> stats){
         List<Integer> modifierList = new ArrayList<>();
         for (Integer stat : stats) {
-            switch (stat) {
-                case 1 -> modifierList.add(-5);
-                case 2, 3 -> modifierList.add(-4);
-                case 4, 5 -> modifierList.add(-3);
-                case 6, 7 -> modifierList.add(-2);
-                case 8, 9 -> modifierList.add(-1);
-                case 10, 11 -> modifierList.add(0);
-                case 12, 13 -> modifierList.add(1);
-                case 14, 15 -> modifierList.add(2);
-                case 16, 17 -> modifierList.add(3);
-                case 18, 19 -> modifierList.add(4);
-                case 20, 21 -> modifierList.add(5);
-                case 22, 23 -> modifierList.add(6);
-                case 24, 25 -> modifierList.add(7);
-                case 26, 27 -> modifierList.add(8);
-                case 28, 29 -> modifierList.add(9);
-                case 30 -> modifierList.add(10);
-            }
+            StatGenerator statGenerator = new StatGenerator();
+            modifierList.add(statGenerator.getModifier(stat));
         }
         StatView1Small.setText(modifierList.get(0).toString());
         StatView2Small.setText(modifierList.get(1).toString());
