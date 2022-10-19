@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static java.util.Collections.emptyList;
+
 
 public class Job {
     private final String jobName;
@@ -15,59 +15,36 @@ public class Job {
     private List<Feature> features;
     private JSONObject jobContent;
     static private final FileManager fm = new FileManager();
+    JobParser jobParser;
 
     public Job(String jobName) throws IOException, ClassNotFoundException {
         this.jobName = jobName;
-        this.jobContent = getJob(jobName);
-        this.features = parseFeatures();
-        this.hitdie = getHitDie();
-        this.proficiencies = parseProficiencies();
+        this.jobContent = jobParser.getJob(jobName);
+        this.features = jobParser.parseFeatures();
+        this.hitdie = jobParser.getHitDie();
+        this.proficiencies = jobParser.parseProficiencies();
     }
 
 
-
-    public JSONObject getJob(String jobName) throws IOException, ClassNotFoundException {
-        JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
-        return jsonJob;
-    }
-    public List<Feature> parseFeatures() {
-        ArrayList<Feature> features = new ArrayList<>();
-        JSONObject featureTable = jobContent.getJSONObject("Class Features").getJSONObject("The "+this.jobName).getJSONObject("table");
-        JSONArray featureNames = featureTable.getJSONArray("Features");
-        JSONArray featureDescs = new JSONArray();
-        featureNames.forEach(featureName -> {
-            featureDescs.put(jobContent.getJSONObject("Class Features").getString(featureName.toString()));
-        });
-        JSONArray featurePreReqs = featureTable.getJSONArray("Level");
-        for (int i = 0; i < featureNames.length(); i++) {
-            features.add(new Feature(featureNames.getString(i), featureDescs.getString(i), featurePreReqs.getInt(i)));
+    public static List<String> getAllJobs(){
+        List<String> jobs = new ArrayList<>();
+        try {
+            List<String> jobNames = JobParser.getAllJobs();
+            for (String jobName : jobNames) {
+                jobs.add(jobName);
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        return features;
+        return jobs;
     }
 
-    public static List<String> getAllJobs() throws IOException, ClassNotFoundException { // TODO: To be used when displaying all available jobs in the UI
-        JSONObject jobs = fm.readFile("jobs.json");
-        List<String> jobNames = new ArrayList<>();
-        jobs.keySet().forEach(jobName -> {
-            jobNames.add(jobName);
-        });
-        return jobNames;
+    public int getHitDie() {
+        return this.hitdie;
     }
 
     public List<Feature> getFeatures() {
         return this.features;
-    }
-
-
-    public int getHitDie(){
-        JSONObject classFeats = jobContent.getJSONObject("Class Features");
-        int hitDie = classFeats.getInt("Hit Die");
-        return hitDie;
-    }
-
-    public Map parseProficiencies() {
-        jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies");
-        return jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
     }
 
     public String getJobDesc() {

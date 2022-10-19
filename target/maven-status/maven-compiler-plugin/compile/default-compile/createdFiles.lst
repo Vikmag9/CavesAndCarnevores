@@ -1,7 +1,7 @@
-FXBaseTestScreen.class
 SceneController.class
 CharacterListItem.class
 FileManager.class
+RaceParser.class
 Character.class
 StatName.class
 Stats\DiceBag.class
@@ -20,4 +20,7 @@ Items\CoinBag.class
 Items\Inventory.class
 CharacterViewController$1.class
 CharacterViewController.class
+CharacterHandler.class
+Stats\RollStrategy.class
 FxmlHelper.class
+JobParser.class
