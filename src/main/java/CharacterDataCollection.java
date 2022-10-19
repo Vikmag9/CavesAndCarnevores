@@ -15,4 +15,5 @@ public interface CharacterDataCollection {
     public String getLanguages();
     public String getOrganisations();
     public String getEarlierLife();
+
 }

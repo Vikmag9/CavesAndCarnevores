@@ -84,4 +84,5 @@ public class InventoryItemBuilder {
     public boolean getIsMagical() {
         return this.isMagical;
     }
+
 }

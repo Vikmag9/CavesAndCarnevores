@@ -188,4 +188,5 @@ public class Character implements CharacterDataCollection {
     public void setAlignment(String alignment) {
         this.alignment = alignment;
     }
+
 }

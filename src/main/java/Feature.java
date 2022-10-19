@@ -8,5 +8,4 @@ public class Feature {
         this.levelPrerequisites = prerequisites;
     }
 
-
 }

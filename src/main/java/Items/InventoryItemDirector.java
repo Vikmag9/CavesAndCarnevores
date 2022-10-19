@@ -23,6 +23,5 @@ public class InventoryItemDirector {
         return new InventoryItem(miscBuilder);
     }
 
-
 }
 

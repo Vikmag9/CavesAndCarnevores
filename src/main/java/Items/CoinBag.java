@@ -23,5 +23,4 @@ public class CoinBag {
         return this.goldCoin;
     }
 
-
 }

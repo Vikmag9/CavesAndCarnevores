@@ -31,5 +31,6 @@ public class CharacterHandler {
         fm.saveMap(characterData, "src/main/resources/characters/" + character.getName());
 
         //TODO parse into format for saving, delegate to FileManager by sending as hashmap
+
     }
 }

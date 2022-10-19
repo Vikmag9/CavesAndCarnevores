@@ -101,4 +101,5 @@ public class Job {
     public Map getProficiencies() {
         return proficiencies;
     }
+
 }

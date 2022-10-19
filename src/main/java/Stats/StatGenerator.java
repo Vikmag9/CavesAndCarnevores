@@ -16,5 +16,6 @@ public class StatGenerator {
     public ArrayList<Integer> getListOfStats(){
         return this.strategy.getListOfStats();
     }
+
 }
 

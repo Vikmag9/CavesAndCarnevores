@@ -21,7 +21,6 @@ public class CharacterListItem  extends AnchorPane {
     private Inventory inventory;
 
 
-
     @FXML private Text itemNameText;
     @FXML private Text itemTypeText;
     @FXML private Text itemMagicalText;

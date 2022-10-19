@@ -329,5 +329,4 @@ public class CharacterViewController implements Initializable {
             inventoryFlowPane.getChildren().add(rli);
         }
     }
-
 }

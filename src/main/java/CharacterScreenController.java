@@ -20,4 +20,5 @@ public class CharacterScreenController implements Initializable {
     private void deleteCharacter(){
         // Delete a preexisting character
     }
+
 }

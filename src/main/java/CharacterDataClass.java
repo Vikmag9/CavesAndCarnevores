@@ -168,4 +168,5 @@ public class CharacterDataClass implements CharacterDataCollection{
     public String getEarlierLife() {
         return this.earlierLife;
     }
+
 }
