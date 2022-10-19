@@ -16,7 +16,6 @@ import java.util.*;
 
 public class CharacterViewController implements Initializable {
 
-
     //Basics tab fx:ids
     @FXML private Text strengthsPtsText;
     @FXML private Text dexterityPtsText;
