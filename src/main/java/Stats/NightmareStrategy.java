@@ -1,6 +1,7 @@
-package Model.Stats;
+package Stats;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NightmareStrategy implements StatStrategy{
     DiceBag diceBag;

@@ -1,4 +1,4 @@
-package Model.Stats;
+package Stats;
 
 import java.util.ArrayList;
 

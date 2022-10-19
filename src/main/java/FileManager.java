@@ -1,4 +1,4 @@
-package Model;
+import Items.InventoryItem;
 
 import java.io.*;
 
@@ -19,7 +19,7 @@ public class FileManager {
 
     public JSONObject readFile(String resourceName) throws IOException, ClassNotFoundException {
 
-        InputStream is = Class.forName("Model.FileManager").getResourceAsStream(resourceName);
+        InputStream is = Class.forName("FileManager").getResourceAsStream(resourceName);
         if (is == null) {
             throw new NullPointerException("Cannot find resource file " + resourceName);
         }

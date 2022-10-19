@@ -1,7 +1,8 @@
-package Model.Stats;
+package Stats;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class RollStrategy implements StatStrategy{
     ArrayList<Integer> listOfRolls;

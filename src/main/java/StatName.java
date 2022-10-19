@@ -1,5 +1,3 @@
-package Model;
-
 public enum StatName {
     Intelligence,
     Wisdom,

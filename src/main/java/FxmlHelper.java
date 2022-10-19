@@ -1,6 +1,3 @@
-package Controller;
-
-import Controller.SceneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 

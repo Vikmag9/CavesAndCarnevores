@@ -1,5 +1,3 @@
-package Model;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -9,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class RaceParser {
+public class Race {
     private String name;
     private String description;
     private int speed;
@@ -19,19 +17,19 @@ public class RaceParser {
     private JSONObject raceContent;
     static private final FileManager fm = new FileManager();
 
-    public RaceParser(String raceName) throws IOException, ClassNotFoundException {
+    public Race(String raceName) throws IOException, ClassNotFoundException {
         this.name = raceName;
-        this.raceContent = RaceContent(name);
+        this.raceContent = getRaceContent(name);
         this.description = parseDescription();
         this.speed = parseSpeed();
         this.traits = parseTraits();
         this.proficiencies = parseProficiencies();
     }
 
-    public RaceParser(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
+    public Race(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
         this.name = subraceName;
-        if (SubraceContent(superRaceName,subraceName) != null) {
-            this.raceContent = SubraceContent(superRaceName, subraceName);
+        if (getSubraceContent(superRaceName,subraceName) != null) {
+            this.raceContent = getSubraceContent(superRaceName, subraceName);
             this.description = parseDescription();
             this.speed = parseSpeed();
             this.traits = parseTraits();
@@ -39,12 +37,12 @@ public class RaceParser {
         }
     }
 
-    public JSONObject RaceContent(String jobName) throws IOException, ClassNotFoundException {
+    public JSONObject getRaceContent(String jobName) throws IOException, ClassNotFoundException {
         JSONObject jsonRace = fm.readFile("races.json").getJSONObject(jobName);
         return jsonRace;
     }
 
-    public JSONObject SubraceContent(String superRace, String subRace) throws IOException, ClassNotFoundException {
+    public JSONObject getSubraceContent(String superRace, String subRace) throws IOException, ClassNotFoundException {
         JSONArray jsonRace = fm.readFile("races.json").getJSONObject(superRace).getJSONArray("Subraces");
         AtomicReference<JSONObject> subRaceContent = null;
         JSONObject subRaceContent1 = null;
@@ -77,7 +75,9 @@ public class RaceParser {
         w.getJSONObject(0).keySet().forEach(subRaceName -> {
             try {
                 SubraceNames.add(new Race(superRace,subRaceName));
-            } catch (ClassNotFoundException | IOException e) {
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         });
