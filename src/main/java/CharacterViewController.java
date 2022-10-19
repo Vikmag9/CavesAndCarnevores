@@ -1,8 +1,6 @@
-package Controller;
-
-import Model.Items.Inventory;
-import Model.Items.InventoryItem;
-import Model.Items.InventoryItemBuilder;
+import Items.Inventory;
+import Items.InventoryItem;
+import Items.InventoryItemBuilder;
 import Model.Character;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

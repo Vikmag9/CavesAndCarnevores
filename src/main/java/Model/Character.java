@@ -1,6 +1,6 @@
 package Model;
 
-import Model.Items.Inventory;
+import Items.Inventory;
 
 import java.io.IOException;
 import java.util.HashMap;

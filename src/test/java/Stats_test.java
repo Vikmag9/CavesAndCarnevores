@@ -1,4 +1,4 @@
-import Model.Stats.ArrayStrategy;
+import Stats.ArrayStrategy;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

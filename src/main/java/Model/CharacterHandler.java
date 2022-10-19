@@ -21,7 +21,7 @@ public class CharacterHandler {
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getGoldCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
-        characterData.put("Model/Stats", character.getStats());
+        characterData.put("Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
         characterData.put("Alignment", character.getAlignment());
 

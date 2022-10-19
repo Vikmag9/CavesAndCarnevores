@@ -1,4 +1,4 @@
-package Model.Items;
+package Items;
 
 public class CoinBag {
     private double goldCoin;

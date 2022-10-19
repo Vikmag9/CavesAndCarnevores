@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="131.0" prefWidth="426.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CharacterViewController">
+<AnchorPane prefHeight="131.0" prefWidth="426.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharacterViewController">
     <Text fx:id="itemNameText" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="buttons_font_large" text="Name of Item" />
     <Text fx:id="itemTypeText" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Item type" />
     <ScrollPane layoutX="13.0" layoutY="45.0" prefHeight="58.0" prefWidth="400.0">

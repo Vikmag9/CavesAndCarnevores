@@ -1,27 +1,19 @@
-package Items;
-
-import Controller.CharacterViewController;
-import Items.Inventory;
 import Items.InventoryItem;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.util.List;
 
 import static java.lang.String.valueOf;
 
-public class ItemsListItem  extends AnchorPane {
+public class CharacterListItem  extends AnchorPane {
     private CharacterViewController parentController;
     private Character character;
-    private Inventory inventory;
+    private InventoryItem item;
 
 
 
@@ -38,39 +30,34 @@ public class ItemsListItem  extends AnchorPane {
     @FXML private Button itemRemoveButton;
     @FXML private Button itemConsumeButton;
 
-    public ItemsListItem(InventoryItem item, CharacterViewController characterViewController){
+    public CharacterListItem(InventoryItem item, CharacterViewController characterViewController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ItemsListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
+
         try {
             fxmlLoader.load();
+
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
 
+        this.item = item;
         this.parentController = characterViewController;
-        populateInventoryListView(item);
+        populateCharacterListView(item);
+
+
     }
 
-    private void populateInventoryListView(InventoryItem item) {
+    private void populateCharacterListView(InventoryItem item) {
         itemNameText.setText(item.getItemName());
         itemDescriptionTextArea.setText(item.getItemDescription());
         itemTypeText.setText(item.getItemType());
-        if (item.getIsMagical()){
-            itemMagicalText.setVisible(true);
-        }
-        if (item.getAtkBonus() > 0){
-            itemAttackBonusText.setVisible(true);
-            itemAttackBonusText.setText("+ " + item.getAtkBonus() + " Atk Bonus");
-        }
-        if (item.getAc() > 0){
-            itemACText.setVisible(true);
-            itemACText.setText(item.getAc() + " AC");
-        }
-
+        itemMagicalText.setText(valueOf(item.getIsMagical()));
+        itemAttackBonusText.setText(valueOf(item.getAtkBonus()));
+        itemACText.setText(valueOf(item.getAc()));
         itemValueText.setText(valueOf(item.getItemValue()));
 
     }
 }
-

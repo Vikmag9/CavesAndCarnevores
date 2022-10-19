@@ -1,6 +1,6 @@
-import Model.Items.Inventory;
-import Model.Items.InventoryItem;
-import Model.Items.InventoryItemBuilder;
+import Items.Inventory;
+import Items.InventoryItem;
+import Items.InventoryItemBuilder;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 
