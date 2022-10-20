@@ -1,5 +1,6 @@
 import Items.Inventory;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /*
@@ -27,12 +28,15 @@ public class CharacterDataClass implements CharacterDataCollection{
     private int level;
     private String background;
     private HashMap<StatName, Integer> stats;
+    ArrayList<ProficiencySkills> proficiencySkills;
 
     /**
      * constructor for the CharacterDataClass.
      */
     CharacterDataClass(){
         this.stats = new HashMap<StatName, Integer>();
+        this.proficiencySkills = new ArrayList<>();
+
     }
 
     /**
@@ -265,6 +269,19 @@ public class CharacterDataClass implements CharacterDataCollection{
     @Override
     public String getEarlierLife() {
         return this.earlierLife;
+    }
+
+    public void setProficiencies(Boolean addOrRemove, ProficiencySkills statName){
+        if (addOrRemove) {
+            this.proficiencySkills.add(statName);
+            System.out.println(proficiencySkills);
+        }
+        else{
+            this.proficiencySkills.remove(statName);
+            System.out.println(proficiencySkills);
+
+
+        }
     }
 
 }
