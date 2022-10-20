@@ -178,6 +178,15 @@ public class CharacterViewController implements Initializable {
     @FXML private Button itemRemoveButton;
     @FXML private Button itemConsumeButton;
 
+    /**
+     * Initializes the controller class for the CharacterInfoScreen.fxml.
+     * A necessary method for the FXML to work, since it is needed for the initializeable interface.
+     * Prepares the components that need initialization, such as textareas and radiobuttons.
+     * The parameters are not used in the method calls but are necessary to implement the initializeable interface.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setActionsTextArea();
@@ -190,6 +199,10 @@ public class CharacterViewController implements Initializable {
 
     // Combat features
 
+    /**
+     * Sets the actions to be displayed in the text area.
+     * Could be used to set the actions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setActionsTextArea() {
         String actions = """
                 - Attack
@@ -206,9 +219,14 @@ public class CharacterViewController implements Initializable {
                 - Ready An Action
                 - Use a Class Feature""";
 
+        actionsTextArea.setEditable(false);
         actionsTextArea.setText(actions);
     }
 
+    /**
+     * Sets the reactions to be displayed in the text area.
+     * Could be used to set the reactions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setReactionsTextArea() {
         String reactions = """
                 - Opportunity Attack
@@ -216,9 +234,14 @@ public class CharacterViewController implements Initializable {
                 - Cast a spell
                 """;
 
+        reactionsTextArea.setEditable(false);
         reactionsTextArea.setText(reactions);
     }
 
+    /**
+     * Sets the bonus actions to be displayed in the text area.
+     * Could be used to set the bonus actions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setBonusActionsTextArea() {
         String bonusActions = """
                 - Offhand Attack
@@ -226,6 +249,7 @@ public class CharacterViewController implements Initializable {
                 - Use a Class Feature
                 """;
 
+        bonusActionsTextArea.setEditable(false);
         bonusActionsTextArea.setText(bonusActions);
     }
 
@@ -266,6 +290,12 @@ public class CharacterViewController implements Initializable {
         spellList.add(spell);
     }
 
+    /**
+     * Disables or enables the checkboxes depending on which radio button is selected.
+     * So that consumable items can't have attack bonus or armor class.
+     *
+     * @param bool The boolean value that determines if the checkboxes should be disabled or enabled. true == disable.
+     */
     @FXML
     private void disablecheckboxes(Boolean bool) {
 
@@ -276,6 +306,10 @@ public class CharacterViewController implements Initializable {
 
     }
 
+    /**
+     * Prepares the radio buttons for the inventory.
+     * Disables the checkboxes for consumable items.
+     */
     private void prepareRadioButtons(){
         ToggleGroup itemToggleGroup = new ToggleGroup();
         consumableRadioButton.setToggleGroup(itemToggleGroup);
@@ -313,7 +347,7 @@ public class CharacterViewController implements Initializable {
 
     // Inventory features
 
-    private void updateRecipeList() {
+    private void updateInventoryList() {
         //Inventory inventory = character.getInventory();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);

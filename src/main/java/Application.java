@@ -9,6 +9,11 @@ import java.io.IOException;
 public class Application extends javafx.application.Application {
     Character character;
 
+    /**
+     * Starts the program displaying the main screen.
+     * sets the base screen to the corresponding fxml-file, which contains a border pane that is loaded with other fxml-files in the screen controller.
+     * @throws IOException
+     */
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         String javaVersion = System.getProperty("java.version");
         String javafxVersion = System.getProperty("javafx.version");
@@ -33,6 +38,11 @@ public class Application extends javafx.application.Application {
 
     }
 
+    /**
+     * Main method - Starts the program.
+     * Calls on the start method, which deals with the scene.
+     * @param args for running the main method according to Java.
+     */
     public static void main(String[] args) {
         launch();
     }
