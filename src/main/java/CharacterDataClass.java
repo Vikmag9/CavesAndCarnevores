@@ -286,4 +286,8 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this.proficiencySkills;
     }
 
+
+
+
+
 }

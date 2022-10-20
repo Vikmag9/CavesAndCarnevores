@@ -4,6 +4,7 @@ public enum ProficiencySkills {
     Performance,
     Persuasion,
     AnimalHandling,
+    Handling,
     Insight,
     Medicine,
     Perception,

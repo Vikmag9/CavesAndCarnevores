@@ -44,10 +44,16 @@ public class CharacterViewController implements Initializable {
     @FXML private TextField chaText;
 
 
+
+
+
+
+
     @FXML private CheckBox g;
     @FXML private CheckBox f;
     @FXML private CheckBox h;
     @FXML private CheckBox d;
+
 
 
     //Basics tab fx:ids
