@@ -71,7 +71,7 @@
                <Text layoutX="59.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Proficiencies" textAlignment="CENTER" AnchorPane.bottomAnchor="232.6921875" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="58.4296875" AnchorPane.topAnchor="4.328125" />
                <TextArea fx:id="proficienciesTextArea" layoutX="3.0" layoutY="22.0" prefHeight="202.0" prefWidth="188.0" styleClass="skills_font" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
             </AnchorPane>
-            <AnchorPane layoutX="328.0" layoutY="107.0" prefHeight="407.0" prefWidth="178.0">
+            <AnchorPane layoutX="328.0" layoutY="108.0" prefHeight="407.0" prefWidth="178.0">
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="407.0" layoutX="-12.0" stroke="BLACK" strokeType="INSIDE" width="179.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0" />
                <Text layoutX="70.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Skills" textAlignment="CENTER" />
                <Text layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Athletics" />
@@ -132,35 +132,16 @@
             <AnchorPane layoutX="118.0" layoutY="66.0" prefHeight="170.0" prefWidth="170.0">
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="170.0" stroke="BLACK" strokeType="INSIDE" width="202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                <Text layoutX="50.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Saving Throws" textAlignment="CENTER" AnchorPane.bottomAnchor="149.38828125" AnchorPane.topAnchor="5.05078125" />
-               <CheckBox fx:id="ConstitutionCheck" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" text="Constitution" />
-               <CheckBox fx:id="StrengthCheck" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" text="Strength" />
+               <CheckBox fx:id="ConstitutionSave" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" text="Constitution" />
+               <CheckBox fx:id="StrengthSave" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" text="Strength" />
                <CheckBox fx:id="IntelligenceSave" layoutX="13.0" layoutY="92.0" mnemonicParsing="false" text="Intelligence" />
                <CheckBox fx:id="DexteritySave" layoutX="13.0" layoutY="117.0" mnemonicParsing="false" text="Dexterity" />
                <CheckBox fx:id="CharismaSave" layoutX="13.0" layoutY="141.0" mnemonicParsing="false" text="Charisma" />
-               <CheckBox fx:id="wisdomSaving" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="Wisdom" />
+               <CheckBox fx:id="wisdomSave" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="Wisdom" />
             </AnchorPane>
-            <AnchorPane layoutX="144.0" layoutY="3.0" prefHeight="58.0" prefWidth="482.0">
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" stroke="BLACK" strokeType="INSIDE"
-                          width="484.0" AnchorPane.topAnchor="0.0"/>
-               <Text fx:id="characterNameText" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                     styleClass="Text_enter" text="Name of Character" textAlignment="CENTER"
-                     AnchorPane.leftAnchor="10.0"/>
-               <Text fx:id="characterRaceText" layoutX="351.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                     styleClass="skills_label" text="Race" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0"/>
-               <Text fx:id="characterClassText" layoutX="398.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                     styleClass="skills_label" text="Class" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0"/>
-            </AnchorPane>
-            <AnchorPane layoutX="633.0" layoutY="2.0" prefHeight="58.0" prefWidth="88.0">
-               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" stroke="BLACK" strokeType="INSIDE"
-                          width="88.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0"
-                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
-               <Text layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font"
-                     text="Level"/>
-               <Text fx:id="characterLevelText" layoutX="59.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                     styleClass="skills_font" text="1" textAlignment="RIGHT" AnchorPane.rightAnchor="10.984375"/>
-               <Button fx:id="characterLevelUpButton" layoutX="7.0" layoutY="25.0" mnemonicParsing="false"
-                       styleClass="skills_font" text="Level Up"/>
-            </AnchorPane>
+            <TextField fx:id="nameTextField" layoutX="145.0" layoutY="21.0" />
+            <TextField fx:id="raceTextField" layoutX="404.0" layoutY="9.0" />
+            <TextField fx:id="jobTextField" layoutX="405.0" layoutY="34.0" />
          </AnchorPane>
       </Tab>
       <Tab text="Combat">

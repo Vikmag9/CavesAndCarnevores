@@ -1,6 +1,8 @@
+ItemsListItem.class
 SceneController.class
 CharacterListItem.class
 FileManager.class
+RaceParser.class
 Character.class
 StatName.class
 Stats\DiceBag.class
@@ -30,3 +32,4 @@ CharacterHandler.class
 Stats\StatStrategy.class
 Stats\RollStrategy.class
 FxmlHelper.class
+JobParser.class

@@ -1,6 +1,7 @@
 import Items.Inventory;
 import org.w3c.dom.CharacterData;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public interface CharacterDataCollection {
@@ -15,5 +16,6 @@ public interface CharacterDataCollection {
     public String getLanguages();
     public String getOrganisations();
     public String getEarlierLife();
+    public ArrayList<ProficiencySkills> getProficiencySkills();
 
 }

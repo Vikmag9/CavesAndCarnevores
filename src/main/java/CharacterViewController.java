@@ -11,10 +11,14 @@ import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
 public class CharacterViewController implements Initializable {
+
+
+
 
     @FXML private CheckBox athleticsCheck;
     @FXML private CheckBox acrobaticsCheck;
@@ -35,6 +39,12 @@ public class CharacterViewController implements Initializable {
     @FXML private CheckBox performanceCheck;
     @FXML private CheckBox persuasionCheck;
 
+    @FXML private TextField strengthText;
+    @FXML private TextField dexText;
+    @FXML private TextField conText;
+    @FXML private TextField wisText;
+    @FXML private TextField intText;
+    @FXML private TextField chaText;
 
 
     @FXML private CheckBox g;
@@ -44,12 +54,6 @@ public class CharacterViewController implements Initializable {
 
 
     //Basics tab fx:ids
-    @FXML private Text strengthsPtsText;
-    @FXML private Text dexterityPtsText;
-    @FXML private Text constitutionPtsText;
-    @FXML private Text wisdomPtsText;
-    @FXML private Text intelligencePtsText;
-    @FXML private Text charismaPtsText;
 
     @FXML private Text strengthModifierText;
     @FXML private Text dexterityModifierText;
@@ -58,31 +62,6 @@ public class CharacterViewController implements Initializable {
     @FXML private Text intelligenceModifierText;
     @FXML private Text charismaModifierText;
 
-    @FXML private Circle strengthSavingThrowCircle;
-    @FXML private Circle dexteritySavingThrowCircle;
-    @FXML private Circle constitutionSavingThrowCircle;
-    @FXML private Circle wisdomSavingThrowCircle;
-    @FXML private Circle intelligenceSavingThrowCircle;
-    @FXML private Circle charismaSavingThrowCircle;
-
-    @FXML private Circle athleticsSkillStatus;
-    @FXML private Circle acrobaticsSkillStatus;
-    @FXML private Circle sleightOfHandSkillStatus;
-    @FXML private Circle stealthSkillStatus;
-    @FXML private Circle arcanaSkillStatus;
-    @FXML private Circle historySkillStatus;
-    @FXML private Circle investigationSkillStatus;
-    @FXML private Circle natureSkillStatus;
-    @FXML private Circle religionSkillStatus;
-    @FXML private Circle animalHandlingSkillStatus;
-    @FXML private Circle insightSkillStatus;
-    @FXML private Circle medicineSkillStatus;
-    @FXML private Circle perceptionSkillStatus;
-    @FXML private Circle survivalSkillStatus;
-    @FXML private Circle deceptionSkillStatus;
-    @FXML private Circle intimidationSkillStatus;
-    @FXML private Circle performanceSkillStatus;
-    @FXML private Circle persuasionSkillStatus;
 
     @FXML private Text athleticsSkillLevelText;
     @FXML private Text acrobaticsSkillLevelText;
@@ -112,6 +91,10 @@ public class CharacterViewController implements Initializable {
     @FXML Label characterClassLabel;
     @FXML Label characterLevelLabel;
 
+
+    @FXML TextField nameTextField;
+    @FXML TextField raceTextField;
+    @FXML TextField jobTextField;
 
     // Combat fx:ids
 
@@ -207,10 +190,60 @@ public class CharacterViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        System.out.println("here");
+
         setActionsTextArea();
         setReactionsTextArea();
         setBonusActionsTextArea();
         prepareRadioButtons();
+        prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
+        prepareName("Gregg");
+        HashMap<StatName, Integer> stats = new HashMap<>();
+        stats.put(StatName.Strength, 10);
+        stats.put(StatName.Constitution, 10);
+        stats.put(StatName.Wisdom, 10);
+        stats.put(StatName.Intelligence, 10);
+        stats.put(StatName.Charisma, 10);
+        stats.put(StatName.Dexterity, 10);
+        prepareStats(stats);
+        prepareModifiers();
+    }
+
+    private Character getCharacter() throws IOException, ClassNotFoundException, CloneNotSupportedException{
+        Job charJob = new Job("Rogue");
+        List<Feature> featureList = charJob.getFeatures();
+        Inventory inventory = new Inventory(1);
+        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
+        builder.ac(12);
+        builder.isequipped(true);
+        InventoryItem cheeseArmor = new InventoryItem(builder);
+        inventory.addItem(cheeseArmor);
+
+        CharacterDataClass charData = new CharacterDataClass();
+        charData.setBackground("Orphan");
+        charData.setRaceName("Dwarf");
+        charData.setJobName("Rogue");
+        charData.setName("Gregg");
+        charData.setLevel(1);
+        charData.setInventory(inventory);
+
+        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
+        charStats.put(StatName.Strength, 10);
+        charStats.put(StatName.Dexterity, 10);
+        charStats.put(StatName.Constitution, 12);
+        charStats.put(StatName.Intelligence, 10);
+        charStats.put(StatName.Wisdom, 10);
+        charStats.put(StatName.Charisma, 10);
+
+        charData.setProficiencies(true, ProficiencySkills.Athletics);
+
+
+        charData.setStats(charStats);
+
+        Character character = new Character(charData, charData.getLevel());
+        return character;
     }
 
     // Basics features
@@ -279,9 +312,31 @@ public class CharacterViewController implements Initializable {
             spellsFlowPane.getChildren().add(new Label(spellName + "\n" + spellDescription));
 
         }
+    }
 
+    private void prepareName(String string){
+        nameTextField.setText(string);
+    }
 
+    private void prepareRace(String string){
+        raceTextField.setText(string);
+    }
 
+    private void prepareJob(String string){
+        jobTextField.setText(string);
+    }
+
+    private void prepareStats(HashMap<StatName, Integer> stats){
+        strengthText.setText(stats.get(StatName.Strength).toString());
+        conText.setText(stats.get(StatName.Constitution).toString());
+        wisText.setText(stats.get(StatName.Wisdom).toString());
+        chaText.setText(stats.get(StatName.Charisma).toString());
+        intText.setText(stats.get(StatName.Intelligence).toString());
+        dexText.setText(stats.get(StatName.Dexterity).toString());
+    }
+
+    private void prepareModifiers(){
+        strengthModifierText.setText("5");
     }
 
     private void prepareSpell(Map<String, String> map) {
@@ -291,6 +346,64 @@ public class CharacterViewController implements Initializable {
         String jobb = map.get("class");
         List<String> spell = Arrays.asList(jobb, level, name, description);
         spellList.add(spell);
+    }
+
+    private void prepareCheckBoxes(ArrayList<ProficiencySkills> proflist){
+
+        if(proflist.contains(ProficiencySkills.Athletics)){
+            athleticsCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Deception)) {
+            deceptionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Intimidation)) {
+            intimidationCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Performance)) {
+            performanceCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Persuasion)) {
+            persuasionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.AnimalHandling)) {
+            animalCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Insight)) {
+            insightCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Medicine)) {
+            medicineCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Perception)) {
+            perceptionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Survival)) {
+            survivalCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Arcana)) {
+            arcanaCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.History)) {
+            historyCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Investigation)) {
+            investigationCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Nature)) {
+            natureCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Religion)) {
+            religionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Acrobatics)) {
+            acrobaticsCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.SleightOfHand)) {
+            sleightCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Stealth)) {
+            stealthCheck.setSelected(true);
+        }
     }
 
     @FXML
