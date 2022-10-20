@@ -16,6 +16,33 @@ import java.util.*;
 
 public class CharacterViewController implements Initializable {
 
+    @FXML private CheckBox athleticsCheck;
+    @FXML private CheckBox acrobaticsCheck;
+    @FXML private CheckBox sleightCheck;
+    @FXML private CheckBox stealthCheck;
+    @FXML private CheckBox arcanaCheck;
+    @FXML private CheckBox historyCheck;
+    @FXML private CheckBox investigationCheck;
+    @FXML private CheckBox natureCheck;
+    @FXML private CheckBox religionCheck;
+    @FXML private CheckBox animalCheck;
+    @FXML private CheckBox insightCheck;
+    @FXML private CheckBox medicineCheck;
+    @FXML private CheckBox perceptionCheck;
+    @FXML private CheckBox survivalCheck;
+    @FXML private CheckBox deceptionCheck;
+    @FXML private CheckBox intimidationCheck;
+    @FXML private CheckBox performanceCheck;
+    @FXML private CheckBox persuasionCheck;
+
+
+
+    @FXML private CheckBox g;
+    @FXML private CheckBox f;
+    @FXML private CheckBox h;
+    @FXML private CheckBox d;
+
+
     //Basics tab fx:ids
     @FXML private Text strengthsPtsText;
     @FXML private Text dexterityPtsText;
