@@ -36,6 +36,10 @@ public class Inventory {
 
     }
 
+    public void setInventory(List<InventoryItem> inventory) {
+        this.inventory = inventory;
+    }
+
     public InventoryItem getItem(int key){
         return inventory.get(key);
     }

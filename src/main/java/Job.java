@@ -3,6 +3,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public class Job {
     private JSONObject jobContent;
     static private final FileManager fm = new FileManager();
 
-    public Job(String jobName) throws IOException, ClassNotFoundException {
+    public Job(String jobName) {
         this.jobName = jobName;
         this.jobContent = getJob(jobName);
         this.features = parseFeatures();
@@ -26,7 +27,7 @@ public class Job {
 
 
 
-    public JSONObject getJob(String jobName) throws IOException, ClassNotFoundException {
+    public JSONObject getJob(String jobName) {
         JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
         return jsonJob;
     }
@@ -45,7 +46,7 @@ public class Job {
         return features;
     }
 
-    public static List<String> getAllJobs() throws IOException, ClassNotFoundException { // TODO: To be used when displaying all available jobs in the UI
+    public static List<String> getAllJobs() { // TODO: To be used when displaying all available jobs in the UI
         JSONObject jobs = fm.readFile("jobs.json");
         List<String> jobNames = new ArrayList<>();
         jobs.keySet().forEach(jobName -> {
@@ -67,7 +68,14 @@ public class Job {
 
     public Map parseProficiencies() {
         jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies");
-        return jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
+        Map jsonMap = jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
+        Map profs = new HashMap();
+        profs.put(Proficiencies.Armor, jsonMap.get("Armor"));
+        profs.put(Proficiencies.Weapons, jsonMap.get("Weapons"));
+        profs.put(Proficiencies.Tools, jsonMap.get("Tools"));
+        profs.put(Proficiencies.SavingThrows, jsonMap.get("Saving Throws"));
+        profs.put(Proficiencies.Skills, jsonMap.get("Skills"));
+        return profs;
     }
 
     public String getJobDesc() {

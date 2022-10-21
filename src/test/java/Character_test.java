@@ -360,7 +360,7 @@ public class Character_test {
     }
 
     @Test
-    public void calculateHpTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    public void calculateHpTest() throws CloneNotSupportedException {
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
@@ -402,11 +402,18 @@ public class Character_test {
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
+
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
         builder.ac(12);
         builder.isequipped(true);
         InventoryItem cheeseArmor = new InventoryItem(builder);
         inventory.addItem(cheeseArmor);
+
+        InventoryItemBuilder builder2 = new InventoryItemBuilder("Weapon", "Cheese-swordie", "Goes donk donk", 50, 2.0, true);
+        builder.atkBonus(12);
+        builder.isequipped(true);
+        InventoryItem cheeseSword = new InventoryItem(builder2);
+        inventory.addItem(cheeseSword);
 
         CharacterDataClass charData = new CharacterDataClass();
         charData.setBackground("Orphan");
@@ -428,7 +435,23 @@ public class Character_test {
         charData.setStats(charStats);
 
         Character character = new Character(charData, charData.getLevel());
+       // character.getRace().setSubRace(Race.getAllSubraces("Dwarf").get(1));
         CharacterHandler.saveCharacter(character);
+    }
+
+    @Test
+    public void loadCharacterTest(){
+        Character character = CharacterHandler.loadCharacter("Gregg");
+        assertEquals(character.getName(), "Gregg");
+        assertEquals(character.getRace().getName(), "Dwarf");
+        if (character.getRace().getSubRace() != null) {
+            assertEquals(character.getRace().getSubRace().getName(), "Mountain Dwarf");
+        }
+        assertEquals(character.getJob().getJobName(), "Rogue");
+        assertEquals(character.getJob().getHitDie(), 8);
+        // TODO add more tests
+        assertEquals(character.getHealth(), 6);
+
     }
 
 

@@ -17,17 +17,20 @@ public class FileManager {
     public FileManager(){
     }
 
-    public JSONObject readFile(String resourceName) throws IOException, ClassNotFoundException {
+    public JSONObject readFile(String resourceName) {
 
-        InputStream is = Class.forName("FileManager").getResourceAsStream(resourceName);
-        if (is == null) {
+        try {
+            InputStream is = Class.forName("FileManager").getResourceAsStream(resourceName);
+            if (is == null) {
+                throw new NullPointerException("Cannot find resource file " + resourceName);
+            }
+            JSONTokener tokener = new JSONTokener(is);
+            JSONObject content = new JSONObject(tokener);
+            return content;
+        } catch (Exception e) {
+            e.printStackTrace();
             throw new NullPointerException("Cannot find resource file " + resourceName);
         }
-        JSONTokener tokener = new JSONTokener(is);
-        JSONObject content = new JSONObject(tokener);
-
-        // Convert JSON string to JSONObject
-        return content;
     }
 
 
@@ -38,11 +41,6 @@ public class FileManager {
             FileOutputStream fileOut = new FileOutputStream( filePath + ".json");
             mapper.writeValue(fileOut, map);
             fileOut.close();
-        }
-        catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

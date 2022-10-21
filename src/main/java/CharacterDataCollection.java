@@ -10,6 +10,7 @@ public interface CharacterDataCollection {
     public String getBackground();
     public Inventory getInventory();
     public String getAlignment();
+    public int getXp();
     public HashMap<StatName, Integer> getStats();
     public int getLevel();
 

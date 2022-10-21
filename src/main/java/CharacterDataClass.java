@@ -15,6 +15,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private int level;
     private String background;
     private HashMap<StatName, Integer> stats;
+    private int xp;
 
     public CharacterDataClass setName(String name){
         this.name = name;
@@ -56,6 +57,11 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this;
     }
 
+    public CharacterDataClass setXp(int xp){
+        this.xp = xp;
+        return this;
+    }
+
     @Override
     public String getName() {
         return this.name;
@@ -94,5 +100,10 @@ public class CharacterDataClass implements CharacterDataCollection{
     @Override
     public String getAlignment() {
         return this.alignment;
+    }
+
+    @Override
+    public int getXp() {
+        return xp;
     }
 }

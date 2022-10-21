@@ -2,10 +2,8 @@ package Items;
 
 public class CoinBag {
     private int goldCoin;
-    private int startingCoins;
-
     CoinBag(int startingCoins){
-        this.startingCoins = startingCoins;
+        this.goldCoin = startingCoins;
     }
 
     public void addCoin(int amount){
@@ -18,5 +16,9 @@ public class CoinBag {
 
     public int getCoins(){
         return this.goldCoin;
+    }
+
+    public void setCoins(int amount){
+        this.goldCoin = amount;
     }
 }

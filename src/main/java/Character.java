@@ -1,9 +1,6 @@
 import Items.Inventory;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Character implements CharacterDataCollection {
@@ -18,14 +15,14 @@ public class Character implements CharacterDataCollection {
     private int armorClass;
     private String alignment;
     private Inventory inventory;
-    private Map<String, List<String>> proficiencies;
+    private Map<Proficiencies, List<String>> proficiencies;
     private String background;
     private HashMap<StatName, Integer> stats;
     private String raceName;
     private String jobName;
 
 
-    public Character(CharacterDataCollection data, int level) throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    public Character(CharacterDataCollection data, int level) {
         CharacterDataCollection characterData = data; // Creates copy of data to avoid modifying original data
         this.name = characterData.getName();
         this.alignment = characterData.getAlignment();
@@ -33,6 +30,7 @@ public class Character implements CharacterDataCollection {
         this.raceName = characterData.getRaceName();
         this.job = new Job(characterData.getJobName());
         this.jobName = characterData.getJobName();
+        this.xp = characterData.getXp();
         this.background = characterData.getBackground();
         this.level = level;
         this.stats = characterData.getStats();
@@ -40,6 +38,7 @@ public class Character implements CharacterDataCollection {
         this.feats = assembleFeats();
         this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
+        this.proficiencies = assembleProficiencies();
 
     }
 
@@ -70,6 +69,36 @@ public class Character implements CharacterDataCollection {
         //TODO Add features from background etc
         return this.job.getFeatures();
     }
+
+    private HashMap<Proficiencies, List<String>> assembleProficiencies(){
+        HashMap<Proficiencies, List<String>> proficiencies = new HashMap<>();
+        proficiencies.put(Proficiencies.Armor, Collections.emptyList());
+        proficiencies.put(Proficiencies.Weapons, Collections.emptyList());
+        proficiencies.put(Proficiencies.Tools, Collections.emptyList());
+        proficiencies.put(Proficiencies.SavingThrows, Collections.emptyList());
+        proficiencies.put(Proficiencies.Skills, Collections.emptyList());
+
+
+        Map jobProfs = this.job.getProficiencies();
+        Map raceProfs = this.race.getProficiencies();
+
+
+        jobProfs.forEach((key, value) -> {
+            if (proficiencies.containsKey(key) && value != null) {
+                proficiencies.put(Proficiencies.valueOf(key.toString()), (List<String>) value);
+            }
+        });
+
+        raceProfs.forEach((key, value) -> {
+            if (proficiencies.containsKey(key) && value != null) {
+                List<String> collection = proficiencies.get(key);
+                collection.addAll((List<String>) value);
+                proficiencies.put(Proficiencies.valueOf(key.toString()), collection);
+            }
+        });
+        return proficiencies;
+    }
+
     // --------------------------------- GETTERS AND SETTERS -------------------------------------
 
     public void setName(String name) {
@@ -170,5 +199,9 @@ public class Character implements CharacterDataCollection {
 
     public void setAlignment(String alignment) {
         this.alignment = alignment;
+    }
+
+    public List<Feature> getFeatures() {
+        return this.feats;
     }
 }
