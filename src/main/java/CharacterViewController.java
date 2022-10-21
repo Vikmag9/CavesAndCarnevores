@@ -8,10 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -87,7 +85,7 @@ public class CharacterViewController implements Initializable {
 
     @FXML private TextArea spellsTextArea;
     @FXML private TextArea languagesTextArea;
-    @FXML private TextArea proficienciesTextArea;
+
 
     @FXML Label characterNameLabel;
     @FXML Label characterRaceLabel;
@@ -120,9 +118,9 @@ public class CharacterViewController implements Initializable {
     @FXML private Text movementSpeedText;
     @FXML private Text HitpointsText;
 
-    @FXML private TextArea actionsTextArea;
-    @FXML private TextArea reactionsTextArea;
-    @FXML private TextArea bonusActionsTextArea;
+    @FXML private TextArea featuresTextArea;
+    @FXML private TextArea proficienciesTextArea;
+    @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
 
@@ -211,52 +209,11 @@ public class CharacterViewController implements Initializable {
         setBonusActionsTextArea();
         prepareRadioButtons();
         prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
-        prepareName("Gregg");
-        HashMap<StatName, Integer> stats = new HashMap<>();
-        stats.put(StatName.Strength, 10);
-        stats.put(StatName.Constitution, 10);
-        stats.put(StatName.Wisdom, 10);
-        stats.put(StatName.Intelligence, 10);
-        stats.put(StatName.Charisma, 10);
-        stats.put(StatName.Dexterity, 10);
-        prepareStats(stats);
+        //prepareStats();
         prepareModifiers();
     }
 
-    private Character getCharacter() throws IOException, ClassNotFoundException, CloneNotSupportedException{
-        Job charJob = new Job("Rogue");
-        List<Feature> featureList = charJob.getFeatures();
-        Inventory inventory = new Inventory(1);
-        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
-        builder.ac(12);
-        builder.isequipped(true);
-        InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem(cheeseArmor);
 
-        CharacterDataClass charData = new CharacterDataClass();
-        charData.setBackground("Orphan");
-        charData.setRaceName("Dwarf");
-        charData.setJobName("Rogue");
-        charData.setName("Gregg");
-        charData.setLevel(1);
-        charData.setInventory(inventory);
-
-        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
-        charStats.put(StatName.Strength, 10);
-        charStats.put(StatName.Dexterity, 10);
-        charStats.put(StatName.Constitution, 12);
-        charStats.put(StatName.Intelligence, 10);
-        charStats.put(StatName.Wisdom, 10);
-        charStats.put(StatName.Charisma, 10);
-
-        charData.setProficiencies(true, ProficiencySkills.Athletics);
-
-
-        charData.setStats(charStats);
-
-        Character character = new Character(charData, charData.getLevel());
-        return character;
-    }
 
     // Basics features
 
@@ -282,8 +239,8 @@ public class CharacterViewController implements Initializable {
                 - Ready An Action
                 - Use a Class Feature""";
 
-        actionsTextArea.setEditable(false);
-        actionsTextArea.setText(actions);
+        featuresTextArea.setEditable(false);
+        featuresTextArea.setText(actions);
     }
 
     /**
@@ -297,8 +254,8 @@ public class CharacterViewController implements Initializable {
                 - Cast a spell
                 """;
 
-        reactionsTextArea.setEditable(false);
-        reactionsTextArea.setText(reactions);
+        proficienciesTextArea.setEditable(false);
+        proficienciesTextArea.setText(reactions);
     }
 
     /**
@@ -312,8 +269,8 @@ public class CharacterViewController implements Initializable {
                 - Use a Class Feature
                 """;
 
-        bonusActionsTextArea.setEditable(false);
-        bonusActionsTextArea.setText(bonusActions);
+        spellTextArea.setEditable(false);
+        spellTextArea.setText(bonusActions);
     }
 
     private void prepareSpells() {
@@ -364,6 +321,11 @@ public class CharacterViewController implements Initializable {
 
     private void prepareModifiers(){
         strengthModifierText.setText("5");
+        intelligenceModifierText.setText("5");
+        wisdomModifierText.setText("5");
+        constitutionModifierText.setText("5");
+        charismaModifierText.setText("5");
+        dexterityModifierText.setText("5");
     }
 
     private void prepareSpell(Map<String, String> map) {
