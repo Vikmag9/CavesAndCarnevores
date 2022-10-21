@@ -18,7 +18,7 @@ public class CoinBag {
         return this.goldCoin;
     }
 
-    public double getCoin(){
+    public int getCoin(){
         return this.goldCoin;
     }
 

@@ -115,13 +115,15 @@ public class Character implements CharacterDataCollection {
     private List<Feature> assembleFeats() {
         List<Feature> feats = this.job.getFeatures();
         feats.addAll(this.race.getTraits());
+        List<Feature> characterFeatures = new ArrayList<>();
         for (Feature feat : feats) {
-            if (feat.getLevel() > this.level) {
-                feats.remove(feat);
+            if (feat.getLevel() <= this.level) {
+                characterFeatures.add(feat);
             }
         }
-        return this.job.getFeatures();
+        return characterFeatures;
     }
+
 
     private HashMap<Proficiencies, List<String>> assembleProficiencies(){
         HashMap<Proficiencies, List<String>> proficiencies = new HashMap<>();
