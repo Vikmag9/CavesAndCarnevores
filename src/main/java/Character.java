@@ -28,6 +28,8 @@ public class Character implements CharacterDataCollection {
     private String organisation;
     private String earlierLife;
     private ArrayList<ProficiencySkills> proficiencySkills;
+    int modifier;
+    HashMap<StatName, Integer> modifiers;
 
     /**
      * Constructor for the Character class.
@@ -51,6 +53,7 @@ public class Character implements CharacterDataCollection {
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
         this.stats = characterData.getStats();
+        this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
         this.inventory = characterData.getInventory();
@@ -91,6 +94,15 @@ public class Character implements CharacterDataCollection {
         return (((this.job.getHitDie()/2)+1) * getLevel()) + ((this.getStats().get(StatName.Constitution)-10)/2);
     }
 
+    public HashMap<StatName, Integer> calculateModifiers(){
+        modifiers = new HashMap<StatName, Integer>();
+        for(StatName statname : StatName.values()){
+            int stat = this.stats.get(statname);
+            int modifier = (stat-10)/2;
+            modifiers.put(statname, modifier);
+        }
+        return modifiers;
+    }
     /**
      * Assembles the character's feats.
      * feats is an umbrella for the different traits and abilities that a character has depending on their race and class.

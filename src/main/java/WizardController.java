@@ -22,7 +22,6 @@ public class WizardController implements Initializable{
 
     //General
     @FXML private AnchorPane basicsPane;
-    @FXML private AnchorPane inventoryPane;
     @FXML private AnchorPane jobSpecificPane;
     @FXML private AnchorPane lorePane;
     @FXML private AnchorPane satsAndSkillsPane;
@@ -84,17 +83,6 @@ public class WizardController implements Initializable{
     @FXML private FlowPane WeaponsFlowPane;
     List<ComboBox<String>> comboBoxList = new ArrayList<>();
 
-
-
-    //Inventory AnchorPane
-    @FXML private ComboBox<String> inventoryComboBox1;
-    @FXML private ComboBox<String> inventoryComboBox2;
-    @FXML private ComboBox<String> inventoryComboBox3;
-    @FXML private TextField inventoryTextField1;
-    @FXML private TextField inventoryTextField2;
-    @FXML private TextField inventoryTextField3;
-
-
     // Lore AnchorPane
     @FXML TextArea earlyLifeTextArea;
     @FXML TextArea organisationTextArea;
@@ -137,7 +125,7 @@ public class WizardController implements Initializable{
         prepareComboBoxes();
         prepareRadioButtons();
         prepareProficiencyCheckBoxes();
-        //prepareTextFields();
+        prepareTextFields();
     }
 
     private void prepareTextFields(){
@@ -150,14 +138,8 @@ public class WizardController implements Initializable{
         coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCoreMemories(coreMemoriesTextArea.getText()));
         organisationTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setOrganisations(organisationTextArea.getText()));
         languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setLanguages(languagesTextArea.getText()));
+
         }
-
-
-
-
-
-
-
 
 
     //navigation methods for the wizard within the stackpane
@@ -175,10 +157,6 @@ public class WizardController implements Initializable{
 
     @FXML private void toWeaponsAndArmourPane() {
         weaponsAndArmourPane.toFront();
-    }
-
-    @FXML private void toInventoryPane() {
-        inventoryPane.toFront();
     }
 
     @FXML private void toLorePane() {

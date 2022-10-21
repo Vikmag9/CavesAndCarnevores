@@ -44,7 +44,7 @@
          <Circle fill="#82b170" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
          <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="30.0" styleClass="Header_font" stylesheets="@Font.css" text="Weapons, Armour and Tools" />
-         <Button layoutX="628.0" layoutY="563.0" mnemonicParsing="false" onAction="#toInventoryPane" text="&gt;&gt;" />
+         <Button layoutX="628.0" layoutY="563.0" mnemonicParsing="false" onAction="#toLorePane" text="&gt;&gt;" />
          <Button layoutX="88.0" layoutY="562.0" mnemonicParsing="false" onAction="#toJobSpecificPane" text="&lt;&lt;" />
          <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" layoutX="106.0" layoutY="104.0" prefHeight="424.0" prefWidth="518.0" style="-fx-background-color: #82b170; -fx-border-color: #566e54;" />
       </AnchorPane>
@@ -60,7 +60,7 @@
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="91.0" layoutX="132.0" layoutY="420.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
          <Label layoutX="149.0" layoutY="453.0" styleClass="Text_enter" stylesheets="@Font.css" text="Organisations" />
          <TextArea fx:id="organisationTextArea" layoutX="310.0" layoutY="438.0" prefHeight="61.0" prefWidth="268.0" />
-         <Button layoutX="73.0" layoutY="562.0" mnemonicParsing="false" onAction="#toInventoryPane" text="&lt;&lt;" />
+         <Button layoutX="73.0" layoutY="562.0" mnemonicParsing="false" onAction="#toWeaponsAndArmourPane" text="&lt;&lt;" />
          <Button fx:id="finishButton" layoutX="633.0" layoutY="563.0" mnemonicParsing="false" onMouseClicked="#finishCreation" text="Finish" />
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="91.0" layoutX="132.0" layoutY="311.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
          <Label layoutX="149.0" layoutY="344.0" styleClass="Text_enter" stylesheets="@Font.css" text="Core memories" />
@@ -137,34 +137,29 @@
          <Label layoutX="296.0" layoutY="141.0" styleClass="skills_label" stylesheets="@Font.css" text="STR" />
          <Label layoutX="388.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" text="CHA" />
          <Label layoutX="160.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="240.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="239.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="325.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="325.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
          <Label fx:id="StatView2Big" layoutX="172.0" layoutY="271.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView1Big" layoutX="92.0" layoutY="272.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView4Big" layoutX="172.0" layoutY="357.0" prefWidth="23.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView3Big" layoutX="92.0" layoutY="357.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="404.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
          <Label fx:id="StatView5Big" layoutX="92.0" layoutY="436.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView2Small" layoutX="174.0" layoutY="302.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
@@ -172,30 +167,25 @@
          <Label fx:id="StatView3Small" layoutX="94.0" layoutY="387.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView4Small" layoutX="174.0" layoutY="387.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView5Small" layoutX="94.0" layoutY="467.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="151.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="150.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="255.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="255.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="354.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
          <TextField fx:id="StrengthTextField" layoutX="287.0" layoutY="178.0" onKeyTyped="#setStrength" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <TextField fx:id="WisdomTextField" layoutX="381.0" layoutY="178.0" onKeyTyped="#setWisdom" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
@@ -204,17 +194,15 @@
          <TextField fx:id="CharismaTextField" layoutX="382.0" layoutY="380.0" onInputMethodTextChanged="#setCharisma" onKeyTyped="#setCharisma" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <Button layoutX="649.0" layoutY="570.0" mnemonicParsing="false" onAction="#toJobSpecificPane" text="&gt;&gt;" />
          <Button layoutX="59.0" layoutY="570.0" mnemonicParsing="false" onAction="#toBasicsPane" text="&lt;&lt;" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="281.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="281.0" layoutY="354.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
          <TextField fx:id="ConstitutionTextField" layoutX="287.0" layoutY="381.0" onKeyTyped="#setConstitution" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <Label layoutX="294.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" text="CON" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@StatBox.png" />
-            </image>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="404.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@StatBox.png"/>
          </ImageView>
          <Label fx:id="StatView6Small" layoutX="174.0" layoutY="467.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView6Big" layoutX="172.0" layoutY="436.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
