@@ -12,4 +12,5 @@ public class ArrayStrategy implements StatStrategy{
         System.out.println("array");
         return listOfStats;
     }
+
 }

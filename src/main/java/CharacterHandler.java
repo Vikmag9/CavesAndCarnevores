@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +9,9 @@ import java.util.Map;
 import Items.Inventory;
 import Items.InventoryItem;
 import Items.InventoryItemBuilder;
+import java.util.List;
+import org.apache.commons.io.FilenameUtils;
+
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
@@ -17,8 +22,7 @@ public class CharacterHandler {
         return new Character(character, level);
     }
 
-    public static void saveCharacter(Character character) {
-        ;
+    public static void saveCharacter(Character character) {;
         HashMap<Object, Object> characterData = new HashMap<>();
         characterData.put("Name", character.getName());
         characterData.put("Level", String.valueOf(character.getLevel()));
@@ -26,7 +30,7 @@ public class CharacterHandler {
         characterData.put("Job", character.getJobName());
         characterData.put("Background", character.getBackground());
         characterData.put("xp", String.valueOf(character.getXp()));
-        characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoins()));
+        characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
         characterData.put("Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
@@ -90,4 +94,14 @@ public class CharacterHandler {
     }
 
 
+
+    public static List<String> loadAllCharacters(){
+        List<String> listOfCharacters = new ArrayList<>();
+        File[] characters = new File("src/main/resources/characters/").listFiles();
+        if (characters != null) {
+            //loadCharacter(); does not exist yet
+            for (File character : characters) listOfCharacters.add(FilenameUtils.removeExtension(character.getName()));
+        }
+        return listOfCharacters;
+    }
 }

@@ -41,6 +41,7 @@ public class RollStrategy implements StatStrategy{
         listOfStats = rollStats();
         return listOfStats;
     }
+
 }
 
 

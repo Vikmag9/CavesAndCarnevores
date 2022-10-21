@@ -91,8 +91,4 @@ public class InventoryItem { // Functions as a data class, Each inventory item i
         return this.serialNumber;
     }
 
-
-
-
-
 }

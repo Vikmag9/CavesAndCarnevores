@@ -454,6 +454,23 @@ public class Character_test {
 
     }
 
+    @Test
+    public void testCalculateModifiers() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+        CharacterDataClass charData = new CharacterDataClass();
+        HashMap<StatName, Integer> charStats  = new HashMap<>();
+        charStats.put(StatName.Strength, 5);
+        charStats.put(StatName.Dexterity, 8);
+        charStats.put(StatName.Constitution, 10);
+        charStats.put(StatName.Intelligence, 15);
+        charStats.put(StatName.Wisdom, 17);
+        charStats.put(StatName.Charisma, 18);
+        charData.setStats(charStats);
+        Character character = new Character(charData, 1);
+        HashMap<StatName, Integer> modifiers = character.calculateModifiers();
+        System.out.println(modifiers.get(StatName.Strength));
+        assertTrue(modifiers.get(StatName.Strength) == -4);
+    }
+
 
 }
 

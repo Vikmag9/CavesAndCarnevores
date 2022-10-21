@@ -1,58 +1,37 @@
 
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
-
-
-public class Race {
+public class RaceParser {
     private String name;
     private String description;
     private int speed;
     private List<Feature> traits;
     private Map proficiencies;
     private Race subRace;
+    private JSONObject raceContent;
+    static private final FileManager fm = new FileManager();
 
-    /**
-     * One of the 3 constructors for the Race class.
-     * @param raceParsed The parsed information from the race JSON file.
-     */
-    public Race(RaceParser raceParsed) {
-        this.name = raceParsed.getName();
-        this.description = raceParsed.getDescription();
-        this.speed = raceParsed.getSpeed();
-        this.traits = raceParsed.getTraits();
-        this.proficiencies = raceParsed.getProficiencies();
-    }
-
-    public Race(String raceName) {
+    public RaceParser(String raceName) throws IOException, ClassNotFoundException {
         this.name = raceName;
-        this.raceContent = getRaceContent(name);
+        this.raceContent = RaceContent(name);
         this.description = parseDescription();
         this.speed = parseSpeed();
         this.traits = parseTraits();
         this.proficiencies = parseProficiencies();
-    /**
-     * One of the 3 constructors for the Race class.
-     * Uses the input parameter to then retrieve the data from the raceParser class.
-     * @param racename The name of a characters race, as a string.
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
-    public Race(String racename) throws IOException, ClassNotFoundException {
-        RaceParser raceParser = new RaceParser(racename);
-        this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
     }
 
-    public Race(String superRaceName,String subraceName) {
+    public RaceParser(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
         this.name = subraceName;
-        if (getSubraceContent(superRaceName,subraceName) != null) {
-            this.raceContent = getSubraceContent(superRaceName, subraceName);
+        if (SubraceContent(superRaceName,subraceName) != null) {
+            this.raceContent = SubraceContent(superRaceName, subraceName);
             this.description = parseDescription();
             this.speed = parseSpeed();
             this.traits = parseTraits();
@@ -60,12 +39,12 @@ public class Race {
         }
     }
 
-    public JSONObject getRaceContent(String raceName) {
-        JSONObject jsonRace = fm.readFile("races.json").getJSONObject(raceName);
+    public JSONObject RaceContent(String jobName) throws IOException, ClassNotFoundException {
+        JSONObject jsonRace = fm.readFile("races.json").getJSONObject(jobName);
         return jsonRace;
     }
 
-    public JSONObject getSubraceContent(String superRace, String subRace) {
+    public JSONObject SubraceContent(String superRace, String subRace) throws IOException, ClassNotFoundException {
         JSONArray jsonRace = fm.readFile("races.json").getJSONObject(superRace).getJSONArray("Subraces");
         AtomicReference<JSONObject> subRaceContent = null;
         JSONObject subRaceContent1 = null;
@@ -77,32 +56,16 @@ public class Race {
         return null;
     }
 
-    public static List<String> getAllRaces() {
+    public static List<String> getAllRaces() throws IOException, ClassNotFoundException {
         JSONObject races = fm.readFile("races.json");
         List<String> raceNames = new ArrayList<>();
         races.keySet().forEach(raceName -> {
             raceNames.add(raceName);
         });
         return raceNames;
-    /**
-     * One of the 3 constructors for the Race Class.
-     * Used when setting a race with a subrace.
-     * Uses the input parameter to then retrieve the data from the raceParser class, that belongs to the race and subrace.
-     * @param superRaceName The name of the race of the character, as a string.
-     * @param subraceName The name of the subrace of the character, as a string.
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
-    public Race(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
-        RaceParser raceParser = new RaceParser(superRaceName,subraceName);
-        this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
     }
 
-    public static List<Race> getAllSubraces(String superRace) {
+    public static List<Race> getAllSubraces(String superRace) throws IOException, ClassNotFoundException {
         JSONObject races = fm.readFile("races.json");
         List<Race> SubraceNames = new ArrayList<>();
         JSONArray w = races.getJSONObject(superRace).getJSONArray("Subraces");
@@ -112,8 +75,11 @@ public class Race {
             SubraceNames.add(new Race(superRace, subName));
         }
         w.getJSONObject(0).keySet().forEach(subRaceName -> {
-            SubraceNames.add(new Race(superRace,subRaceName));
-
+            try {
+                SubraceNames.add(new Race(superRace,subRaceName));
+            } catch (ClassNotFoundException | IOException e) {
+                throw new RuntimeException(e);
+            }
         });
         return SubraceNames;
     }
@@ -134,15 +100,7 @@ public class Race {
     }
 
     public Map parseProficiencies(){
-
-        Map jsonMap = raceContent.getJSONObject("Proficiencies").toMap();
-        HashMap profs = new HashMap();
-        profs.put(Proficiencies.Armor, jsonMap.get("Armor"));
-        profs.put(Proficiencies.Weapons, jsonMap.get("Weapons"));
-        profs.put(Proficiencies.Tools, jsonMap.get("Tools"));
-        profs.put(Proficiencies.SavingThrows, jsonMap.get("Saving Throws"));
-        profs.put(Proficiencies.Skills, jsonMap.get("Skills"));
-        return profs;
+        return raceContent.getJSONObject("Proficiencies").toMap();
     }
     public Map<String, String> parseAbilityScores(){
         JSONArray absScores = raceContent.getJSONArray("Ability score increase");
@@ -151,6 +109,9 @@ public class Race {
 
     public int parseSpeed(){
         return raceContent.getInt("Speed");
+    }
+    public Race parseSubRace(){
+        return null;
     }
 
     public void setupSubrace(Race subRace) {
@@ -162,10 +123,6 @@ public class Race {
         return name;
     }
 
-    /**
-     * Sets the name of a characters race.
-     * @param name the name of a characters race, as a string.
-     */
     public void setName(String name) {
         this.name = name;
     }
@@ -174,10 +131,6 @@ public class Race {
         return this.description;
     }
 
-    /**
-     * Sets the race description of a character.
-     * @param description the description of the race, as a character
-     */
     public void setDescription(String description) {
         this.description = description;
     }
@@ -191,18 +144,7 @@ public class Race {
     }
 
     public Race getSubRace() {
-        if (subRace != null) {
-            return subRace;
-        }
-        return null;
-    }
-
-    public static List<Race> getAllSubraces(String raceName) {
-        List<Race> subraces = new ArrayList<>();
-        RaceParser.getAllSubraces(raceName).forEach(subrace -> {
-            subraces.add(new Race(subrace.getName()));
-        });
-        return subraces;
+        return this.subRace;
     }
 
 
@@ -225,19 +167,9 @@ public class Race {
 
     public void setProficiencies(Map<String, String> proficiencies) {this.proficiencies = proficiencies;}
 
-    public static List<String> getAllRaces(){
-        List<String> racenames = null;
-        racenames = RaceParser.getAllRaces();
-
-        return racenames;
-    }
 
 
 
-
-    public String getSubraceName() {
-        return this.subRace.getName();
-    }
 
 
 

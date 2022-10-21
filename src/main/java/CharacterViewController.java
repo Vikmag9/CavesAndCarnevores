@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -16,14 +15,46 @@ import java.util.*;
 
 public class CharacterViewController implements Initializable {
 
+    @FXML private CheckBox athleticsCheck;
+    @FXML private CheckBox acrobaticsCheck;
+    @FXML private CheckBox sleightCheck;
+    @FXML private CheckBox stealthCheck;
+    @FXML private CheckBox arcanaCheck;
+    @FXML private CheckBox historyCheck;
+    @FXML private CheckBox investigationCheck;
+    @FXML private CheckBox natureCheck;
+    @FXML private CheckBox religionCheck;
+    @FXML private CheckBox animalCheck;
+    @FXML private CheckBox insightCheck;
+    @FXML private CheckBox medicineCheck;
+    @FXML private CheckBox perceptionCheck;
+    @FXML private CheckBox survivalCheck;
+    @FXML private CheckBox deceptionCheck;
+    @FXML private CheckBox intimidationCheck;
+    @FXML private CheckBox performanceCheck;
+    @FXML private CheckBox persuasionCheck;
+
+    @FXML private TextField strengthText;
+    @FXML private TextField dexText;
+    @FXML private TextField conText;
+    @FXML private TextField wisText;
+    @FXML private TextField intText;
+    @FXML private TextField chaText;
+
+
+
+
+
+
+
+    @FXML private CheckBox g;
+    @FXML private CheckBox f;
+    @FXML private CheckBox h;
+    @FXML private CheckBox d;
+
+
 
     //Basics tab fx:ids
-    @FXML private Text strengthsPtsText;
-    @FXML private Text dexterityPtsText;
-    @FXML private Text constitutionPtsText;
-    @FXML private Text wisdomPtsText;
-    @FXML private Text intelligencePtsText;
-    @FXML private Text charismaPtsText;
 
     @FXML private Text strengthModifierText;
     @FXML private Text dexterityModifierText;
@@ -32,31 +63,6 @@ public class CharacterViewController implements Initializable {
     @FXML private Text intelligenceModifierText;
     @FXML private Text charismaModifierText;
 
-    @FXML private Circle strengthSavingThrowCircle;
-    @FXML private Circle dexteritySavingThrowCircle;
-    @FXML private Circle constitutionSavingThrowCircle;
-    @FXML private Circle wisdomSavingThrowCircle;
-    @FXML private Circle intelligenceSavingThrowCircle;
-    @FXML private Circle charismaSavingThrowCircle;
-
-    @FXML private Circle athleticsSkillStatus;
-    @FXML private Circle acrobaticsSkillStatus;
-    @FXML private Circle sleightOfHandSkillStatus;
-    @FXML private Circle stealthSkillStatus;
-    @FXML private Circle arcanaSkillStatus;
-    @FXML private Circle historySkillStatus;
-    @FXML private Circle investigationSkillStatus;
-    @FXML private Circle natureSkillStatus;
-    @FXML private Circle religionSkillStatus;
-    @FXML private Circle animalHandlingSkillStatus;
-    @FXML private Circle insightSkillStatus;
-    @FXML private Circle medicineSkillStatus;
-    @FXML private Circle perceptionSkillStatus;
-    @FXML private Circle survivalSkillStatus;
-    @FXML private Circle deceptionSkillStatus;
-    @FXML private Circle intimidationSkillStatus;
-    @FXML private Circle performanceSkillStatus;
-    @FXML private Circle persuasionSkillStatus;
 
     @FXML private Text athleticsSkillLevelText;
     @FXML private Text acrobaticsSkillLevelText;
@@ -79,13 +85,17 @@ public class CharacterViewController implements Initializable {
 
     @FXML private TextArea spellsTextArea;
     @FXML private TextArea languagesTextArea;
-    @FXML private TextArea proficienciesTextArea;
+
 
     @FXML Label characterNameLabel;
     @FXML Label characterRaceLabel;
     @FXML Label characterClassLabel;
     @FXML Label characterLevelLabel;
 
+
+    @FXML TextField nameTextField;
+    @FXML TextField raceTextField;
+    @FXML TextField jobTextField;
 
     // Combat fx:ids
 
@@ -108,9 +118,9 @@ public class CharacterViewController implements Initializable {
     @FXML private Text movementSpeedText;
     @FXML private Text HitpointsText;
 
-    @FXML private TextArea actionsTextArea;
-    @FXML private TextArea reactionsTextArea;
-    @FXML private TextArea bonusActionsTextArea;
+    @FXML private TextArea featuresTextArea;
+    @FXML private TextArea proficienciesTextArea;
+    @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
 
@@ -179,18 +189,40 @@ public class CharacterViewController implements Initializable {
     @FXML private Button itemRemoveButton;
     @FXML private Button itemConsumeButton;
 
+    /**
+     * Initializes the controller class for the CharacterInfoScreen.fxml.
+     * A necessary method for the FXML to work, since it is needed for the initializeable interface.
+     * Prepares the components that need initialization, such as textareas and radiobuttons.
+     * The parameters are not used in the method calls but are necessary to implement the initializeable interface.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        System.out.println("here");
+
         setActionsTextArea();
         setReactionsTextArea();
         setBonusActionsTextArea();
         prepareRadioButtons();
+        prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
+        //prepareStats();
+        prepareModifiers();
     }
+
+
 
     // Basics features
 
     // Combat features
 
+    /**
+     * Sets the actions to be displayed in the text area.
+     * Could be used to set the actions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setActionsTextArea() {
         String actions = """
                 - Attack
@@ -207,9 +239,14 @@ public class CharacterViewController implements Initializable {
                 - Ready An Action
                 - Use a Class Feature""";
 
-        actionsTextArea.setText(actions);
+        featuresTextArea.setEditable(false);
+        featuresTextArea.setText(actions);
     }
 
+    /**
+     * Sets the reactions to be displayed in the text area.
+     * Could be used to set the reactions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setReactionsTextArea() {
         String reactions = """
                 - Opportunity Attack
@@ -217,9 +254,14 @@ public class CharacterViewController implements Initializable {
                 - Cast a spell
                 """;
 
-        reactionsTextArea.setText(reactions);
+        proficienciesTextArea.setEditable(false);
+        proficienciesTextArea.setText(reactions);
     }
 
+    /**
+     * Sets the bonus actions to be displayed in the text area.
+     * Could be used to set the bonus actions specific to the character, but is currently set to a generalized text that work for all characters.
+     */
     private void setBonusActionsTextArea() {
         String bonusActions = """
                 - Offhand Attack
@@ -227,7 +269,8 @@ public class CharacterViewController implements Initializable {
                 - Use a Class Feature
                 """;
 
-        bonusActionsTextArea.setText(bonusActions);
+        spellTextArea.setEditable(false);
+        spellTextArea.setText(bonusActions);
     }
 
     private void prepareSpells() {
@@ -253,9 +296,36 @@ public class CharacterViewController implements Initializable {
             spellsFlowPane.getChildren().add(new Label(spellName + "\n" + spellDescription));
 
         }
+    }
 
+    private void prepareName(String string){
+        nameTextField.setText(string);
+    }
 
+    private void prepareRace(String string){
+        raceTextField.setText(string);
+    }
 
+    private void prepareJob(String string){
+        jobTextField.setText(string);
+    }
+
+    private void prepareStats(HashMap<StatName, Integer> stats){
+        strengthText.setText(stats.get(StatName.Strength).toString());
+        conText.setText(stats.get(StatName.Constitution).toString());
+        wisText.setText(stats.get(StatName.Wisdom).toString());
+        chaText.setText(stats.get(StatName.Charisma).toString());
+        intText.setText(stats.get(StatName.Intelligence).toString());
+        dexText.setText(stats.get(StatName.Dexterity).toString());
+    }
+
+    private void prepareModifiers(){
+        strengthModifierText.setText("5");
+        intelligenceModifierText.setText("5");
+        wisdomModifierText.setText("5");
+        constitutionModifierText.setText("5");
+        charismaModifierText.setText("5");
+        dexterityModifierText.setText("5");
     }
 
     private void prepareSpell(Map<String, String> map) {
@@ -265,6 +335,64 @@ public class CharacterViewController implements Initializable {
         String jobb = map.get("class");
         List<String> spell = Arrays.asList(jobb, level, name, description);
         spellList.add(spell);
+    }
+
+    private void prepareCheckBoxes(ArrayList<ProficiencySkills> proflist){
+
+        if(proflist.contains(ProficiencySkills.Athletics)){
+            athleticsCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Deception)) {
+            deceptionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Intimidation)) {
+            intimidationCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Performance)) {
+            performanceCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Persuasion)) {
+            persuasionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.AnimalHandling)) {
+            animalCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Insight)) {
+            insightCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Medicine)) {
+            medicineCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Perception)) {
+            perceptionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Survival)) {
+            survivalCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Arcana)) {
+            arcanaCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.History)) {
+            historyCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Investigation)) {
+            investigationCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Nature)) {
+            natureCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Religion)) {
+            religionCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Acrobatics)) {
+            acrobaticsCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.SleightOfHand)) {
+            sleightCheck.setSelected(true);
+        }
+        if(proflist.contains(ProficiencySkills.Stealth)) {
+            stealthCheck.setSelected(true);
+        }
     }
 
     @FXML
@@ -277,6 +405,10 @@ public class CharacterViewController implements Initializable {
 
     }
 
+    /**
+     * Prepares the radio buttons for the inventory.
+     * Disables the checkboxes for consumable items.
+     */
     private void prepareRadioButtons(){
         ToggleGroup itemToggleGroup = new ToggleGroup();
         consumableRadioButton.setToggleGroup(itemToggleGroup);
@@ -314,7 +446,7 @@ public class CharacterViewController implements Initializable {
 
     // Inventory features
 
-    private void updateRecipeList() {
+    private void updateInventoryList() {
         //Inventory inventory = character.getInventory();
         Inventory inventory = new Inventory(1);
         InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
@@ -329,5 +461,4 @@ public class CharacterViewController implements Initializable {
             inventoryFlowPane.getChildren().add(rli);
         }
     }
-
 }

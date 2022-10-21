@@ -18,4 +18,5 @@ public class CharacterScreen { // This class is for showing created characters
     public static void showCharacters(){
         // Display created characters in the ScrollPane
     }
+
 }

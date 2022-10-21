@@ -1,24 +1,25 @@
-import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
-public class FXBaseTestScreen extends Application {
+public class Application extends javafx.application.Application {
     Character character;
 
+    /**
+     * Starts the program displaying the main screen.
+     * sets the base screen to the corresponding fxml-file, which contains a border pane that is loaded with other fxml-files in the screen controller.
+     * @throws IOException
+     */
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         String javaVersion = System.getProperty("java.version");
         String javafxVersion = System.getProperty("javafx.version");
 
         Label l = new Label("Här står saker:, JavaFX version:" + javafxVersion + ", Java på version" + javaVersion + ".");
 
-
-        SceneController sceneController = new SceneController();
 
         Parent root = FXMLLoader.load(getClass().getResource("BaseScreen.fxml"));
         Stage primaryStage = new Stage();
@@ -28,14 +29,15 @@ public class FXBaseTestScreen extends Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
         primaryStage.setMaximized(true);
-        //sceneController.prepareComboBoxes();
 
-
-        //sceneController.openStartScreen();
 
     }
 
-
+    /**
+     * Main method - Starts the program.
+     * Calls on the start method, which deals with the scene.
+     * @param args for running the main method according to Java.
+     */
     public static void main(String[] args) {
         launch();
     }

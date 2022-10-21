@@ -19,6 +19,8 @@ public class CharacterListItem  extends AnchorPane {
     private CharacterViewController parentController;
     private Character character;
     private Inventory inventory;
+
+
     @FXML private Text itemNameText;
     @FXML private Text itemTypeText;
     @FXML private Text itemMagicalText;

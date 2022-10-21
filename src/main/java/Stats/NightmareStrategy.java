@@ -32,4 +32,5 @@ public class NightmareStrategy implements StatStrategy{
         listOfStats = rollStats();
         return listOfStats;
     }
+
 }

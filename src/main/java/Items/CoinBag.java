@@ -14,11 +14,16 @@ public class CoinBag {
         this.goldCoin -= amount;
     }
 
-    public int getCoins(){
+    public int getCoinAmount(){
+        return this.goldCoin;
+    }
+
+    public double getGoldCoin(){
         return this.goldCoin;
     }
 
     public void setCoins(int amount){
         this.goldCoin = amount;
     }
+
 }

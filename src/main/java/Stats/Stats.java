@@ -10,29 +10,15 @@ public class Stats {
 
     public void chooseStrategy(String strategy){
         System.out.println("Stat");
-        switch(strategy){
-            case("Roll drop one"):
-                statGenerator.setStrategy(new RollStrategy());
-                System.out.println("Roll");
-                break;
-            case("Array"):
-                statGenerator.setStrategy(new ArrayStrategy());
-                System.out.println("Array1");
-                break;
-            case("Nightmare"):
-                statGenerator.setStrategy(new NightmareStrategy());
-                System.out.println("Nightmare");
-                break;
-
-
-
+        switch (strategy) {
+            case ("Roll drop one") -> statGenerator.setStrategy(new RollStrategy());
+            case ("Array") -> statGenerator.setStrategy(new ArrayStrategy());
+            case ("Nightmare") -> statGenerator.setStrategy(new NightmareStrategy());
         }
     }
 
     public ArrayList<Integer> getStats(){
         return this.statGenerator.getListOfStats();
     }
-
-
 
 }
