@@ -87,6 +87,7 @@ public class CharacterHandler {
 
 
 
+
  /*   public static List<String> loadAllCharacters(){
         List<String> listOfCharacters = new ArrayList<>();
         File[] characters = new File("src/main/resources/characters/").listFiles();
