@@ -435,7 +435,7 @@ public class Character_test {
         charData.setStats(charStats);
 
         Character character = new Character(charData, charData.getLevel());
-       // character.getRace().setSubRace(Race.getAllSubraces("Dwarf").get(1));
+        character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
         CharacterHandler.saveCharacter(character);
     }
 
@@ -445,7 +445,7 @@ public class Character_test {
         assertEquals(character.getName(), "Gregg");
         assertEquals(character.getRace().getName(), "Dwarf");
         if (character.getRace().getSubRace() != null) {
-            assertEquals(character.getRace().getSubRace().getName(), "Mountain Dwarf");
+            assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
         assertEquals(character.getJob().getJobName(), "Rogue");
         assertEquals(character.getJob().getHitDie(), 8);

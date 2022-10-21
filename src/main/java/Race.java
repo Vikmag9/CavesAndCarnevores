@@ -23,10 +23,10 @@ public class Race {
     public Race(String racename) {
         RaceParser raceParser = new RaceParser(racename);
         this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
+        this.description = raceParser.parseDescription();
+        this.speed = raceParser.parseSpeed();
+        this.traits = raceParser.parseTraits();
+        this.proficiencies = raceParser.parseProficiencies();
     }
 
     /**
@@ -41,10 +41,10 @@ public class Race {
     public Race(String superRaceName,String subraceName) {
         RaceParser raceParser = new RaceParser(superRaceName, subraceName);
         this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
+        this.description = raceParser.parseDescription();
+        this.speed = raceParser.parseSpeed();
+        this.traits = raceParser.parseTraits();
+        this.proficiencies = raceParser.parseProficiencies();
     }
 
 
@@ -90,9 +90,7 @@ public class Race {
 
     public static List<Race> getAllSubraces(String raceName) {
         List<Race> subraces = new ArrayList<>();
-        RaceParser.getAllSubraces(raceName).forEach(subrace -> {
-            subraces.add(new Race(subrace.getName()));
-        });
+        subraces = RaceParser.getAllSubraces(raceName);
         return subraces;
     }
 

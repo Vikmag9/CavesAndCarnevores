@@ -11,10 +11,7 @@ import java.util.Map;
  * This is to avoid the job class from being directly dependent on the Json file.
  */
 public class JobParser {
-    private String jobName;
-    private int hitdie;
-    private Map proficiencies;
-    private List<Feature> features;
+    private final String jobName;
     private JSONObject jobContent;
     static private final FileManager fm = new FileManager();
 
@@ -25,9 +22,6 @@ public class JobParser {
     public JobParser(String jobName) {
         this.jobName = jobName;
         this.jobContent = getJob(jobName);
-        this.features = parseFeatures();
-        this.hitdie = getHitDie();
-        this.proficiencies = parseProficiencies();
     }
 
 
@@ -74,10 +68,6 @@ public class JobParser {
         return jobNames;
     }
 
-    public List<Feature> getFeatures() {
-        return this.features;
-    }
-
 
     public int getHitDie(){
         JSONObject classFeats = jobContent.getJSONObject("Class Features");
@@ -98,20 +88,10 @@ public class JobParser {
         return jobContent.getJSONObject("Class Features").getString("content");
     }
 
-    public String getJobName() {
-        return jobName;
-    }
 
     public List getEquipment() {
         return jobContent.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
     }
 
-    public int getHitdie() {
-        return hitdie;
-    }
-
-    public Map getProficiencies() {
-        return proficiencies;
-    }
 
 }

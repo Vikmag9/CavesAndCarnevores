@@ -80,7 +80,7 @@ public class CharacterHandler {
         Character characterObject = new Character(character, character.getLevel());
         String subRace = characterData.get("Subrace").toString();
         if (!subRace.equals("None")) {
-            characterObject.getRace().setSubRace(new Race(characterData.get("Subrace").toString()));
+            characterObject.getRace().setSubRace(new Race(character.getRaceName(), subRace));
         }
         return characterObject;
     }
