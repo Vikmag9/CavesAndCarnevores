@@ -35,7 +35,7 @@ public class WizardController implements Initializable{
     CharacterDataClass dataClass = new CharacterDataClass();
 
     //Basics AnchorPane
-    @FXML private TextField ameTextField;
+    @FXML private TextField nameTextField;
     @FXML private ComboBox<String> raceComboBox;
     @FXML private ComboBox<String> jobComboBox;
     @FXML private ComboBox<String> backgroundComboBox;
@@ -96,10 +96,10 @@ public class WizardController implements Initializable{
 
 
     // Lore AnchorPane
-    @FXML private TextField arlyLifeTextField;
-    @FXML private TextField rganisationTextField;
-    @FXML private TextField oreMemoriesTextField;
-    @FXML private TextField anguagesTextField;
+    @FXML TextArea earlyLifeTextArea;
+    @FXML TextArea organisationTextArea;
+    @FXML TextArea coreMemoriesTextArea;
+    @FXML TextArea languagesTextArea;
     @FXML private Button finishButton;
 
     //JobSpecific AnchorPane
@@ -139,27 +139,18 @@ public class WizardController implements Initializable{
         prepareProficiencyCheckBoxes();
         //prepareTextFields();
     }
-/*
+
     private void prepareTextFields(){
         nameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            //dataClass.setName(nameTextField.getText());
+            dataClass.setName(nameTextField.getText());
             System.out.println("Bob");
         });
-/*
-        earlyLifeTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            dataClass.setEarlierLife(earlyLifeTextField.getText());
-        });
-        coreMemoriesTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            dataClass.setCoreMemories(coreMemoriesTextField.getText());
-        });
-        organisationTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            dataClass.setOrganisations(organisationTextField.getText());
-        });
-        languagesTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            dataClass.setLanguages(languagesTextField.getText());
-        });
+
+        earlyLifeTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setEarlierLife(earlyLifeTextArea.getText()));
+        coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCoreMemories(coreMemoriesTextArea.getText()));
+        organisationTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setOrganisations(organisationTextArea.getText()));
+        languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setLanguages(languagesTextArea.getText()));
         }
- */
 
 
 
@@ -195,28 +186,22 @@ public class WizardController implements Initializable{
     }
 
     private void prepareComboBoxes(){
-        List<String> jobs = new ArrayList<>();
-        List<String> races = new ArrayList<>();
+        List<String> races;
+        List<String> jobs;
         jobs = Job.getAllJobs();
         races = Race.getAllRaces();
         raceComboBox.getItems().addAll(races);
         raceComboBox.getSelectionModel().selectFirst();
-        raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
-            dataClass.setRaceName(raceComboBox.getValue());
-        });
+        raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(raceComboBox.getValue()));
 
         jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
-        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
-            dataClass.setRaceName(jobComboBox.getValue());
-        });
+        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(jobComboBox.getValue()));
 
         //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
-        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
-            dataClass.setRaceName(backgroundComboBox.getValue());
-        });
+        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(backgroundComboBox.getValue()));
     }
 
     @FXML

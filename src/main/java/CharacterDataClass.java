@@ -279,9 +279,15 @@ public class CharacterDataClass implements CharacterDataCollection{
         else{
             this.proficiencySkills.remove(statName);
             System.out.println(proficiencySkills);
-
-
         }
     }
+
+    public ArrayList<ProficiencySkills> getProficiencySkills(){
+        return this.proficiencySkills;
+    }
+
+
+
+
 
 }

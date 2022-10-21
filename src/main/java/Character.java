@@ -1,6 +1,7 @@
 import Items.Inventory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,6 +27,7 @@ public class Character implements CharacterDataCollection {
     private String languages;
     private String organisation;
     private String earlierLife;
+    private ArrayList<ProficiencySkills> proficiencySkills;
 
     /**
      * Constructor for the Character class.
@@ -47,11 +49,13 @@ public class Character implements CharacterDataCollection {
         this.jobName = characterData.getJobName();
         this.background = characterData.getBackground();
         this.level = level;
+        this.proficiencySkills = characterData.getProficiencySkills();
         this.stats = characterData.getStats();
         this.health = calculateHealth();
         this.feats = assembleFeats();
         this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
+
 
     }
 
@@ -163,6 +167,11 @@ public class Character implements CharacterDataCollection {
         this.inventory = inventory;
     }
 
+    public void setProficiencySkills(ArrayList<ProficiencySkills> list){
+        this.proficiencySkills = list;
+    }
+
+
     public String getName() {
         return this.name;
     }
@@ -240,6 +249,11 @@ public class Character implements CharacterDataCollection {
     @Override
     public String getEarlierLife() {
         return this.earlierLife;
+    }
+
+    @Override
+    public ArrayList<ProficiencySkills> getProficiencySkills() {
+        return this.proficiencySkills;
     }
 
     /**

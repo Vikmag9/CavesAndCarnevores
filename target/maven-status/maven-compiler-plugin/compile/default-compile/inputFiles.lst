@@ -16,6 +16,7 @@ C:\GUI\CavesAndCarnevores2\src\main\java\Character.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Items\InventoryItem.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\RollStrategy.java
 C:\GUI\CavesAndCarnevores2\src\main\java\WizardController.java
+C:\GUI\CavesAndCarnevores2\src\main\java\RaceParser.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\NightmareStrategy.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Items\InventoryItemBuilder.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\StatGenerator.java
@@ -25,7 +26,9 @@ C:\GUI\CavesAndCarnevores2\src\main\java\Items\InventoryItemDirector.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\StatStrategy.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\DiceBag.java
 C:\GUI\CavesAndCarnevores2\src\main\java\CharacterListItem.java
+C:\GUI\CavesAndCarnevores2\src\main\java\JobParser.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Race.java
 C:\GUI\CavesAndCarnevores2\src\main\java\Stats\ArrayStrategy.java
+C:\GUI\CavesAndCarnevores2\src\main\java\ItemsListItem.java
 C:\GUI\CavesAndCarnevores2\src\main\java\CharacterViewController.java
 C:\GUI\CavesAndCarnevores2\src\main\java\CharacterDataCollection.java
