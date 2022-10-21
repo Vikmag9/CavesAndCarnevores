@@ -2,33 +2,42 @@ package Stats;
 
 import java.util.ArrayList;
 
+/**
+ * A class for choosing the different ways to roll stats and getting those stats.
+ */
 public class Stats {
     StatGenerator statGenerator;
     public Stats(){
         this.statGenerator = new StatGenerator();
     }
 
+    /**
+     * A method that chooses one of the three available strategies for rolling stats in the application based in the
+     * input it receives.
+     * @param strategy A string: either Roll Drop One, Array, and Nightmare.
+     */
     public void chooseStrategy(String strategy){
         System.out.println("Stat");
-        switch(strategy){
-            case("Roll drop one"):
+        switch (strategy) {
+            case ("Roll drop one") -> {
                 statGenerator.setStrategy(new RollStrategy());
                 System.out.println("Roll");
-                break;
-            case("Array"):
+            }
+            case ("Array") -> {
                 statGenerator.setStrategy(new ArrayStrategy());
                 System.out.println("Array1");
-                break;
-            case("Nightmare"):
+            }
+            case ("Nightmare") -> {
                 statGenerator.setStrategy(new NightmareStrategy());
                 System.out.println("Nightmare");
-                break;
-
-
-
+            }
         }
     }
 
+    /**
+     * A getter for stats.
+     * @return a list of stats from StatGenerator
+     */
     public ArrayList<Integer> getStats(){
         return this.statGenerator.getListOfStats();
     }
