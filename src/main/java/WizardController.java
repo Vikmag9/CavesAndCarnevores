@@ -326,7 +326,7 @@ public class WizardController implements Initializable{
     }
 
     @FXML
-    private void finishCreation() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    private void finishCreation() {
         CharacterHandler.createCharacter(dataClass, 1);
     }
 

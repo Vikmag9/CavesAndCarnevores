@@ -1,7 +1,6 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -22,10 +21,8 @@ public class JobParser {
     /**
      * The constructor for the JobParser class.
      * @param jobName The name of the job, as a string.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public JobParser(String jobName) throws IOException, ClassNotFoundException {
+    public JobParser(String jobName) {
         this.jobName = jobName;
         this.jobContent = getJob(jobName);
         this.features = parseFeatures();
@@ -39,10 +36,8 @@ public class JobParser {
      * A method to retrieve the information from the Json file.
      * @param jobName The name of the job, as a string.
      * @return The information from the Json file, as a JSONObject.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public JSONObject getJob(String jobName) throws IOException, ClassNotFoundException {
+    public JSONObject getJob(String jobName) {
         JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
         return jsonJob;
     }
@@ -69,10 +64,8 @@ public class JobParser {
     /**
      * A method to retrieve all the job names from the Json file.
      * @return A list of job names, as a list of strings.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public static List<String> getAllJobs() throws IOException, ClassNotFoundException {
+    public static List<String> getAllJobs() {
         JSONObject jobs = fm.readFile("jobs.json");
         List<String> jobNames = new ArrayList<>();
         jobs.keySet().forEach(jobName -> {

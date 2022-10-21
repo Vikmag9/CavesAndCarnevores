@@ -1,19 +1,11 @@
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import Items.Inventory;
 import Items.InventoryItem;
 import Items.InventoryItemBuilder;
-import java.util.List;
-import org.apache.commons.io.FilenameUtils;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.databind.JsonMappingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class CharacterHandler {
     private static FileManager fm = new FileManager();
@@ -95,7 +87,7 @@ public class CharacterHandler {
 
 
 
-    public static List<String> loadAllCharacters(){
+ /*   public static List<String> loadAllCharacters(){
         List<String> listOfCharacters = new ArrayList<>();
         File[] characters = new File("src/main/resources/characters/").listFiles();
         if (characters != null) {
@@ -104,4 +96,6 @@ public class CharacterHandler {
         }
         return listOfCharacters;
     }
+
+  */
 }

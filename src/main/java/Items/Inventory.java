@@ -16,7 +16,7 @@ public class Inventory {
            return this.coinBag.getCoinAmount();
     }
 
-        public Inventory(double startingCoins) {
+        public Inventory(int startingCoins) {
                 this.inventory = new ArrayList<InventoryItem>();
                 this.coinBag = new CoinBag(startingCoins);
         }

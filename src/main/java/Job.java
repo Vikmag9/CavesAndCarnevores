@@ -23,6 +23,7 @@ public class Job {
 
     public Job(String jobName) {
         this.jobName = jobName;
+        this.jobParser = new JobParser(jobName);
         this.jobDescription = jobParser.getJobDesc();
         this.features = jobParser.parseFeatures();
         this.hitdie = jobParser.getHitDie();
@@ -35,12 +36,14 @@ public class Job {
      * Used in the GUI to display all the jobs.
      * @return a list of all the available jobs.
      */
-    public static List<String> getAllJobs(){
+    public static List<String> getAllJobs() {
         List<String> jobs = new ArrayList<>();
         List<String> jobNames = JobParser.getAllJobs();
         for (String jobName : jobNames) {
             jobs.add(jobName);
         }
+        return jobs;
+    }
 
 
     public int getHitDie() {
@@ -49,29 +52,6 @@ public class Job {
 
     public List<Feature> getFeatures() {
         return this.features;
-    }
-
-
-    public int getHitDie(){
-        JSONObject classFeats = jobContent.getJSONObject("Class Features");
-        int hitDie = classFeats.getInt("Hit Die");
-        return hitDie;
-    }
-
-    public Map parseProficiencies() {
-        jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies");
-        Map jsonMap = jobContent.getJSONObject("Class Features").getJSONObject("Proficiencies").toMap();
-        Map profs = new HashMap();
-        profs.put(Proficiencies.Armor, jsonMap.get("Armor"));
-        profs.put(Proficiencies.Weapons, jsonMap.get("Weapons"));
-        profs.put(Proficiencies.Tools, jsonMap.get("Tools"));
-        profs.put(Proficiencies.SavingThrows, jsonMap.get("Saving Throws"));
-        profs.put(Proficiencies.Skills, jsonMap.get("Skills"));
-        return profs;
-    }
-
-    public String getJobDesc() {
-        return jobContent.getJSONObject("Class Features").getString("content");
     }
 
     public String getJobName() {

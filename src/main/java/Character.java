@@ -120,7 +120,6 @@ public class Character implements CharacterDataCollection {
                 feats.remove(feat);
             }
         }
-        //TODO Add features from background etc (change javadock comment when done)
         return this.job.getFeatures();
     }
 
