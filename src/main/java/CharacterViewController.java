@@ -8,10 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -87,7 +85,7 @@ public class CharacterViewController implements Initializable {
 
     @FXML private TextArea spellsTextArea;
     @FXML private TextArea languagesTextArea;
-    @FXML private TextArea proficienciesTextArea;
+
 
     @FXML Label characterNameLabel;
     @FXML Label characterRaceLabel;
@@ -120,9 +118,9 @@ public class CharacterViewController implements Initializable {
     @FXML private Text movementSpeedText;
     @FXML private Text HitpointsText;
 
-    @FXML private TextArea actionsTextArea;
-    @FXML private TextArea reactionsTextArea;
-    @FXML private TextArea bonusActionsTextArea;
+    @FXML private TextArea featuresTextArea;
+    @FXML private TextArea proficienciesTextArea;
+    @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
 
@@ -241,8 +239,8 @@ public class CharacterViewController implements Initializable {
                 - Ready An Action
                 - Use a Class Feature""";
 
-        actionsTextArea.setEditable(false);
-        actionsTextArea.setText(actions);
+        featuresTextArea.setEditable(false);
+        featuresTextArea.setText(actions);
     }
 
     /**
@@ -256,8 +254,8 @@ public class CharacterViewController implements Initializable {
                 - Cast a spell
                 """;
 
-        reactionsTextArea.setEditable(false);
-        reactionsTextArea.setText(reactions);
+        proficienciesTextArea.setEditable(false);
+        proficienciesTextArea.setText(reactions);
     }
 
     /**
@@ -271,8 +269,8 @@ public class CharacterViewController implements Initializable {
                 - Use a Class Feature
                 """;
 
-        bonusActionsTextArea.setEditable(false);
-        bonusActionsTextArea.setText(bonusActions);
+        spellTextArea.setEditable(false);
+        spellTextArea.setText(bonusActions);
     }
 
     private void prepareSpells() {
