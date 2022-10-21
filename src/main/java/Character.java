@@ -124,7 +124,7 @@ public class Character implements CharacterDataCollection {
 
     /**
      * Sets the character's name from a string, nessesary for creating a character from the GUI.
-     * @return the name of the character.
+     * @param name the name of the character.
      */
     public void setName(String name) {
         this.name = name;

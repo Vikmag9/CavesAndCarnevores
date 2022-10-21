@@ -11,11 +11,17 @@ import java.net.URL;
 import java.util.*;
 import Stats.StatGenerator;
 
+/**
+ * A controller for the character creation wizard.
+ * Not a wizard in the sense of a wizard in a game, but a wizard in the sense of a wizard that creates a character.
+ * The wizard is a series of steps that the user goes through to create a character.
+ * The fxml file that this controller is connected to is the wizard.fxml file, and has a stackpane with anchorpanes as the different parts of the wizard.
+ *
+ */
 public class WizardController implements Initializable{
 
     //General
     @FXML private AnchorPane basicsPane;
-    @FXML private AnchorPane inventoryPane;
     @FXML private AnchorPane jobSpecificPane;
     @FXML private AnchorPane lorePane;
     @FXML private AnchorPane satsAndSkillsPane;
@@ -77,22 +83,11 @@ public class WizardController implements Initializable{
     @FXML private FlowPane WeaponsFlowPane;
     List<ComboBox<String>> comboBoxList = new ArrayList<>();
 
-
-
-    //Inventory AnchorPane
-    @FXML private ComboBox<String> inventoryComboBox1;
-    @FXML private ComboBox<String> inventoryComboBox2;
-    @FXML private ComboBox<String> inventoryComboBox3;
-    @FXML private TextField inventoryTextField1;
-    @FXML private TextField inventoryTextField2;
-    @FXML private TextField inventoryTextField3;
-
-
     // Lore AnchorPane
-    @FXML private TextArea earlyLifeTextArea;
-    @FXML private TextArea organisationTextArea;
-    @FXML private TextArea coreMemoriesTextArea;
-    @FXML private TextArea languagesTextArea;
+    @FXML TextArea earlyLifeTextArea;
+    @FXML TextArea organisationTextArea;
+    @FXML TextArea coreMemoriesTextArea;
+    @FXML TextArea languagesTextArea;
     @FXML private Button finishButton;
 
     //JobSpecific AnchorPane
@@ -118,19 +113,24 @@ public class WizardController implements Initializable{
     @FXML private Label StatView6Small;
 
 
-
-
+    /**
+     * Initializes the wizard.
+     * Prepares the comboboxes and the radiobuttons.
+     * The parameters are not used, but are required by the interface.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
         prepareRadioButtons();
         prepareProficiencyCheckBoxes();
-        //prepareTextFields();
+        prepareTextFields();
     }
 
     private void prepareTextFields(){
         nameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            //dataClass.setName(nameTextField.getText());
+            dataClass.setName(nameTextField.getText());
             System.out.println("Bob");
         });
 
@@ -138,14 +138,8 @@ public class WizardController implements Initializable{
         coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCoreMemories(coreMemoriesTextArea.getText()));
         organisationTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setOrganisations(organisationTextArea.getText()));
         languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setLanguages(languagesTextArea.getText()));
+
         }
-
-
-
-
-
-
-
 
 
     //navigation methods for the wizard within the stackpane
@@ -165,15 +159,11 @@ public class WizardController implements Initializable{
         weaponsAndArmourPane.toFront();
     }
 
-    @FXML private void toInventoryPane() {
-        inventoryPane.toFront();
-    }
-
     @FXML private void toLorePane() {
         lorePane.toFront();
     }
 
-    protected void prepareComboBoxes(){
+    private void prepareComboBoxes(){
         List<String> races;
         List<String> jobs;
         jobs = Job.getAllJobs();
