@@ -11,6 +11,13 @@ import java.net.URL;
 import java.util.*;
 import Stats.StatGenerator;
 
+/**
+ * A controller for the character creation wizard.
+ * Not a wizard in the sense of a wizard in a game, but a wizard in the sense of a wizard that creates a character.
+ * The wizard is a series of steps that the user goes through to create a character.
+ * The fxml file that this controller is connected to is the wizard.fxml file, and has a stackpane with anchorpanes as the different parts of the wizard.
+ *
+ */
 public class WizardController implements Initializable{
 
     //General
@@ -118,8 +125,13 @@ public class WizardController implements Initializable{
     @FXML private Label StatView6Small;
 
 
-
-
+    /**
+     * Initializes the wizard.
+     * Prepares the comboboxes and the radiobuttons.
+     * The parameters are not used, but are required by the interface.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         prepareComboBoxes();
@@ -182,7 +194,7 @@ public class WizardController implements Initializable{
         lorePane.toFront();
     }
 
-    protected void prepareComboBoxes(){
+    private void prepareComboBoxes(){
         List<String> jobs = new ArrayList<>();
         List<String> races = new ArrayList<>();
         jobs = Job.getAllJobs();

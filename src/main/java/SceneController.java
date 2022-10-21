@@ -16,6 +16,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * A controller that handles the main scene of the application.
+ * The different methods handle the different fxml files that are loaded into a border pane in the base screen.
+ */
 public class SceneController implements Initializable {
     @FXML private BorderPane borderPane;
     @FXML private Button CreateCharacterHeaderButton;
@@ -23,7 +27,8 @@ public class SceneController implements Initializable {
 
 
     //navigational methods to switch fxml files in the center part of the border pane
-        @FXML protected void openStartScreen() {
+
+    @FXML private void openStartScreen() {
         try {
 
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
@@ -33,7 +38,7 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML public void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
+    @FXML private void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
             borderPane.setCenter(startScreen);
@@ -62,6 +67,13 @@ public class SceneController implements Initializable {
     }
 
     //opens the start screen on launch
+
+    /**
+     * Initialize method that opens the start screen on launch.
+     * The parameters are not used, but are required by the interface.
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         openStartScreen();

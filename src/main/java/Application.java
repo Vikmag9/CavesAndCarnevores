@@ -21,8 +21,6 @@ public class Application extends javafx.application.Application {
         Label l = new Label("Här står saker:, JavaFX version:" + javafxVersion + ", Java på version" + javaVersion + ".");
 
 
-        SceneController sceneController = new SceneController();
-
         Parent root = FXMLLoader.load(getClass().getResource("BaseScreen.fxml"));
         Stage primaryStage = new Stage();
         primaryStage.setTitle("Caves and Carnivores");
@@ -31,10 +29,7 @@ public class Application extends javafx.application.Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
         primaryStage.setMaximized(true);
-        //sceneController.prepareComboBoxes();
 
-
-        //sceneController.openStartScreen();
 
     }
 
