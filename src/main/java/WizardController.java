@@ -89,10 +89,10 @@ public class WizardController implements Initializable{
 
 
     // Lore AnchorPane
-    @FXML private TextArea earlyLifeTextArea;
-    @FXML private TextArea organisationTextArea;
-    @FXML private TextArea coreMemoriesTextArea;
-    @FXML private TextArea languagesTextArea;
+    @FXML TextArea earlyLifeTextArea;
+    @FXML TextArea organisationTextArea;
+    @FXML TextArea coreMemoriesTextArea;
+    @FXML TextArea languagesTextArea;
     @FXML private Button finishButton;
 
     //JobSpecific AnchorPane
@@ -130,7 +130,7 @@ public class WizardController implements Initializable{
 
     private void prepareTextFields(){
         nameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            //dataClass.setName(nameTextField.getText());
+            dataClass.setName(nameTextField.getText());
             System.out.println("Bob");
         });
 
