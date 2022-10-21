@@ -211,52 +211,11 @@ public class CharacterViewController implements Initializable {
         setBonusActionsTextArea();
         prepareRadioButtons();
         prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
-        prepareName("Gregg");
-        HashMap<StatName, Integer> stats = new HashMap<>();
-        stats.put(StatName.Strength, 10);
-        stats.put(StatName.Constitution, 10);
-        stats.put(StatName.Wisdom, 10);
-        stats.put(StatName.Intelligence, 10);
-        stats.put(StatName.Charisma, 10);
-        stats.put(StatName.Dexterity, 10);
-        prepareStats(stats);
+        //prepareStats();
         prepareModifiers();
     }
 
-    private Character getCharacter() throws IOException, ClassNotFoundException, CloneNotSupportedException{
-        Job charJob = new Job("Rogue");
-        List<Feature> featureList = charJob.getFeatures();
-        Inventory inventory = new Inventory(1);
-        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
-        builder.ac(12);
-        builder.isequipped(true);
-        InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem(cheeseArmor);
 
-        CharacterDataClass charData = new CharacterDataClass();
-        charData.setBackground("Orphan");
-        charData.setRaceName("Dwarf");
-        charData.setJobName("Rogue");
-        charData.setName("Gregg");
-        charData.setLevel(1);
-        charData.setInventory(inventory);
-
-        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
-        charStats.put(StatName.Strength, 10);
-        charStats.put(StatName.Dexterity, 10);
-        charStats.put(StatName.Constitution, 12);
-        charStats.put(StatName.Intelligence, 10);
-        charStats.put(StatName.Wisdom, 10);
-        charStats.put(StatName.Charisma, 10);
-
-        charData.setProficiencies(true, ProficiencySkills.Athletics);
-
-
-        charData.setStats(charStats);
-
-        Character character = new Character(charData, charData.getLevel());
-        return character;
-    }
 
     // Basics features
 
@@ -364,6 +323,11 @@ public class CharacterViewController implements Initializable {
 
     private void prepareModifiers(){
         strengthModifierText.setText("5");
+        intelligenceModifierText.setText("5");
+        wisdomModifierText.setText("5");
+        constitutionModifierText.setText("5");
+        charismaModifierText.setText("5");
+        dexterityModifierText.setText("5");
     }
 
     private void prepareSpell(Map<String, String> map) {

@@ -9,7 +9,7 @@ public class StatGenerator {
         this.strategy = new RollStrategy();
     }
 
-    public void setStrategy(StatStrategy strategy) {
+    void setStrategy(StatStrategy strategy) {
         this.strategy = strategy;
     }
 
