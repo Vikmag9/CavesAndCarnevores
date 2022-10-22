@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="836.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WizardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="836.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.WizardController">
    <effect>
       <DropShadow blurType="GAUSSIAN" height="161.36" radius="65.56" spread="0.17" width="102.88" />
    </effect>
