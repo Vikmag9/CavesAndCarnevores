@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
  * The different methods handle the different fxml files that are loaded into a border pane in the base screen.
  */
 public class SceneController implements Initializable {
+
     @FXML private BorderPane borderPane;
     @FXML private Button CreateCharacterHeaderButton;
     @FXML private Button MyCharactersHeaderButton;

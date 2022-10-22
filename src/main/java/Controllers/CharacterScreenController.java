@@ -2,6 +2,7 @@ package Controllers;
 
 import Model.Character;
 import Model.CharacterHandler;
+import Model.ProficiencySkills;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -30,6 +31,7 @@ public class CharacterScreenController implements Initializable {
     private void prepareSendDataButton() {
         sendDataButton.setOnMouseClicked(event -> sendData(event));
     }
+
     @FXML
     private void setCharacterArea(){
         // Load all existing characters to the flowpane in Controllers.CharacterScreen.fxml
@@ -41,7 +43,7 @@ public class CharacterScreenController implements Initializable {
 
 
 
-    @FXML
+
     private void sendData(MouseEvent event) {
         // Step 1
 
