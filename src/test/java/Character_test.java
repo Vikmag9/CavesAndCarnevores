@@ -420,7 +420,7 @@ public class Character_test {
         charData.setBackground("Orphan");
         charData.setRaceName("Dwarf");
         charData.setJobName("Rogue");
-        charData.setName("Gregg");
+        charData.setName("Gregg3");
         charData.setAlignment("Chaotic Good");
         charData.setLevel(1);
         charData.setInventory(inventory);
@@ -436,7 +436,8 @@ public class Character_test {
         charData.setStats(charStats);
 
         Character character = new Character(charData, charData.getLevel());
-        character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
+        //character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
+        String x = character.getRace().getDescription();
         CharacterHandler.saveCharacter(character);
     }
 
