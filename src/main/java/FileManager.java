@@ -1,14 +1,14 @@
-import Items.InventoryItem;
-
 import java.io.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.FilenameUtils;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class FileManager {
@@ -44,6 +44,18 @@ public class FileManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<String> getFilesInDirectory(String dirPath) {
+        File folder = new File(dirPath);
+        File[] listOfFiles = folder.listFiles();
+        List<String> fileNames = new ArrayList<>();
+        for (File file : listOfFiles) {
+            if (file.isFile()) {
+                fileNames.add(FilenameUtils.removeExtension(file.getName()));
+            }
+        }
+        return fileNames;
     }
 
 }

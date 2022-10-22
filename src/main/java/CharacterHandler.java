@@ -14,7 +14,7 @@ public class CharacterHandler {
         return new Character(character, level);
     }
 
-    public static void saveCharacter(Character character) {;
+    public static void saveCharacter(Character character) {
         HashMap<Object, Object> characterData = new HashMap<>();
         characterData.put("Name", character.getName());
         characterData.put("Level", String.valueOf(character.getLevel()));
@@ -40,8 +40,13 @@ public class CharacterHandler {
 
     }
 
+    /**
+     *  Gets all the relevant character data from a json file to a Map and loads it into a character object. Among other things, it is used by loadAllCharacters() to produce a
+     *  list of characterObjects for populating the CharacterScreen later.
+     * @param name A string with the name of a character
+     * @return A characterObject
+     */
     public static Character loadCharacter(String name) {
-
         Map characterData = fm.readFile("characters/" + name + ".json").toMap();
         CharacterDataClass character = new CharacterDataClass();
         character.setName((String) characterData.get("Name"));
@@ -85,18 +90,15 @@ public class CharacterHandler {
         return characterObject;
     }
 
-
-
-
- /*   public static List<String> loadAllCharacters(){
-        List<String> listOfCharacters = new ArrayList<>();
-        File[] characters = new File("src/main/resources/characters/").listFiles();
-        if (characters != null) {
-            //loadCharacter(); does not exist yet
-            for (File character : characters) listOfCharacters.add(FilenameUtils.removeExtension(character.getName()));
-        }
+    /**
+     * Gets the names of all files within the Characters folder and calls on loadCharacter() for each of them. Then adds
+     * the return value of loadCharacter() to a list of character objects.
+     * @return A list of character objects
+     */
+    public static List<Character> loadAllCharacters(){
+        List<Character> listOfCharacters = new ArrayList<>();
+        List<String> characterNames = new ArrayList<>(fm.getFilesInDirectory("src/main/resources/characters/"));
+        characterNames.forEach(name -> listOfCharacters.add(loadCharacter(name)));
         return listOfCharacters;
     }
-
-  */
 }
