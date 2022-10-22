@@ -21,8 +21,8 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fx:id="characterCardNameText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_enter" text="Name of Model.Character" />
-      <Text fx:id="characterCardRaceText" layoutX="10.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Model.Race" />
+      <Text fx:id="characterCardNameText" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_enter" text="Name of Character" />
+      <Text fx:id="characterCardRaceText" layoutX="10.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Race" />
       <Text fx:id="characterCardClassText" layoutX="10.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Class" />
       <Text layoutX="228.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="Level" />
       <Text fx:id="characterCardLevelText" layoutX="268.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="1" />

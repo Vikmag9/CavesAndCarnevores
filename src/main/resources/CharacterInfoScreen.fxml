@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="730.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CharacterViewController">
+<AnchorPane prefHeight="650.0" prefWidth="730.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CharacterInfoScreenController">
    <TabPane prefHeight="650.0" prefWidth="730.0" stylesheets="@ModuleTabs.css" tabClosingPolicy="UNAVAILABLE">
       <Tab text="Basics">
          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="741.0">
@@ -129,8 +129,8 @@
             </AnchorPane>
             <AnchorPane layoutX="144.0" layoutY="3.0" prefHeight="58.0" prefWidth="482.0">
                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" stroke="BLACK" strokeType="INSIDE" width="484.0" AnchorPane.topAnchor="0.0" />
-               <Text fx:id="characterNameText" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_enter" text="Name of Model.Character" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" />
-               <Text fx:id="characterRaceText" layoutX="351.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Model.Race" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" />
+               <Text fx:id="characterNameText" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_enter" text="Name of Character" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" />
+               <Text fx:id="characterRaceText" layoutX="351.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Race" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" />
                <Text fx:id="characterClassText" layoutX="398.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Class" textAlignment="RIGHT" AnchorPane.rightAnchor="10.0" />
             </AnchorPane>
             <AnchorPane layoutX="633.0" layoutY="2.0" prefHeight="58.0" prefWidth="88.0">
@@ -148,7 +148,7 @@
                   <TextArea fx:id="featuresTextArea" layoutX="-1.0" layoutY="-1.0" prefHeight="118.0" prefWidth="290.0" styleClass="skills_font" stylesheets="@Font.css" />
                </AnchorPane>
             </TitledPane>
-            <TitledPane animated="false" collapsible="false" layoutX="159.0" layoutY="239.0" prefHeight="144.0" prefWidth="290.0" styleClass="skills_font" text="Model.Proficiencies">
+            <TitledPane animated="false" collapsible="false" layoutX="159.0" layoutY="239.0" prefHeight="144.0" prefWidth="290.0" styleClass="skills_font" text="Proficiencies">
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="290.0">
                   <TextArea fx:id="proficienciesTextArea" layoutX="-1.0" layoutY="-1.0" prefHeight="118.0" prefWidth="290.0" styleClass="skills_font" stylesheets="@Font.css" />
                </AnchorPane>

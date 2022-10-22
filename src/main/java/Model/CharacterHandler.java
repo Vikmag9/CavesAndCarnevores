@@ -88,20 +88,6 @@ public class CharacterHandler {
         return characterObject;
     }
 
-
-
-
- /*   public static List<String> loadAllCharacters(){
-        List<String> listOfCharacters = new ArrayList<>();
-        File[] characters = new File("src/main/resources/characters/").listFiles();
-        if (characters != null) {
-            //loadCharacter(); does not exist yet
-            for (File character : characters) listOfCharacters.add(FilenameUtils.removeExtension(character.getName()));
-        }
-        return listOfCharacters;
-    }
-
-  */
 }
 
 
