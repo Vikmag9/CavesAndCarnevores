@@ -1,7 +1,6 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -12,25 +11,17 @@ import java.util.Map;
  * This is to avoid the job class from being directly dependent on the Json file.
  */
 public class JobParser {
-    private String jobName;
-    private int hitdie;
-    private Map proficiencies;
-    private List<Feature> features;
+    private final String jobName;
     private JSONObject jobContent;
     static private final FileManager fm = new FileManager();
 
     /**
      * The constructor for the JobParser class.
      * @param jobName The name of the job, as a string.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public JobParser(String jobName) throws IOException, ClassNotFoundException {
+    public JobParser(String jobName) {
         this.jobName = jobName;
         this.jobContent = getJob(jobName);
-        this.features = parseFeatures();
-        this.hitdie = getHitDie();
-        this.proficiencies = parseProficiencies();
     }
 
 
@@ -39,10 +30,8 @@ public class JobParser {
      * A method to retrieve the information from the Json file.
      * @param jobName The name of the job, as a string.
      * @return The information from the Json file, as a JSONObject.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public JSONObject getJob(String jobName) throws IOException, ClassNotFoundException {
+    public JSONObject getJob(String jobName) {
         JSONObject jsonJob = fm.readFile("jobs.json").getJSONObject(jobName);
         return jsonJob;
     }
@@ -69,20 +58,14 @@ public class JobParser {
     /**
      * A method to retrieve all the job names from the Json file.
      * @return A list of job names, as a list of strings.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public static List<String> getAllJobs() throws IOException, ClassNotFoundException {
+    public static List<String> getAllJobs() {
         JSONObject jobs = fm.readFile("jobs.json");
         List<String> jobNames = new ArrayList<>();
         jobs.keySet().forEach(jobName -> {
             jobNames.add(jobName);
         });
         return jobNames;
-    }
-
-    public List<Feature> getFeatures() {
-        return this.features;
     }
 
 
@@ -105,20 +88,10 @@ public class JobParser {
         return jobContent.getJSONObject("Class Features").getString("content");
     }
 
-    public String getJobName() {
-        return jobName;
-    }
 
     public List getEquipment() {
         return jobContent.getJSONObject("Class Features").getJSONObject("Equipment").getJSONArray("content").toList();
     }
 
-    public int getHitdie() {
-        return hitdie;
-    }
-
-    public Map getProficiencies() {
-        return proficiencies;
-    }
 
 }

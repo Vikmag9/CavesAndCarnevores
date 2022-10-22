@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 import Stats.StatGenerator;
@@ -327,7 +326,7 @@ public class WizardController implements Initializable{
     }
 
     @FXML
-    private void finishCreation() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    private void finishCreation() {
         CharacterHandler.createCharacter(dataClass, 1);
     }
 

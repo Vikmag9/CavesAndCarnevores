@@ -3,6 +3,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,10 +19,11 @@ public class Job {
     private Map proficiencies;
     private List<Feature> features;
     private String jobDescription;
-    JobParser jobParser;
+    private JobParser jobParser;
 
-    public Job(String jobName) throws IOException, ClassNotFoundException {
+    public Job(String jobName) {
         this.jobName = jobName;
+        this.jobParser = new JobParser(jobName);
         this.jobDescription = jobParser.getJobDesc();
         this.features = jobParser.parseFeatures();
         this.hitdie = jobParser.getHitDie();
@@ -34,18 +36,15 @@ public class Job {
      * Used in the GUI to display all the jobs.
      * @return a list of all the available jobs.
      */
-    public static List<String> getAllJobs(){
+    public static List<String> getAllJobs() {
         List<String> jobs = new ArrayList<>();
-        try {
-            List<String> jobNames = JobParser.getAllJobs();
-            for (String jobName : jobNames) {
-                jobs.add(jobName);
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+        List<String> jobNames = JobParser.getAllJobs();
+        for (String jobName : jobNames) {
+            jobs.add(jobName);
         }
         return jobs;
     }
+
 
     public int getHitDie() {
         return this.hitdie;
@@ -54,7 +53,6 @@ public class Job {
     public List<Feature> getFeatures() {
         return this.features;
     }
-
 
     public String getJobName() {
         return jobName;

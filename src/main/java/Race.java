@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,30 +17,16 @@ public class Race {
 
     /**
      * One of the 3 constructors for the Race class.
-     * @param raceParsed The parsed information from the race JSON file.
-     */
-    public Race(RaceParser raceParsed) {
-        this.name = raceParsed.getName();
-        this.description = raceParsed.getDescription();
-        this.speed = raceParsed.getSpeed();
-        this.traits = raceParsed.getTraits();
-        this.proficiencies = raceParsed.getProficiencies();
-    }
-
-    /**
-     * One of the 3 constructors for the Race class.
      * Uses the input parameter to then retrieve the data from the raceParser class.
      * @param racename The name of a characters race, as a string.
-     * @throws IOException
-     * @throws ClassNotFoundException
      */
-    public Race(String racename) throws IOException, ClassNotFoundException {
+    public Race(String racename) {
         RaceParser raceParser = new RaceParser(racename);
         this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
+        this.description = raceParser.parseDescription();
+        this.speed = raceParser.parseSpeed();
+        this.traits = raceParser.parseTraits();
+        this.proficiencies = raceParser.parseProficiencies();
     }
 
     /**
@@ -51,20 +38,15 @@ public class Race {
      * @throws IOException
      * @throws ClassNotFoundException
      */
-    public Race(String superRaceName,String subraceName) throws IOException, ClassNotFoundException {
-        RaceParser raceParser = new RaceParser(superRaceName,subraceName);
+    public Race(String superRaceName,String subraceName) {
+        RaceParser raceParser = new RaceParser(superRaceName, subraceName);
         this.name = raceParser.getName();
-        this.description = raceParser.getDescription();
-        this.speed = raceParser.getSpeed();
-        this.traits = raceParser.getTraits();
-        this.proficiencies = raceParser.getProficiencies();
+        this.description = raceParser.parseDescription();
+        this.speed = raceParser.parseSpeed();
+        this.traits = raceParser.parseTraits();
+        this.proficiencies = raceParser.parseProficiencies();
     }
 
-
-
-    public void setupSubrace(Race subRace) {
-        setSubRace(subRace);
-    }
 
     //--------------------------------- GETTERS AND SETTERS -------------------------------------
     public String getName() {
@@ -100,20 +82,15 @@ public class Race {
     }
 
     public Race getSubRace() {
-        return this.subRace;
+        if (subRace != null) {
+            return subRace;
+        }
+        return null;
     }
 
-    public static List<Race> getAllSubraces(String raceName) throws IOException, ClassNotFoundException {
+    public static List<Race> getAllSubraces(String raceName) {
         List<Race> subraces = new ArrayList<>();
-        RaceParser.getAllSubraces(raceName).forEach(subrace -> {
-            try {
-                subraces.add(new Race(subrace.getName()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-        });
+        subraces = RaceParser.getAllSubraces(raceName);
         return subraces;
     }
 
@@ -138,20 +115,12 @@ public class Race {
     public void setProficiencies(Map<String, String> proficiencies) {this.proficiencies = proficiencies;}
 
     public static List<String> getAllRaces(){
-        List<String> racenames = null;
-        try {
-            racenames = RaceParser.getAllRaces();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return racenames;
+        return RaceParser.getAllRaces();
     }
 
-
-
-
+    public String getSubraceName() {
+        return this.subRace.getName();
+    }
 
 
 

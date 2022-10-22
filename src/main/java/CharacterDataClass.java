@@ -29,6 +29,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private String background;
     private HashMap<StatName, Integer> stats;
     ArrayList<ProficiencySkills> proficiencySkills;
+    private int xp;
 
     /**
      * constructor for the CharacterDataClass.
@@ -117,6 +118,11 @@ public class CharacterDataClass implements CharacterDataCollection{
      */
     public CharacterDataClass setAlignment(String alignment){
         this.alignment = alignment;
+        return this;
+    }
+
+    public CharacterDataClass setXp(int xp){
+        this.xp = xp;
         return this;
     }
 
@@ -254,6 +260,11 @@ public class CharacterDataClass implements CharacterDataCollection{
     @Override
     public String getAlignment() {
         return this.alignment;
+    }
+
+    @Override
+    public int getXp() {
+        return xp;
     }
 
     @Override
