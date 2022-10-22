@@ -51,7 +51,7 @@ public class CharacterHandler {
      */
     public static Character loadCharacter(String name) {
 
-        Map characterData = fm.readFile("characters/" + name + ".json").toMap();
+        Map<String, Object> characterData = fm.readFile("characters/" + name + ".json").toMap();
         CharacterDataClass character = new CharacterDataClass();
         character.setName((String) characterData.get("Name"));
         character.setLevel(Integer.parseInt((String) characterData.get("Level")));
@@ -99,9 +99,9 @@ public class CharacterHandler {
      * the return value of loadCharacter() to a list of character objects.
      * @return A list of character objects
      */
-    public static List<Character> loadAllCharacters(){
-        List<Character> listOfCharacters = new ArrayList<>();
-        List<String> characterNames = new ArrayList<>(fm.getFilesInDirectory("src/main/resources/characters/"));
+    public static ArrayList<Character> loadAllCharacters(){
+        ArrayList<Character> listOfCharacters = new ArrayList<>();
+        ArrayList<String> characterNames = new ArrayList<>(fm.getFilesInDirectory("src/main/resources/characters/"));
         characterNames.forEach(name -> listOfCharacters.add(loadCharacter(name)));
         return listOfCharacters;
     }
