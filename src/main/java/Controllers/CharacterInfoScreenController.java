@@ -10,9 +10,12 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.*;
@@ -452,5 +455,19 @@ public class CharacterInfoScreenController implements Initializable {
             ItemsListItem rli = new ItemsListItem(item, this);
             inventoryFlowPane.getChildren().add(rli);
         }
+    }
+
+    @FXML
+    private void receiveData(MouseEvent event) {
+        // Step 1
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        // Step 2
+        Character character = (Character) stage.getUserData();
+        // Step 3
+        String name = character.getName();
+        String race = character.getRaceName();
+        System.out.println(name);
+        System.out.println(race);
     }
 }

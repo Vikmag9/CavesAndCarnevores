@@ -456,7 +456,7 @@ public class Character_test {
     }
 
     @Test
-    public void testCalculateModifiers() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    public void testCalculateModifiers() {
         CharacterDataClass charData = new CharacterDataClass();
         HashMap<StatName, Integer> charStats  = new HashMap<>();
         charStats.put(StatName.Strength, 5);
