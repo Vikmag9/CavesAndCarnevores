@@ -43,11 +43,6 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private TextField chaText;
 
 
-
-
-
-
-
     @FXML private CheckBox g;
     @FXML private CheckBox f;
     @FXML private CheckBox h;

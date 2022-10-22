@@ -101,7 +101,8 @@ public class Character implements CharacterDataCollection {
         modifiers = new HashMap<StatName, Integer>();
         for(StatName statname : StatName.values()){
             int stat = this.stats.get(statname);
-            int modifier = (stat-10)/2;
+            double modifierDouble = (stat-10)/2;
+            int modifier = (int) Math.floor(modifierDouble);
             modifiers.put(statname, modifier);
         }
         return modifiers;
