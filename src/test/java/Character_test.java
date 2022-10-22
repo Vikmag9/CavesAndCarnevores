@@ -472,11 +472,6 @@ public class Character_test {
         assertTrue(modifiers.get(StatName.Strength) == -4);
     }
 
-    @Test
-    public void loadAllCharactersTest(){
-        List<Character> characters = CharacterHandler.loadAllCharacters();
-        int x = 5;
-    }
 
 
 }

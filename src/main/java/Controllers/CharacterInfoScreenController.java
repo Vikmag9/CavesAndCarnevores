@@ -126,7 +126,7 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private FlowPane spellsFlowPane;
 
     List<List<String>> spellList;
-    Character character;
+    // Character character;
 
 
 
@@ -208,12 +208,12 @@ public class CharacterInfoScreenController implements Initializable {
         setBonusActionsTextArea();
         prepareRadioButtons();
         prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
-        prepareStats(character.getStats());
+        // prepareStats(character.getStats());
         prepareModifiers();
-        prepareName(character.getName());
-        prepareRace(character.getRaceName());
-        prepareJob(character.getJobName());
-        prepareSpells();
+        // prepareName(character.getName());
+        // prepareRace(character.getRaceName());
+        // prepareJob(character.getJobName());
+        // prepareSpells();
     }
 
 
@@ -273,7 +273,7 @@ public class CharacterInfoScreenController implements Initializable {
         spellTextArea.setText(bonusActions);
     }
 
-    private void prepareSpells() {
+    /*private void prepareSpells() {
         List<List<String>> sortedSpellList = new ArrayList<>();
         List<List<String>> level1spells = new ArrayList<>();
         for (List<String> spell : spellList) {
@@ -296,7 +296,7 @@ public class CharacterInfoScreenController implements Initializable {
             spellsFlowPane.getChildren().add(new Label(spellName + "\n" + spellDescription));
 
         }
-    }
+    }*/
 
     private void prepareName(String string){
         nameTextField.setText(string);

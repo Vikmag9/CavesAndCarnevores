@@ -16,7 +16,6 @@ import static java.lang.String.valueOf;
 
 public class CharacterListItem  extends AnchorPane {
     private CharacterInfoScreenController parentController;
-    private Character character;
 
 
     @FXML private Text characterCardNameText;
