@@ -1,4 +1,5 @@
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Proficiencies.java
+/Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Controllers/CharacterInfoScreenController.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/DiceBag.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/ProficiencySkills.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/StatGenerator.java
@@ -7,14 +8,12 @@
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Items/InventoryItem.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/RollStrategy.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Items/Inventory.java
-/Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Controllers/CharacterViewController.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/FileManager/FileManager.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Feature.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/ArrayStrategy.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/NightmareStrategy.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Race.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Items/InventoryItemBuilder.java
-/Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Controllers/CharacterScreen.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/RaceParser.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/StatName.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/JobParser.java
@@ -22,7 +21,6 @@
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Character.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/SceneController.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Job.java
-/Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/Modifier.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/Stats/StatStrategy.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Controllers/CharacterScreenController.java
 /Users/jonathan/Documents/CavesAndCarnevores/src/main/java/Model/CharacterDataCollection.java

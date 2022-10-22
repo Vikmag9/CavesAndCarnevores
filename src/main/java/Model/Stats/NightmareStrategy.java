@@ -2,6 +2,9 @@ package Model.Stats;
 
 import java.util.ArrayList;
 
+/**
+ * A class that implements the Nightmare Strategy, which is a way to roll a character's stats.
+ */
 public class NightmareStrategy implements StatStrategy{
     DiceBag diceBag;
     int roll;
@@ -18,7 +21,7 @@ public class NightmareStrategy implements StatStrategy{
     }
 
     private ArrayList<Integer> rollStats() {
-        listOfStats = new ArrayList<Integer>();
+        listOfStats = new ArrayList<>();
         for (int i = 0; i < 6; i++){
             stat = rollStat();
             listOfStats.add(stat);

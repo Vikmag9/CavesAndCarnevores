@@ -2,6 +2,9 @@ package Model.Stats;
 
 import java.util.ArrayList;
 
+/**
+ * Class for generating a list of stats based on the strategy chosen and generating corresponding modifiers.
+ */
 public class StatGenerator {
     private StatStrategy strategy;
 
@@ -9,14 +12,27 @@ public class StatGenerator {
         this.strategy = new RollStrategy();
     }
 
-    void setStrategy(StatStrategy strategy) {
+    /**
+     * A setter for strategies.
+     * @param strategy A string with the chosen strategy.
+     */
+    public void setStrategy(StatStrategy strategy) {
         this.strategy = strategy;
     }
 
+    /**
+     * A getter for stats based on the three strategies.
+     * @return An ArrayList with 6 stats rolled based on the strategy.
+     */
     public ArrayList<Integer> getListOfStats(){
         return this.strategy.getListOfStats();
     }
 
+    /**
+     * A method that calculates a modifier to a corresponding stat.
+     * @param stat An int indicating the level of a particular stat.
+     * @return The modifier for a certain stat.
+     */
     public int getModifier(int stat){
         int statModifier;
         switch (stat) {
@@ -25,7 +41,6 @@ public class StatGenerator {
             case 4, 5 -> statModifier = -3;
             case 6, 7 -> statModifier = -2;
             case 8, 9 -> statModifier = -1;
-            case 10, 11 -> statModifier = 0;
             case 12, 13 -> statModifier = 1;
             case 14, 15 -> statModifier = 2;
             case 16, 17 -> statModifier = 3;

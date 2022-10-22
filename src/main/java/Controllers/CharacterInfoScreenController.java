@@ -1,9 +1,9 @@
 package Controllers;
 
+import Model.Character;
 import Model.Items.Inventory;
 import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
-import Model.Character;
 import Model.ProficiencySkills;
 import Model.StatName;
 import javafx.beans.value.ChangeListener;
@@ -17,7 +17,7 @@ import javafx.scene.text.Text;
 import java.net.URL;
 import java.util.*;
 
-public class CharacterViewController implements Initializable {
+public class CharacterInfoScreenController implements Initializable {
 
     @FXML private CheckBox athleticsCheck;
     @FXML private CheckBox acrobaticsCheck;
@@ -44,11 +44,6 @@ public class CharacterViewController implements Initializable {
     @FXML private TextField wisText;
     @FXML private TextField intText;
     @FXML private TextField chaText;
-
-
-
-
-
 
 
     @FXML private CheckBox g;
@@ -213,8 +208,12 @@ public class CharacterViewController implements Initializable {
         setBonusActionsTextArea();
         prepareRadioButtons();
         prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
-        //prepareStats();
+        prepareStats(character.getStats());
         prepareModifiers();
+        prepareName(character.getName());
+        prepareRace(character.getRaceName());
+        prepareJob(character.getJobName());
+        prepareSpells();
     }
 
 
@@ -247,10 +246,9 @@ public class CharacterViewController implements Initializable {
         featuresTextArea.setText(actions);
     }
 
-    /**
-     * Sets the reactions to be displayed in the text area.
-     * Could be used to set the reactions specific to the character, but is currently set to a generalized text that work for all characters.
-     */
+    /*Sets the reactions to be displayed in the text area. Could be used to set the reactions specific to the character,
+    but is currently set to a generalized text that work for all characters. */
+
     private void setReactionsTextArea() {
         String reactions = """
                 - Opportunity Attack
@@ -262,10 +260,8 @@ public class CharacterViewController implements Initializable {
         proficienciesTextArea.setText(reactions);
     }
 
-    /**
-     * Sets the bonus actions to be displayed in the text area.
-     * Could be used to set the bonus actions specific to the character, but is currently set to a generalized text that work for all characters.
-     */
+    /* Sets the bonus actions to be displayed in the text area. Could be used to set the bonus actions specific to the
+     * character, but is currently set to a generalized text that work for all characters. */
     private void setBonusActionsTextArea() {
         String bonusActions = """
                 - Offhand Attack
@@ -398,43 +394,35 @@ public class CharacterViewController implements Initializable {
             stealthCheck.setSelected(true);
         }
     }
-
-    @FXML
+    @FXML /* Disables the AC and Attack Bonus option when a Consumable item type is selected, as they cannot have either
+    of those traits. */
     private void disablecheckboxes(Boolean bool) {
 
-            acCheckBox.setDisable(bool);
-            atkBonusCheckBox.setDisable(bool);
-
-
-
+        acCheckBox.setDisable(bool);
+        atkBonusCheckBox.setDisable(bool);
     }
 
-    /**
-     * Prepares the radio buttons for the inventory.
-     * Disables the checkboxes for consumable items.
-     */
+    /* Prepares the radio buttons for the inventory. Calls on function that disables the AC and Attack Bonus checkboxes
+    for consumable items. */
     private void prepareRadioButtons(){
         ToggleGroup itemToggleGroup = new ToggleGroup();
         consumableRadioButton.setToggleGroup(itemToggleGroup);
         equippableRadioButton.setToggleGroup(itemToggleGroup);
         miscellaneousRadioButton.setToggleGroup(itemToggleGroup);
-        itemToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                if (itemToggleGroup.getSelectedToggle() != null){
-                    RadioButton selected = (RadioButton) itemToggleGroup.getSelectedToggle();
-                    System.out.println(selected.getText());
-                    if (consumableRadioButton.isSelected()){
-                        disablecheckboxes(true);
-                        System.out.println("disable");
-                    }
-                    else {
-                        disablecheckboxes(false);
-                        System.out.println("enable");
-                    }
-
-
+        itemToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (itemToggleGroup.getSelectedToggle() != null){
+                RadioButton selected = (RadioButton) itemToggleGroup.getSelectedToggle();
+                System.out.println(selected.getText());
+                if (consumableRadioButton.isSelected()){
+                    disablecheckboxes(true);
+                    System.out.println("disable");
                 }
+                else {
+                    disablecheckboxes(false);
+                    System.out.println("enable");
+                }
+
+
             }
         });
     }
@@ -461,7 +449,7 @@ public class CharacterViewController implements Initializable {
         inventoryFlowPane.getChildren().clear();
         List<InventoryItem> items = inventory.getInventory();
         for (InventoryItem item : items) {
-            CharacterListItem rli = new CharacterListItem(item, this);
+            ItemsListItem rli = new ItemsListItem(item, this);
             inventoryFlowPane.getChildren().add(rli);
         }
     }

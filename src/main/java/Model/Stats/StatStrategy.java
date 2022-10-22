@@ -3,8 +3,11 @@ package Model.Stats;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Interface for getting stats from the three stat strategies.
+ */
 public interface StatStrategy {
-    public ArrayList<Integer> getListOfStats();
+    ArrayList<Integer> getListOfStats();
 
 
 }

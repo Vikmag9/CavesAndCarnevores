@@ -38,7 +38,7 @@ public class SceneController implements Initializable {
         }
     }
 
-    @FXML private void openCreateCharacterScreen() throws IOException, ClassNotFoundException {
+    @FXML private void openCreateCharacterScreen() {
         try {
             AnchorPane startScreen = FXMLLoader.load(getClass().getResource("Wizard.fxml"));
             borderPane.setCenter(startScreen);
