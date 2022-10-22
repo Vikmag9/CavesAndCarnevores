@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -18,9 +19,16 @@ import java.util.ResourceBundle;
 
 public class CharacterScreenController implements Initializable {
 
+    @FXML private Button sendDataButton;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        prepareSendDataButton();
         setCharacterArea();
+    }
+
+    private void prepareSendDataButton() {
+        sendDataButton.setOnMouseClicked(event -> sendData(event));
     }
     @FXML
     private void setCharacterArea(){
@@ -31,9 +39,12 @@ public class CharacterScreenController implements Initializable {
         // Delete a preexisting character
     }
 
+
+
     @FXML
     private void sendData(MouseEvent event) {
         // Step 1
+
         Character character = CharacterHandler.loadCharacter("Gregg");
         // Step 2
         Node node = (Node) event.getSource();
@@ -42,7 +53,7 @@ public class CharacterScreenController implements Initializable {
         stage.close();
         try {
             // Step 4
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/SceneA.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("CharacterInfoScreen.fxml"));
             // Step 5
             stage.setUserData(character);
             // Step 6

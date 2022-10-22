@@ -54,6 +54,8 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private CheckBox h;
     @FXML private CheckBox d;
 
+    @FXML private Button receiveDataButton;
+
 
 
     //Basics tab fx:ids
@@ -217,8 +219,18 @@ public class CharacterInfoScreenController implements Initializable {
         // prepareRace(character.getRaceName());
         // prepareJob(character.getJobName());
         // prepareSpells();
+        hej();
+        prepareReceiveDataButton();
     }
 
+    private void prepareReceiveDataButton() {
+        System.out.println("databutton");
+        receiveDataButton.setOnMouseClicked(event -> receiveData(event));
+    }
+    private void hej(){
+        System.out.println("hej");
+        receiveDataButton.setText("hej");
+    }
 
 
     // Basics features
@@ -457,17 +469,23 @@ public class CharacterInfoScreenController implements Initializable {
         }
     }
 
-    @FXML
+
+
     private void receiveData(MouseEvent event) {
         // Step 1
+        System.out.println("0");
         Node node = (Node) event.getSource();
+        System.out.println("1");
         Stage stage = (Stage) node.getScene().getWindow();
+        System.out.println("2");
         // Step 2
         Character character = (Character) stage.getUserData();
+        System.out.println("3");
         // Step 3
         String name = character.getName();
         String race = character.getRaceName();
         System.out.println(name);
         System.out.println(race);
+        System.out.println("4");
     }
 }
