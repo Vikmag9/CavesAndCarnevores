@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
-    Character character;
 
     /**
      * Starts the program displaying the main screen.

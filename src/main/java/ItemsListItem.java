@@ -1,21 +1,20 @@
 import Items.Inventory;
 import Items.InventoryItem;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.util.List;
 
 import static java.lang.String.valueOf;
 
+/**
+ * Controller for the ItemsListItem component that displays individual inventory items and their specifications.
+ */
 public class ItemsListItem  extends AnchorPane {
-    private CharacterViewController parentController;
+    private CharacterInfoScreenController parentController;
     private java.lang.Character character;
     private Inventory inventory;
 
@@ -43,7 +42,12 @@ public class ItemsListItem  extends AnchorPane {
     @FXML
     private Button itemConsumeButton;
 
-    public ItemsListItem(InventoryItem item, CharacterViewController characterViewController) {
+    /**
+     * Constructor that loads the visual component for an individual item.
+     * @param item takes in an item and its details
+     * @param characterInfoScreenController takes in the controller for CharacterInfoScreen that
+     */
+    public ItemsListItem(InventoryItem item, CharacterInfoScreenController characterInfoScreenController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ItemsListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -54,10 +58,10 @@ public class ItemsListItem  extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.parentController = characterViewController;
+        this.parentController = characterInfoScreenController;
         populateInventoryListView(item);
     }
-
+    // Displays all relevant information about each individual item in the ItemsListItem component.
     private void populateInventoryListView(InventoryItem item) {
         itemNameText.setText(item.getItemName());
         itemDescriptionTextArea.setText(item.getItemDescription());
