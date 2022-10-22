@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -13,19 +12,11 @@
       <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#82b170cc" height="642.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="1235.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="313.0" layoutY="66.0" prefHeight="52.0" prefWidth="616.0" styleClass="welcome_text_elephant" stylesheets="@Font.css" text="Characters" textAlignment="CENTER" AnchorPane.leftAnchor="313.0" AnchorPane.topAnchor="66.0" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="331.0" layoutY="143.0" prefHeight="107.0" prefWidth="580.0" styleClass="welcome_text_body" stylesheets="@Font.css" text="Here are your previously created characters and their stats. Click on one to expand." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="331.0" AnchorPane.topAnchor="143.0" />
-      <ScrollPane fx:id="characterScrollPane" layoutX="14.0" layoutY="250.0" prefHeight="383.0" prefWidth="1212.0" style="-fx-background-color: #000000;">
-         <content>
-            <AnchorPane fx:id="characterContainerAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="1210.0" style="-fx-background-color: #566e54;">
-               <children>
-                  <FlowPane fx:id="charactersFlowPane" prefHeight="383.0" prefWidth="1212.0" />
-               </children>
-            </AnchorPane>
-         </content>
-      </ScrollPane>
       <Button fx:id="sendDataButton" layoutX="79.0" layoutY="92.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="140.0" text="Pick Gregg :)">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <ComboBox fx:id="characterCombo" layoutX="545.0" layoutY="324.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

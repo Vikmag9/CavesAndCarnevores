@@ -15,7 +15,6 @@ import java.io.IOException;
 import static java.lang.String.valueOf;
 
 public class CharacterListItem  extends AnchorPane {
-    private CharacterInfoScreenController parentController;
 
 
     @FXML private Text characterCardNameText;
@@ -23,24 +22,26 @@ public class CharacterListItem  extends AnchorPane {
     @FXML private Text characterCardClassText;
     @FXML private Text characterCardLevelText;
 
-    @FXML private Button characterCardDeleteButton;
-    @FXML private Button characterCardViewButton;
 
 
-    public CharacterListItem(Character character, CharacterInfoScreenController characterInfoScreenController){
+    public CharacterListItem(Character character){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CharacterListItem.fxml"));
+        System.out.println("loaded chosen");
         fxmlLoader.setRoot(this);
+        System.out.println("root set");
         fxmlLoader.setController(this);
+        System.out.println("controller set");
 
         try {
             fxmlLoader.load();
+            System.out.println("fxml opened");
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        System.out.println("fxml opened");
 
-        this.parentController = characterInfoScreenController;
         populateCharacterListView(character);
-
+        System.out.println("population complete");
 
     }
 

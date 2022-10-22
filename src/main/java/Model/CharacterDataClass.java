@@ -70,6 +70,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      */
     public CharacterDataClass setRaceName(String raceName){
         this.raceName = raceName;
+        System.out.println(raceName);
         return this;
     }
 
@@ -177,7 +178,6 @@ public class CharacterDataClass implements CharacterDataCollection{
      */
     public void setStrength(int strength){
         stats.put(StatName.Strength, strength);
-        System.out.println(strength);
     }
 
     /**
@@ -185,7 +185,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param intelligence the intelligence stat of the character, as an integer.
      */
     public void setIntelligence(int intelligence){
-        stats.put(StatName.Intelligence, intelligence);
+        this.stats.put(StatName.Intelligence, intelligence);
         System.out.println(intelligence);
 
     }
@@ -195,7 +195,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param constitution the constitution stat of the character, as an integer.
      */
     public void setConstitution(int constitution){
-        stats.put(StatName.Intelligence, constitution);
+        this.stats.put(StatName.Constitution, constitution);
     }
 
     /**
@@ -203,7 +203,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param wisdom the wisdom stat of the character, as an integer.
      */
     public void setWisdom(int wisdom){
-        stats.put(StatName.Wisdom, wisdom);
+        this.stats.put(StatName.Wisdom, wisdom);
         System.out.println(wisdom);
 
     }
@@ -213,7 +213,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param charisma the charisma stat of the character, as an integer.
      */
     public void setCharisma(int charisma){
-        stats.put(StatName.Charisma, charisma);
+        this.stats.put(StatName.Charisma, charisma);
     }
 
     /**
@@ -221,7 +221,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param dexterity the dexterity stat of the character, as an integer.
      */
     public void setDexterity(int dexterity){
-        stats.put(StatName.Dexterity, dexterity);
+        this.stats.put(StatName.Dexterity, dexterity);
     }
 
     @Override

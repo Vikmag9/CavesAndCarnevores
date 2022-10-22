@@ -1,6 +1,7 @@
 package Controllers;
 
 import Model.Character;
+import Model.CharacterSingleton;
 import Model.Items.Inventory;
 import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
@@ -8,10 +9,12 @@ import Model.ProficiencySkills;
 import Model.StatName;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
@@ -21,6 +24,8 @@ import java.net.URL;
 import java.util.*;
 
 public class CharacterInfoScreenController implements Initializable {
+
+    private Character character;
 
     @FXML private Button receiveDataButton;
 
@@ -90,15 +95,12 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private TextArea languagesTextArea;
 
 
-    @FXML Label characterNameLabel;
-    @FXML Label characterRaceLabel;
-    @FXML Label characterClassLabel;
     @FXML Label characterLevelLabel;
 
 
-    @FXML TextField nameTextField;
-    @FXML TextField raceTextField;
-    @FXML TextField jobTextField;
+    @FXML Text characterNameText;
+    @FXML Text characterRaceText;
+    @FXML Text characterClassText;
 
     // Combat fx:ids
 
@@ -203,22 +205,28 @@ public class CharacterInfoScreenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-        System.out.println("here");
-
+        this.character = CharacterSingleton.getInstance().getCharacter();
         setActionsTextArea();
+        System.out.println("1");
         setReactionsTextArea();
+        System.out.println("2");
         setBonusActionsTextArea();
+        System.out.println("3");
         prepareRadioButtons();
-        prepareCheckBoxes(new ArrayList<ProficiencySkills>(List.of(ProficiencySkills.Acrobatics)));
-        // prepareStats(character.getStats());
+        System.out.println(character.getName());
+        prepareCheckBoxes(character.getProficiencySkills());
+        System.out.println("5");
+        prepareStats(character.getStats());
+        System.out.println("6");
         prepareModifiers();
-        // prepareName(character.getName());
-        // prepareRace(character.getRaceName());
-        // prepareJob(character.getJobName());
-        // prepareSpells();
-        prepareReceiveDataButton();
+        System.out.println("7");
+        prepareName(character.getName());
+        System.out.println("8");
+        prepareRace(character.getRaceName());
+        System.out.println("9");
+        prepareJob(character.getJobName());
+        System.out.println("10");
+        //prepareSpells();
     }
 
     private void prepareReceiveDataButton() {
@@ -308,15 +316,15 @@ public class CharacterInfoScreenController implements Initializable {
     }*/
 
     private void prepareName(String string){
-        nameTextField.setText(string);
+        characterNameText.setText(string);
     }
 
     private void prepareRace(String string){
-        raceTextField.setText(string);
+        characterRaceText.setText(string);
     }
 
     private void prepareJob(String string){
-        jobTextField.setText(string);
+        characterClassText.setText(string);
     }
 
     private void prepareStats(HashMap<StatName, Integer> stats){
@@ -476,5 +484,6 @@ public class CharacterInfoScreenController implements Initializable {
         String race = character.getRaceName();
         System.out.println(name);
         System.out.println(race);
+        this.character = character;
     }
 }
