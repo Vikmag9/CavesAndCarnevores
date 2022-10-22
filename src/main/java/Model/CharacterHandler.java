@@ -105,4 +105,5 @@ public class CharacterHandler {
         characterNames.forEach(name -> listOfCharacters.add(loadCharacter(name)));
         return listOfCharacters;
     }
+
 }

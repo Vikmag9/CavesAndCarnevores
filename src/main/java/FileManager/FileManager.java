@@ -35,7 +35,6 @@ public class FileManager {
         }
     }
 
-
     public void saveMap(HashMap map, String filePath) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -48,6 +47,11 @@ public class FileManager {
         }
     }
 
+    /**
+     * Creates a String list of the names of the files in a certain directory based on a path.
+     * @param dirPath the directory of the folder
+     * @return a String List of the file names in the folder
+     */
     public List<String> getFilesInDirectory(String dirPath) {
         File folder = new File(dirPath);
         File[] listOfFiles = folder.listFiles();
