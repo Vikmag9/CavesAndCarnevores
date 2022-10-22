@@ -1,3 +1,4 @@
+import FileManager.FileManager;
 import Model.CharacterHandler;
 import Model.Items.Inventory;
 import Model.Items.InventoryItem;
@@ -7,6 +8,7 @@ import Model.Character;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,7 +18,7 @@ import static org.junit.Assert.*;
 public class Character_test {
     /*
     @Test
-    public void createBarbarianTest() throws IOException, ClassNotFoundException {
+    public void createBarbarianTest(){
         Model.Job charJob = new Model.Job("Barbarian");
         List<Model.Feature> featureList = charJob.getFeatures();
 
@@ -47,7 +49,7 @@ public class Character_test {
     }
 
     @Test
-    public void createBardTest() throws IOException, ClassNotFoundException {
+    public void createBardTest(){
         Model.Job charJob = new Model.Job("Bard");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -76,7 +78,7 @@ public class Character_test {
     }
 
     @Test
-    public void createClericTest() throws IOException, ClassNotFoundException {
+    public void createClericTest(){
         Model.Job charJob = new Model.Job("Cleric");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -103,7 +105,7 @@ public class Character_test {
     }
 
     @Test
-    public void createDruidTest() throws IOException, ClassNotFoundException {
+    public void createDruidTest(){
         Model.Job charJob = new Model.Job("Druid");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -131,7 +133,7 @@ public class Character_test {
     }
 
     @Test
-    public void createFighterTest() throws IOException, ClassNotFoundException {
+    public void createFighterTest(){
             Model.Job charJob = new Model.Job("Fighter");
             List<Model.Feature> featureList = charJob.getFeatures();
             HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -159,7 +161,7 @@ public class Character_test {
         }
 
     @Test
-    public void createMonkTest() throws IOException, ClassNotFoundException {
+    public void createMonkTest(){
         Model.Job charJob = new Model.Job("Monk");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -187,7 +189,7 @@ public class Character_test {
     }
 
     @Test
-    public void createPaladinTest() throws IOException, ClassNotFoundException {
+    public void createPaladinTest(){
         Model.Job charJob = new Model.Job("Paladin");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -214,7 +216,7 @@ public class Character_test {
     }
 
     @Test
-    public void createRangerTest() throws IOException, ClassNotFoundException {
+    public void createRangerTest(){
         Model.Job charJob = new Model.Job("Ranger");
         List<Model.Feature> featureList = charJob.getFeatures();
         HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
@@ -241,7 +243,7 @@ public class Character_test {
     }
 
     @Test
-    public void createRougeTest() throws IOException, ClassNotFoundException {
+    public void createRougeTest() {
         Model.Job charJob = new Model.Job("Rogue");
         List<Model.Feature> featureList = charJob.getFeatures();
 
@@ -268,7 +270,7 @@ public class Character_test {
     }
 
     @Test
-    public void testBarbarianParsing() throws IOException, ClassNotFoundException {
+    public void testBarbarianParsing(){
         Model.Job charJob = new Model.Job("Barbarian");
         Inventory inventory = new Inventory(1);
         Model.Character BarbarianCharacter = new Model.Character("Gregg", new Model.Race("Human"),
@@ -319,7 +321,7 @@ public class Character_test {
      */
 
     @Test
-    public void createRaceTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    public void createRaceTest(){
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
@@ -337,7 +339,7 @@ public class Character_test {
         charData.setLevel(1);
         charData.setInventory(inventory);
 
-        HashMap<StatName, Integer> charStats  = new HashMap<StatName, Integer>();
+        HashMap<StatName, Integer> charStats  = new HashMap<>();
         charStats.put(StatName.Strength, 10);
         charStats.put(StatName.Dexterity, 10);
         charStats.put(StatName.Constitution, 12);
@@ -361,7 +363,7 @@ public class Character_test {
     }
 
     @Test
-    public void calculateHpTest() throws CloneNotSupportedException {
+    public void calculateHpTest() {
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
@@ -399,7 +401,7 @@ public class Character_test {
     }
 
     @Test
-    public void saveCharacterTest() throws IOException, ClassNotFoundException, CloneNotSupportedException {
+    public void saveCharacterTest(){
         Job charJob = new Job("Rogue");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
@@ -420,7 +422,7 @@ public class Character_test {
         charData.setBackground("Orphan");
         charData.setRaceName("Dwarf");
         charData.setJobName("Rogue");
-        charData.setName("Gregg");
+        charData.setName("Harold");
         charData.setAlignment("Chaotic Good");
         charData.setLevel(1);
         charData.setInventory(inventory);
@@ -456,6 +458,13 @@ public class Character_test {
     }
 
     @Test
+    public void loadAllCharactersTest(){
+        FileManager fm = new FileManager();
+        List<Character> listOfCharacters = new ArrayList<>(CharacterHandler.loadAllCharacters());
+        listOfCharacters.forEach(character -> assertTrue(character instanceof Character));
+    }
+
+    @Test
     public void testCalculateModifiers() {
         CharacterDataClass charData = new CharacterDataClass();
         HashMap<StatName, Integer> charStats  = new HashMap<>();
@@ -469,7 +478,7 @@ public class Character_test {
         Character character = new Character(charData, 1);
         HashMap<StatName, Integer> modifiers = character.calculateModifiers();
         System.out.println(modifiers.get(StatName.Strength));
-        assertTrue(modifiers.get(StatName.Strength) == -4);
+        assertEquals(-4, (int) modifiers.get(StatName.Strength));
     }
 
 
