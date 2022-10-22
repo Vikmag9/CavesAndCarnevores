@@ -26,6 +26,9 @@ public class SceneController implements Initializable {
     @FXML private Button MyCharactersHeaderButton;
 
 
+
+
+
     //navigational methods to switch fxml files in the center part of the border pane
 
     @FXML private void openStartScreen() {
@@ -50,7 +53,7 @@ public class SceneController implements Initializable {
 
     @FXML private void openCharacterInfoScreen() {
         try {
-            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterInfoScreen.fxml"));
+            AnchorPane startScreen = FXMLLoader.load(getClass().getResource("CharacterScreen.fxml"));
             borderPane.setCenter(startScreen);
         } catch (Exception e) {
             System.out.println("Error loading FXML file: " + e);
