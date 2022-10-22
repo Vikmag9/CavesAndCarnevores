@@ -22,7 +22,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="createCharacterHeaderButton1" layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Character" AnchorPane.topAnchor="40.0">
+      <Button fx:id="createCharacterHeaderButton1" layoutX="837.0" layoutY="40.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: #6FAD59; -fx-background-radius: 20;" styleClass="buttons_font_large" stylesheets="@Font.css" text="Create Model.Character" AnchorPane.topAnchor="40.0">
          <effect>
             <DropShadow />
          </effect>
