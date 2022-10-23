@@ -458,6 +458,7 @@ public class Character_test {
         }
         assertEquals(character.getJob().getJobName(), "Rogue");
         assertEquals(character.getJob().getHitDie(), 8);
+        assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests
         assertEquals(character.getHealth(), 6);
 

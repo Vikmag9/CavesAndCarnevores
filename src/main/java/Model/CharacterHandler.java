@@ -88,13 +88,12 @@ public class CharacterHandler {
         enumStat.put(StatName.Charisma, stats.get("Charisma"));
         character.setStats(enumStat);
 
-        /*
-        List<Proficiencies> skillProfs = new ArrayList();
+        ArrayList<ProficiencySkills> skillProfs = new ArrayList();
         List<String> skillProfsString = (List<String>) characterData.get("SkillProficiencies");
         skillProfsString.forEach(skill -> {
-            String x = skill;
-            skillProfs.add(Proficiencies.valueOf(skill));
-        });*/
+            skillProfs.add(ProficiencySkills.valueOf(skill));
+        });
+        character.setProficiencySkills(skillProfs);
 
         Character characterObject = new Character(character, character.getLevel());
         String subRace = characterData.get("Subrace").toString();
