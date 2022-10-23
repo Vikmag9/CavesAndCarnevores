@@ -333,4 +333,8 @@ public class Character implements CharacterDataCollection {
         return this.feats;
     }
 
+    public Map<Proficiencies, List<String>> getProficiencies(){
+        return this.proficiencies;
+    }
+
 }

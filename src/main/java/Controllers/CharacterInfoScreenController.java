@@ -1,12 +1,10 @@
 package Controllers;
 
+import Model.*;
 import Model.Character;
-import Model.CharacterSingleton;
 import Model.Items.Inventory;
 import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
-import Model.ProficiencySkills;
-import Model.StatName;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.Event;
@@ -194,6 +192,9 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private Button itemRemoveButton;
     @FXML private Button itemConsumeButton;
 
+    @FXML private ListView<String> featureListView;
+    @FXML private ListView<String> proficiencyListView;
+
     /**
      * Initializes the controller class for the CharacterInfoScreen.fxml.
      * A necessary method for the FXML to work, since it is needed for the initializeable interface.
@@ -206,11 +207,9 @@ public class CharacterInfoScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.character = CharacterSingleton.getInstance().getCharacter();
-        setActionsTextArea();
+
         System.out.println("1");
-        setReactionsTextArea();
         System.out.println("2");
-        setBonusActionsTextArea();
         System.out.println("3");
         prepareRadioButtons();
         System.out.println(character.getName());
@@ -218,7 +217,7 @@ public class CharacterInfoScreenController implements Initializable {
         System.out.println("5");
         prepareStats(character.getStats());
         System.out.println("6");
-        prepareModifiers();
+        prepareModifiers(character.calculateModifiers());
         System.out.println("7");
         prepareName(character.getName());
         System.out.println("8");
@@ -226,6 +225,8 @@ public class CharacterInfoScreenController implements Initializable {
         System.out.println("9");
         prepareJob(character.getJobName());
         System.out.println("10");
+        prepareFeatures(character.getFeatures());
+        prepareProficiencies(character.getProficiencies());
         //prepareSpells();
     }
 
@@ -243,52 +244,36 @@ public class CharacterInfoScreenController implements Initializable {
      * Sets the actions to be displayed in the text area.
      * Could be used to set the actions specific to the character, but is currently set to a generalized text that work for all characters.
      */
-    private void setActionsTextArea() {
-        String actions = """
-                - Attack
-                - Dash
-                - Disengage
-                - Dodge
-                - Help
-                - Hide
-                - Search
-                - Use an Object
-                - Grapple
-                - Shove
-                - Cast a Spell
-                - Ready An Action
-                - Use a Class Feature""";
-
-        featuresTextArea.setEditable(false);
-        featuresTextArea.setText(actions);
+    private void prepareFeatures(List<Feature> features) {
+        features.forEach(feature -> {
+            featureListView.getItems().add(feature.getName());
+            featureListView.getItems().add(feature.getDesc());
+        });
     }
 
+    private void prepareProficiencies(Map<Proficiencies, List<String>> proficiencies) {
+        for (Proficiencies category : Proficiencies.values()) {
+            System.out.println(category);
+            proficiencyListView.getItems().add(category.toString());
+            List<String> profs = proficiencies.get(category);
+            System.out.println(profs);
+            for(String prof : profs){
+                System.out.println(prof);
+                proficiencyListView.getItems().add(prof);
+            }
+        }
+
+
+
+    }
     /*Sets the reactions to be displayed in the text area. Could be used to set the reactions specific to the character,
     but is currently set to a generalized text that work for all characters. */
 
-    private void setReactionsTextArea() {
-        String reactions = """
-                - Opportunity Attack
-                - Perform a readied action
-                - Cast a spell
-                """;
 
-        proficienciesTextArea.setEditable(false);
-        proficienciesTextArea.setText(reactions);
-    }
 
     /* Sets the bonus actions to be displayed in the text area. Could be used to set the bonus actions specific to the
      * character, but is currently set to a generalized text that work for all characters. */
-    private void setBonusActionsTextArea() {
-        String bonusActions = """
-                - Offhand Attack
-                - Cast a spell
-                - Use a Class Feature
-                """;
 
-        spellTextArea.setEditable(false);
-        spellTextArea.setText(bonusActions);
-    }
 
     /*private void prepareSpells() {
         List<List<String>> sortedSpellList = new ArrayList<>();
@@ -336,13 +321,13 @@ public class CharacterInfoScreenController implements Initializable {
         dexText.setText(stats.get(StatName.Dexterity).toString());
     }
 
-    private void prepareModifiers(){
-        strengthModifierText.setText("5");
-        intelligenceModifierText.setText("5");
-        wisdomModifierText.setText("5");
-        constitutionModifierText.setText("5");
-        charismaModifierText.setText("5");
-        dexterityModifierText.setText("5");
+    private void prepareModifiers(HashMap<StatName, Integer> modifiers){
+        strengthModifierText.setText(modifiers.get(StatName.Strength).toString());
+        intelligenceModifierText.setText(modifiers.get(StatName.Intelligence).toString());
+        wisdomModifierText.setText(modifiers.get(StatName.Wisdom).toString());
+        constitutionModifierText.setText(modifiers.get(StatName.Constitution).toString());
+        charismaModifierText.setText(modifiers.get(StatName.Charisma).toString());
+        dexterityModifierText.setText(modifiers.get(StatName.Dexterity).toString());
     }
 
     private void prepareSpell(Map<String, String> map) {

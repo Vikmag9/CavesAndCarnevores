@@ -21,4 +21,12 @@ public class Feature {
     public int getLevel() {
         return this.levelPrerequisites;
     }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }
