@@ -2,6 +2,7 @@ package Controllers;
 
 import Model.Character;
 import Model.CharacterHandler;
+import Model.CharacterSingleton;
 import Model.ProficiencySkills;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,62 +11,85 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CharacterScreenController implements Initializable {
 
     @FXML private Button sendDataButton;
+    @FXML private FlowPane charactersFlowPane;
+    @FXML private ComboBox<String> characterCombo;
+    private String selectedCharacter;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        prepareSendDataButton();
-        setCharacterArea();
+        prepareCombobox();
+        prepareSendData();
     }
 
-    private void prepareSendDataButton() {
-        sendDataButton.setOnMouseClicked(event -> sendData(event));
+    private void prepareCombobox() {
+        List<Character> characters = CharacterHandler.loadAllCharacters();
+        List<String> characterNames = new ArrayList<>();
+        characters.forEach(character -> {
+            characterNames.add(character.getName());
+        });
+        characterCombo.getItems().addAll(characterNames);
+        characterCombo.getSelectionModel().selectFirst();
+        characterCombo.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> selectedCharacter = newValue);
     }
 
-    @FXML
-    private void setCharacterArea(){
-        // Load all existing characters to the flowpane in Controllers.CharacterScreen.fxml
-    }
-    @FXML
-    private void deleteCharacter(){
-        // Delete a preexisting character
-    }
-
-
-
-
-    private void sendData(MouseEvent event) {
-        // Step 1
-
+    /*private void displayCharacters(){
+        charactersFlowPane.getChildren().clear();
+        /*CharacterHandler.loadAllCharacters().forEach(character ->{
+            charactersFlowPane.getChildren().add(new CharacterListItem(character));
+        });
         Character character = CharacterHandler.loadCharacter("Gregg");
-        // Step 2
-        Node node = (Node) event.getSource();
-        // Step 3
-        Stage stage = (Stage) node.getScene().getWindow();
-        stage.close();
-        try {
-            // Step 4
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("CharacterInfoScreen.fxml"));
+        System.out.println("character loaded");
+        CharacterListItem h = new CharacterListItem(character);
+        System.out.println("listitem");
+        charactersFlowPane.getChildren().add(h);
+
+
+    }
+*/
+
+
+    private void prepareSendData() {
+        sendDataButton.setOnMouseClicked(mouseEvent ->{
+            CharacterSingleton.getInstance().setCharacter(CharacterHandler.loadCharacter(this.selectedCharacter));
+            Node node = (Node) mouseEvent.getSource();
+            // Step 3
+            Stage stage = (Stage) node.getScene().getWindow();
+            stage.close();
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getClassLoader().getResource("CharacterInfoScreen.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             // Step 5
-            stage.setUserData(character);
             // Step 6
             Scene scene = new Scene(root);
             stage.setScene(scene);
             // Step 7
             stage.show();
-        } catch (IOException e) {
-            System.err.println(String.format("Error: %s", e.getMessage()));
-        }
+        });
     }
+
+
+    @FXML
+    private void deleteCharacter(){
+        // Delete a preexisting character
+    }
+
 
 }

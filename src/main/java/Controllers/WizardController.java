@@ -1,6 +1,7 @@
 package Controllers;
 
 import Model.*;
+import Model.Character;
 import Model.Stats.Stats;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -174,12 +175,12 @@ public class WizardController implements Initializable{
 
         jobComboBox.getItems().addAll(jobs);
         jobComboBox.getSelectionModel().selectFirst();
-        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(jobComboBox.getValue()));
+        jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setJobName(jobComboBox.getValue()));
 
         //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
         backgroundComboBox.getSelectionModel().selectFirst();
-        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(backgroundComboBox.getValue()));
+        backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setBackground(backgroundComboBox.getValue()));
     }
 
     @FXML
@@ -328,7 +329,8 @@ public class WizardController implements Initializable{
 
     @FXML
     private void finishCreation() {
-        CharacterHandler.createCharacter(dataClass, 1);
+        Character character = CharacterHandler.createCharacter(dataClass, 1);
+        CharacterHandler.saveCharacter(character);
     }
 
 }

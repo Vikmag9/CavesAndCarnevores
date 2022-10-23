@@ -48,6 +48,7 @@ public class Character implements CharacterDataCollection {
         CharacterDataCollection characterData = data; // Creates copy of data to avoid modifying original data
         this.name = characterData.getName();
         this.alignment = characterData.getAlignment();
+        System.out.println(characterData.getRaceName());
         this.race = new Race(characterData.getRaceName());
         this.raceName = characterData.getRaceName();
         this.job = new Job(characterData.getJobName());
@@ -56,11 +57,12 @@ public class Character implements CharacterDataCollection {
         this.background = characterData.getBackground();
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
+        System.out.println(characterData.getStats());
         this.stats = characterData.getStats();
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = characterData.getInventory();
+        this.inventory = new Inventory(10);
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 
