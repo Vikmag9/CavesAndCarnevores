@@ -63,7 +63,7 @@ public class Character implements CharacterDataCollection {
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = new Inventory(10);
+        this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 
@@ -148,18 +148,18 @@ public class Character implements CharacterDataCollection {
 
 
         jobProfs.forEach((key, value) -> {
-            if (proficiencies.containsKey(key) && value != null) {
+            if (proficiencies.containsKey(Proficiencies.valueOf(key.toString())) && value != null) {
                 proficiencies.put(Proficiencies.valueOf(key.toString()), (List<String>) value);
             }
         });
-
         raceProfs.forEach((key, value) -> {
-            if (proficiencies.containsKey(key) && value != null) {
-                List<String> collection = proficiencies.get(key);
-                collection.addAll((List<String>) value);
-                proficiencies.put(Proficiencies.valueOf(key.toString()), collection);
+            if (proficiencies.containsKey(Proficiencies.valueOf(key.toString())) && value != null) {
+                List profs = proficiencies.get(Proficiencies.valueOf(key.toString()));
+                profs.addAll((List<String>) value);
+                proficiencies.put(Proficiencies.valueOf(key.toString()), profs);
             }
         });
+
         return proficiencies;
     }
 

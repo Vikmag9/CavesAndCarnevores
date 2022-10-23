@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -402,7 +403,7 @@ public class Character_test {
 
     @Test
     public void saveCharacterTest(){
-        Job charJob = new Job("Rogue");
+        Job charJob = new Job("Monk");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
 
@@ -421,7 +422,7 @@ public class Character_test {
         CharacterDataClass charData = new CharacterDataClass();
         charData.setBackground("Orphan");
         charData.setRaceName("Dwarf");
-        charData.setJobName("Rogue");
+        charData.setJobName("Monk");
         charData.setName("Gregg");
         charData.setAlignment("Chaotic Good");
         charData.setLevel(1);
@@ -456,11 +457,13 @@ public class Character_test {
         if (character.getRace().getSubRace() != null) {
             assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
-        assertEquals(character.getJob().getJobName(), "Rogue");
+        Map<Proficiencies, List<String>> proficiencies = character.getProficiencies();
+        assertEquals(character.getJob().getJobName(), "Monk");
         assertEquals(character.getJob().getHitDie(), 8);
         assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests
         assertEquals(character.getHealth(), 6);
+
 
     }
 
