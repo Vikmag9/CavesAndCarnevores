@@ -5,10 +5,7 @@ import Model.Items.Inventory;
 import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CharacterHandler {
     private static FileManager fm = new FileManager();
@@ -27,7 +24,7 @@ public class CharacterHandler {
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
-        characterData.put("Model", character.getStats());
+        characterData.put("Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
         characterData.put("HP", String.valueOf(character.getHealth()));
         characterData.put("Alignment", character.getAlignment());
@@ -37,7 +34,6 @@ public class CharacterHandler {
         else {
             characterData.put("Subrace", "None");
         }
-        characterData.put("Proficiencies", character.getJob().getProficiencies());
         characterData.put("SkillProficiencies", character.getProficiencySkills());
 
         fm.saveMap(characterData, "src/main/resources/characters/" + character.getName());
@@ -74,11 +70,12 @@ public class CharacterHandler {
         inventory.setInventory(inventoryItemListParsed);
         character.setInventory(inventory);
 
-
         character.getInventory().getCoinBag().setCoins(Integer.parseInt((String) characterData.get("Gold")));
         character.getInventory().setInventory(inventoryItemListParsed);
 
-        HashMap<String, Integer> stats = (HashMap<String, Integer>) characterData.get("Model");
+
+
+        HashMap<String, Integer> stats = (HashMap<String, Integer>) characterData.get("Stats");
         HashMap<StatName, Integer> enumStat = new HashMap<>();
         enumStat.put(StatName.Strength, stats.get("Strength"));
         enumStat.put(StatName.Dexterity, stats.get("Dexterity"));
@@ -100,6 +97,7 @@ public class CharacterHandler {
         if (!subRace.equals("None")) {
             characterObject.getRace().setSubRace(new Race(character.getRaceName(), subRace));
         }
+
 
 
         return characterObject;
