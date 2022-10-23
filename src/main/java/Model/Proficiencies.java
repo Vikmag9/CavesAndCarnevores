@@ -6,8 +6,5 @@ public enum Proficiencies {
     Tools,
     SavingThrows,
     Skills,
-    SkillChoices,
-    SkillOptions,
-
     Other
 }

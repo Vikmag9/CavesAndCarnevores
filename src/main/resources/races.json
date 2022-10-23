@@ -23,7 +23,7 @@
       "Armor": [],
       "Weapons": ["Battleaxe", "Handaxe", "Light hammer", "Warhammer"],
       "Tools": [],
-      "SavingThrows": [],
+      "Saving throws": [],
       "SkillOptions": []
     },
     "Subraces": [
@@ -44,7 +44,7 @@
            "Armor": [],
            "Weapons": [],
            "Tools": [],
-           "SavingThrows": [],
+           "Saving throws": [],
            "SkillOptions": []
          }
        }
@@ -66,7 +66,7 @@
            "Armor": ["Light armor", "Medium armor"],
            "Weapons": [],
            "Tools": [],
-           "SavingThrows": [],
+           "Saving throws": [],
            "SkillOptions": []
          }
        }
@@ -96,7 +96,7 @@
       "Armor": [],
       "Weapons": ["Longsword", "Shortsword", "Shortbow", "Longbow"],
       "Tools": [],
-      "SavingThrows": [],
+      "Saving throws": [],
       "SkillOptions": ["Perception"]
     },
     "Subraces": [
@@ -122,7 +122,7 @@
             "Armor": [],
             "Weapons": [],
             "Tools": [],
-            "SavingThrows": [],
+            "Saving throws": [],
             "SkillOptions": []
           }
         }
@@ -148,7 +148,7 @@
             "Armor": [],
             "Weapons": [],
             "Tools": [],
-            "SavingThrows": [],
+            "Saving throws": [],
             "SkillOptions": []
           }
         }
@@ -170,7 +170,7 @@
       "Armor": [],
       "Weapons": [],
       "Tools": [],
-      "SavingThrows": [],
+      "Saving throws": [],
       "SkillOptions": []
     },
     "Subraces":[
@@ -194,7 +194,7 @@
                 "Armor": [],
                 "Weapons": [],
                 "Tools": [],
-                "SavingThrows": [],
+                "Saving throws": [],
                 "SkillOptions": []
             }
         }
@@ -219,7 +219,7 @@
                 "Armor": [],
                 "Weapons": [],
                 "Tools": [],
-                "SavingThrows": [],
+                "Saving throws": [],
                 "SkillOptions": []
             }
         }
@@ -236,7 +236,7 @@
         "Armor": [],
         "Weapons": [],
         "Tools": [],
-        "SavingThrows": [],
+        "Saving throws": [],
         "SkillOptions": []
         },
     "Subraces": []
@@ -256,7 +256,7 @@
           "Armor": [],
           "Weapons": [],
           "Tools": [],
-          "SavingThrows": [],
+          "Saving throws": [],
           "SkillOptions": []
       },
      "Subraces": []
