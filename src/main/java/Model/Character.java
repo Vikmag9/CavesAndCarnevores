@@ -63,7 +63,7 @@ public class Character implements CharacterDataCollection {
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = new Inventory(10);
+        this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 

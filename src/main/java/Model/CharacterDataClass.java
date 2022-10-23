@@ -255,6 +255,9 @@ public class CharacterDataClass implements CharacterDataCollection{
 
     @Override
     public Inventory getInventory() {
+        if (this.inventory == null){
+            this.inventory = new Inventory(0);
+        }
         return this.inventory;
     }
 
