@@ -30,6 +30,7 @@ public class Character implements CharacterDataCollection {
     private String languages;
     private String organisation;
     private String earlierLife;
+    private String notes;
     private ArrayList<ProficiencySkills> proficiencySkills;
     int modifier;
     HashMap<StatName, Integer> modifiers;
@@ -137,6 +138,7 @@ public class Character implements CharacterDataCollection {
         proficiencies.put(Proficiencies.Tools, Collections.emptyList());
         proficiencies.put(Proficiencies.SavingThrows, Collections.emptyList());
         proficiencies.put(Proficiencies.Skills, Collections.emptyList());
+        proficiencies.put(Proficiencies.Other, Collections.emptyList());
 
 
         Map jobProfs = this.job.getProficiencies();

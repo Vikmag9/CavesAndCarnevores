@@ -38,6 +38,7 @@ public class CharacterHandler {
             characterData.put("Subrace", "None");
         }
         characterData.put("Proficiencies", character.getJob().getProficiencies());
+        characterData.put("SkillProficiencies", character.getProficiencySkills());
 
         fm.saveMap(characterData, "src/main/resources/characters/" + character.getName());
 
@@ -63,6 +64,7 @@ public class CharacterHandler {
 
         Inventory inventory = new Inventory(0);
         List<Map> inventoryItemListLoaded = (List<Map>) characterData.get("Inventory");
+
         List<InventoryItem> inventoryItemListParsed = new ArrayList();
         inventoryItemListLoaded.forEach(item -> {
             InventoryItemBuilder builder = new InventoryItemBuilder(item.get("itemType").toString(), item.get("itemName").toString(), item.get("itemDescription").toString(),Integer.parseInt(item.get("itemValue").toString()), Double.parseDouble(item.get("itemWeight").toString()), Boolean.parseBoolean(item.get("isMagical").toString()));
@@ -86,11 +88,21 @@ public class CharacterHandler {
         enumStat.put(StatName.Charisma, stats.get("Charisma"));
         character.setStats(enumStat);
 
+        /*
+        List<Proficiencies> skillProfs = new ArrayList();
+        List<String> skillProfsString = (List<String>) characterData.get("SkillProficiencies");
+        skillProfsString.forEach(skill -> {
+            String x = skill;
+            skillProfs.add(Proficiencies.valueOf(skill));
+        });*/
+
         Character characterObject = new Character(character, character.getLevel());
         String subRace = characterData.get("Subrace").toString();
         if (!subRace.equals("None")) {
             characterObject.getRace().setSubRace(new Race(character.getRaceName(), subRace));
         }
+
+
         return characterObject;
     }
 

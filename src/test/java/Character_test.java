@@ -436,6 +436,11 @@ public class Character_test {
         charStats.put(StatName.Charisma, 10);
 
         charData.setStats(charStats);
+        ArrayList<ProficiencySkills> profSkills = new ArrayList<>();
+        profSkills.add(ProficiencySkills.Athletics);
+        profSkills.add(ProficiencySkills.Perception);
+        profSkills.add(ProficiencySkills.Stealth);
+        charData.setProficiencySkills(profSkills);
 
         Character character = new Character(charData, charData.getLevel());
         //character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));

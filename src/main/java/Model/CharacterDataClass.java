@@ -4,6 +4,7 @@ import Model.Items.Inventory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /*
 This class has taken inspiration from the builder pattern. It behaves like a builder, but the builder pattern is not used.
@@ -30,7 +31,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private int level;
     private String background;
     private HashMap<StatName, Integer> stats;
-    ArrayList<ProficiencySkills> proficiencySkills;
+    private ArrayList<ProficiencySkills> proficiencySkills;
     private int xp;
 
     /**
@@ -222,6 +223,14 @@ public class CharacterDataClass implements CharacterDataCollection{
      */
     public void setDexterity(int dexterity){
         this.stats.put(StatName.Dexterity, dexterity);
+    }
+    /**
+     * Sets the skill proficiencies for a character in the Model.CharacterDataClass.
+     * @param proficiencySkills the skill proficiencies for the character, as a list of strings.
+     * @return A list of the skill proficiencies for the character.
+     */
+    public void setProficiencySkills(ArrayList<ProficiencySkills> proficiencySkills) {
+        this.proficiencySkills = proficiencySkills;
     }
 
     @Override
