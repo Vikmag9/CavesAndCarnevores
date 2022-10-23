@@ -174,8 +174,13 @@ public class CharacterInfoScreenController implements Initializable {
         this.character = CharacterSingleton.getInstance().getCharacter();
 
         prepareRadioButtons();
+        System.out.println("1");
         System.out.println(character.getName());
+        System.out.println("2");
+
         prepareCheckBoxes(character.getProficiencySkills());
+        System.out.println("3");
+
         prepareStats(character.getStats());
         prepareModifiers(character.calculateModifiers());
         prepareName(character.getName());
