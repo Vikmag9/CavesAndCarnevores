@@ -16,7 +16,6 @@ public class Character implements CharacterDataCollection {
     private Job job; // Model.Job represents a D&D Class since "class" is otherwise a keyword in java.
     private List<Feature> feats;
     private int health;
-    private String Alignment;
     private int xp;
     private int level;
     private int armorClass;
@@ -31,6 +30,9 @@ public class Character implements CharacterDataCollection {
     private String organisation;
     private String earlierLife;
     private String notes;
+
+    private String corememories;
+
     private ArrayList<ProficiencySkills> proficiencySkills;
     int modifier;
     HashMap<StatName, Integer> modifiers;
@@ -40,7 +42,6 @@ public class Character implements CharacterDataCollection {
      *
      * @param data The data to be used to create the character, as an object that implements the Model.CharacterDataCollection interface.
      * @param level The level of the character, as an integer.
-     * @throws IOException
      * @throws ClassNotFoundException
      * @throws CloneNotSupportedException
      */
@@ -56,17 +57,22 @@ public class Character implements CharacterDataCollection {
         this.jobName = characterData.getJobName();
         this.xp = characterData.getXp();
         this.background = characterData.getBackground();
-        this.notes = characterData.getNotes();
-        this.organisation = characterData.getOrganisations();
-        this.earlierLife = characterData.getEarlierLife();
+        if (characterData.getNotes() != null) {
+            this.notes = characterData.getNotes();
+        }
+        if (characterData.getOrganisations() != null) {
+            this.organisation = characterData.getOrganisations();
+        }
+        if (characterData.getEarlierLife() != null) {
+            this.earlierLife = characterData.getEarlierLife();
+        }
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
-        System.out.println(characterData.getStats());
         this.stats = characterData.getStats();
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = new Inventory(10);
+        this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 
@@ -93,6 +99,10 @@ public class Character implements CharacterDataCollection {
             }
         });
         return (ac.get() + additionalAC.get());
+    }
+
+    public int getAC(){
+        return calculateAC();
     }
 
     /**
@@ -225,6 +235,22 @@ public class Character implements CharacterDataCollection {
         this.inventory = inventory;
     }
 
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public void setOrganisation(String organisation) {
+        this.organisation = organisation;
+    }
+
+    public void setEarlierLife(String earlierLife) {
+        this.earlierLife = earlierLife;
+    }
+
+    public void setCorememories(String corememories) {
+        this.corememories = corememories;
+    }
+
     public void setProficiencySkills(ArrayList<ProficiencySkills> list){
         this.proficiencySkills = list;
     }
@@ -312,6 +338,11 @@ public class Character implements CharacterDataCollection {
     @Override
     public String getNotes() {
         return this.notes;
+    }
+
+    @Override
+    public String getCorememories() {
+        return this.corememories;
     }
 
     @Override

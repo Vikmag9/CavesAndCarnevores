@@ -24,6 +24,22 @@ public class CharacterHandler {
         characterData.put("Race", character.getRaceName());
         characterData.put("Job", character.getJobName());
         characterData.put("Background", character.getBackground());
+        if (character.getNotes() != null) {
+            characterData.put("Notes", character.getNotes());
+        }
+        if (character.getOrganisations() != null) {
+            characterData.put("Organisations", character.getOrganisations());
+        }
+        if (character.getEarlierLife() != null) {
+            characterData.put("EarlierLife", character.getEarlierLife());
+        }
+        if (character.getCorememories() != null) {
+            characterData.put("Corememories", character.getCorememories());
+        }
+        if (character.getLanguages() != null) {
+            characterData.put("Languages", character.getLanguages());
+        }
+
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
@@ -60,6 +76,21 @@ public class CharacterHandler {
         character.setJobName((String) characterData.get("Job"));
         character.setBackground((String) characterData.get("Background"));
         character.setXp(Integer.parseInt((String) characterData.get("xp")));
+        if (character.getNotes() != null) {
+            character.setNotes((String) characterData.get("Notes"));
+        }
+        if (character.getOrganisations() != null) {
+            character.setOrganisations((String) characterData.get("Organisations"));
+        }
+        if (character.getEarlierLife() != null) {
+            character.setEarlierLife((String) characterData.get("EarlierLife"));
+        }
+        if (character.getCorememories() != null) {
+            character.setCorememories((String) characterData.get("Corememories"));
+        }
+        if (character.getLanguages() != null) {
+            character.setLanguages((String) characterData.get("Languages"));
+        }
 
 
         Inventory inventory = new Inventory(0);

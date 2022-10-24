@@ -443,8 +443,10 @@ public class Character_test {
         charData.setProficiencySkills(profSkills);
 
         Character character = new Character(charData, charData.getLevel());
-        //character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
-        String x = character.getRace().getDescription();
+        character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
+        character.setNotes("I am a note");
+        character.setOrganisation("I am an organisation");
+        character.setEarlierLife("I have an earlier life");
         CharacterHandler.saveCharacter(character);
     }
 
@@ -456,7 +458,7 @@ public class Character_test {
         if (character.getRace().getSubRace() != null) {
             assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
-        assertEquals(character.getJob().getJobName(), "Rogue");
+        assertEquals(character.getJob().getJobName(), "Druid");
         assertEquals(character.getJob().getHitDie(), 8);
         assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests

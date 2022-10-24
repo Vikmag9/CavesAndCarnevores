@@ -39,7 +39,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * constructor for the Model.CharacterDataClass.
      */
     public CharacterDataClass(){
-        this.stats = new HashMap<StatName, Integer>();
+        this.stats = new HashMap<>();
         this.proficiencySkills = new ArrayList<>();
 
     }
@@ -163,8 +163,9 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param coreMemories the core memories of the character, as a string.
      * @return the Model.CharacterDataClass object.
      */
-    public CharacterDataClass setCoreMemories(String coreMemories){
+    public CharacterDataClass setCorememories(String coreMemories){
         this.coreMemories = coreMemories;
+        System.out.println(coreMemories);
         return this;
     }
 
@@ -239,6 +240,9 @@ public class CharacterDataClass implements CharacterDataCollection{
         this.proficiencySkills = proficiencySkills;
         return this;
     }
+
+
+
 
     @Override
     public String getName() {
@@ -320,7 +324,10 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this.proficiencySkills;
     }
 
-
+    @Override
+    public String getCorememories() {
+        return this.coreMemories;
+    }
 
 
 

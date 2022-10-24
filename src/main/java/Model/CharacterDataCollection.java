@@ -24,6 +24,8 @@ public interface CharacterDataCollection {
     public String getOrganisations();
     public String getEarlierLife();
     public String getNotes();
+
+    public String getCorememories();
     public ArrayList<ProficiencySkills> getProficiencySkills();
 
 }

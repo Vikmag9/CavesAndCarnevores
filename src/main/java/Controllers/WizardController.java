@@ -136,7 +136,7 @@ public class WizardController implements Initializable{
         });
 
         earlyLifeTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setEarlierLife(earlyLifeTextArea.getText()));
-        coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCoreMemories(coreMemoriesTextArea.getText()));
+        coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCorememories(coreMemoriesTextArea.getText()));
         organisationTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setOrganisations(organisationTextArea.getText()));
         languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setLanguages(languagesTextArea.getText()));
 

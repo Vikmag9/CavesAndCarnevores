@@ -10,8 +10,8 @@ public final class CharacterSingleton {
         return INSTANCE;
     }
 
-    public void setCharacter(Character u) {
-        this.character = u;
+    public void setCharacter(Character character) {
+        this.character = character;
     }
 
     public Character getCharacter() {
