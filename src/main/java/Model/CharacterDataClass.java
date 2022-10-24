@@ -163,7 +163,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param coreMemories the core memories of the character, as a string.
      * @return the Model.CharacterDataClass object.
      */
-    public CharacterDataClass setCoreMemories(String coreMemories){
+    public CharacterDataClass setCorememories(String coreMemories){
         this.coreMemories = coreMemories;
         return this;
     }
@@ -239,6 +239,9 @@ public class CharacterDataClass implements CharacterDataCollection{
         this.proficiencySkills = proficiencySkills;
         return this;
     }
+
+
+
 
     @Override
     public String getName() {
@@ -320,7 +323,10 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this.proficiencySkills;
     }
 
-
+    @Override
+    public String getCorememories() {
+        return this.coreMemories;
+    }
 
 
 
