@@ -141,6 +141,9 @@
                <Button fx:id="characterLevelUpButton" layoutX="7.0" layoutY="25.0" mnemonicParsing="false" styleClass="skills_font" text="Level Up" />
             </AnchorPane>
             <Button fx:id="receiveDataButton" layoutX="391.0" layoutY="541.0" mnemonicParsing="false" text="Button" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="53.0" layoutX="517.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="202.0" />
+            <Text layoutX="532.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Proficiency Bonus" textAlignment="CENTER" />
+            <TextField fx:id="proficiencyBonusText" layoutX="668.0" layoutY="251.0" prefHeight="28.0" prefWidth="40.0" />
          </AnchorPane>
       </Tab>
       <Tab text="Combat">

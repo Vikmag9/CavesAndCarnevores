@@ -47,6 +47,8 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private Text intelligenceModifierText;
     @FXML private Text charismaModifierText;
 
+    @FXML private TextField proficiencyBonusText;
+
 
     @FXML private Text athleticsSkillLevelText;
     @FXML private Text acrobaticsSkillLevelText;
@@ -188,6 +190,7 @@ public class CharacterInfoScreenController implements Initializable {
         prepareJob(character.getJobName());
         prepareFeatures(character.getFeatures());
         prepareProficiencies(character.getProficiencies());
+        updateSkillProficiencyModifiers();
         //updateInventoryList();
         //prepareSpells();
     }
@@ -438,6 +441,44 @@ public class CharacterInfoScreenController implements Initializable {
         }
     }
 
+    private void updateSkillProficiencyModifiers() {
+        // Update the skill proficiency modifiers
+        if (proficiencyBonusText.getText().isEmpty()) {
+            proficiencyBonusText.setText("0");
+        }
+        Integer proficiencyB = Integer.valueOf(proficiencyBonusText.getText());
+        List<CheckBox> skillsCheckList= Arrays.asList(athleticsCheck, deceptionCheck, intimidationCheck, performanceCheck, persuasionCheck, animalCheck, insightCheck, medicineCheck, perceptionCheck, survivalCheck, arcanaCheck, historyCheck, investigationCheck, natureCheck, religionCheck, acrobaticsCheck, sleightCheck, stealthCheck);
+        List<Text> skillsModifierList = Arrays.asList(athleticsSkillLevelText, deceptionSkillLevelText, intimidationSkillLevelText, performanceSkillLevelText, persuasionSkillLevelText, animalHandlingSkillLevelText, insightSkillLevelText, medicineSkillLevelText, perceptionSkillLevelText, survivalSkillLevelText, arcanaSkillLevelText, historySkillLevelText, investigationSkillLevelText, natureSkillLevelText, religionSkillLevelText, acrobaticsSkillLevelText, sleightOfHandSkillLevelText, stealthSkillLevelText);
+        List<Text> strenghtList = Arrays.asList(athleticsSkillLevelText, intimidationSkillLevelText);
+        List<Text> dexterityList = Arrays.asList(acrobaticsSkillLevelText, sleightOfHandSkillLevelText, stealthSkillLevelText);
+        List<Text> wisdomList = Arrays.asList(insightSkillLevelText, medicineSkillLevelText, perceptionSkillLevelText, survivalSkillLevelText);
+        List<Text> intelligenceList = Arrays.asList(arcanaSkillLevelText, historySkillLevelText, investigationSkillLevelText, natureSkillLevelText, religionSkillLevelText);
+        List<Text> charismaList = Arrays.asList(deceptionSkillLevelText, performanceSkillLevelText, persuasionSkillLevelText);
+        for (int i = 0; i < skillsCheckList.size(); i++) {
+            Integer modifier = 0;
+            if (strenghtList.contains(skillsModifierList.get(i))) {
+                modifier = Integer.valueOf(strengthModifierText.getText());
+            }
+            if (dexterityList.contains(skillsModifierList.get(i))) {
+                modifier = Integer.valueOf(dexterityModifierText.getText());
+            }
+            if (wisdomList.contains(skillsModifierList.get(i))) {
+                modifier = Integer.valueOf(wisdomModifierText.getText());
+            }
+            if (intelligenceList.contains(skillsModifierList.get(i))) {
+                modifier = Integer.valueOf(intelligenceModifierText.getText());
+            }
+            if (charismaList.contains(skillsModifierList.get(i))) {
+                modifier = Integer.valueOf(charismaModifierText.getText());
+            }
+
+            if (skillsCheckList.get(i).isSelected()) {
+                modifier += proficiencyB;
+            }
+            skillsModifierList.get(i).setText(modifier.toString());
+
+        }
+    }
 
 
     private void receiveData(MouseEvent event) {
