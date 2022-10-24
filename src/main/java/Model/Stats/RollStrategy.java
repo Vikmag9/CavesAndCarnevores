@@ -21,10 +21,10 @@ public class RollStrategy implements StatStrategy{
     private int rollOneStat(){
         listOfRolls = new ArrayList<>();
         for(int i = 0; i < 4; i++){
-            listOfRolls.add(this.diceBag.rollDice(6));
+            listOfRolls.add(DiceBag.rollDice(6));
             System.out.println(listOfRolls);
         }
-        listOfRolls.remove(listOfRolls.indexOf(Collections.min(listOfRolls)));
+        listOfRolls.remove(Collections.min(listOfRolls));
         stat = 0;
         System.out.println("!" +listOfRolls);
         for (Integer listOfRoll : listOfRolls) {
