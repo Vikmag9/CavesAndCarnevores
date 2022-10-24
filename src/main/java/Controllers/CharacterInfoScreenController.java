@@ -27,127 +27,57 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private CheckBox athleticsCheck, acrobaticsCheck,sleightCheck, stealthCheck,arcanaCheck,historyCheck,investigationCheck,natureCheck,religionCheck,animalCheck;
     @FXML private CheckBox insightCheck,medicineCheck,perceptionCheck,survivalCheck,deceptionCheck,intimidationCheck,performanceCheck,persuasionCheck;
 
-    @FXML private TextField strengthText;
-    @FXML private TextField dexText;
-    @FXML private TextField conText;
-    @FXML private TextField wisText;
-    @FXML private TextField intText;
-    @FXML private TextField chaText;
+    @FXML private TextField strengthText, dexText, conText, wisText, intText, chaText;
+    @FXML private TextField proficiencyBonusText;
 
 
     //Basics tab fx:ids
 
-    @FXML private Text strengthModifierText;
-    @FXML private Text dexterityModifierText;
-    @FXML private Text constitutionModifierText;
-    @FXML private Text wisdomModifierText;
-    @FXML private Text intelligenceModifierText;
-    @FXML private Text charismaModifierText;
+    @FXML private Text strengthModifierText, dexterityModifierText, constitutionModifierText, wisdomModifierText, intelligenceModifierText, charismaModifierText;
 
-    @FXML private TextField proficiencyBonusText;
+    @FXML private Text athleticsSkillLevelText, acrobaticsSkillLevelText, sleightOfHandSkillLevelText, stealthSkillLevelText, arcanaSkillLevelText, historySkillLevelText, investigationSkillLevelText, natureSkillLevelText, religionSkillLevelText, animalHandlingSkillLevelText, insightSkillLevelText, medicineSkillLevelText, perceptionSkillLevelText, survivalSkillLevelText, deceptionSkillLevelText, intimidationSkillLevelText, performanceSkillLevelText, persuasionSkillLevelText;
 
-
-    @FXML private Text athleticsSkillLevelText;
-    @FXML private Text acrobaticsSkillLevelText;
-    @FXML private Text sleightOfHandSkillLevelText;
-    @FXML private Text stealthSkillLevelText;
-    @FXML private Text arcanaSkillLevelText;
-    @FXML private Text historySkillLevelText;
-    @FXML private Text investigationSkillLevelText;
-    @FXML private Text natureSkillLevelText;
-    @FXML private Text religionSkillLevelText;
-    @FXML private Text animalHandlingSkillLevelText;
-    @FXML private Text insightSkillLevelText;
-    @FXML private Text medicineSkillLevelText;
-    @FXML private Text perceptionSkillLevelText;
-    @FXML private Text survivalSkillLevelText;
-    @FXML private Text deceptionSkillLevelText;
-    @FXML private Text intimidationSkillLevelText;
-    @FXML private Text performanceSkillLevelText;
-    @FXML private Text persuasionSkillLevelText;
-
-    @FXML private TextArea spellsTextArea;
-    @FXML private TextArea languagesTextArea;
-
+    @FXML private TextArea spellsTextArea, languagesTextArea;
 
     @FXML Label characterLevelLabel;
-
-
-    @FXML Text characterNameText;
-    @FXML Text characterRaceText;
-    @FXML Text characterClassText;
+    @FXML Text characterNameText, characterRaceText, characterClassText;
 
     // Combat fx:ids
-
-
-
     @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
-
     @FXML private FlowPane spellsFlowPane;
-
     List<List<String>> spellList;
-
-
 
     // Spells fx:ids
 
-    @FXML private Button level1SpellsButton;
-    @FXML private Button level2SpellsButton;
-    @FXML private Button level3SpellsButton;
-    @FXML private Button level4SpellsButton;
-    @FXML private Button level5SpellsButton;
-    @FXML private Button level6SpellsButton;
-    @FXML private Button level7SpellsButton;
-    @FXML private Button level8SpellsButton;
-    @FXML private Button level9SpellsButton;
-
+    @FXML private Button level1SpellsButton, level2SpellsButton, level3SpellsButton, level4SpellsButton, level5SpellsButton, level6SpellsButton, level7SpellsButton, level8SpellsButton, level9SpellsButton;
 
     // Lore & Notes fx:ids
 
-    @FXML private TextArea earlierLifeTextArea;
-    @FXML private TextArea organizationTextArea;
-    @FXML private TextArea coreMemoriesTextArea;
-    @FXML private TextArea notesTextArea;
+    @FXML private TextArea earlierLifeTextArea, organizationTextArea, coreMemoriesTextArea, notesTextArea;
 
     @FXML private Button loreAndNotesSaveButton;
 
     // Inventory fx:ids
 
-    @FXML private RadioButton equippableRadioButton;
-    @FXML private RadioButton consumableRadioButton;
-    @FXML private RadioButton miscellaneousRadioButton;
-
-    @FXML private CheckBox acCheckBox;
-    @FXML private CheckBox atkBonusCheckBox;
-    @FXML private CheckBox isMagicalCheckBox;
-
+    @FXML private RadioButton equippableRadioButton, consumableRadioButton, miscellaneousRadioButton;
+    @FXML private CheckBox acCheckBox, atkBonusCheckBox, isMagicalCheckBox;
     @FXML private FlowPane inventoryFlowPane;
     @FXML private TextField currentGoldTextField;
 
     //listItem fx-ids
-    @FXML private TextField itemNameTextField;
-    @FXML private TextField itemValueTextField;
+    @FXML private TextField itemNameTextField, itemValueTextField;
     @FXML private TextArea itemCreationDescriptionTextArea;
 
 
-    @FXML private Button createItemButton;
-    @FXML private Button clearItemCreationButton;
+    @FXML private Button createItemButton, clearItemCreationButton;
 
-
-    @FXML private Text itemNameText;
-    @FXML private Text itemTypeText;
-    @FXML private Text itemMagicalText;
-    @FXML private Text itemAttackBonusText;
-    @FXML private Text itemACText;
-    @FXML private Text itemValueText;
+    @FXML private Text itemNameText, itemTypeText, itemMagicalText, itemAttackBonusText, itemACText, itemValueText;
 
     @FXML private TextArea itemDescriptionTextArea;
 
-    @FXML private Button itemSellButton;
-    @FXML private Button itemRemoveButton;
-    @FXML private Button itemConsumeButton;
+    @FXML private Button itemSellButton, itemRemoveButton, itemConsumeButton;
 
     @FXML private ListView<String> featureListView;
     @FXML private ListView<String> proficiencyListView;
