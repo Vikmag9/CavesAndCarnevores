@@ -24,21 +24,12 @@ public class CharacterHandler {
         characterData.put("Race", character.getRaceName());
         characterData.put("Job", character.getJobName());
         characterData.put("Background", character.getBackground());
-        if (character.getNotes() != null) {
-            characterData.put("Notes", character.getNotes());
-        }
-        if (character.getOrganisations() != null) {
-            characterData.put("Organisations", character.getOrganisations());
-        }
-        if (character.getEarlierLife() != null) {
-            characterData.put("EarlierLife", character.getEarlierLife());
-        }
-        if (character.getCorememories() != null) {
-            characterData.put("Corememories", character.getCorememories());
-        }
-        if (character.getLanguages() != null) {
-            characterData.put("Languages", character.getLanguages());
-        }
+
+        characterData.put("Notes", character.getNotes());
+        characterData.put("Organisations", character.getOrganisations());
+        characterData.put("EarlierLife", character.getEarlierLife());
+        characterData.put("Corememories", character.getCorememories());        
+        characterData.put("Languages", character.getLanguages());
 
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoin()));
@@ -76,20 +67,35 @@ public class CharacterHandler {
         character.setJobName((String) characterData.get("Job"));
         character.setBackground((String) characterData.get("Background"));
         character.setXp(Integer.parseInt((String) characterData.get("xp")));
-        if (character.getNotes() != null) {
+        if (characterData.get("Notes") != null) {
             character.setNotes((String) characterData.get("Notes"));
         }
-        if (character.getOrganisations() != null) {
+        else {
+            character.setNotes("");
+        }
+        if (characterData.get("Organisations") != null) {
             character.setOrganisations((String) characterData.get("Organisations"));
         }
-        if (character.getEarlierLife() != null) {
+        else{
+            character.setOrganisations("");
+        }
+        if (characterData.get("EarlierLife") != null) {
             character.setEarlierLife((String) characterData.get("EarlierLife"));
         }
-        if (character.getCorememories() != null) {
+        else {
+            character.setEarlierLife("");
+        }
+        if (characterData.get("Corememories") != null) {
             character.setCorememories((String) characterData.get("Corememories"));
         }
-        if (character.getLanguages() != null) {
+        else {
+            character.setCorememories("");
+        }
+        if (characterData.get("Languages") != null) {
             character.setLanguages((String) characterData.get("Languages"));
+        }
+        else {
+            character.setLanguages("");
         }
 
 

@@ -66,6 +66,12 @@ public class Character implements CharacterDataCollection {
         if (characterData.getEarlierLife() != null) {
             this.earlierLife = characterData.getEarlierLife();
         }
+        if (characterData.getCorememories() != null) {
+            this.corememories = characterData.getCorememories();
+        }
+        if (characterData.getLanguages() != null) {
+            this.languages = characterData.getLanguages();
+        }
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
         this.stats = characterData.getStats();

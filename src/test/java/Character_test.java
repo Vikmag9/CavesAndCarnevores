@@ -447,6 +447,7 @@ public class Character_test {
         character.setNotes("I am a note");
         character.setOrganisation("I am an organisation");
         character.setEarlierLife("I have an earlier life");
+        character.setCorememories("I have a core memory");
         CharacterHandler.saveCharacter(character);
     }
 
@@ -459,6 +460,7 @@ public class Character_test {
             assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
         assertEquals(character.getJob().getJobName(), "Druid");
+        assertEquals(character.getCorememories(), "I have a core memory");
         assertEquals(character.getJob().getHitDie(), 8);
         assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests
