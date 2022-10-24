@@ -471,7 +471,6 @@ public class Character_test {
 
     @Test
     public void loadAllCharactersTest(){
-        FileManager fm = new FileManager();
         List<Character> listOfCharacters = new ArrayList<>(CharacterHandler.loadAllCharacters());
         listOfCharacters.forEach(character -> assertTrue(character instanceof Character));
     }

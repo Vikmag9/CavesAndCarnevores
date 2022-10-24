@@ -12,8 +12,14 @@ public class DiceBag {
      * @return a random int between 1-diceType.
      */
     public static int rollDice(int diceType){
-        Random rand = new Random();
-        return rand.nextInt(diceType)+1; // Generates a random number between 1 and the max of the dice type.
+        switch (diceType) {
+            case 4, 6, 8, 10, 12, 20 -> {
+                Random rand = new Random();
+                return rand.nextInt(diceType) + 1; // Generates a random number between 1 and the max of the dice type.
+            }
+            default -> throw new IllegalArgumentException("Unexpected value: " + diceType);
+        }
+
     }
 
 }
