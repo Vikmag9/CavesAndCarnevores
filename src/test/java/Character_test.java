@@ -495,7 +495,7 @@ public class Character_test {
     @Test
     public void loadSpellsTest(){
         Character character = CharacterHandler.loadCharacter("Gregg");
-        List<String> spells = CharacterHandler.loadSpells(character.getJob());
+        List<String> spells = CharacterHandler.loadSpells(character.getJob().getJobName());
         assertTrue(spells.size() > 0);
 
     }

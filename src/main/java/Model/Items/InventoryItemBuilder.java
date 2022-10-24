@@ -4,7 +4,6 @@ public class InventoryItemBuilder {
     private String itemType; //TODO Make into ENUM
     private String itemName;
     private String itemDescription;
-    private int itemAmount;
     private int itemValue;
     private double itemWeight;
     int ac;

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SpellParser {
     private static FileManager fm = new FileManager();
-    public static List<String> parseSpellsForCharacter(Job job){
+    public static List<String> parseSpellsForCharacter(String job){
         JSONObject jsonSpells = fm.readFile("spells.json");
         JSONArray jsonSpellList = jsonSpells.getJSONArray("spells");
         List<Object> spellList = jsonSpellList.toList();
@@ -20,7 +20,7 @@ public class SpellParser {
         jsonSpellList.forEach(spell -> {
             JSONObject spellObject = (JSONObject) spell;
             JSONArray x = spellObject.getJSONArray("classes");
-            if (spellObject.getJSONArray("classes").toList().contains(job.getJobName())){
+            if (spellObject.getJSONArray("classes").toList().contains(job)){
                 spellNames.add(spellObject.getString("name"));
             }
         });

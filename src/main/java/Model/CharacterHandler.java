@@ -142,7 +142,7 @@ public class CharacterHandler {
         return characterObject;
     }
 
-    public static List<String> loadSpells(Job job){
+    public static List<String> loadSpells(String job){
         return SpellParser.parseSpellsForCharacter(job);
     }
 
