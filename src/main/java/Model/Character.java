@@ -26,6 +26,11 @@ public class Character implements CharacterDataCollection {
     private HashMap<StatName, Integer> stats;
     private String raceName;
     private String jobName;
+
+    public void setLanguages(String languages) {
+        this.languages = languages;
+    }
+
     private String languages;
     private String organisation;
     private String earlierLife;

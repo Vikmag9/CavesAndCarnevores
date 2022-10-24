@@ -27,7 +27,7 @@ public class CharacterDataClass implements CharacterDataCollection{
     private String name;
     private String jobName;
     private String raceName;
-    private Inventory inventory;
+    private Inventory inventory = new Inventory(0);
     private String alignment;
     private int level;
     private String background;
