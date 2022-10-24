@@ -103,6 +103,10 @@ public class CharacterHandler {
         return characterObject;
     }
 
+    public static List<String> loadSpells(Job job){
+        return SpellParser.parseSpellsForCharacter(job);
+    }
+
     /**
      * Gets the names of all files within the Characters folder and calls on loadCharacter() for each of them. Then adds
      * the return value of loadCharacter() to a list of character objects.

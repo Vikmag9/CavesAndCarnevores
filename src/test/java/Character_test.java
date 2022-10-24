@@ -403,7 +403,7 @@ public class Character_test {
 
     @Test
     public void saveCharacterTest(){
-        Job charJob = new Job("Monk");
+        Job charJob = new Job("Druid");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
 
@@ -422,7 +422,7 @@ public class Character_test {
         CharacterDataClass charData = new CharacterDataClass();
         charData.setBackground("Orphan");
         charData.setRaceName("Dwarf");
-        charData.setJobName("Monk");
+        charData.setJobName("Druid");
         charData.setName("Gregg");
         charData.setAlignment("Chaotic Good");
         charData.setLevel(1);
@@ -489,6 +489,14 @@ public class Character_test {
         HashMap<StatName, Integer> modifiers = character.calculateModifiers();
         System.out.println(modifiers.get(StatName.Strength));
         assertEquals(-4, (int) modifiers.get(StatName.Strength));
+    }
+
+    @Test
+    public void loadSpellsTest(){
+        Character character = CharacterHandler.loadCharacter("Gregg");
+        List<String> spells = CharacterHandler.loadSpells(character.getJob());
+        assertTrue(spells.size() > 0);
+
     }
 
 
