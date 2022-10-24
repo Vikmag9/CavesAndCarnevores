@@ -5,6 +5,8 @@ import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
 import Model.*;
 import Model.Character;
+import Model.Stats.ArrayStrategy;
+import Model.Stats.StatGenerator;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -16,38 +18,37 @@ import static org.junit.Assert.*;
 
 
 public class Character_test {
-    /*
+
     @Test
     public void createBarbarianTest(){
-        Model.Job charJob = new Model.Job("Barbarian");
-        List<Model.Feature> featureList = charJob.getFeatures();
+        CharacterDataClass characterDataClass = new CharacterDataClass();
+
+        characterDataClass = characterDataClass.setName("Gregg");
+        characterDataClass.setRaceName("Human");
+        characterDataClass.setJobName("Barbarian");
+        characterDataClass.setBackground("Sailor");
+        characterDataClass.setAlignment("Chaotic Good");
+        characterDataClass.setStrength(15);
+        characterDataClass.setDexterity(14);
+        characterDataClass.setConstitution(13);
+        characterDataClass.setIntelligence(12);
+        characterDataClass.setWisdom(10);
+        characterDataClass.setCharisma(5);
+        characterDataClass.setProficiencySkills(new ArrayList<>(List.of(ProficiencySkills.Athletics, ProficiencySkills.Intimidation, ProficiencySkills.Nature, ProficiencySkills.Perception, ProficiencySkills.Survival)));
+        characterDataClass.setInventory(new Inventory(10));
 
 
-        HashMap<String, InventoryItem> inventoryMap = new HashMap<String, InventoryItem>();
-        Inventory inventory = new Inventory(1);
-        InventoryItemBuilder builder = new InventoryItemBuilder("Armour", "Cheese-tplate", "Goes clink clonk", 2, 4.0, false);
-        builder.ac(12);
-        builder.isequipped(true);
-        InventoryItem cheeseArmor = new InventoryItem(builder);
-        inventory.addItem(cheeseArmor);
-
-        Model.Character character = new Model.Character("Gregg", new Model.Race("Batman"),
-                charJob,
-                inventory,
-                1,
-                "Orphan");
+        Character myCharacter = new Character(characterDataClass, 1);
 
 
-        assertEquals(character.getName(), "Gregg");
-        assertEquals(character.getRace().getName(), "Batman");
-        assertEquals(character.getJob().getJobName(), "Barbarian");
-        assertEquals(character.getFeats(), featureList);
-        assertEquals(character.getInventory(), inventory);
-        assertEquals(character.getHealth(), 7);
-        assertEquals(character.getArmorClass(), 12);
+
+        assertEquals(myCharacter.getName(), "Gregg");
+        assertEquals(myCharacter.getRace().getName(), "Human");
+        assertEquals(myCharacter.getJob().getJobName(), "Barbarian");
 
     }
 
+    /*
     @Test
     public void createBardTest(){
         Model.Job charJob = new Model.Job("Bard");
@@ -356,7 +357,7 @@ public class Character_test {
         assertEquals(character.getRace().getName(), "Dwarf");
         assertEquals(character.getRace().getSpeed(), 25);
         assertEquals(character.getRace().getSubRace().getName(), "Mountain Dwarf");
-        assertEquals(character.getHealth(), 5); // Tests that the hit die is 12
+        assertEquals(character.getHealth(), 6); // Tests that the hit die is 12
 
 
 
@@ -478,18 +479,22 @@ public class Character_test {
     @Test
     public void testCalculateModifiers() {
         CharacterDataClass charData = new CharacterDataClass();
-        HashMap<StatName, Integer> charStats  = new HashMap<>();
-        charStats.put(StatName.Strength, 5);
-        charStats.put(StatName.Dexterity, 8);
-        charStats.put(StatName.Constitution, 10);
-        charStats.put(StatName.Intelligence, 15);
-        charStats.put(StatName.Wisdom, 17);
-        charStats.put(StatName.Charisma, 18);
-        charData.setStats(charStats);
+        charData.setStrength(3);
+        charData.setDexterity(4);
+        charData.setConstitution(5);
+        charData.setIntelligence(6);
+        charData.setWisdom(7);
+        charData.setCharisma(8);
+        charData.setJobName("Barbarian");
+        charData.setRaceName("Dwarf");
+        charData.setBackground("Acolyte");
+        charData.setProficiencySkills(new ArrayList<>(List.of(ProficiencySkills.Athletics, ProficiencySkills.Intimidation, ProficiencySkills.Nature, ProficiencySkills.Perception, ProficiencySkills.Survival)));
+        charData.setInventory(new Inventory(10));
+
+
         Character character = new Character(charData, 1);
         HashMap<StatName, Integer> modifiers = character.calculateModifiers();
-        System.out.println(modifiers.get(StatName.Strength));
-        assertEquals(-4, (int) modifiers.get(StatName.Strength));
+        assertEquals(-3, (int) modifiers.get(StatName.Strength));
     }
 
     @Test
