@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="836.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.WizardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.8" prefHeight="646.0" prefWidth="836.0" style="-fx-background-color: #becfb8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.WizardController">
    <effect>
       <DropShadow blurType="GAUSSIAN" height="161.36" radius="65.56" spread="0.17" width="102.88" />
    </effect>
@@ -72,29 +72,6 @@
          <Label layoutX="149.0" layoutY="243.0" styleClass="Text_enter" stylesheets="@Font.css" text="Earlier life" />
          <TextArea fx:id="earlyLifeTextArea" layoutX="310.0" layoutY="228.0" prefHeight="61.0" prefWidth="268.0" />
       </AnchorPane>
-      <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF;">
-         <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="642.0" layoutX="-8.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="733.0" />
-         <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
-         <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-         <Circle fill="#e4e4e4" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-         <Circle fill="#e4e4e4" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-         <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-         <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
-         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="24.0" styleClass="Header_font" stylesheets="@Font.css" text="Basics" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="140.0" layoutY="112.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-         <Label layoutX="196.0" layoutY="131.0" styleClass="Text_enter" stylesheets="@Font.css" text="Name" />
-         <TextField fx:id="nameTextField" layoutX="370.0" layoutY="124.0" prefHeight="37.0" prefWidth="198.0" promptText="Enter Name" styleClass="Text_enter" stylesheets="@Font.css" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="280.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="362.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
-         <Label layoutX="196.0" layoutY="215.0" styleClass="Text_enter" stylesheets="@Font.css" text="Race" />
-         <Label layoutX="199.0" layoutY="299.0" styleClass="Text_enter" stylesheets="@Font.css" text="Class" />
-         <Label layoutX="199.0" layoutY="383.0" styleClass="Text_enter" stylesheets="@Font.css" text="Background" />
-         <ComboBox fx:id="raceComboBox" editable="true" layoutX="370.0" layoutY="207.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Race" styleClass="Text_enter" stylesheets="@Font.css" />
-         <ComboBox fx:id="jobComboBox" editable="true" layoutX="370.0" layoutY="291.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Class" styleClass="Text_enter" stylesheets="@Font.css" />
-         <ComboBox fx:id="backgroundComboBox" editable="true" layoutX="370.0" layoutY="376.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Background" styleClass="Text_enter" stylesheets="@Font.css" />
-         <Button layoutX="623.0" layoutY="562.0" mnemonicParsing="false" onAction="#toStatsAndSkillPane" text="&gt;&gt;" />
-      </AnchorPane>
       <AnchorPane fx:id="satsAndSkillsPane" prefHeight="646.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;">
          <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="638.0" layoutX="5.0" layoutY="1.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="729.0" />
          <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
@@ -137,29 +114,24 @@
          <Label layoutX="296.0" layoutY="141.0" styleClass="skills_label" stylesheets="@Font.css" text="STR" />
          <Label layoutX="388.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" text="CHA" />
          <Label layoutX="160.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="240.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="239.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="325.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="325.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
          <Label fx:id="StatView2Big" layoutX="172.0" layoutY="271.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView1Big" layoutX="92.0" layoutY="272.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView4Big" layoutX="172.0" layoutY="357.0" prefWidth="23.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView3Big" layoutX="92.0" layoutY="357.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="404.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="75.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
          <Label fx:id="StatView5Big" layoutX="92.0" layoutY="436.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView2Small" layoutX="174.0" layoutY="302.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
@@ -167,48 +139,64 @@
          <Label fx:id="StatView3Small" layoutX="94.0" layoutY="387.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView4Small" layoutX="174.0" layoutY="387.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView5Small" layoutX="94.0" layoutY="467.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="151.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="150.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="255.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="282.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="255.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="354.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="376.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
          <TextField fx:id="StrengthTextField" layoutX="287.0" layoutY="178.0" onKeyTyped="#setStrength" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <TextField fx:id="WisdomTextField" layoutX="381.0" layoutY="178.0" onKeyTyped="#setWisdom" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <TextField fx:id="DexterityTextField" layoutX="288.0" layoutY="282.0" onKeyTyped="#setDexterity" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <TextField fx:id="IntelligenceTextField" layoutX="382.0" layoutY="282.0" onKeyTyped="#setIntelligence" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <TextField fx:id="CharismaTextField" layoutX="382.0" layoutY="380.0" onInputMethodTextChanged="#setCharisma" onKeyTyped="#setCharisma" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
-         <Button layoutX="649.0" layoutY="570.0" mnemonicParsing="false" onAction="#toJobSpecificPane" text="&gt;&gt;" />
+         <Button layoutX="649.0" layoutY="570.0" mnemonicParsing="false" onAction="#toLorePane" text="&gt;&gt;" />
          <Button layoutX="59.0" layoutY="570.0" mnemonicParsing="false" onAction="#toBasicsPane" text="&lt;&lt;" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="281.0" layoutY="354.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="281.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
          <TextField fx:id="ConstitutionTextField" layoutX="287.0" layoutY="381.0" onKeyTyped="#setConstitution" prefHeight="30.0" prefWidth="46.0" styleClass="skills_label" stylesheets="@Font.css" />
          <Label layoutX="294.0" layoutY="348.0" styleClass="skills_label" stylesheets="@Font.css" text="CON" />
-         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="404.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@StatBox.png"/>
+         <ImageView fitHeight="94.0" fitWidth="58.0" layoutX="155.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@StatBox.png" />
          </ImageView>
          <Label fx:id="StatView6Small" layoutX="174.0" layoutY="467.0" styleClass="skills_font" stylesheets="@Font.css" text="XX" />
          <Label fx:id="StatView6Big" layoutX="172.0" layoutY="436.0" styleClass="skills_label" stylesheets="@Font.css" text="XX" />
          <RadioButton fx:id="rollDropRadio" layoutX="46.0" layoutY="143.0" mnemonicParsing="false" text="Roll drop one" />
          <RadioButton fx:id="arrayRadio" layoutX="46.0" layoutY="170.0" mnemonicParsing="false" text="Array" />
          <RadioButton fx:id="nightmareRadio" layoutX="45.0" layoutY="199.0" mnemonicParsing="false" text="Nightmare" />
+      </AnchorPane>
+      <AnchorPane fx:id="basicsPane" prefHeight="646.0" prefWidth="790.0" style="-fx-background-color: #FFFFFF;">
+         <Rectangle arcHeight="5.0" arcWidth="10.0" fill="#83b071" height="642.0" layoutX="-8.0" stroke="#566e54" strokeType="OUTSIDE" strokeWidth="2.0" width="733.0" />
+         <Line endX="302.60009765625" layoutX="294.0" layoutY="575.0" startX="-153.79998779296875" stroke="#e4e4e4" strokeLineCap="ROUND" strokeWidth="15.0" />
+         <Circle fill="#82b170" layoutX="177.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+         <Circle fill="#e4e4e4" layoutX="253.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+         <Circle fill="#e4e4e4" layoutX="329.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+         <Circle fill="#e4e4e4" layoutX="405.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+         <Circle fill="#e4e4e4" layoutX="481.0" layoutY="575.0" radius="19.0" stroke="#566e54" strokeType="INSIDE" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="24.0" styleClass="Header_font" stylesheets="@Font.css" text="Basics" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="140.0" layoutY="112.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+         <Label layoutX="196.0" layoutY="131.0" styleClass="Text_enter" stylesheets="@Font.css" text="Name" />
+         <TextField fx:id="nameTextField" layoutX="370.0" layoutY="124.0" prefHeight="37.0" prefWidth="198.0" promptText="Enter Name" styleClass="Text_enter" stylesheets="@Font.css" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="196.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="280.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="61.0" layoutX="138.0" layoutY="362.0" stroke="#566e54" strokeType="INSIDE" width="460.0" />
+         <Label layoutX="196.0" layoutY="215.0" styleClass="Text_enter" stylesheets="@Font.css" text="Race" />
+         <Label layoutX="199.0" layoutY="299.0" styleClass="Text_enter" stylesheets="@Font.css" text="Class" />
+         <Label layoutX="199.0" layoutY="383.0" styleClass="Text_enter" stylesheets="@Font.css" text="Background" />
+         <ComboBox fx:id="raceComboBox" editable="true" layoutX="370.0" layoutY="207.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Race" styleClass="Text_enter" stylesheets="@Font.css" />
+         <ComboBox fx:id="jobComboBox" editable="true" layoutX="370.0" layoutY="291.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Class" styleClass="Text_enter" stylesheets="@Font.css" />
+         <ComboBox fx:id="backgroundComboBox" editable="true" layoutX="370.0" layoutY="376.0" prefHeight="38.0" prefWidth="198.0" promptText="Choose Background" styleClass="Text_enter" stylesheets="@Font.css" />
+         <Button layoutX="623.0" layoutY="562.0" mnemonicParsing="false" onAction="#toStatsAndSkillPane" text="&gt;&gt;" />
       </AnchorPane>
    </StackPane>
 </AnchorPane>

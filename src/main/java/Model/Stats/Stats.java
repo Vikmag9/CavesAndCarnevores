@@ -3,7 +3,8 @@ package Model.Stats;
 import java.util.ArrayList;
 
 /**
- * A class for choosing the different ways to roll stats and getting those stats.
+ * A class for choosing the different ways to roll stats and getting those stats. The module, Stats, implements
+ * the strategy pattern, in which the class Stats chooses the strategy depending on the user input.
  */
 public class Stats {
     StatGenerator statGenerator;

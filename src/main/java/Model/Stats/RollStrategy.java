@@ -16,7 +16,7 @@ public class RollStrategy implements StatStrategy{
          this.diceBag = new DiceBag();
     }
 
-    /* Rolls 4 d6 dice and removes the lowest number. The sum is one of the generated stats. Returns one out of 6
+    /** Rolls 4 d6 dice and removes the lowest number. The sum is one of the generated stats. Returns one out of 6
     stats. */
     private int rollOneStat(){
         listOfRolls = new ArrayList<>();
@@ -32,7 +32,11 @@ public class RollStrategy implements StatStrategy{
         }
         return stat;
     }
-    // Calls the rollOneStat 6 times and returns a list of 6 stats to be placed in the Stats & Skills part of the Wizard.
+    /**
+     * Calls a method that rolls 6 stats. Each stat is calculated by rolling 4 d6 dice, removing the lowest number, and
+     * adding the rest to a sum. The sum is one stat. This method repeats itself 6 times.
+     * @return A list of 6 stats rolled according to the Roll One Drop strategy.
+     */
     private ArrayList<Integer> rollStats(){
         listOfStats = new ArrayList<>();
         for(int i= 1; i < 7; i++)
@@ -40,11 +44,7 @@ public class RollStrategy implements StatStrategy{
         return listOfStats;
     }
 
-    /**
-     * Calls a method that rolls 6 stats. Each stat is calculated by rolling 4 d6 dice, removing the lowest number, and
-     * adding the rest to a sum. The sum is one stat. This method repeats itself 6 times.
-     * @return A list of 6 stats rolled according to the Roll One Drop strategy.
-     */
+
     @Override
     public ArrayList<Integer> getListOfStats(){
         listOfStats = rollStats();

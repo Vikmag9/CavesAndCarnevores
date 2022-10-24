@@ -40,8 +40,8 @@ public class CharacterScreenController implements Initializable {
             characterNames.add(character.getName());
         });
         characterCombo.getItems().addAll(characterNames);
-        characterCombo.getSelectionModel().selectFirst();
         characterCombo.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> selectedCharacter = newValue);
+        characterCombo.getSelectionModel().selectFirst();
     }
 
     /*private void displayCharacters(){

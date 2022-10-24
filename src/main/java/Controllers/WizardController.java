@@ -168,17 +168,19 @@ public class WizardController implements Initializable{
         jobs = Job.getAllJobs();
         races = Race.getAllRaces();
         raceComboBox.getItems().addAll(races);
-        raceComboBox.getSelectionModel().selectFirst();
         raceComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setRaceName(raceComboBox.getValue()));
+        raceComboBox.getSelectionModel().selectFirst();
+
 
         jobComboBox.getItems().addAll(jobs);
-        jobComboBox.getSelectionModel().selectFirst();
         jobComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setJobName(jobComboBox.getValue()));
+        jobComboBox.getSelectionModel().selectFirst();
 
         //Background is not extensible yet, need to parse json file but don't have the time
         backgroundComboBox.getItems().addAll("Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin");
-        backgroundComboBox.getSelectionModel().selectFirst();
         backgroundComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> dataClass.setBackground(backgroundComboBox.getValue()));
+        backgroundComboBox.getSelectionModel().selectFirst();
+
     }
 
     @FXML
