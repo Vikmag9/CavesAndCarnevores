@@ -43,11 +43,18 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML Text characterNameText, characterRaceText, characterClassText;
 
     // Combat fx:ids
+
+    @FXML Text movementSpeedText;
+
     @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
+
     @FXML private FlowPane spellsFlowPane;
+
     List<List<String>> spellList;
+
+
 
     // Spells fx:ids
 
@@ -96,7 +103,6 @@ public class CharacterInfoScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.character = CharacterSingleton.getInstance().getCharacter();
-
         prepareRadioButtons();
         System.out.println(character.getName());
         prepareCheckBoxes(character.getProficiencySkills());
@@ -109,10 +115,19 @@ public class CharacterInfoScreenController implements Initializable {
         prepareProficiencies(character.getProficiencies());
         prepareTextFields(character);
         updateSkillProficiencyModifiers();
-        //updateInventoryList();
-        //prepareSpells()
         prepareAC(character.getArmorClass());
         prepareInitiavitive(character.calculateModifiers());
+        prepareSpeed(character.getRace());
+        prepareNotes(character);
+    }
+
+    private void prepareNotes(Character character) {
+        notesTextArea.textProperty().addListener((observable, oldValue, newValue) -> character.setNotes(notesTextArea.getText()));
+    }
+
+    private void prepareSpeed(Race race) {
+         movementSpeedText.setText(String.valueOf(race.getSpeed()));
+
     }
 
     private void prepareInitiavitive(HashMap<StatName, Integer> modifiers) {
@@ -125,9 +140,7 @@ public class CharacterInfoScreenController implements Initializable {
 
     }
 
-    private void prepareReceiveDataButton() {
-        receiveDataButton.setOnMouseClicked(event -> receiveData(event));
-    }
+
 
 
     private void prepareFeatures(List<Feature> features) {
@@ -138,16 +151,11 @@ public class CharacterInfoScreenController implements Initializable {
     }
 
     private void prepareProficiencies(Map<Proficiencies, List<String>> proficiencies) {
-        for (Proficiencies category : Proficiencies.values()) {
-            System.out.println(category);
+        proficiencies.forEach((category, profList) -> {
             proficiencyListView.getItems().add(category.toString());
-            List<String> profs = proficiencies.get(category);
-            System.out.println(profs);
-            for(String prof : profs){
-                System.out.println(prof);
-                proficiencyListView.getItems().add(prof);
-            }
-        }
+            proficiencyListView.getItems().add( String.join(", ",profList));
+
+        });
     }
 
 
@@ -225,6 +233,7 @@ public class CharacterInfoScreenController implements Initializable {
     private void updateView(){
         prepareModifiers(character.calculateModifiers());
         prepareInitiavitive(character.calculateModifiers());
+        updateSkillProficiencyModifiers();
     }
 
     private void prepareModifiers(HashMap<StatName, Integer> modifiers){
@@ -238,10 +247,8 @@ public class CharacterInfoScreenController implements Initializable {
 
     private void prepareSpell(Map<String, String> map) {
         String name = map.get("name");
-        String level = map.get("level");
         String description = map.get("description");
-        String jobb = map.get("class");
-        List<String> spell = Arrays.asList(jobb, level, name, description);
+        List<String> spell = Arrays.asList(name, description);
         spellList.add(spell);
     }
 
@@ -334,16 +341,6 @@ public class CharacterInfoScreenController implements Initializable {
             }
         });
     }
-
-    // Spells features
-
-    // Lore & Notes features
-
-   @FXML
-    private void saveLoreAndNotesTab(){
-        // Save the current state of the Lore & Notes tab
-    }
-
     @FXML
     private void saveCharacter(){
         CharacterHandler.saveCharacter(this.character);
@@ -369,10 +366,8 @@ public class CharacterInfoScreenController implements Initializable {
 
     private void updateSkillProficiencyModifiers() {
         // Update the skill proficiency modifiers
-        if (proficiencyBonusText.getText().isEmpty()) {
-            proficiencyBonusText.setText("0");
-        }
-        Integer proficiencyB = Integer.valueOf(proficiencyBonusText.getText());
+
+        Integer proficiencyB = character.getLevel();
         List<CheckBox> skillsCheckList= Arrays.asList(athleticsCheck, deceptionCheck, intimidationCheck, performanceCheck, persuasionCheck, animalCheck, insightCheck, medicineCheck, perceptionCheck, survivalCheck, arcanaCheck, historyCheck, investigationCheck, natureCheck, religionCheck, acrobaticsCheck, sleightCheck, stealthCheck);
         List<Text> skillsModifierList = Arrays.asList(athleticsSkillLevelText, deceptionSkillLevelText, intimidationSkillLevelText, performanceSkillLevelText, persuasionSkillLevelText, animalHandlingSkillLevelText, insightSkillLevelText, medicineSkillLevelText, perceptionSkillLevelText, survivalSkillLevelText, arcanaSkillLevelText, historySkillLevelText, investigationSkillLevelText, natureSkillLevelText, religionSkillLevelText, acrobaticsSkillLevelText, sleightOfHandSkillLevelText, stealthSkillLevelText);
         List<Text> strenghtList = Arrays.asList(athleticsSkillLevelText, intimidationSkillLevelText);
@@ -407,28 +402,18 @@ public class CharacterInfoScreenController implements Initializable {
     }
 
 
-    private void receiveData(MouseEvent event) {
-        // Step 1
-        Node node = (Node) event.getSource();
-        Stage stage = (Stage) node.getScene().getWindow();
-        // Step 2
-        Character character = (Character) stage.getUserData();
-        // Step 3
-        String name = character.getName();
-        String race = character.getRaceName();
-        System.out.println(name);
-        System.out.println(race);
-        this.character = character;
-    }
-
     private void prepareTextFields(Character character){
-        coreMemoriesTextArea.setText("1");
+        System.out.println(character.getCorememories());
+        coreMemoriesTextArea.setText(character.getCorememories());
+        earlierLifeTextArea.setText(character.getEarlierLife());
+        System.out.println("earlierLife" + character.getEarlierLife());
+        organizationTextArea.setText(character.getOrganisations());
+        languagesTextArea.setText(character.getLanguages());
+        earlierLifeTextArea.textProperty().addListener((observable, oldValue, newValue) -> character.setEarlierLife(earlierLifeTextArea.getText()));
+        coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> character.setCorememories(coreMemoriesTextArea.getText()));
+        organizationTextArea.textProperty().addListener((observable, oldValue, newValue) -> character.setOrganisation(organizationTextArea.getText()));
+        languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> character.setLanguages(languagesTextArea.getText()));
 
     }
-
-
-
-
-
 }
 

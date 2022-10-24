@@ -134,12 +134,10 @@ public class WizardController implements Initializable{
             dataClass.setName(nameTextField.getText());
             System.out.println("Bob");
         });
-
         earlyLifeTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setEarlierLife(earlyLifeTextArea.getText()));
         coreMemoriesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setCorememories(coreMemoriesTextArea.getText()));
         organisationTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setOrganisations(organisationTextArea.getText()));
         languagesTextArea.textProperty().addListener((observable, oldValue, newValue) -> dataClass.setLanguages(languagesTextArea.getText()));
-
         }
 
 
@@ -269,8 +267,6 @@ public class WizardController implements Initializable{
     }
 
     private void prepareProficiencyCheckBoxes(){
-        //this is not very extensible, however, due to how the game Dungeons & Dragons (5e) is written, there will never be a need to add more skill proficiencies.
-
         AcrobaticsCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
                 dataClass.setProficiencies(newValue, ProficiencySkills.Acrobatics));
         SleightOfHandCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
@@ -309,20 +305,15 @@ public class WizardController implements Initializable{
                 dataClass.setProficiencies(newValue, ProficiencySkills.Persuasion));
         AthleticsCheckBox.selectedProperty().addListener((observable, oldValue, newValue) ->
                 dataClass.setProficiencies(newValue, ProficiencySkills.Athletics));
-
-
     }
 
     private void loadWeaponsArmourTools(Map<String, List<String>> map){
-
         map.forEach((key, value) -> {
             ComboBox<String> combobox = new ComboBox<>();
             combobox.setPlaceholder(new Label(key));
             combobox.getItems().addAll(value);
             comboBoxList.add(combobox);
             });
-
-
         WeaponsFlowPane.getChildren().clear();
         WeaponsFlowPane.getChildren().add(comboBoxList.get(0));
     }
