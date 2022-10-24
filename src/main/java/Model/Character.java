@@ -56,6 +56,9 @@ public class Character implements CharacterDataCollection {
         this.jobName = characterData.getJobName();
         this.xp = characterData.getXp();
         this.background = characterData.getBackground();
+        this.notes = characterData.getNotes();
+        this.organisation = characterData.getOrganisations();
+        this.earlierLife = characterData.getEarlierLife();
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
         System.out.println(characterData.getStats());
@@ -304,6 +307,11 @@ public class Character implements CharacterDataCollection {
     @Override
     public String getEarlierLife() {
         return this.earlierLife;
+    }
+
+    @Override
+    public String getNotes() {
+        return this.notes;
     }
 
     @Override

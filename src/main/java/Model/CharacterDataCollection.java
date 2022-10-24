@@ -23,6 +23,7 @@ public interface CharacterDataCollection {
     public String getLanguages();
     public String getOrganisations();
     public String getEarlierLife();
+    public String getNotes();
     public ArrayList<ProficiencySkills> getProficiencySkills();
 
 }
