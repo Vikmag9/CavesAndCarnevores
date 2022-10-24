@@ -23,56 +23,56 @@
       "Armor": [],
       "Weapons": ["Battleaxe", "Handaxe", "Light hammer", "Warhammer"],
       "Tools": [],
-      "Saving throws": [],
+      "SavingThrows": [],
       "SkillOptions": []
     },
     "Subraces": [
-     {
-       "Hill Dwarf": {
-         "Ability score increase": [
-           0,
-           0,
-           0,
-           1,
-           0,
-           0
-         ],
-         "Speed": 25,
-         "Description": "Hill dwarves are stout and hardy, with a strong sense of tradition and a belief in the benefits of a well-ordered society. They tend to be on the good side of the law, and they value loyalty and hard work. Hill dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Hill dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Hill dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
-         "Traits": ["Ability Score Increase: Your Wisdom score increases by 1.", "Dwarven Toughness: Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."],
-         "Proficiencies": {
-           "Armor": [],
-           "Weapons": [],
-           "Tools": [],
-           "Saving throws": [],
-           "SkillOptions": []
-         }
-       }
-     },
-     {
-       "Mountain Dwarf": {
-         "Ability score increase": [
-           2,
-           0,
-           0,
-           0,
-           0,
-           0
-         ],
-         "Speed": 25,
-         "Description": "Mountain dwarves are strong, hardy, and tough, with a penchant for the military life. They tend to be on the lawful side of the law, and they value honor and tradition. Mountain dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Mountain dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Mountain dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
-         "Traits": ["Ability Score Increase: Your Strength score increases by 2.", "Dwarven Armor Training: You have proficiency with light and medium armor."],
-         "Proficiencies": {
-           "Armor": ["Light armor", "Medium armor"],
-           "Weapons": [],
-           "Tools": [],
-           "Saving throws": [],
-           "SkillOptions": []
-         }
-       }
-     }
+      {
+        "Hill Dwarf": {
+          "Ability score increase": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "Speed": 25,
+          "Description": "Hill dwarves are stout and hardy, with a strong sense of tradition and a belief in the benefits of a well-ordered society. They tend to be on the good side of the law, and they value loyalty and hard work. Hill dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Hill dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Hill dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
+          "Traits": ["Ability Score Increase: Your Wisdom score increases by 1.", "Dwarven Toughness: Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."],
+          "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "SavingThrows": [],
+            "SkillOptions": []
+          }
+        }
+      },
+      {
+        "Mountain Dwarf": {
+          "Ability score increase": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "Speed": 25,
+          "Description": "Mountain dwarves are strong, hardy, and tough, with a penchant for the military life. They tend to be on the lawful side of the law, and they value honor and tradition. Mountain dwarves are short, stocky, and hardy, with a broad, squat build. They stand between 4 and 4½ feet tall and average about 150 pounds. Mountain dwarves have broad faces, prominent noses, and thick, bushy beards. Their skin ranges from pale to deep brown, and their hair is usually black, brown, or dark gray. Mountain dwarves typically wear simple, practical clothing, and they favor sturdy leather boots and work gloves. They are often seen wearing studded leather armor, and they wield battleaxes, handaxes, light hammers, and warhammers.",
+          "Traits": ["Ability Score Increase: Your Strength score increases by 2.", "Dwarven Armor Training: You have proficiency with light and medium armor."],
+          "Proficiencies": {
+            "Armor": ["Light armor", "Medium armor"],
+            "Weapons": [],
+            "Tools": [],
+            "SavingThrows": [],
+            "SkillOptions": []
+          }
+        }
+      }
     ]
- },
+  },
 
   "Elf": {
     "Ability score increase": [
@@ -86,17 +86,17 @@
     "Speed": 30,
     "Description": "Elves are a magical people of otherworldly grace, living in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry.",
     "Traits": [
-          "Darkvision: Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-          "Keen Senses: You have proficiency in the Perception skill.",
-          "Fey Ancestry: You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
-          "Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
-          "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow."
-      ],
+      "Darkvision: Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+      "Keen Senses: You have proficiency in the Perception skill.",
+      "Fey Ancestry: You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+      "Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
+      "Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow."
+    ],
     "Proficiencies": {
       "Armor": [],
       "Weapons": ["Longsword", "Shortsword", "Shortbow", "Longbow"],
       "Tools": [],
-      "Saving throws": [],
+      "SavingThrows": [],
       "SkillOptions": ["Perception"]
     },
     "Subraces": [
@@ -122,7 +122,7 @@
             "Armor": [],
             "Weapons": [],
             "Tools": [],
-            "Saving throws": [],
+            "SavingThrows": [],
             "SkillOptions": []
           }
         }
@@ -148,7 +148,7 @@
             "Armor": [],
             "Weapons": [],
             "Tools": [],
-            "Saving throws": [],
+            "SavingThrows": [],
             "SkillOptions": []
           }
         }
@@ -170,58 +170,58 @@
       "Armor": [],
       "Weapons": [],
       "Tools": [],
-      "Saving throws": [],
+      "SavingThrows": [],
       "SkillOptions": []
     },
     "Subraces":[
       {
         "Lightfoot": {
-            "Ability score increase": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                1
-            ],
-             "Speed": 25,
-            "Description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.\n\nLightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, these halflings are called hairfeet or tallfellows.",
-            "Traits": [
-                "Ability Score Increase: Your Charisma score increases by 1.",
-                "Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
-            ],
-            "Proficiencies": {
-                "Armor": [],
-                "Weapons": [],
-                "Tools": [],
-                "Saving throws": [],
-                "SkillOptions": []
-            }
+          "Ability score increase": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "Speed": 25,
+          "Description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.\n\nLightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, these halflings are called hairfeet or tallfellows.",
+          "Traits": [
+            "Ability Score Increase: Your Charisma score increases by 1.",
+            "Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+          ],
+          "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "SavingThrows": [],
+            "SkillOptions": []
+          }
         }
       },
       {
         "Stout": {
-            "Ability score increase": [
-                0,
-                0,
-                1,
-                0,
-                0,
-                0
-            ],
-            "Speed": 25,
-            "Description": "As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.\n\n",
-            "Traits": [
-                "Ability Score Increase: Your Constitution score increases by 1.",
-                "Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage."
-            ],
-            "Proficiencies": {
-                "Armor": [],
-                "Weapons": [],
-                "Tools": [],
-                "Saving throws": [],
-                "SkillOptions": []
-            }
+          "Ability score increase": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "Speed": 25,
+          "Description": "As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.\n\n",
+          "Traits": [
+            "Ability Score Increase: Your Constitution score increases by 1.",
+            "Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage."
+          ],
+          "Proficiencies": {
+            "Armor": [],
+            "Weapons": [],
+            "Tools": [],
+            "SavingThrows": [],
+            "SkillOptions": []
+          }
         }
       }
     ]
@@ -233,33 +233,33 @@
     "Description": "Humans are the most adaptable and ambitious people among the common",
     "Traits": ["Ability Score Increase: Your ability scores each increase by 1."],
     "Proficiencies": {
-        "Armor": [],
-        "Weapons": [],
-        "Tools": [],
-        "Saving throws": [],
-        "SkillOptions": []
-        },
-    "Subraces": []
+      "Armor": [],
+      "Weapons": [],
+      "Tools": [],
+      "SavingThrows": [],
+      "SkillOptions": []
     },
+    "Subraces": []
+  },
 
   "Dragonborn": {
-      "Ability score increase": [2, 0, 0, 0, 0, 1],
-      "Speed": 30,
-      "Description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Most dragonborn are good, but a few are evil. Those who are good are often noble, valiant, and selfless, while those who are evil can be cruel, brutal, and tyrannical. Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
-      "Traits": [
-        "Ability Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.",
-        "Draconic Ancestry: You have draconic ancestry. Choose one type of tyoe of dragon. Your breath weapon and damage resistance are determined by the dragon type ",
-        "Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest.",
-        "Damage Resistance: You have resistance to the damage type associated with your draconic ancestry."
-      ],
-      "Proficiencies": {
-          "Armor": [],
-          "Weapons": [],
-          "Tools": [],
-          "Saving throws": [],
-          "SkillOptions": []
-      },
-     "Subraces": []
+    "Ability score increase": [2, 0, 0, 0, 0, 1],
+    "Speed": 30,
+    "Description": "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. Most dragonborn are good, but a few are evil. Those who are good are often noble, valiant, and selfless, while those who are evil can be cruel, brutal, and tyrannical. Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+    "Traits": [
+      "Ability Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.",
+      "Draconic Ancestry: You have draconic ancestry. Choose one type of tyoe of dragon. Your breath weapon and damage resistance are determined by the dragon type ",
+      "Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest.",
+      "Damage Resistance: You have resistance to the damage type associated with your draconic ancestry."
+    ],
+    "Proficiencies": {
+      "Armor": [],
+      "Weapons": [],
+      "Tools": [],
+      "SavingThrows": [],
+      "SkillOptions": []
+    },
+    "Subraces": []
   },
 
   "Gnome": {
