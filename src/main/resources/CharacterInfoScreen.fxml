@@ -141,7 +141,10 @@
                <Text fx:id="characterLevelText" layoutX="59.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_font" text="1" textAlignment="RIGHT" AnchorPane.rightAnchor="10.984375" />
                <Button fx:id="characterLevelUpButton" layoutX="7.0" layoutY="25.0" mnemonicParsing="false" styleClass="skills_font" text="Level Up" />
             </AnchorPane>
-            <Button fx:id="receiveDataButton" layoutX="621.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#saveCharacter" prefHeight="50.0" prefWidth="94.0" text="Save changes" />
+            <Button fx:id="receiveDataButton" layoutX="391.0" layoutY="541.0" mnemonicParsing="false" text="Button" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="53.0" layoutX="517.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="202.0" />
+            <Text layoutX="532.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Proficiency Bonus" textAlignment="CENTER" />
+            <TextField fx:id="proficiencyBonusText" layoutX="668.0" layoutY="251.0" prefHeight="28.0" prefWidth="40.0" />
          </AnchorPane>
       </Tab>
       <Tab text="Combat">
@@ -174,13 +177,12 @@
                <Text layoutX="7.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Movement speed" />
                <TextField fx:id="acTextField" layoutX="42.0" layoutY="50.0" prefHeight="28.0" prefWidth="48.0" />
                <TextField fx:id="initiativeTextField" layoutX="40.0" layoutY="149.0" prefHeight="28.0" prefWidth="48.0" />
-               <Text fx:id="movementSpeedText" layoutX="40.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="52.5367431640625">
+               <Text fx:id="movementSpeedText" layoutX="45.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="44.53662109375">
                   <font>
-                     <Font size="24.0" />
+                     <Font size="22.0" />
                   </font>
                </Text>
             </AnchorPane>
-            <Button fx:id="receiveDataButton1" layoutX="621.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#saveCharacter" prefHeight="50.0" prefWidth="94.0" text="Save changes" />
          </AnchorPane>
       </Tab>
       <Tab text="Spells">
@@ -198,15 +200,17 @@
                   <Button fx:id="level9SpellsButton" layoutY="480.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="271.0" styleClass="skills_font" text="Level 9" />
                </AnchorPane>
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                  <FlowPane fx:id="spellsFlowPane" layoutX="-1.0" layoutY="1.0" prefHeight="538.0" prefWidth="411.0" styleClass="skills_font" />
+                  <FlowPane fx:id="spellsFlowPane" layoutX="-1.0" layoutY="1.0" prefHeight="538.0" prefWidth="411.0" styleClass="skills_font">
+                     <children>
+                        <ListView fx:id="spellListView" prefHeight="540.0" prefWidth="411.0" />
+                     </children></FlowPane>
                </AnchorPane>
             </SplitPane>
-            <Button fx:id="receiveDataButton11" layoutX="600.0" layoutY="582.0" mnemonicParsing="false" onMouseClicked="#saveCharacter" prefHeight="32.0" prefWidth="115.0" text="Save changes" />
          </AnchorPane>
       </Tab>
       <Tab text="Lore &amp; Notes">
          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@Font.css">
-            <Button fx:id="loreAndNotesSaveButton" layoutX="600.0" layoutY="577.0" mnemonicParsing="false" onMouseClicked="#saveCharacter" prefHeight="30.0" prefWidth="115.0" styleClass="skills_font" text="Save Changes" AnchorPane.bottomAnchor="14.200000000000045" AnchorPane.rightAnchor="15.199999999999932" />
+            <Button fx:id="loreAndNotesSaveButton" layoutX="600.0" layoutY="577.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" styleClass="skills_font" text="Save Changes" AnchorPane.bottomAnchor="14.200000000000045" AnchorPane.rightAnchor="15.199999999999932" />
             <Text layoutX="127.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_enter" text="Earlier Life" />
             <ScrollPane layoutX="14.0" layoutY="40.0" prefHeight="150.0" prefWidth="324.0">
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="322.0">

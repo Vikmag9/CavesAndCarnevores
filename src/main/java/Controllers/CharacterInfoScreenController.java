@@ -86,8 +86,9 @@ public class CharacterInfoScreenController implements Initializable {
 
     @FXML private Button itemSellButton, itemRemoveButton, itemConsumeButton;
 
-    @FXML private ListView<String> featureListView;
-    @FXML private ListView<String> proficiencyListView;
+    @FXML private ListView<String> featureListView, spellListView,proficiencyListView;
+
+
 
     @FXML private TextField initiativeTextField, acTextField;
 
@@ -119,6 +120,7 @@ public class CharacterInfoScreenController implements Initializable {
         prepareInitiavitive(character.calculateModifiers());
         prepareSpeed(character.getRace());
         prepareNotes(character);
+        prepareSpellButtons();
     }
 
     private void prepareNotes(Character character) {
@@ -245,11 +247,27 @@ public class CharacterInfoScreenController implements Initializable {
         dexterityModifierText.setText(modifiers.get(StatName.Dexterity).toString());
     }
 
-    private void prepareSpell(Map<String, String> map) {
-        String name = map.get("name");
-        String description = map.get("description");
-        List<String> spell = Arrays.asList(name, description);
-        spellList.add(spell);
+    private void prepareSpell(int level) {
+        List<Map<String, String>> spells = CharacterHandler.loadSpells(character.getJobName(), String.valueOf(level));
+        spellListView.getItems().clear();
+        spells.forEach(spell ->{
+            spellListView.getItems().add(spell.get("name"));
+            spellListView.getItems().add(spell.get("description")+"\n\n");
+            spellListView.getItems().add("");
+
+        });
+    }
+
+    private void prepareSpellButtons(){
+        level1SpellsButton.setOnAction(event -> prepareSpell(1));
+        level2SpellsButton.setOnAction(event -> prepareSpell(2));
+        level3SpellsButton.setOnAction(event -> prepareSpell(3));
+        level4SpellsButton.setOnAction(event -> prepareSpell(4));
+        level5SpellsButton.setOnAction(event -> prepareSpell(5));
+        level6SpellsButton.setOnAction(event -> prepareSpell(6));
+        level7SpellsButton.setOnAction(event -> prepareSpell(7));
+        level8SpellsButton.setOnAction(event -> prepareSpell(8));
+        level9SpellsButton.setOnAction(event -> prepareSpell(9));
     }
 
     private void prepareCheckBoxes(ArrayList<ProficiencySkills> proflist){
