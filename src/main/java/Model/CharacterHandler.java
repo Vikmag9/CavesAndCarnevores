@@ -138,12 +138,23 @@ public class CharacterHandler {
             characterObject.getRace().setSubRace(new Race(character.getRaceName(), subRace));
         }
 
-
         return characterObject;
     }
 
-    public static List<String> loadSpells(String job){
+    private List<Map<String, String>> loadAllSpells(String job){
         return SpellParser.parseSpellsForCharacter(job);
+    }
+
+    public static List<Map<String, String>> loadSpells(String job, String level){
+        List<Map<String, String>> spells = SpellParser.parseSpellsForCharacter(job);
+        List<Map<String, String>> spellsForLevel = new ArrayList<>();
+        spells.forEach(spell -> {
+            if (spell.get("level").equals(level)){
+                spellsForLevel.add(spell);
+            }
+        });
+
+        return spellsForLevel;
     }
 
     /**

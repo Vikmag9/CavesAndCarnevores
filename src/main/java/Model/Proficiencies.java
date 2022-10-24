@@ -8,6 +8,5 @@ public enum Proficiencies {
     Skills,
     SkillChoices,
     SkillOptions,
-
     Other
 }

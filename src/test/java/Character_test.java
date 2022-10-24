@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -499,7 +500,7 @@ public class Character_test {
     @Test
     public void loadSpellsTest(){
         Character character = CharacterHandler.loadCharacter("Gregg");
-        List<String> spells = CharacterHandler.loadSpells(character.getJob().getJobName());
+        List<Map<String,String>> spells = CharacterHandler.loadSpells(character.getJob().getJobName(), String.valueOf(1));
         assertTrue(spells.size() > 0);
 
     }
