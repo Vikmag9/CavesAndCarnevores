@@ -16,7 +16,6 @@ public class SpellParser {
         JSONObject jsonSpells = fm.readFile("spells.json");
         JSONArray jsonSpellList = jsonSpells.getJSONArray("spells");
         List<Map<String, String>> spellInfo = new ArrayList<>();
-        spellInfo.add(new HashMap<String, String>());
         List<Object> spellList = jsonSpellList.toList();
         List<String> spellNames = new ArrayList();
         jsonSpellList.forEach(spell -> {
