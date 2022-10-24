@@ -99,7 +99,7 @@
                <Text fx:id="intimidationSkillLevelText" layoutX="154.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" />
                <Text fx:id="performanceSkillLevelText" layoutX="154.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" />
                <Text fx:id="persuasionSkillLevelText" layoutX="154.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" />
-               <CheckBox fx:id="athleticsCheck" layoutX="6.0" layoutY="25.0" mnemonicParsing="false" />
+               <CheckBox fx:id="athleticsCheck" layoutX="6.0" layoutY="25.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="164.0" textAlignment="RIGHT" />
                <CheckBox fx:id="acrobaticsCheck" layoutX="6.0" layoutY="46.0" mnemonicParsing="false" />
                <CheckBox fx:id="sleightCheck" layoutX="6.0" layoutY="66.0" mnemonicParsing="false" />
                <CheckBox fx:id="stealthCheck" layoutX="6.0" layoutY="86.0" mnemonicParsing="false" />
@@ -171,8 +171,8 @@
                <Text layoutX="53.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="AC" />
                <Text layoutX="32.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Initiative" />
                <Text layoutX="7.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="skills_label" text="Movement speed" />
-               <TextField layoutX="42.0" layoutY="50.0" prefHeight="28.0" prefWidth="48.0" />
-               <TextField layoutX="40.0" layoutY="149.0" prefHeight="28.0" prefWidth="48.0" />
+               <TextField fx:id="acTextField" layoutX="42.0" layoutY="50.0" prefHeight="28.0" prefWidth="48.0" />
+               <TextField fx:id="initiativeTextField" layoutX="40.0" layoutY="149.0" prefHeight="28.0" prefWidth="48.0" />
                <TextField layoutX="43.0" layoutY="248.0" prefHeight="28.0" prefWidth="48.0" />
             </AnchorPane>
          </AnchorPane>

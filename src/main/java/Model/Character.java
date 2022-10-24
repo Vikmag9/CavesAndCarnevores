@@ -16,7 +16,6 @@ public class Character implements CharacterDataCollection {
     private Job job; // Model.Job represents a D&D Class since "class" is otherwise a keyword in java.
     private List<Feature> feats;
     private int health;
-    private String Alignment;
     private int xp;
     private int level;
     private int armorClass;
@@ -40,7 +39,6 @@ public class Character implements CharacterDataCollection {
      *
      * @param data The data to be used to create the character, as an object that implements the Model.CharacterDataCollection interface.
      * @param level The level of the character, as an integer.
-     * @throws IOException
      * @throws ClassNotFoundException
      * @throws CloneNotSupportedException
      */
@@ -90,6 +88,10 @@ public class Character implements CharacterDataCollection {
             }
         });
         return (ac.get() + additionalAC.get());
+    }
+
+    public int getAC(){
+        return calculateAC();
     }
 
     /**

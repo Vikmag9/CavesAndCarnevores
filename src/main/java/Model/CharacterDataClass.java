@@ -38,7 +38,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * constructor for the Model.CharacterDataClass.
      */
     public CharacterDataClass(){
-        this.stats = new HashMap<StatName, Integer>();
+        this.stats = new HashMap<>();
         this.proficiencySkills = new ArrayList<>();
 
     }
@@ -159,6 +159,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      */
     public CharacterDataClass setCoreMemories(String coreMemories){
         this.coreMemories = coreMemories;
+        System.out.println(coreMemories);
         return this;
     }
 

@@ -5,14 +5,11 @@ import Model.Character;
 import Model.Items.Inventory;
 import Model.Items.InventoryItem;
 import Model.Items.InventoryItemBuilder;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.Event;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
@@ -81,13 +78,7 @@ public class CharacterInfoScreenController implements Initializable {
     // Combat fx:ids
 
 
-    @FXML private Text acText;
-    @FXML private Text initiativeText;
-    @FXML private Text movementSpeedText;
-    @FXML private Text HitpointsText;
 
-    @FXML private TextArea featuresTextArea;
-    @FXML private TextArea proficienciesTextArea;
     @FXML private TextArea spellTextArea;
 
     @FXML private Text HitPointsText;
@@ -95,7 +86,6 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private FlowPane spellsFlowPane;
 
     List<List<String>> spellList;
-    // Character character;
 
 
 
@@ -160,6 +150,8 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private ListView<String> featureListView;
     @FXML private ListView<String> proficiencyListView;
 
+    @FXML private TextField initiativeTextField, acTextField;
+
     /**
      * Initializes the controller class for the CharacterInfoScreen.fxml.
      * A necessary method for the FXML to work, since it is needed for the initializeable interface.
@@ -174,13 +166,8 @@ public class CharacterInfoScreenController implements Initializable {
         this.character = CharacterSingleton.getInstance().getCharacter();
 
         prepareRadioButtons();
-        System.out.println("1");
         System.out.println(character.getName());
-        System.out.println("2");
-
         prepareCheckBoxes(character.getProficiencySkills());
-        System.out.println("3");
-
         prepareStats(character.getStats());
         prepareModifiers(character.calculateModifiers());
         prepareName(character.getName());
@@ -188,18 +175,28 @@ public class CharacterInfoScreenController implements Initializable {
         prepareJob(character.getJobName());
         prepareFeatures(character.getFeatures());
         prepareProficiencies(character.getProficiencies());
+        prepareTextFields(character);
         //updateInventoryList();
-        //prepareSpells();
+        //prepareSpells()
+        prepareAC(character.getArmorClass());
+        prepareInitiavitive(character.calculateModifiers());
+    }
+
+    private void prepareInitiavitive(HashMap<StatName, Integer> modifiers) {
+        initiativeTextField.setText(Integer.toString(modifiers.get(StatName.Dexterity)));
+    }
+
+    private void prepareAC(int armorClass) {
+        acTextField.setText(Integer.toString(armorClass));
+        acTextField.textProperty().addListener((observable, oldValue, newValue) -> character.setArmorClass(Integer.parseInt(acTextField.getText())));
+
     }
 
     private void prepareReceiveDataButton() {
         receiveDataButton.setOnMouseClicked(event -> receiveData(event));
     }
 
-    /**
-     * Sets the actions to be displayed in the text area.
-     * Could be used to set the actions specific to the character, but is currently set to a generalized text that work for all characters.
-     */
+
     private void prepareFeatures(List<Feature> features) {
         features.forEach(feature -> {
             featureListView.getItems().add(feature.getName());
@@ -219,13 +216,6 @@ public class CharacterInfoScreenController implements Initializable {
             }
         }
     }
-    /*Sets the reactions to be displayed in the text area. Could be used to set the reactions specific to the character,
-    but is currently set to a generalized text that work for all characters. */
-
-
-
-    /* Sets the bonus actions to be displayed in the text area. Could be used to set the bonus actions specific to the
-     * character, but is currently set to a generalized text that work for all characters. */
 
 
     /*private void prepareSpells() {
@@ -301,6 +291,7 @@ public class CharacterInfoScreenController implements Initializable {
 
     private void updateView(){
         prepareModifiers(character.calculateModifiers());
+        prepareInitiavitive(character.calculateModifiers());
     }
 
     private void prepareModifiers(HashMap<StatName, Integer> modifiers){
@@ -453,6 +444,13 @@ public class CharacterInfoScreenController implements Initializable {
         System.out.println(race);
         this.character = character;
     }
+
+    private void prepareTextFields(Character character){
+        coreMemoriesTextArea.setText("1");
+
+    }
+    
+
 
 
 
