@@ -19,9 +19,7 @@ public class DiceBag {
             }
             default -> throw new IllegalArgumentException("Unexpected value: " + diceType);
         }
-
     }
-
 }
 
 

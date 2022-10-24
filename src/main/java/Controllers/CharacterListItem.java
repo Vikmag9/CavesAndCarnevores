@@ -23,7 +23,11 @@ public class CharacterListItem  extends AnchorPane {
     @FXML private Text characterCardLevelText;
 
 
-
+    /**
+     * Constructor for CharacterListItem. Loads CharacterListItem.fxml and populates the Text components with a certain
+     * character's attributes.
+     * @param character A character Object
+     */
     public CharacterListItem(Character character){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CharacterListItem.fxml"));
         System.out.println("loaded chosen");

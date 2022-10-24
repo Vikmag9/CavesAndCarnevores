@@ -58,5 +58,20 @@ public class Stats_test {
     public void calculateModifier_test(){
         StatGenerator statGenerator = new StatGenerator();
         Assertions.assertEquals(statGenerator.getModifier(1), -5);
+        Assertions.assertEquals(statGenerator.getModifier(3), -4);
+        Assertions.assertEquals(statGenerator.getModifier(5), -3);
+        Assertions.assertEquals(statGenerator.getModifier(7), -2);
+        Assertions.assertEquals(statGenerator.getModifier(9), -1);
+        Assertions.assertEquals(statGenerator.getModifier(11), 0);
+        Assertions.assertEquals(statGenerator.getModifier(13), 1);
+        Assertions.assertEquals(statGenerator.getModifier(15), 2);
+        Assertions.assertEquals(statGenerator.getModifier(17), 3);
+        Assertions.assertEquals(statGenerator.getModifier(19), 4);
+        Assertions.assertEquals(statGenerator.getModifier(21), 5);
+        Assertions.assertEquals(statGenerator.getModifier(23), 6);
+        Assertions.assertEquals(statGenerator.getModifier(25), 7);
+        Assertions.assertEquals(statGenerator.getModifier(27), 8);
+        Assertions.assertEquals(statGenerator.getModifier(29), 9);
+        Assertions.assertEquals(statGenerator.getModifier(30), 10);
     }
 }

@@ -71,7 +71,12 @@ public class JobParser {
         return jobNames;
     }
 
-
+    /**
+     * Getter for Hit Dice, retrieved from the classFeats json-object. Hit Dice refers to the number of dice
+     * rolled to calculate how many hit points a character or monster begins play with. This determines how difficult
+     * they are to kill.
+     * @return An int hitDie
+     */
     public int getHitDie(){
         JSONObject classFeats = jobContent.getJSONObject("Class Features");
         int hitDie = classFeats.getInt("Hit Die");

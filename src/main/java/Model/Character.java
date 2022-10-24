@@ -39,16 +39,14 @@ public class Character implements CharacterDataCollection {
     private String corememories;
 
     private ArrayList<ProficiencySkills> proficiencySkills;
-    int modifier;
-    HashMap<StatName, Integer> modifiers;
+    private int modifier;
+    private HashMap<StatName, Integer> modifiers;
 
     /**
      * Constructor for the Model.Character class.
      *
      * @param data The data to be used to create the character, as an object that implements the Model.CharacterDataCollection interface.
      * @param level The level of the character, as an integer.
-     * @throws ClassNotFoundException
-     * @throws CloneNotSupportedException
      */
 
     public Character(CharacterDataCollection data, int level) {
