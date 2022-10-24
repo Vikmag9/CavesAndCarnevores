@@ -414,6 +414,11 @@ public class CharacterInfoScreenController implements Initializable {
         // Save the current state of the Lore & Notes tab
     }
 
+    @FXML
+    private void saveCharacter(){
+        CharacterHandler.saveCharacter(this.character);
+    }
+
     // Inventory features
 
     private void updateInventoryList() {
