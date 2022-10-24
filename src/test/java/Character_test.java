@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -457,13 +456,11 @@ public class Character_test {
         if (character.getRace().getSubRace() != null) {
             assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
-        Map<Proficiencies, List<String>> proficiencies = character.getProficiencies();
-        assertEquals(character.getJob().getJobName(), "Monk");
+        assertEquals(character.getJob().getJobName(), "Rogue");
         assertEquals(character.getJob().getHitDie(), 8);
         assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests
         assertEquals(character.getHealth(), 6);
-
 
     }
 

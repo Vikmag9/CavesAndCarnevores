@@ -63,7 +63,7 @@ public class Character implements CharacterDataCollection {
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = characterData.getInventory();
+        this.inventory = new Inventory(10);
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 
@@ -114,7 +114,7 @@ public class Character implements CharacterDataCollection {
     }
     /**
      * Assembles the character's feats.
-     * feats is an umbrella for the different traits and abilities that a character has depending on their race and class.
+     * feats is an umbrella-term for the different traits and abilities that a character has depending on their race and class.
      * First fetches the matching feats and then removes the ones that belong to any levels higher than the character's level.
      * @return A list of the character's feats.
      */
@@ -129,6 +129,8 @@ public class Character implements CharacterDataCollection {
         }
         return characterFeatures;
     }
+
+
 
 
     private HashMap<Proficiencies, List<String>> assembleProficiencies(){
@@ -146,18 +148,18 @@ public class Character implements CharacterDataCollection {
 
 
         jobProfs.forEach((key, value) -> {
-            if (proficiencies.containsKey(Proficiencies.valueOf(key.toString())) && value != null) {
+            if (proficiencies.containsKey(key) && value != null) {
                 proficiencies.put(Proficiencies.valueOf(key.toString()), (List<String>) value);
             }
         });
+
         raceProfs.forEach((key, value) -> {
-            if (proficiencies.containsKey(Proficiencies.valueOf(key.toString())) && value != null) {
-                List profs = proficiencies.get(Proficiencies.valueOf(key.toString()));
-                profs.addAll((List<String>) value);
-                proficiencies.put(Proficiencies.valueOf(key.toString()), profs);
+            if (proficiencies.containsKey(key) && value != null) {
+                List<String> collection = proficiencies.get(key);
+                collection.addAll((List<String>) value);
+                proficiencies.put(Proficiencies.valueOf(key.toString()), collection);
             }
         });
-
         return proficiencies;
     }
 
@@ -337,4 +339,29 @@ public class Character implements CharacterDataCollection {
         return this.proficiencies;
     }
 
+    public void setStrength(int strength){
+        stats.put(StatName.Strength, strength);
+    }
+    public void setConstitution(int constitution){
+        this.stats.put(StatName.Constitution, constitution);
+    }
+
+    public void setWisdom(int wisdom){
+        this.stats.put(StatName.Wisdom, wisdom);
+        System.out.println(wisdom);
+    }
+
+    public void setCharisma(int charisma){
+        this.stats.put(StatName.Charisma, charisma);
+    }
+
+    public void setDexterity(int dexterity){
+        this.stats.put(StatName.Dexterity, dexterity);
+    }
+
+    public void setIntelligence(int intelligence){
+        this.stats.put(StatName.Intelligence, intelligence);
+        System.out.println(intelligence);
+
+    }
 }

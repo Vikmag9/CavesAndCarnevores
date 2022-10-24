@@ -75,7 +75,7 @@ public class ItemsListItem  extends AnchorPane {
             itemAttackBonusText.setVisible(true);
             itemAttackBonusText.setText("+ " + item.getAtkBonus() + " Atk Bonus");
         }
-        if (item.getAc() > 0) {
+        if (item.getAc() != 0) {
             itemACText.setVisible(true);
             itemACText.setText(item.getAc() + " AC");
         }

@@ -7,7 +7,7 @@
         "Armor": ["Light armor", "Medium armor", "Shields"],
         "Weapons": ["Simple weapons", "Martial weapons"],
         "Tools": ["None"],
-        "SavingThrows": ["Strength", "Constitution"],
+        "Saving throws": ["Strength", "Constitution"],
         "SkillOptions": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
         "SkillChoices": 2
       },
@@ -219,7 +219,7 @@
         "Armor": ["Light armor"],
         "Weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
         "Tools": ["Three musical instruments of your choice"],
-        "SavingThrows": ["Dexterity", "Charisma"],
+        "Saving throws": ["Dexterity", "Charisma"],
         "SkillOptions": ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"],
         "SkillChoices": 3
       },
@@ -621,7 +621,7 @@
         "Tools": [
           "None"
         ],
-        "SavingThrows": [
+        "Saving throws": [
           "Wisdom",
           "Charisma"
         ],
@@ -1038,7 +1038,7 @@
         "Tools": [
           "Herbalism kit"
         ],
-        "SavingThrows": [
+        "Saving throws": [
           "Intelligence",
           "Wisdom"
         ],
@@ -1577,7 +1577,7 @@
         "Armor": ["All armor", "Shields"],
         "Weapons": ["Simple weapons", "Martial weapons"],
         "Tools": ["None"],
-        "SavingThrows": ["Strength", "Constitution"],
+        "Saving throws": ["Strength", "Constitution"],
         "SkillOptions": ["Acrobatics", "Animal Handling","Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"],
         "SkillChoices": 2
       },
@@ -1713,7 +1713,7 @@
         "Armor": ["None"],
         "Weapons": ["Simple weapons", "Shortswords"],
         "Tools": ["Artisan's tools or one musical instrument"],
-        "SavingThrows": ["Strength", "Dexterity"],
+        "Saving throws": ["Strength", "Dexterity"],
         "SkillOptions": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"],
         "SkillChoices": 2
       },
@@ -1937,7 +1937,7 @@
         "Armor": ["All armor", "Shields"],
         "Weapons": ["Simple weapons", "Martial weapons"],
         "Tools": ["None"],
-        "SavingThrows": ["Wisdom", "Charisma"],
+        "Saving throws": ["Wisdom", "Charisma"],
         "SkillOptions": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"],
         "SkillChoices": 2
       },
@@ -2262,7 +2262,7 @@
         "Armor": ["Light armor", "Medium armor", "Shields"],
         "Weapons": ["Simple weapons", "Martial weapons"],
         "Tools": ["None"],
-        "SavingThrows": ["Strength", "Dexterity"],
+        "Saving throws": ["Strength", "Dexterity"],
         "SkillOptions": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"],
         "SkillChoices": 2
       },
@@ -2585,7 +2585,7 @@
         "Armor": ["Light armor"],
         "Weapons": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
         "Tools": ["Thieves’ tools"],
-        "SavingThrows": ["Dexterity", "Intelligence"],
+        "Saving throws": ["Dexterity", "Intelligence"],
         "SkillOptions": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"],
         "SkillChoices": 4
 
@@ -2739,7 +2739,7 @@
         "Armor": ["None"],
         "Weapons": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"],
         "Tools": ["None"],
-        "SavingThrows": ["Constitution", "Charisma"],
+        "Saving throws": ["Constitution", "Charisma"],
         "SkillOptions": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"],
         "SkillChoices": 2
       },
@@ -3251,7 +3251,7 @@
         "Armor": ["Light armor"],
         "Weapons": ["Simple weapons"],
         "Tools": ["None"],
-        "SavingThrows": ["Wisdom", "Charisma"],
+        "Saving throws": ["Wisdom", "Charisma"],
         "SkillOptions": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"],
         "SkillChoices": 2
       },
@@ -3716,7 +3716,7 @@
         "Armor": ["None"],
         "Weapons": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
         "Tools": ["None"],
-        "SavingThrows": ["Intelligence", "Wisdom"],
+        "Saving throws": ["Intelligence", "Wisdom"],
         "SkillOptions": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"],
         "SkillChoices": 4,
         "content": [

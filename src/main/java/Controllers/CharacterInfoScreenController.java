@@ -27,24 +27,8 @@ public class CharacterInfoScreenController implements Initializable {
 
     @FXML private Button receiveDataButton;
 
-    @FXML private CheckBox athleticsCheck;
-    @FXML private CheckBox acrobaticsCheck;
-    @FXML private CheckBox sleightCheck;
-    @FXML private CheckBox stealthCheck;
-    @FXML private CheckBox arcanaCheck;
-    @FXML private CheckBox historyCheck;
-    @FXML private CheckBox investigationCheck;
-    @FXML private CheckBox natureCheck;
-    @FXML private CheckBox religionCheck;
-    @FXML private CheckBox animalCheck;
-    @FXML private CheckBox insightCheck;
-    @FXML private CheckBox medicineCheck;
-    @FXML private CheckBox perceptionCheck;
-    @FXML private CheckBox survivalCheck;
-    @FXML private CheckBox deceptionCheck;
-    @FXML private CheckBox intimidationCheck;
-    @FXML private CheckBox performanceCheck;
-    @FXML private CheckBox persuasionCheck;
+    @FXML private CheckBox athleticsCheck, acrobaticsCheck,sleightCheck, stealthCheck,arcanaCheck,historyCheck,investigationCheck,natureCheck,religionCheck,animalCheck;
+    @FXML private CheckBox insightCheck,medicineCheck,perceptionCheck,survivalCheck,deceptionCheck,intimidationCheck,performanceCheck,persuasionCheck;
 
     @FXML private TextField strengthText;
     @FXML private TextField dexText;
@@ -52,12 +36,6 @@ public class CharacterInfoScreenController implements Initializable {
     @FXML private TextField wisText;
     @FXML private TextField intText;
     @FXML private TextField chaText;
-
-
-    @FXML private CheckBox g;
-    @FXML private CheckBox f;
-    @FXML private CheckBox h;
-    @FXML private CheckBox d;
 
 
     //Basics tab fx:ids
@@ -102,19 +80,6 @@ public class CharacterInfoScreenController implements Initializable {
 
     // Combat fx:ids
 
-    @FXML private Text strengthCombatPtsText;
-    @FXML private Text dexterityCombatPtsText;
-    @FXML private Text constitutionCombatPtsText;
-    @FXML private Text wisdomCombatPtsText;
-    @FXML private Text intelligenceCombatPtsText;
-    @FXML private Text charismaCombatPtsText;
-
-    @FXML private Text strengthCombatModifierText;
-    @FXML private Text dexterityCombatModifierText;
-    @FXML private Text constitutionCombatModifierText;
-    @FXML private Text wisdomCombatModifierText;
-    @FXML private Text intelligenceCombatModifierText;
-    @FXML private Text charismaCombatModifierText;
 
     @FXML private Text acText;
     @FXML private Text initiativeText;
@@ -208,37 +173,28 @@ public class CharacterInfoScreenController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.character = CharacterSingleton.getInstance().getCharacter();
 
-        System.out.println("1");
-        System.out.println("2");
-        System.out.println("3");
         prepareRadioButtons();
+        System.out.println("1");
         System.out.println(character.getName());
+        System.out.println("2");
+
         prepareCheckBoxes(character.getProficiencySkills());
-        System.out.println("5");
+        System.out.println("3");
+
         prepareStats(character.getStats());
-        System.out.println("6");
         prepareModifiers(character.calculateModifiers());
-        System.out.println("7");
         prepareName(character.getName());
-        System.out.println("8");
         prepareRace(character.getRaceName());
-        System.out.println("9");
         prepareJob(character.getJobName());
-        System.out.println("10");
         prepareFeatures(character.getFeatures());
         prepareProficiencies(character.getProficiencies());
+        //updateInventoryList();
         //prepareSpells();
     }
 
     private void prepareReceiveDataButton() {
         receiveDataButton.setOnMouseClicked(event -> receiveData(event));
     }
-
-
-
-    // Basics features
-
-    // Combat features
 
     /**
      * Sets the actions to be displayed in the text area.
@@ -262,9 +218,6 @@ public class CharacterInfoScreenController implements Initializable {
                 proficiencyListView.getItems().add(prof);
             }
         }
-
-
-
     }
     /*Sets the reactions to be displayed in the text area. Could be used to set the reactions specific to the character,
     but is currently set to a generalized text that work for all characters. */
@@ -319,6 +272,35 @@ public class CharacterInfoScreenController implements Initializable {
         chaText.setText(stats.get(StatName.Charisma).toString());
         intText.setText(stats.get(StatName.Intelligence).toString());
         dexText.setText(stats.get(StatName.Dexterity).toString());
+        strengthText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setStrength(Integer.parseInt(strengthText.getText()));
+            updateView();
+        });
+        conText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setConstitution(Integer.parseInt(conText.getText()));
+            updateView();
+        });
+        wisText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setWisdom(Integer.parseInt(wisText.getText()));
+            updateView();
+        });
+        chaText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setCharisma(Integer.parseInt(chaText.getText()));
+            updateView();
+        });
+        intText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setIntelligence(Integer.parseInt(intText.getText()));
+            updateView();
+        });
+        dexText.textProperty().addListener((observable, oldValue, newValue) ->{
+            character.setDexterity(Integer.parseInt(dexText.getText()));
+            updateView();
+        });
+
+    }
+
+    private void updateView(){
+        prepareModifiers(character.calculateModifiers());
     }
 
     private void prepareModifiers(HashMap<StatName, Integer> modifiers){
@@ -433,7 +415,7 @@ public class CharacterInfoScreenController implements Initializable {
 
     // Lore & Notes features
 
-    @FXML
+   @FXML
     private void saveLoreAndNotesTab(){
         // Save the current state of the Lore & Notes tab
     }
@@ -471,4 +453,8 @@ public class CharacterInfoScreenController implements Initializable {
         System.out.println(race);
         this.character = character;
     }
+
+
+
 }
+
