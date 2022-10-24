@@ -24,10 +24,26 @@ public class CharacterHandler {
         characterData.put("Race", character.getRaceName());
         characterData.put("Job", character.getJobName());
         characterData.put("Background", character.getBackground());
+        if (character.getNotes() != null) {
+            characterData.put("Notes", character.getNotes());
+        }
+        if (character.getOrganisations() != null) {
+            characterData.put("Organisations", character.getOrganisations());
+        }
+        if (character.getEarlierLife() != null) {
+            characterData.put("EarlierLife", character.getEarlierLife());
+        }
+        if (character.getCorememories() != null) {
+            characterData.put("Corememories", character.getCorememories());
+        }
+        if (character.getLanguages() != null) {
+            characterData.put("Languages", character.getLanguages());
+        }
+
         characterData.put("xp", String.valueOf(character.getXp()));
         characterData.put("Gold", String.valueOf(character.getInventory().getCoinBag().getCoin()));
         characterData.put("Inventory", character.getInventory().getInventory());
-        characterData.put("Model", character.getStats());
+        characterData.put("Stats", character.getStats());
         characterData.put("AC", String.valueOf(character.getArmorClass()));
         characterData.put("HP", String.valueOf(character.getHealth()));
         characterData.put("Alignment", character.getAlignment());
@@ -60,6 +76,21 @@ public class CharacterHandler {
         character.setJobName((String) characterData.get("Job"));
         character.setBackground((String) characterData.get("Background"));
         character.setXp(Integer.parseInt((String) characterData.get("xp")));
+        if (character.getNotes() != null) {
+            character.setNotes((String) characterData.get("Notes"));
+        }
+        if (character.getOrganisations() != null) {
+            character.setOrganisations((String) characterData.get("Organisations"));
+        }
+        if (character.getEarlierLife() != null) {
+            character.setEarlierLife((String) characterData.get("EarlierLife"));
+        }
+        if (character.getCorememories() != null) {
+            character.setCorememories((String) characterData.get("Corememories"));
+        }
+        if (character.getLanguages() != null) {
+            character.setLanguages((String) characterData.get("Languages"));
+        }
 
 
         Inventory inventory = new Inventory(0);
@@ -78,7 +109,7 @@ public class CharacterHandler {
         character.getInventory().getCoinBag().setCoins(Integer.parseInt((String) characterData.get("Gold")));
         character.getInventory().setInventory(inventoryItemListParsed);
 
-        HashMap<String, Integer> stats = (HashMap<String, Integer>) characterData.get("Model");
+        HashMap<String, Integer> stats = (HashMap<String, Integer>) characterData.get("Stats");
         HashMap<StatName, Integer> enumStat = new HashMap<>();
         enumStat.put(StatName.Strength, stats.get("Strength"));
         enumStat.put(StatName.Dexterity, stats.get("Dexterity"));
@@ -103,6 +134,10 @@ public class CharacterHandler {
 
 
         return characterObject;
+    }
+
+    public static List<String> loadSpells(Job job){
+        return SpellParser.parseSpellsForCharacter(job);
     }
 
     /**

@@ -1,9 +1,10 @@
-[
+{
+  "spells": [
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -19,8 +20,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Conjuration cantrip"
@@ -28,8 +29,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "ranger",
-      "wizard"
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -48,8 +49,8 @@
     "ritual": true,
     "school": "abjuration",
     "tags": [
-      "ranger",
-      "wizard",
+      "Ranger",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level abjuration (ritual)"
@@ -57,9 +58,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -79,9 +80,9 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -89,8 +90,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric"
+      "Bard",
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -110,8 +111,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "cleric",
+      "Bard",
+      "Cleric",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -119,10 +120,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -138,10 +139,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Abjuration cantrip"
@@ -149,8 +150,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": true,
@@ -170,8 +171,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -179,8 +180,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -197,8 +198,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -206,11 +207,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -227,11 +228,11 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -239,9 +240,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -257,9 +258,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Necromancy cantrip"
@@ -267,8 +268,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -288,8 +289,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -297,8 +298,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -318,8 +319,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level illusion"
@@ -327,8 +328,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -345,8 +346,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -354,7 +355,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -370,7 +371,7 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "paladin",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -378,10 +379,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -400,10 +401,10 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level divination (Ritual)"
@@ -411,8 +412,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -432,8 +433,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -441,11 +442,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -462,11 +463,11 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -474,9 +475,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -495,9 +496,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -505,8 +506,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -522,8 +523,8 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level divination"
@@ -531,13 +532,13 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -553,13 +554,13 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level divination (Ritual)"
@@ -567,10 +568,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger"
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -589,10 +590,10 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level divination (Ritual)"
@@ -600,10 +601,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -619,10 +620,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "cleric (trickery)",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric (trickery)",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level illusion"
@@ -630,7 +631,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -646,7 +647,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -654,7 +655,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard"
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -671,7 +672,7 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
+      "Bard",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -679,7 +680,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -695,7 +696,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -703,7 +704,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "warlock"
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -719,7 +720,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "warlock",
+      "Warlock",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -727,7 +728,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -744,7 +745,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "ranger",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -752,7 +753,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -768,7 +769,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -776,8 +777,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid"
+      "Bard",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -793,8 +794,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "druid",
+      "Bard",
+      "Druid",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -802,9 +803,9 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -820,9 +821,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -830,8 +831,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -851,8 +852,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level necromancy"
@@ -860,9 +861,9 @@
   {
     "casting_time": "1 reaction, which you take when you or a creature within 60 feet of you falls",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -881,9 +882,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -891,7 +892,7 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -910,7 +911,7 @@
     "ritual": true,
     "school": "conjuration",
     "tags": [
-      "wizard",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level conjuration (ritual)"
@@ -918,8 +919,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -935,8 +936,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -944,10 +945,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -964,10 +965,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -975,10 +976,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -997,10 +998,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Enchantment cantrip"
@@ -1008,8 +1009,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -1028,8 +1029,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -1037,7 +1038,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1056,7 +1057,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "wizard",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -1064,8 +1065,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -1081,8 +1082,8 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "cantrip"
     ],
     "type": "Divination cantrip"
@@ -1090,7 +1091,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -1107,7 +1108,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -1115,7 +1116,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -1132,7 +1133,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "ranger",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -1140,9 +1141,9 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid"
+      "Bard",
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -1159,9 +1160,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
+      "Bard",
+      "Cleric",
+      "Druid",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -1169,7 +1170,7 @@
   {
     "casting_time": "1 reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see.",
     "classes": [
-      "warlock"
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -1186,7 +1187,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "warlock",
+      "Warlock",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -1194,7 +1195,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "warlock"
+      "Warlock"
     ],
     "components": {
       "material": true,
@@ -1214,7 +1215,7 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "warlock",
+      "Warlock",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -1222,8 +1223,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "paladin"
+      "Bard",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -1240,8 +1241,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "paladin",
+      "Bard",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -1249,7 +1250,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -1266,7 +1267,7 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "ranger",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level divination"
@@ -1274,8 +1275,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1294,8 +1295,8 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level divination (Ritual)"
@@ -1303,9 +1304,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1324,9 +1325,9 @@
     "ritual": true,
     "school": "illusion",
     "tags": [
-      "bard",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level illusion (Ritual)"
@@ -1334,7 +1335,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -1351,7 +1352,7 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
+      "Cleric",
       "level1"
     ],
     "type": "1st-level necromancy"
@@ -1359,10 +1360,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1381,10 +1382,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -1392,10 +1393,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1414,10 +1415,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -1425,10 +1426,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1448,10 +1449,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Ranger",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -1459,8 +1460,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1479,8 +1480,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -1488,10 +1489,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1507,10 +1508,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Conjuration cantrip"
@@ -1518,8 +1519,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1536,8 +1537,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -1545,11 +1546,11 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1568,11 +1569,11 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -1580,9 +1581,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1601,9 +1602,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -1611,10 +1612,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1633,10 +1634,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Illusion cantrip"
@@ -1644,10 +1645,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1663,10 +1664,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Conjuration cantrip"
@@ -1674,10 +1675,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1693,10 +1694,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -1704,7 +1705,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -1720,7 +1721,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "cantrip"
     ],
     "type": "Conjuration cantrip"
@@ -1728,10 +1729,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -1750,10 +1751,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -1761,9 +1762,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "paladin"
+      "Cleric",
+      "Druid",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -1779,9 +1780,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
-      "paladin",
+      "Cleric",
+      "Druid",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -1789,8 +1790,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1806,8 +1807,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -1815,8 +1816,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1833,8 +1834,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level necromancy"
@@ -1842,10 +1843,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -1861,10 +1862,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -1872,8 +1873,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -1892,8 +1893,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "cantrip"
     ],
     "type": "Abjuration cantrip"
@@ -1901,7 +1902,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -1917,7 +1918,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -1925,7 +1926,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -1944,7 +1945,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -1952,8 +1953,8 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": true,
@@ -1972,8 +1973,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -1981,7 +1982,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -1998,7 +1999,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -2006,8 +2007,8 @@
   {
     "casting_time": "1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2023,8 +2024,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -2032,7 +2033,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -2051,7 +2052,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -2059,8 +2060,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2076,8 +2077,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -2085,9 +2086,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2106,9 +2107,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level illusion"
@@ -2116,9 +2117,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2138,9 +2139,9 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level enchantment"
@@ -2148,7 +2149,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2164,7 +2165,7 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
+      "Cleric",
       "cantrip"
     ],
     "type": "Necromancy cantrip"
@@ -2172,9 +2173,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -2190,9 +2191,9 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level divination (ritual)"
@@ -2200,7 +2201,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2216,7 +2217,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
+      "Cleric",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -2224,7 +2225,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -2243,7 +2244,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -2251,7 +2252,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -2267,7 +2268,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -2275,10 +2276,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2295,10 +2296,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -2306,10 +2307,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2325,10 +2326,10 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Divination cantrip"
@@ -2336,9 +2337,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2357,9 +2358,9 @@
     "ritual": true,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level conjuration (ritual)"
@@ -2367,7 +2368,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard"
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -2383,7 +2384,7 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
+      "Bard",
       "cantrip"
     ],
     "type": "Enchantment cantrip"
@@ -2391,9 +2392,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2413,9 +2414,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -2423,7 +2424,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -2439,7 +2440,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -2447,8 +2448,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": true,
@@ -2468,8 +2469,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level2"
     ],
     "type": "2nd-level abjuration"
@@ -2477,9 +2478,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -2499,9 +2500,9 @@
     "ritual": true,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level enchantment (ritual)"
@@ -2509,10 +2510,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2529,10 +2530,10 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level Necromancy"
@@ -2540,7 +2541,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -2559,7 +2560,7 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "cleric",
+      "Cleric",
       "level2"
     ],
     "type": "2nd-level divination (ritual)"
@@ -2567,8 +2568,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric"
+      "Bard",
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2584,8 +2585,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "cleric",
+      "Bard",
+      "Cleric",
       "level2"
     ],
     "type": "2nd-level Enchantment"
@@ -2593,12 +2594,12 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2618,12 +2619,12 @@
     "ritual": true,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level enchantment (ritual)"
@@ -2631,11 +2632,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -2651,11 +2652,11 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level abjuration"
@@ -2663,7 +2664,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2680,7 +2681,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -2688,9 +2689,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "ranger"
+      "Bard",
+      "Cleric",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -2706,9 +2707,9 @@
     "ritual": true,
     "school": "illusion",
     "tags": [
-      "bard",
-      "cleric",
-      "ranger",
+      "Bard",
+      "Cleric",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level illusion (ritual)"
@@ -2716,7 +2717,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2733,7 +2734,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -2741,7 +2742,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -2760,7 +2761,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level2"
     ],
     "type": "2nd-level abjuration"
@@ -2768,8 +2769,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric",
-      "wizard"
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2789,8 +2790,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "wizard",
+      "Cleric",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level necromancy"
@@ -2798,7 +2799,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2817,7 +2818,7 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "wizard",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level divination"
@@ -2825,7 +2826,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -2841,7 +2842,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "paladin",
+      "Paladin",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -2849,7 +2850,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -2865,7 +2866,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "paladin",
+      "Paladin",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -2873,7 +2874,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -2889,7 +2890,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -2897,11 +2898,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -2921,11 +2922,11 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -2933,7 +2934,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -2949,7 +2950,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -2957,10 +2958,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -2977,10 +2978,10 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level necromancy"
@@ -2988,9 +2989,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3007,9 +3008,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "cleric",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level necromancy"
@@ -3017,7 +3018,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -3033,7 +3034,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -3041,8 +3042,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3058,8 +3059,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3067,7 +3068,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -3084,7 +3085,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -3092,10 +3093,10 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3114,10 +3115,10 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level divination"
@@ -3125,10 +3126,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3148,10 +3149,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level Conjuration"
@@ -3159,7 +3160,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard"
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -3175,7 +3176,7 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
+      "Bard",
       "level4"
     ],
     "type": "4th-level enchantment"
@@ -3183,8 +3184,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -3201,8 +3202,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -3210,7 +3211,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -3229,7 +3230,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "ranger",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -3237,9 +3238,9 @@
   {
     "casting_time": "1 reaction, which you take when you see a creature within 60 feet of you casting a spell.",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3256,9 +3257,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -3266,8 +3267,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -3283,8 +3284,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -3292,7 +3293,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -3308,7 +3309,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -3316,11 +3317,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "sorcerer"
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer"
     ],
     "components": {
       "material": false,
@@ -3336,11 +3337,11 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "sorcerer",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Sorcerer",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -3348,13 +3349,13 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3371,13 +3372,13 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -3385,7 +3386,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -3402,7 +3403,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3410,10 +3411,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3432,10 +3433,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level illusion"
@@ -3443,10 +3444,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3465,10 +3466,10 @@
     "ritual": true,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level necromancy (ritual)"
@@ -3476,8 +3477,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3497,8 +3498,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -3506,9 +3507,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3528,9 +3529,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3538,9 +3539,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3559,9 +3560,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3569,8 +3570,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3589,8 +3590,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3598,10 +3599,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3620,10 +3621,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level illusion"
@@ -3631,7 +3632,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -3648,7 +3649,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "ranger",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3656,10 +3657,10 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3679,10 +3680,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Paladin",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -3690,10 +3691,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3713,10 +3714,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level illusion"
@@ -3724,7 +3725,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -3741,7 +3742,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -3749,8 +3750,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3766,8 +3767,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level Transmutation"
@@ -3775,7 +3776,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3794,7 +3795,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "wizard",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level abjuration"
@@ -3802,8 +3803,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -3822,8 +3823,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -3831,9 +3832,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "ranger",
-      "wizard"
+      "Bard",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -3852,9 +3853,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "ranger",
-      "wizard",
+      "Bard",
+      "Ranger",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -3862,8 +3863,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -3879,8 +3880,8 @@
     "ritual": true,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level3"
     ],
     "type": "3rd-level transmutation (ritual)"
@@ -3888,7 +3889,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3904,7 +3905,7 @@
     "ritual": true,
     "school": "illusion",
     "tags": [
-      "wizard",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level illusion (ritual)"
@@ -3912,9 +3913,9 @@
   {
     "casting_time": "1 action or 8 hours",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -3930,9 +3931,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -3940,11 +3941,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Cleric",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -3960,11 +3961,11 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Cleric",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -3972,8 +3973,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": true,
@@ -3992,8 +3993,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -4001,9 +4002,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4022,9 +4023,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "cleric",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -4032,9 +4033,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4053,9 +4054,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -4063,8 +4064,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4083,8 +4084,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -4092,8 +4093,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric"
+      "Bard",
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -4112,8 +4113,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "cleric",
+      "Bard",
+      "Cleric",
       "level3"
     ],
     "type": "3rd-level necromancy"
@@ -4121,9 +4122,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -4139,9 +4140,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -4149,7 +4150,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -4169,7 +4170,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -4177,9 +4178,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4198,9 +4199,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -4208,10 +4209,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4231,10 +4232,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level enchantment"
@@ -4242,8 +4243,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -4260,8 +4261,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -4269,9 +4270,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "wizard"
+      "Cleric",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4290,9 +4291,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
-      "wizard",
+      "Cleric",
+      "Druid",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -4300,8 +4301,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -4321,8 +4322,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -4330,8 +4331,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -4347,8 +4348,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -4356,11 +4357,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4379,11 +4380,11 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level divination"
@@ -4391,8 +4392,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -4408,8 +4409,8 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level divination (ritual)"
@@ -4417,8 +4418,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -4434,8 +4435,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level illusion"
@@ -4443,7 +4444,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -4460,7 +4461,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level2"
     ],
     "type": "2nd-Level evocation"
@@ -4468,7 +4469,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -4488,7 +4489,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "ranger",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-Level transmutation"
@@ -4496,10 +4497,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -4515,10 +4516,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level enchantment"
@@ -4526,9 +4527,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4547,9 +4548,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level evocation"
@@ -4557,10 +4558,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4579,10 +4580,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -4590,9 +4591,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4611,9 +4612,9 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-Level divination"
@@ -4621,7 +4622,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -4637,7 +4638,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "level8"
     ],
     "type": "8th-level transmutation"
@@ -4645,8 +4646,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "wizard"
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4665,8 +4666,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "wizard",
+      "Cleric",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level abjuration"
@@ -4674,8 +4675,8 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4694,8 +4695,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level enchantment"
@@ -4703,9 +4704,9 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "cleric",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4724,9 +4725,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Warlock",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level necromancy"
@@ -4734,7 +4735,7 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4753,7 +4754,7 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "wizard",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level necromancy"
@@ -4761,9 +4762,9 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric",
-      "druid",
-      "wizard"
+      "Cleric",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4782,9 +4783,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
-      "wizard",
+      "Cleric",
+      "Druid",
+      "Wizard",
       "level8"
     ],
     "type": "Wind"
@@ -4792,8 +4793,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -4809,8 +4810,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level conjuration"
@@ -4818,10 +4819,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -4838,10 +4839,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level enchantment"
@@ -4849,9 +4850,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "sorcerer"
+      "Cleric",
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": true,
@@ -4870,9 +4871,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
-      "druid",
-      "sorcerer",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
       "level8"
     ],
     "type": "8th-level evocation"
@@ -4880,10 +4881,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4902,10 +4903,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level enchantment"
@@ -4913,10 +4914,10 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4935,10 +4936,10 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level divination"
@@ -4946,9 +4947,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "sorcerer",
-      "wizard"
+      "Cleric",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -4967,9 +4968,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "sorcerer",
-      "wizard",
+      "Cleric",
+      "Sorcerer",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level conjuration"
@@ -4977,8 +4978,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "warlock"
+      "Bard",
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -4994,8 +4995,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "warlock",
+      "Bard",
+      "Warlock",
       "level8"
     ],
     "type": "8th-level transmutation"
@@ -5003,7 +5004,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -5022,7 +5023,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level8"
     ],
     "type": "8th-level abjuration"
@@ -5030,8 +5031,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5050,8 +5051,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level abjuration"
@@ -5059,8 +5060,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5076,8 +5077,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level conjuration"
@@ -5085,7 +5086,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -5101,7 +5102,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level9"
     ],
     "type": "9th-level conjuration"
@@ -5109,7 +5110,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5125,7 +5126,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "wizard",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level conjuration"
@@ -5133,8 +5134,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5150,8 +5151,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level evocation"
@@ -5159,8 +5160,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5176,8 +5177,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level abjuration"
@@ -5185,7 +5186,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard"
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -5201,7 +5202,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
+      "Bard",
       "level9"
     ],
     "type": "9th-level evocation"
@@ -5209,10 +5210,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5228,10 +5229,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level enchantment"
@@ -5239,10 +5240,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5258,10 +5259,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level enchantment"
@@ -5269,7 +5270,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5285,7 +5286,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "wizard",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level abjuration"
@@ -5293,8 +5294,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5313,8 +5314,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level transmutation"
@@ -5322,7 +5323,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -5338,7 +5339,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level9"
     ],
     "type": "9th-level conjuration"
@@ -5346,7 +5347,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5365,7 +5366,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level evocation"
@@ -5373,9 +5374,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5394,9 +5395,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level8"
     ],
     "type": "8th-level evocation"
@@ -5404,8 +5405,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5421,8 +5422,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level transmutation"
@@ -5430,9 +5431,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5451,9 +5452,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Warlock",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level transmutation"
@@ -5461,7 +5462,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -5477,7 +5478,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level8"
     ],
     "type": "8th-level conjuration"
@@ -5485,8 +5486,8 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -5505,8 +5506,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level9"
     ],
     "type": "9th-level necromancy"
@@ -5514,7 +5515,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5530,7 +5531,7 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "wizard",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level illusion"
@@ -5538,8 +5539,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5555,8 +5556,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level9"
     ],
     "type": "9th-level conjuration"
@@ -5564,7 +5565,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -5581,7 +5582,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level7"
     ],
     "type": "7th-level conjuration"
@@ -5589,8 +5590,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5610,8 +5611,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -5619,10 +5620,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5638,10 +5639,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -5649,7 +5650,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -5665,7 +5666,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -5673,11 +5674,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5694,11 +5695,11 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level transmutation"
@@ -5706,9 +5707,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5724,9 +5725,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level necromancy"
@@ -5734,9 +5735,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "sorcerer"
+      "Cleric",
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": false,
@@ -5752,9 +5753,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
-      "druid",
-      "sorcerer",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -5762,9 +5763,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5783,9 +5784,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Warlock",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -5793,9 +5794,9 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "bard",
-      "druid",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5811,9 +5812,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "druid",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level illusion"
@@ -5821,8 +5822,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -5838,8 +5839,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -5847,8 +5848,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5867,8 +5868,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level illusion"
@@ -5876,11 +5877,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5899,11 +5900,11 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level conjuration"
@@ -5911,9 +5912,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "cleric",
-      "druid"
+      "Bard",
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -5932,9 +5933,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
+      "Bard",
+      "Cleric",
+      "Druid",
       "level7"
     ],
     "type": "7th-level transmutation"
@@ -5942,8 +5943,8 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "bard",
-      "cleric"
+      "Bard",
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -5962,8 +5963,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "cleric",
+      "Bard",
+      "Cleric",
       "level7"
     ],
     "type": "7th-level necromancy"
@@ -5971,9 +5972,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -5992,9 +5993,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level transmutation"
@@ -6002,7 +6003,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6021,7 +6022,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level transmutation"
@@ -6029,7 +6030,7 @@
   {
     "casting_time": "12 hours",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6048,7 +6049,7 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "wizard",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level illusion"
@@ -6056,9 +6057,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "cleric",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6077,9 +6078,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level abjuration"
@@ -6087,9 +6088,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6097,7 +6098,7 @@
       "somatic": false,
       "verbal": true
     },
-    "description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object, that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature.\n\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table.\n\n| Familiarity       | Mishap | Simliar Area | Off Target | On Target |\n|-------------------|--------|--------------|------------|-----------|\n| Permanent circle  |  ---   |      ---     |     ---    |   01-100  |\n| Associated object |  ---   |      ---     |     ---    |   01-100  |\n| Very familiar     | 01-05  |     06-13    |    14-24   |   25-100  |\n| Seen casually     | 01-33  |     34-43    |    44-53   |   54-100  |\n| Viewed once       | 01-43  |     44-53    |    54-73   |   74-100  |\n| Description       | 01-43  |     44-53    |    54-73   |   74-100  |\n| False destination | 01-50  |    51-100    |     ---    |    ---    |\n\nFamiliarity: \"Permanent Circle\" means a permanent Teleportation Circle whose sigil sequence you know. \"Associated Object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a wizard's Library, bed linen from a royal suite, or a chunk of marble from a Lich's Secret tomb.\n\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell. \"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar. \"Viewed once\" is a place you have seen once, possibly using magic. \"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map.\n\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead view an illusion, or you were attempting to teleport to a familiar location that no longer exists.\n\nOn Target: You and your group (or the target object) appear where you want to go.\n\nOff Target: You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 x 1d10 percent of the distance that was to be travelled. For example, if you tried to Travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as north-east, 3 as east, and so on around the points of the compass. If you were teleporting to a Coastal city and wound up 18 miles out at sea, you could be in trouble.\n\nSimilar Area: You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane.\n\nMishap: The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage and the DM rerolls on the table to see where you wind up (multiple Mishaps can occur, dealing damage each time).",
+    "description": "This spell instantly transports you and up to eight willing creatures of your choice that you can see within range, or a single object, that you can see within range, to a destination you select. If you target an object, it must be able to fit entirely inside a 10-foot cube, and it can't be held or carried by an unwilling creature.\n\nThe destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls d100 and consults the table.\n\n| Familiarity       | Mishap | Simliar Area | Off Target | On Target |\n|-------------------|--------|--------------|------------|-----------|\n| Permanent circle  |  ---   |      ---     |     ---    |   01-100  |\n| Associated object |  ---   |      ---     |     ---    |   01-100  |\n| Very familiar     | 01-05  |     06-13    |    14-24   |   25-100  |\n| Seen casually     | 01-33  |     34-43    |    44-53   |   54-100  |\n| Viewed once       | 01-43  |     44-53    |    54-73   |   74-100  |\n| Description       | 01-43  |     44-53    |    54-73   |   74-100  |\n| False destination | 01-50  |    51-100    |     ---    |    ---    |\n\nFamiliarity: \"Permanent Circle\" means a permanent Teleportation Circle whose sigil sequence you know. \"Associated Object\" means that you possess an object taken from the desired destination within the last six months, such as a book from a Wizard's Library, bed linen from a royal suite, or a chunk of marble from a Lich's Secret tomb.\n\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell. \"Seen casually\" is someplace you have seen more than once but with which you aren't very familiar. \"Viewed once\" is a place you have seen once, possibly using magic. \"Description\" is a place whose location and appearance you know through someone else's description, perhaps from a map.\n\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead view an illusion, or you were attempting to teleport to a familiar location that no longer exists.\n\nOn Target: You and your group (or the target object) appear where you want to go.\n\nOff Target: You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 x 1d10 percent of the distance that was to be travelled. For example, if you tried to Travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as north-east, 3 as east, and so on around the points of the compass. If you were teleporting to a Coastal city and wound up 18 miles out at sea, you could be in trouble.\n\nSimilar Area: You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another Wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane.\n\nMishap: The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage and the DM rerolls on the table to see where you wind up (multiple Mishaps can occur, dealing damage each time).",
     "duration": "Instantaneous",
     "level": "7",
     "name": "Teleport",
@@ -6105,9 +6106,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level conjuration"
@@ -6115,10 +6116,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6137,10 +6138,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level enchantment"
@@ -6148,10 +6149,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6171,10 +6172,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level illusion"
@@ -6182,9 +6183,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6201,9 +6202,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "ANIMATED OBJECTS STATISTICS"
@@ -6211,7 +6212,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -6227,7 +6228,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -6235,9 +6236,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6253,9 +6254,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -6263,8 +6264,8 @@
   {
     "casting_time": "8 hours",
     "classes": [
-      "bard",
-      "druid"
+      "Bard",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -6283,8 +6284,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
+      "Bard",
+      "Druid",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -6292,7 +6293,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -6308,7 +6309,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "paladin",
+      "Paladin",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -6316,8 +6317,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6337,8 +6338,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -6346,7 +6347,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -6362,7 +6363,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -6370,9 +6371,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6392,9 +6393,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level necromancy"
@@ -6402,7 +6403,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -6418,7 +6419,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "paladin",
+      "Paladin",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -6426,8 +6427,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6444,8 +6445,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -6453,8 +6454,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -6470,8 +6471,8 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level5"
     ],
     "type": "5th-level divination (ritual)"
@@ -6479,7 +6480,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -6498,7 +6499,7 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "cleric",
+      "Cleric",
       "level5"
     ],
     "type": "5th-level divination (ritual)"
@@ -6506,8 +6507,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6527,8 +6528,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -6536,8 +6537,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6557,8 +6558,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -6566,8 +6567,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid",
-      "warlock"
+      "Druid",
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -6584,8 +6585,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "warlock",
+      "Druid",
+      "Warlock",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -6593,7 +6594,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -6612,7 +6613,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "ranger",
+      "Ranger",
       "level5"
     ],
     "type": "5th-level Conjuration"
@@ -6620,8 +6621,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6637,8 +6638,8 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level divination (ritual)"
@@ -6646,8 +6647,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -6663,8 +6664,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level5"
     ],
     "type": "5th-level necromancy"
@@ -6672,7 +6673,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6691,7 +6692,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -6699,9 +6700,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric",
-      "warlock",
-      "wizard"
+      "Cleric",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6721,9 +6722,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "warlock",
-      "wizard",
+      "Cleric",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level necromancy"
@@ -6731,8 +6732,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "wizard"
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6751,8 +6752,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
-      "wizard",
+      "Cleric",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -6760,8 +6761,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6781,8 +6782,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level illusion"
@@ -6790,7 +6791,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -6806,7 +6807,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -6814,8 +6815,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6835,8 +6836,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -6844,7 +6845,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -6863,7 +6864,7 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "cleric",
+      "Cleric",
       "level4"
     ],
     "type": "4th-level divination (ritual)"
@@ -6871,8 +6872,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "paladin"
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": true,
@@ -6891,8 +6892,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "paladin",
+      "Cleric",
+      "Paladin",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -6900,8 +6901,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer"
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": false,
@@ -6918,8 +6919,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "druid",
-      "sorcerer",
+      "Druid",
+      "Sorcerer",
       "level4"
     ],
     "type": "4th-level enchantment"
@@ -6927,9 +6928,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -6946,9 +6947,9 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level enchantment"
@@ -6956,9 +6957,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -6977,9 +6978,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Warlock",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level illusion"
@@ -6987,10 +6988,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": true,
@@ -7010,10 +7011,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "sorcerer",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -7021,8 +7022,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7041,8 +7042,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -7050,8 +7051,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "warlock"
+      "Bard",
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -7067,8 +7068,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "warlock",
+      "Bard",
+      "Warlock",
       "level2"
     ],
     "type": "2nd-level enchantment"
@@ -7076,7 +7077,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -7092,7 +7093,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -7100,10 +7101,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -7119,10 +7120,10 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level necromancy"
@@ -7130,7 +7131,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -7146,7 +7147,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "paladin",
+      "Paladin",
       "level2"
     ],
     "type": "2nd-level conjuration"
@@ -7154,9 +7155,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "cleric",
-      "druid"
+      "Bard",
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -7175,9 +7176,9 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
+      "Bard",
+      "Cleric",
+      "Druid",
       "level6"
     ],
     "type": "6th-level divination"
@@ -7185,9 +7186,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "ranger"
+      "Cleric",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -7203,9 +7204,9 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "cleric",
-      "druid",
-      "ranger",
+      "Cleric",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level divination"
@@ -7213,7 +7214,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7232,7 +7233,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -7240,7 +7241,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -7260,7 +7261,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
+      "Druid",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -7268,7 +7269,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -7288,7 +7289,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -7296,8 +7297,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7317,8 +7318,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level conjuration"
@@ -7326,8 +7327,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7346,8 +7347,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -7355,7 +7356,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -7374,7 +7375,7 @@
     "ritual": true,
     "school": "abjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level6"
     ],
     "type": "6th-level abjuration (ritual)"
@@ -7382,10 +7383,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "ranger"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -7404,10 +7405,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "ranger",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Ranger",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -7415,11 +7416,11 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "cleric",
-      "wizard",
-      "paladin",
-      "druid",
-      "bard"
+      "Cleric",
+      "Wizard",
+      "Paladin",
+      "Druid",
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -7436,11 +7437,11 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "cleric",
-      "wizard",
-      "paladin",
-      "druid",
-      "bard",
+      "Cleric",
+      "Wizard",
+      "Paladin",
+      "Druid",
+      "Bard",
       "level5"
     ],
     "type": "5th-level enchantment"
@@ -7448,8 +7449,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "wizard"
+      "Cleric",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7468,8 +7469,8 @@
     "ritual": true,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "wizard",
+      "Cleric",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level necromancy (ritual)"
@@ -7477,7 +7478,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -7493,7 +7494,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -7501,8 +7502,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7522,8 +7523,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level abjuration"
@@ -7531,9 +7532,9 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "cleric",
-      "wizard",
-      "bard"
+      "Cleric",
+      "Wizard",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -7553,9 +7554,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "wizard",
-      "bard",
+      "Cleric",
+      "Wizard",
+      "Bard",
       "level3"
     ],
     "type": "3rd-level abjuration"
@@ -7563,8 +7564,8 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger",
-      "druid"
+      "Ranger",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -7580,8 +7581,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "ranger",
-      "druid",
+      "Ranger",
+      "Druid",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -7589,9 +7590,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard",
-      "bard"
+      "Sorcerer",
+      "Wizard",
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -7607,9 +7608,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "sorcerer",
-      "wizard",
-      "bard",
+      "Sorcerer",
+      "Wizard",
+      "Bard",
       "level4"
     ],
     "type": "4th-level illusion"
@@ -7617,9 +7618,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "bard"
+      "Cleric",
+      "Druid",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -7638,9 +7639,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "druid",
-      "bard",
+      "Cleric",
+      "Druid",
+      "Bard",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -7648,7 +7649,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -7664,7 +7665,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -7672,8 +7673,8 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "wizard",
-      "bard"
+      "Wizard",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -7692,8 +7693,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "wizard",
-      "bard",
+      "Wizard",
+      "Bard",
       "level6"
     ],
     "type": "6th-level abjuration"
@@ -7701,9 +7702,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard",
-      "druid"
+      "Sorcerer",
+      "Wizard",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -7722,9 +7723,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
-      "druid",
+      "Sorcerer",
+      "Wizard",
+      "Druid",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -7732,10 +7733,10 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7754,10 +7755,10 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "druid",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Warlock",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level illusion"
@@ -7765,7 +7766,7 @@
   {
     "casting_time": "24 hours",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": true,
@@ -7784,7 +7785,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
+      "Cleric",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -7792,7 +7793,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -7808,7 +7809,7 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
+      "Cleric",
       "level6"
     ],
     "type": "6th-level necromancy"
@@ -7816,8 +7817,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "bard"
+      "Druid",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -7837,8 +7838,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "bard",
+      "Druid",
+      "Bard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -7846,8 +7847,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -7864,8 +7865,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -7873,8 +7874,8 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric",
-      "druid"
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -7893,8 +7894,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "druid",
+      "Cleric",
+      "Druid",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -7902,10 +7903,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7925,10 +7926,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level enchantment"
@@ -7936,9 +7937,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -7958,9 +7959,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -7968,9 +7969,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "sorcerer"
+      "Cleric",
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": true,
@@ -7990,9 +7991,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
-      "druid",
-      "sorcerer",
+      "Cleric",
+      "Druid",
+      "Sorcerer",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -8000,9 +8001,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard",
-      "bard"
+      "Sorcerer",
+      "Wizard",
+      "Bard"
     ],
     "components": {
       "material": false,
@@ -8018,9 +8019,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
-      "bard",
+      "Sorcerer",
+      "Wizard",
+      "Bard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -8028,9 +8029,9 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric",
-      "wizard",
-      "bard"
+      "Cleric",
+      "Wizard",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -8049,9 +8050,9 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "cleric",
-      "wizard",
-      "bard",
+      "Cleric",
+      "Wizard",
+      "Bard",
       "level5"
     ],
     "type": "5th-level divination"
@@ -8059,8 +8060,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8079,8 +8080,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -8088,9 +8089,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "ranger"
+      "Bard",
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -8109,9 +8110,9 @@
     "ritual": true,
     "school": "divination",
     "tags": [
-      "bard",
-      "druid",
-      "ranger",
+      "Bard",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level divination (ritual)"
@@ -8119,8 +8120,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8140,8 +8141,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -8149,12 +8150,12 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8173,12 +8174,12 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level divination"
@@ -8186,12 +8187,12 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8210,12 +8211,12 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "paladin",
-      "ranger",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Paladin",
+      "Ranger",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level divination"
@@ -8223,7 +8224,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8242,7 +8243,7 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "wizard",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level necromancy"
@@ -8250,8 +8251,8 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin",
-      "wizard"
+      "Paladin",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8268,8 +8269,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "paladin",
-      "wizard",
+      "Paladin",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -8277,8 +8278,8 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8297,8 +8298,8 @@
     "ritual": true,
     "school": "illusion",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level illusion (ritual)"
@@ -8306,9 +8307,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "druid"
+      "Bard",
+      "Cleric",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -8325,9 +8326,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
+      "Bard",
+      "Cleric",
+      "Druid",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -8335,10 +8336,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8358,10 +8359,10 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level enchantment"
@@ -8369,9 +8370,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8387,9 +8388,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level illusion"
@@ -8397,8 +8398,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8414,8 +8415,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level illusion"
@@ -8423,9 +8424,9 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8441,9 +8442,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level conjuration"
@@ -8451,8 +8452,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8469,8 +8470,8 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level enchantment"
@@ -8478,7 +8479,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -8498,7 +8499,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
+      "Druid",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -8506,9 +8507,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8527,9 +8528,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -8537,8 +8538,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -8557,8 +8558,8 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level abjuration"
@@ -8566,7 +8567,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8585,7 +8586,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -8593,7 +8594,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8610,7 +8611,7 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "wizard",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level illusion"
@@ -8618,9 +8619,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8639,9 +8640,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level illusion"
@@ -8649,7 +8650,7 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -8665,7 +8666,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -8673,10 +8674,10 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8696,10 +8697,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level abjuration"
@@ -8707,10 +8708,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8729,10 +8730,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -8740,8 +8741,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "wizard"
+      "Bard",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8760,8 +8761,8 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "wizard",
+      "Bard",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level illusion"
@@ -8769,9 +8770,9 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "cleric",
-      "paladin",
-      "bard"
+      "Cleric",
+      "Paladin",
+      "Bard"
     ],
     "components": {
       "material": true,
@@ -8790,9 +8791,9 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "cleric",
-      "paladin",
-      "bard",
+      "Cleric",
+      "Paladin",
+      "Bard",
       "level5"
     ],
     "type": "5th-level necromancy"
@@ -8800,10 +8801,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "ranger",
-      "paladin",
-      "druid"
+      "Cleric",
+      "Ranger",
+      "Paladin",
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -8819,10 +8820,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "cleric",
-      "ranger",
-      "paladin",
-      "druid",
+      "Cleric",
+      "Ranger",
+      "Paladin",
+      "Druid",
       "level2"
     ],
     "type": "2nd-level abjuration"
@@ -8830,8 +8831,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8847,8 +8848,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level necromancy"
@@ -8856,7 +8857,7 @@
   {
     "casting_time": "1 hour",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -8875,7 +8876,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -8883,7 +8884,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8902,7 +8903,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -8910,8 +8911,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8928,8 +8929,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -8937,11 +8938,11 @@
   {
     "casting_time": "10 minutes",
     "classes": [
-      "bard",
-      "cleric",
-      "druid",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -8960,11 +8961,11 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "druid",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Druid",
+      "Warlock",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level divination"
@@ -8972,9 +8973,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -8990,9 +8991,9 @@
     "ritual": false,
     "school": "illusion",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level illusion"
@@ -9000,9 +9001,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9021,9 +9022,9 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level divination"
@@ -9031,10 +9032,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9054,10 +9055,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level evocation"
@@ -9065,9 +9066,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9086,9 +9087,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -9096,8 +9097,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -9116,8 +9117,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -9125,7 +9126,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "paladin"
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -9141,7 +9142,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "paladin",
+      "Paladin",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -9149,9 +9150,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "wizard"
+      "Cleric",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9170,9 +9171,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
-      "wizard",
+      "Cleric",
+      "Druid",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -9180,9 +9181,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9201,9 +9202,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -9211,10 +9212,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "ranger",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9233,10 +9234,10 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "ranger",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Ranger",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level abjuration"
@@ -9244,7 +9245,7 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "ranger"
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -9263,7 +9264,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "ranger",
+      "Ranger",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -9271,8 +9272,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9288,8 +9289,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -9297,9 +9298,9 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9318,9 +9319,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -9328,7 +9329,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -9344,7 +9345,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -9352,8 +9353,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": false,
@@ -9369,8 +9370,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level5"
     ],
     "type": "5th-level conjuration"
@@ -9378,11 +9379,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9401,11 +9402,11 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "bard",
-      "cleric",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Cleric",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level divination"
@@ -9413,8 +9414,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "warlock",
-      "wizard"
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9431,8 +9432,8 @@
     "ritual": false,
     "school": "necromancy",
     "tags": [
-      "warlock",
-      "wizard",
+      "Warlock",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level necromancy"
@@ -9440,9 +9441,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9462,9 +9463,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -9472,7 +9473,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9492,7 +9493,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level evocation"
@@ -9500,7 +9501,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9519,7 +9520,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -9527,9 +9528,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9548,9 +9549,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -9558,7 +9559,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -9578,7 +9579,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -9586,10 +9587,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9608,10 +9609,10 @@
     "ritual": true,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation (ritual)"
@@ -9619,10 +9620,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric",
-      "druid",
-      "ranger",
-      "sorcerer"
+      "Cleric",
+      "Druid",
+      "Ranger",
+      "Sorcerer"
     ],
     "components": {
       "material": true,
@@ -9641,10 +9642,10 @@
     "ritual": true,
     "school": "transmutation",
     "tags": [
-      "cleric",
-      "druid",
-      "ranger",
-      "sorcerer",
+      "Cleric",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
       "level2"
     ],
     "type": "3rd-level transmutation (ritual)"
@@ -9652,8 +9653,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -9672,8 +9673,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level conjuration"
@@ -9681,7 +9682,7 @@
   {
     "casting_time": "1 minute",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -9700,7 +9701,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -9708,8 +9709,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -9728,8 +9729,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -9737,7 +9738,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "cleric"
+      "Cleric"
     ],
     "components": {
       "material": false,
@@ -9753,7 +9754,7 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "cleric",
+      "Cleric",
       "level6"
     ],
     "type": "6th-level conjuration"
@@ -9761,9 +9762,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "cleric",
-      "paladin"
+      "Bard",
+      "Cleric",
+      "Paladin"
     ],
     "components": {
       "material": false,
@@ -9779,9 +9780,9 @@
     "ritual": false,
     "school": "enchantment",
     "tags": [
-      "bard",
-      "cleric",
-      "paladin",
+      "Bard",
+      "Cleric",
+      "Paladin",
       "level2"
     ],
     "type": "2nd-level enchantment"
@@ -9789,10 +9790,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9809,10 +9810,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level evocation"
@@ -9820,9 +9821,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "sorcerer",
-      "wizard"
+      "Bard",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9838,9 +9839,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "sorcerer",
-      "wizard",
+      "Bard",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -9848,9 +9849,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9866,9 +9867,9 @@
     "ritual": true,
     "school": "transmutation",
     "tags": [
-      "bard",
-      "druid",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation (ritual)"
@@ -9876,11 +9877,11 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9896,11 +9897,11 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Bard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -9908,9 +9909,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "bard",
-      "druid",
-      "sorcerer"
+      "Bard",
+      "Druid",
+      "Sorcerer"
     ],
     "components": {
       "material": false,
@@ -9926,9 +9927,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "bard",
-      "druid",
-      "sorcerer",
+      "Bard",
+      "Druid",
+      "Sorcerer",
       "level2"
     ],
     "type": "2nd level evocation"
@@ -9936,9 +9937,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9954,9 +9955,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -9964,10 +9965,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -9983,10 +9984,10 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Conjuration cantrip"
@@ -9994,10 +9995,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10013,10 +10014,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "cantrip"
     ],
     "type": "Evocation cantrip"
@@ -10024,9 +10025,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10042,9 +10043,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -10052,8 +10053,8 @@
   {
     "casting_time": "1 bonus action",
     "classes": [
-      "druid",
-      "warlock"
+      "Druid",
+      "Warlock"
     ],
     "components": {
       "material": false,
@@ -10069,8 +10070,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "warlock",
+      "Druid",
+      "Warlock",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -10078,9 +10079,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10096,9 +10097,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -10106,9 +10107,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10124,9 +10125,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "cantrip"
     ],
     "type": "Transmutation cantrip"
@@ -10134,9 +10135,9 @@
   {
     "casting_time": "1 reaction, which you take when you take acid, cold, fire, lightning, or thunder damage",
     "classes": [
-      "druid",
-      "ranger",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10153,9 +10154,9 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "druid",
-      "ranger",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level abjuration"
@@ -10163,8 +10164,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger"
+      "Druid",
+      "Ranger"
     ],
     "components": {
       "material": true,
@@ -10183,8 +10184,8 @@
     "ritual": false,
     "school": "divination",
     "tags": [
-      "druid",
-      "ranger",
+      "Druid",
+      "Ranger",
       "level1"
     ],
     "type": "1st-level divination"
@@ -10192,9 +10193,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10214,9 +10215,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level conjuration"
@@ -10224,10 +10225,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10243,10 +10244,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level transmutation"
@@ -10254,9 +10255,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10276,9 +10277,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level2"
     ],
     "type": "2nd-level conjuration"
@@ -10286,8 +10287,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10304,8 +10305,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level1"
     ],
     "type": "1st-level transmutation"
@@ -10313,9 +10314,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10331,9 +10332,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -10341,7 +10342,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -10358,7 +10359,7 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
+      "Druid",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -10366,9 +10367,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10388,9 +10389,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -10398,9 +10399,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10417,9 +10418,9 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Warlock",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level transmutation"
@@ -10427,10 +10428,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10447,10 +10448,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "ranger",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Ranger",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level transmutation"
@@ -10458,10 +10459,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10477,10 +10478,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -10488,10 +10489,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10507,10 +10508,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -10518,10 +10519,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10537,10 +10538,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -10548,10 +10549,10 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10567,10 +10568,10 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "warlock",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
+      "Wizard",
       "level6"
     ],
     "type": "6th-level transmutation"
@@ -10578,7 +10579,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": true,
@@ -10597,7 +10598,7 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
+      "Druid",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -10605,7 +10606,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid"
+      "Druid"
     ],
     "components": {
       "material": false,
@@ -10621,7 +10622,7 @@
     "ritual": false,
     "school": "abjuration",
     "tags": [
-      "druid",
+      "Druid",
       "level6"
     ],
     "type": "6th-level abjuration"
@@ -10629,8 +10630,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10649,8 +10650,8 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level conjuration"
@@ -10658,8 +10659,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10678,8 +10679,8 @@
     "ritual": false,
     "school": "transmutation",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level transmutation"
@@ -10687,9 +10688,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10708,9 +10709,9 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level evocation"
@@ -10718,9 +10719,9 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "sorcerer",
-      "wizard"
+      "Druid",
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10739,9 +10740,9 @@
     "ritual": false,
     "school": "conjuration",
     "tags": [
-      "druid",
-      "sorcerer",
-      "wizard",
+      "Druid",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level conjuration"
@@ -10749,8 +10750,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "druid",
-      "wizard"
+      "Druid",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10769,8 +10770,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "druid",
-      "wizard",
+      "Druid",
+      "Wizard",
       "level7"
     ],
     "type": "7th-level evocation"
@@ -10778,8 +10779,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10795,8 +10796,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level5"
     ],
     "type": "5th-level evocation"
@@ -10804,8 +10805,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": false,
@@ -10822,8 +10823,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -10831,8 +10832,8 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "sorcerer",
-      "wizard"
+      "Sorcerer",
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10852,8 +10853,8 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "sorcerer",
-      "wizard",
+      "Sorcerer",
+      "Wizard",
       "level4"
     ],
     "type": "4th-level evocation"
@@ -10861,7 +10862,7 @@
   {
     "casting_time": "1 action",
     "classes": [
-      "wizard"
+      "Wizard"
     ],
     "components": {
       "material": true,
@@ -10880,9 +10881,10 @@
     "ritual": false,
     "school": "evocation",
     "tags": [
-      "wizard",
+      "Wizard",
       "level3"
     ],
     "type": "3rd-level evocation"
   }
 ]
+}

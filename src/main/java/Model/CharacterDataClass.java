@@ -19,10 +19,11 @@ However, it can in the future, which makes it extendable.
  */
 public class CharacterDataClass implements CharacterDataCollection{
 
-    String languages;
-    String organisations;
-    String earlierLife;
-    String coreMemories;
+    private String languages;
+    private String organisations;
+    private String earlierLife;
+    private String coreMemories;
+    private String notes;
     private String name;
     private String jobName;
     private String raceName;
@@ -140,6 +141,11 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this;
     }
 
+    public CharacterDataClass setNotes(String notes){
+        this.notes = notes;
+        return this;
+    }
+
     /**
      * Sets the earlier life of the character in the Model.CharacterDataClass.
      * The earlier life is a part of the lore around the character.
@@ -157,7 +163,7 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param coreMemories the core memories of the character, as a string.
      * @return the Model.CharacterDataClass object.
      */
-    public CharacterDataClass setCoreMemories(String coreMemories){
+    public CharacterDataClass setCorememories(String coreMemories){
         this.coreMemories = coreMemories;
         System.out.println(coreMemories);
         return this;
@@ -230,9 +236,13 @@ public class CharacterDataClass implements CharacterDataCollection{
      * @param proficiencySkills the skill proficiencies for the character, as a list of strings.
      * @return A list of the skill proficiencies for the character.
      */
-    public void setProficiencySkills(ArrayList<ProficiencySkills> proficiencySkills) {
+    public CharacterDataClass setProficiencySkills(ArrayList<ProficiencySkills> proficiencySkills) {
         this.proficiencySkills = proficiencySkills;
+        return this;
     }
+
+
+
 
     @Override
     public String getName() {
@@ -294,6 +304,11 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this.earlierLife;
     }
 
+    @Override
+    public String getNotes() {
+        return this.notes;
+    }
+
     public void setProficiencies(Boolean addOrRemove, ProficiencySkills statName){
         if (addOrRemove) {
             this.proficiencySkills.add(statName);
@@ -309,7 +324,10 @@ public class CharacterDataClass implements CharacterDataCollection{
         return this.proficiencySkills;
     }
 
-
+    @Override
+    public String getCorememories() {
+        return this.coreMemories;
+    }
 
 
 

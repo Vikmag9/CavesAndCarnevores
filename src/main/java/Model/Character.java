@@ -30,6 +30,9 @@ public class Character implements CharacterDataCollection {
     private String organisation;
     private String earlierLife;
     private String notes;
+
+    private String corememories;
+
     private ArrayList<ProficiencySkills> proficiencySkills;
     int modifier;
     HashMap<StatName, Integer> modifiers;
@@ -54,14 +57,22 @@ public class Character implements CharacterDataCollection {
         this.jobName = characterData.getJobName();
         this.xp = characterData.getXp();
         this.background = characterData.getBackground();
+        if (characterData.getNotes() != null) {
+            this.notes = characterData.getNotes();
+        }
+        if (characterData.getOrganisations() != null) {
+            this.organisation = characterData.getOrganisations();
+        }
+        if (characterData.getEarlierLife() != null) {
+            this.earlierLife = characterData.getEarlierLife();
+        }
         this.level = level;
         this.proficiencySkills = characterData.getProficiencySkills();
-        System.out.println(characterData.getStats());
         this.stats = characterData.getStats();
         this.modifiers = calculateModifiers();
         this.health = calculateHealth();
         this.feats = assembleFeats();
-        this.inventory = new Inventory(10);
+        this.inventory = characterData.getInventory();
         this.armorClass = calculateAC();
         this.proficiencies = assembleProficiencies();
 
@@ -224,6 +235,22 @@ public class Character implements CharacterDataCollection {
         this.inventory = inventory;
     }
 
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public void setOrganisation(String organisation) {
+        this.organisation = organisation;
+    }
+
+    public void setEarlierLife(String earlierLife) {
+        this.earlierLife = earlierLife;
+    }
+
+    public void setCorememories(String corememories) {
+        this.corememories = corememories;
+    }
+
     public void setProficiencySkills(ArrayList<ProficiencySkills> list){
         this.proficiencySkills = list;
     }
@@ -306,6 +333,16 @@ public class Character implements CharacterDataCollection {
     @Override
     public String getEarlierLife() {
         return this.earlierLife;
+    }
+
+    @Override
+    public String getNotes() {
+        return this.notes;
+    }
+
+    @Override
+    public String getCorememories() {
+        return this.corememories;
     }
 
     @Override

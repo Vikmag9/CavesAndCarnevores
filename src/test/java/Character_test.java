@@ -402,7 +402,7 @@ public class Character_test {
 
     @Test
     public void saveCharacterTest(){
-        Job charJob = new Job("Rogue");
+        Job charJob = new Job("Druid");
         List<Feature> featureList = charJob.getFeatures();
         Inventory inventory = new Inventory(1);
 
@@ -421,7 +421,7 @@ public class Character_test {
         CharacterDataClass charData = new CharacterDataClass();
         charData.setBackground("Orphan");
         charData.setRaceName("Dwarf");
-        charData.setJobName("Rogue");
+        charData.setJobName("Druid");
         charData.setName("Gregg");
         charData.setAlignment("Chaotic Good");
         charData.setLevel(1);
@@ -443,8 +443,10 @@ public class Character_test {
         charData.setProficiencySkills(profSkills);
 
         Character character = new Character(charData, charData.getLevel());
-        //character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
-        String x = character.getRace().getDescription();
+        character.getRace().setSubRace(new Race("Dwarf", "Hill Dwarf"));
+        character.setNotes("I am a note");
+        character.setOrganisation("I am an organisation");
+        character.setEarlierLife("I have an earlier life");
         CharacterHandler.saveCharacter(character);
     }
 
@@ -456,7 +458,7 @@ public class Character_test {
         if (character.getRace().getSubRace() != null) {
             assertEquals(character.getRace().getSubRace().getName(), "Hill Dwarf");
         }
-        assertEquals(character.getJob().getJobName(), "Rogue");
+        assertEquals(character.getJob().getJobName(), "Druid");
         assertEquals(character.getJob().getHitDie(), 8);
         assertEquals(character.getProficiencySkills().get(0), ProficiencySkills.Athletics);
         // TODO add more tests
@@ -486,6 +488,14 @@ public class Character_test {
         HashMap<StatName, Integer> modifiers = character.calculateModifiers();
         System.out.println(modifiers.get(StatName.Strength));
         assertEquals(-4, (int) modifiers.get(StatName.Strength));
+    }
+
+    @Test
+    public void loadSpellsTest(){
+        Character character = CharacterHandler.loadCharacter("Gregg");
+        List<String> spells = CharacterHandler.loadSpells(character.getJob());
+        assertTrue(spells.size() > 0);
+
     }
 
 
